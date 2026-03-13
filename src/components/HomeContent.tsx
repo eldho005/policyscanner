@@ -335,7 +335,6 @@ export default function HomeContent() {
 
           <div className="partners__header u-text-center">
             <h2>Compare 20+ Top Insurers in One Place</h2>
-            <p className="text-secondary">Working with Canada&apos;s top insurance providers to find you the best coverage</p>
           </div>
 
           <div className="partners__grid" id="partnersGrid">
@@ -419,9 +418,6 @@ export default function HomeContent() {
 
           <header className="articles__header u-text-center">
             <h2 className="articles__title">Explore Your Coverage Options</h2>
-            <p className="articles__subtitle text-secondary">
-              Explore our core insurance options and get guidance tailored to your needs.
-            </p>
           </header>
 
           <div className="articles__grid layout__grid">
@@ -568,9 +564,6 @@ export default function HomeContent() {
         <div className="layout__container">
           <header className="faq__header">
             <h2 className="faq__title">Your Questions, Answered</h2>
-            <p className="faq__subtitle text-secondary">
-              Get answers to common questions about life insurance and our services.
-            </p>
           </header>
           <div className="faq__list">
             <div className="faq__item">
