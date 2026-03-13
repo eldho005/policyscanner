@@ -51,11 +51,6 @@
 }
 
 .articles__title {
-  font-size: var(--font-size-h2-mobile);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-text);
-  margin-bottom: var(--heading-to-text);
-  line-height: var(--line-height-snug);
   letter-spacing: var(--micropolish-letter-spacing-normal);
   font-feature-settings: var(--micropolish-font-features-base);
   text-shadow: var(--micropolish-shadow-text-subtle);
@@ -456,10 +451,6 @@
     margin-bottom: var(--space-4);
   }
   
-  .articles__title {
-    font-size: var(--font-size-h2-tablet);
-  }
-  
   .articles__subtitle {
     font-size: var(--font-size-base);
   }
@@ -499,10 +490,6 @@
   
   .articles__sub-grid {
     gap: var(--space-1);
-  }
-  
-  .articles__title {
-    font-size: var(--font-size-h2-desktop);
   }
 }
 

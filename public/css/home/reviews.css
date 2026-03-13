@@ -77,18 +77,9 @@
 }
 
 .insurance-reviews-component__title {
-  font-size: var(--font-size-h2-mobile);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--irc-line-height-tight);
   color: var(--irc-text-primary);
   margin: 0 0 var(--irc-spacing-sm) 0;
   padding: 0;
-}
-@media (min-width: 768px) {
-  .insurance-reviews-component__title { font-size: var(--font-size-h2-tablet); }
-}
-@media (min-width: 992px) {
-  .insurance-reviews-component__title { font-size: var(--font-size-h2-desktop); }
 }
 
 /* ==========================================================================

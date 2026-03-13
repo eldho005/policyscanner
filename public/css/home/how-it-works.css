@@ -34,21 +34,9 @@
   margin-bottom: var(--space-2);
 }
 
-/* Section heading */
+/* Section heading — typography from global h2 */
 .howitworks__title {
-  font-size: var(--font-size-h2-mobile);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-text);
-  line-height: 1.2;
   margin: 0 0 var(--space-5) 0;
-}
-
-@media (min-width: 768px) {
-  .howitworks__title { font-size: var(--font-size-h2-tablet); }
-}
-
-@media (min-width: 992px) {
-  .howitworks__title { font-size: var(--font-size-h2-desktop); }
 }
 
 /* 3. Steps List

@@ -54,23 +54,11 @@
 }
 
 .partners__title {
-  font-size: var(--font-size-h2-mobile);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-snug);
-  color: var(--primary-text);
-  margin-bottom: var(--heading-to-text);
-  
-  /* ENHANCED: Professional typography micropolish */
+  /* Professional typography micropolish */
   font-feature-settings: var(--micropolish-font-features-full);
   letter-spacing: var(--micropolish-letter-spacing-normal);
   text-rendering: var(--micropolish-text-rendering);
   text-shadow: var(--micropolish-shadow-text-subtle);
-}
-@media (min-width: 768px) {
-  .partners__title { font-size: var(--font-size-h2-tablet); }
-}
-@media (min-width: 992px) {
-  .partners__title { font-size: var(--font-size-h2-desktop); }
 }
 
 .partners__header p {
