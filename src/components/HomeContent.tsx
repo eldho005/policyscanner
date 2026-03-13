@@ -154,32 +154,68 @@ export default function HomeContent() {
             {/* Left Column: Content */}
             <div className="layout__grid-item layout__grid-item--lg-half">
 
-              <div className="howitworks__header">
-                <h2 className="howitworks__title">Finally, Life Insurance Shopping That Makes Sense</h2>
-                <p className="howitworks__subtitle">Compare multiple quotes in seconds – with complete transparency</p>
-              </div>
+              <div className="howitworks__left">
+                <span className="howitworks__eyebrow">How It Works</span>
+                <h2 className="howitworks__title">Get covered in<br />3 simple steps</h2>
 
-              <div className="howitworks__steps">
-                <div className="howitworks__step">
-                  <div className="howitworks__step-number">Step 1</div>
-                  <div className="howitworks__step-label">Quick Profile</div>
-                  <div className="howitworks__step-description">Simple questions</div>
-                </div>
-                <div className="howitworks__step">
-                  <div className="howitworks__step-number">Step 2</div>
-                  <div className="howitworks__step-label">Instant Comparison</div>
-                  <div className="howitworks__step-description">View all options</div>
-                </div>
-                <div className="howitworks__step">
-                  <div className="howitworks__step-number">Step 3</div>
-                  <div className="howitworks__step-label">Select &amp; Secure</div>
-                  <div className="howitworks__step-description">Get covered</div>
-                </div>
-              </div>
+                <ol className="howitworks__steps-list">
+                  <li className="howitworks__step-item">
+                    <div className="howitworks__step-num" aria-hidden="true">01</div>
+                    <div className="howitworks__step-body">
+                      <div className="howitworks__step-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                      </div>
+                      <div className="howitworks__step-text">
+                        <h3 className="howitworks__step-title">Tell us about yourself</h3>
+                        <p className="howitworks__step-desc">Answer a few quick questions — takes under 30 seconds</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="howitworks__step-item">
+                    <div className="howitworks__step-num" aria-hidden="true">02</div>
+                    <div className="howitworks__step-body">
+                      <div className="howitworks__step-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+                      </div>
+                      <div className="howitworks__step-text">
+                        <h3 className="howitworks__step-title">Compare real quotes</h3>
+                        <p className="howitworks__step-desc">See side-by-side rates from 20+ top Canadian insurers instantly</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="howitworks__step-item">
+                    <div className="howitworks__step-num" aria-hidden="true">03</div>
+                    <div className="howitworks__step-body">
+                      <div className="howitworks__step-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+                      </div>
+                      <div className="howitworks__step-text">
+                        <h3 className="howitworks__step-title">Choose your policy</h3>
+                        <p className="howitworks__step-desc">Pick the best plan and get covered — no agents, no pressure</p>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
 
-              <div className="howitworks__info">
-                <h3 className="howitworks__info-title">We know Life Insurance comparison can be confusing — so we simplified it.</h3>
-                <p className="howitworks__info-text">Just answer a few basic questions, and our smart engine instantly shows you personalized quotes from Canada&apos;s top insurers. Compare side-by-side, clearly — and choose what&apos;s right for you.</p>
+                <div className="howitworks__trust-row" aria-label="Key benefits">
+                  <div className="howitworks__trust-pill">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    30-second quote
+                  </div>
+                  <div className="howitworks__trust-pill">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    20+ insurers
+                  </div>
+                  <div className="howitworks__trust-pill">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    100% free
+                  </div>
+                </div>
+
+                <a href="/compare-insurance-quotes" className="button button--primary howitworks__cta">
+                  Compare Quotes Now
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
               </div>
 
             </div>

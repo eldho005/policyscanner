@@ -1,276 +1,192 @@
 /* ==========================================================================
-   HOW IT WORKS SECTION - ALIGNMENT & SPACING OPTIMIZED
-   ✅ Enhanced mobile UI alignment and spacing precision
-   ✅ Improved text hierarchy and readability  
-   ✅ Strategic left-alignment for info box content
-   ✅ Phone mockup completely untouched
+   HOW IT WORKS SECTION
    ========================================================================== */
 
-/* ==========================================================================
-   1. Section Foundation - Clean Professional
+/* 1. Section Foundation
    ========================================================================== */
 
 .howitworks {
   background: var(--bg-section-how-it-works);
   position: relative;
   isolation: isolate;
-  font-feature-settings: var(--micropolish-font-features-base);
-  text-rendering: var(--micropolish-text-rendering);
-  -webkit-font-smoothing: var(--micropolish-font-smoothing);
-  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
 }
 
-/* Subtle professional background */
-.howitworks::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: 
-    var(--micropolish-radial-subtle),
-    var(--micropolish-overlay-depth);
-  pointer-events: none;
-  z-index: var(--z-0);
-  opacity: 0.2; /* Reduced for professional subtlety */
-  transform: translateZ(0);
-}
-
-.howitworks > * {
-  position: relative;
-  z-index: var(--z-10);
-}
-
-/* ==========================================================================
-   2. Content Layout - ENHANCED SPACING RHYTHM
+/* 2. Left Column Wrapper
    ========================================================================== */
 
-.howitworks__header {
-  text-align: center;
-  margin-bottom: var(--space-5); /* ✅ OPTIMIZED: Consistent 40px spacing */
+.howitworks__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding: var(--space-6) 0;
 }
 
-/* INTEGRATED: Section title now uses global H2 system */
-.howitworks__title {
-  font-size: 1.5rem;
-  letter-spacing: var(--micropolish-letter-spacing-normal);
-  font-feature-settings: var(--micropolish-font-features-full);
-  text-rendering: var(--micropolish-text-rendering);
-  text-shadow: var(--micropolish-shadow-text-subtle);
-  
-  /* Enhanced visual hierarchy */
-  color: var(--primary-text);
+/* Eyebrow label */
+.howitworks__eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-snug);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-teal);
+  margin-bottom: var(--space-2);
 }
+
+/* Section heading */
+.howitworks__title {
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-text);
+  line-height: 1.2;
+  margin: 0 0 var(--space-5) 0;
+}
+
 @media (min-width: 768px) {
-  .howitworks__title { font-size: 1.75rem; }
+  .howitworks__title { font-size: 2.25rem; }
 }
+
 @media (min-width: 992px) {
-  .howitworks__title { font-size: 2rem; }
+  .howitworks__title { font-size: 2.5rem; }
 }
 
-/* INTEGRATED: Subtitle now uses global paragraph system */
-.howitworks__subtitle {
-  /* REMOVED: Custom font-size - now uses global paragraph scaling */
-  /* KEPT: All other styling */
-  color: var(--secondary-text);
-  line-height: var(--line-height-relaxed);
-  margin: 0;
-  
-  /* WORLD-CLASS: Premium typography micropolishes */
-  letter-spacing: var(--micropolish-letter-spacing-subtle);
-  font-feature-settings: var(--micropolish-font-features-base);
-  text-rendering: var(--micropolish-text-rendering);
-  opacity: 0.9; /* Subtle hierarchy enhancement */
-  max-width: 400px; /* Optimal reading width for mobile/tablet */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==========================================================================
-   3. Process Steps - ENHANCED ALIGNMENT & SPACING
+/* 3. Steps List
    ========================================================================== */
 
-.howitworks__steps {
+.howitworks__steps-list {
+  list-style: none;
+  margin: 0 0 var(--space-5) 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4); /* ✅ OPTIMIZED: Consistent 32px spacing */
-  margin-bottom: var(--space-5); /* ✅ RHYTHM: Harmonized with header spacing */
-  align-items: center;
-}
-
-.howitworks__step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
+  gap: 0;
   width: 100%;
-  max-width: 200px;
+  position: relative;
 }
 
-.howitworks__step:not(:last-child)::after {
+/* Vertical connector line */
+.howitworks__steps-list::before {
   content: "";
   position: absolute;
-  bottom: calc(-1 * var(--space-2));
-  left: 50%;
-  width: 2px;
-  height: var(--space-2);
-  background: linear-gradient(to bottom, 
-    var(--primary-teal), 
-    rgba(59, 197, 185, 0.3)
+  left: 20px;
+  top: 44px;
+  bottom: 44px;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    var(--primary-teal),
+    color-mix(in srgb, var(--primary-teal) 20%, transparent)
   );
-  transform: translateX(-50%);
-  will-change: transform;
+  pointer-events: none;
 }
 
-.howitworks__step-number {
-  width: calc(var(--space-6) + var(--space-1));
-  height: var(--space-4);
+.howitworks__step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  position: relative;
+}
+
+/* Large teal step number circle */
+.howitworks__step-num {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-teal);
+  background: color-mix(in srgb, var(--primary-teal) 8%, transparent);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: 
-    color-mix(in oklch, var(--bg-section-how-it-works) 88%, rgba(59, 197, 185, 0.08)),
-    var(--micropolish-gradient-card);
-  border: var(--micropolish-border-accent);
-  border-radius: var(--border-radius-lg);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--primary-text);
-  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-teal);
+  letter-spacing: 0.02em;
   position: relative;
-  overflow: hidden;
-  font-feature-settings: var(--micropolish-font-features-base);
-  text-rendering: var(--micropolish-text-rendering);
-  transform: translateZ(0);
-  
-  /* PROFESSIONAL: Clean shadow - insurance industry standard */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  z-index: 1;
 }
 
-/* Remove excessive shimmer animation for professional appearance */
-.howitworks__step-number::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--micropolish-border-gradient);
-  opacity: 0.6;
+.howitworks__step-body {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding-top: 10px;
 }
 
-.howitworks__step-label {
+/* Icon circle */
+.howitworks__step-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius-md);
+  background: color-mix(in srgb, var(--primary-teal) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary-teal) 25%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-teal);
+}
+
+.howitworks__step-text {
+  flex: 1;
+}
+
+.howitworks__step-title {
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold); /* ✅ ENHANCED: Stronger hierarchy */
-  color: var(--primary-text);
-  margin-bottom: var(--space-1);
-  line-height: var(--line-height-tight); /* ✅ OPTIMIZED: Better line spacing */
-  letter-spacing: var(--micropolish-letter-spacing-subtle);
-  font-feature-settings: var(--micropolish-font-features-full);
-  text-rendering: var(--micropolish-text-rendering);
-}
-
-.howitworks__step-description {
-  font-size: var(--font-size-sm);
-  color: var(--secondary-text);
-  line-height: var(--line-height-normal); /* ✅ OPTIMIZED: Improved readability */
-  margin: 0;
-  font-weight: var(--font-weight-normal); /* ✅ ENHANCED: Clear hierarchy contrast */
-  letter-spacing: var(--micropolish-letter-spacing-micro);
-  font-feature-settings: var(--micropolish-font-features-base);
-  text-rendering: var(--micropolish-text-rendering);
-  opacity: 0.9; /* ✅ SUBTLE: Better visual hierarchy */
-}
-
-/* ==========================================================================
-   4. Info Box - STRATEGIC LEFT-ALIGNMENT FOR READABILITY
-   ========================================================================== */
-
-.howitworks__info {
-  background: 
-    color-mix(in oklch, var(--bg-section-how-it-works) 92%, var(--micropolish-gradient-card)),
-    var(--micropolish-gradient-card);
-  border-radius: var(--border-radius-lg);
-  padding: var(--card-padding-mobile);
-  backdrop-filter: var(--micropolish-glass-subtle);
-  -webkit-backdrop-filter: var(--micropolish-glass-subtle);
-  position: relative;
-  overflow: hidden;
-  transform: translateZ(0);
-  
-  /* PROFESSIONAL: Clean shadow - appropriate for insurance content */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-.howitworks__info::before {
-  display: none;
-}
-
-.howitworks__info::after {
-  display: none; /* Remove decorative circle for professional appearance */
-}
-
-/* ✅ STRATEGIC LEFT-ALIGNMENT: Enhanced readability for long content */
-.howitworks__info-title {
-  /* REMOVED: Custom font-size - now uses global H3 scaling */
-  /* ENHANCED: Left-aligned for better readability */
   font-weight: var(--font-weight-semibold);
   color: var(--primary-text);
   line-height: var(--line-height-tight);
-  margin-bottom: var(--heading-to-text);
-  letter-spacing: var(--micropolish-letter-spacing-normal);
-  font-feature-settings: var(--micropolish-font-features-full);
-  text-rendering: var(--micropolish-text-rendering);
-  text-shadow: var(--micropolish-shadow-text-subtle);
-  text-align: left; /* ✅ IMPROVED: Left-aligned for better scanability */
+  margin: 0 0 4px 0;
 }
 
-.howitworks__info-text {
+.howitworks__step-desc {
   font-size: var(--font-size-sm);
   color: var(--secondary-text);
   line-height: var(--line-height-relaxed);
   margin: 0;
-  letter-spacing: var(--micropolish-letter-spacing-micro);
-  font-feature-settings: var(--micropolish-font-features-base);
-  text-rendering: var(--micropolish-text-rendering);
-  text-align: left; /* ✅ IMPROVED: Left-aligned for natural reading flow */
 }
 
-/* Responsive updates - maintain borderless design */
-@media (min-width: 768px) {
-  .howitworks__info {
-    padding: var(--card-padding-tablet);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); /* Professional tablet shadow */
-  }
-  
-  /* ✅ ENHANCED: Better padding balance for tablet */
-  .howitworks__info-title,
-  .howitworks__info-text {
-    padding-left: 0; /* Ensure proper alignment */
-  }
+/* 4. Trust Pills Row
+   ========================================================================== */
+
+.howitworks__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
-@media (min-width: 992px) {
-  .howitworks__info {
-    padding: var(--card-padding-desktop);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Professional desktop shadow */
-  }
-  
-  /* FIXED: Subtitle single line on desktop */
-  .howitworks__subtitle {
-    max-width: 600px; /* Increased from 400px to fit single line */
-  }
-  
-  /* ✅ DESKTOP: Maintain left-alignment for readability */
-  .howitworks__info-title,
-  .howitworks__info-text {
-    text-align: left; /* Consistent left-alignment across breakpoints */
-  }
+.howitworks__trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--secondary-text);
+  background: color-mix(in srgb, var(--primary-teal) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary-teal) 20%, transparent);
+  border-radius: 99px;
+  padding: 5px 12px;
+}
+
+.howitworks__trust-pill svg {
+  color: var(--primary-teal);
+  flex-shrink: 0;
+}
+
+/* 5. CTA Button
+   ========================================================================== */
+
+.howitworks__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
 }
 
 /* ==========================================================================
-   5. PHONE MOCKUP - COMPLETELY UNTOUCHED (Original CSS preserved)
+   6. PHONE MOCKUP - COMPLETELY UNTOUCHED (Original CSS preserved)
    ========================================================================== */
 
 .howitworks__phone-container {
