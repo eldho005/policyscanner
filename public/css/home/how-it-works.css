@@ -109,7 +109,22 @@
 .howitworks__step-body {
   display: flex;
   align-items: flex-start;
+  gap: var(--space-2);
   padding-top: 9px;
+}
+
+/* Icon box */
+.howitworks__step-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--border-radius-md);
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-text);
 }
 
 .howitworks__step-text {
@@ -147,17 +162,16 @@
   gap: 5px;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--secondary-text);
+  color: var(--primary-text);
   background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--primary-teal);
   border-radius: 99px;
   padding: 5px 12px;
 }
 
 .howitworks__trust-pill svg {
-  color: var(--secondary-text);
+  color: var(--primary-teal);
   flex-shrink: 0;
-  opacity: 0.6;
 }
 
 /* 5. CTA Button
