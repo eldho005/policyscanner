@@ -113,7 +113,7 @@ export default function HomeContent() {
       <section className="why-choose-us">
         <div className="layout__container">
           <div className="why-choose-us__content">
-            <h2 className="why-choose-us__title">Why Canadians Trust PolicyScanner</h2>
+            <h2 className="why-choose-us__title">The Honest Way to Shop for Life Insurance</h2>
             <div className="why-choose-us__features-group why-choose-us__features-group--primary">
               <div className="why-choose-us__feature">
                 <h3 className="why-choose-us__feature-title">Built by Canadians, for Canadians</h3>
@@ -234,7 +234,7 @@ export default function HomeContent() {
       <section className="insurance-reviews-component" id="insurance-reviews-1">
         <div className="insurance-reviews-component__container">
           <header className="insurance-reviews-component__header">
-            <h2 className="insurance-reviews-component__title">Real Stories from Real Canadians</h2>
+            <h2 className="insurance-reviews-component__title">Trusted by Thousands of Canadians</h2>
           </header>
           <div className="insurance-reviews-component__carousel">
             <div className="insurance-reviews-component__wrapper" role="region" aria-label="Customer reviews carousel">
@@ -418,7 +418,7 @@ export default function HomeContent() {
         <div className="layout__container">
 
           <header className="articles__header u-text-center">
-            <h2 className="articles__title">Insights &amp; Advice for Smarter Insurance Decisions</h2>
+            <h2 className="articles__title">Explore Your Coverage Options</h2>
             <p className="articles__subtitle text-secondary">
               Explore our core insurance options and get guidance tailored to your needs.
             </p>
@@ -567,7 +567,7 @@ export default function HomeContent() {
       <section className="faq layout__section" id="frequently-asked-questions">
         <div className="layout__container">
           <header className="faq__header">
-            <h2 className="faq__title">Frequently Asked Questions</h2>
+            <h2 className="faq__title">Your Questions, Answered</h2>
             <p className="faq__subtitle text-secondary">
               Get answers to common questions about life insurance and our services.
             </p>
