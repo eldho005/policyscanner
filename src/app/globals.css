@@ -29,3 +29,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Google AI-style rotating gradient border */
+.ai-glow-btn {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 1.5px;
+}
+
+.ai-glow-btn::before {
+  content: '';
+  position: absolute;
+  inset: -80%;
+  background: conic-gradient(
+    from 0deg,
+    #4285f4,
+    #ea4335,
+    #fbbc05,
+    #34a853,
+    #9333ea,
+    #4285f4
+  );
+  animation: ai-border-spin 2.5s linear infinite;
+  z-index: 0;
+}
+
+.ai-glow-btn::after {
+  content: '';
+  position: absolute;
+  inset: 1.5px;
+  background: #f8fafc;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.ai-glow-btn > a,
+.ai-glow-btn > span,
+.ai-glow-btn > button {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+@keyframes ai-border-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+

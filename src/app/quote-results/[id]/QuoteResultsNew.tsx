@@ -564,12 +564,14 @@ export default function QuoteResultsNew() {
             </div>
 
             <div className="flex items-center gap-3">
-              <a
-                href="/compare-insurance-quotes"
-                className="text-xs font-semibold text-slate-500 hover:text-slate-800 transition-colors"
-              >
-                New Quote
-              </a>
+              <span className="ai-glow-btn">
+                <a
+                  href="/compare-insurance-quotes"
+                  className="text-xs font-semibold text-slate-700 hover:text-slate-900 transition-colors px-3 py-1.5 whitespace-nowrap"
+                >
+                  New Quote
+                </a>
+              </span>
               <button
                 onClick={() => { setView('profile'); window.scrollTo(0, 0) }}
                 className="flex items-center gap-3 cursor-pointer p-1 rounded-lg hover:bg-slate-50 transition-colors group"
