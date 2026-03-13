@@ -51,8 +51,8 @@
 }
 
 .articles__title {
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2-mobile);
+  font-weight: var(--font-weight-bold);
   color: var(--primary-text);
   margin-bottom: var(--heading-to-text);
   line-height: var(--line-height-snug);
@@ -457,7 +457,7 @@
   }
   
   .articles__title {
-    font-size: 1.75rem;
+    font-size: var(--font-size-h2-tablet);
   }
   
   .articles__subtitle {
@@ -502,7 +502,7 @@
   }
   
   .articles__title {
-    font-size: 2rem;
+    font-size: var(--font-size-h2-desktop);
   }
 }
 

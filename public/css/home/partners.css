@@ -54,8 +54,8 @@
 }
 
 .partners__title {
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2-mobile);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-snug);
   color: var(--primary-text);
   margin-bottom: var(--heading-to-text);
@@ -67,10 +67,10 @@
   text-shadow: var(--micropolish-shadow-text-subtle);
 }
 @media (min-width: 768px) {
-  .partners__title { font-size: 1.75rem; }
+  .partners__title { font-size: var(--font-size-h2-tablet); }
 }
 @media (min-width: 992px) {
-  .partners__title { font-size: 2rem; }
+  .partners__title { font-size: var(--font-size-h2-desktop); }
 }
 
 .partners__header p {

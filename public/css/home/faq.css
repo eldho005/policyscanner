@@ -52,8 +52,8 @@
 }
 
 .faq__title {
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2-mobile);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-snug);
   margin-bottom: var(--heading-to-text);
   
@@ -64,10 +64,10 @@
   text-shadow: var(--micropolish-shadow-text-subtle);
 }
 @media (min-width: 768px) {
-  .faq__title { font-size: 1.75rem; }
+  .faq__title { font-size: var(--font-size-h2-tablet); }
 }
 @media (min-width: 992px) {
-  .faq__title { font-size: 2rem; }
+  .faq__title { font-size: var(--font-size-h2-desktop); }
 }
 
 .faq__subtitle {
