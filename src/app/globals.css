@@ -29,10 +29,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Google AI-style rotating gradient border */
+/* Google AI-style rotating gradient border — plays 2 rounds on page load then stops */
 .ai-glow-btn {
   position: relative;
-  border-radius: 8px;
+  border-radius: 7px;
   overflow: hidden;
   display: inline-block;
   padding: 1.5px;
@@ -41,7 +41,7 @@ body {
 .ai-glow-btn::before {
   content: '';
   position: absolute;
-  inset: -80%;
+  inset: -100%;
   background: conic-gradient(
     from 0deg,
     #4285f4,
@@ -51,7 +51,7 @@ body {
     #9333ea,
     #4285f4
   );
-  animation: ai-border-spin 2.5s linear infinite;
+  animation: ai-border-spin 1.8s linear 2 forwards;
   z-index: 0;
 }
 
@@ -60,7 +60,7 @@ body {
   position: absolute;
   inset: 1.5px;
   background: #f8fafc;
-  border-radius: 6px;
+  border-radius: 5.5px;
   z-index: 1;
 }
 
@@ -70,6 +70,7 @@ body {
   position: relative;
   z-index: 2;
   display: block;
+  border-radius: 5.5px;
 }
 
 @keyframes ai-border-spin {
