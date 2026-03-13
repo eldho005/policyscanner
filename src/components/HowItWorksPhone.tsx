@@ -45,7 +45,7 @@ export default function HowItWorksPhone() {
                   </div>
                 </div>
                 <div className="howitworks__app-header">
-                  <img src="https://res.cloudinary.com/dafclxaa8/image/upload/v1746833395/policyscanner-logo_wjm5hq.webp" alt="PolicyScanner" className="howitworks__app-logo" width="120" height="24" />
+                  <img src="https://res.cloudinary.com/dafclxaa8/image/upload/v1746833395/policyscanner-logo_wjm5hq.webp" alt="PolicyScanner" className="howitworks__app-logo" width="120" height="24" loading="lazy" />
                   <div className="howitworks__app-progress"><div className="howitworks__progress-bar"></div></div>
                 </div>
                 <div className="howitworks__screen-content">
@@ -96,7 +96,7 @@ export default function HowItWorksPhone() {
                   </div>
                 </div>
                 <div className="howitworks__app-header">
-                  <img src="https://res.cloudinary.com/dafclxaa8/image/upload/v1746833395/policyscanner-logo_wjm5hq.webp" alt="PolicyScanner" className="howitworks__app-logo" width="120" height="24" />
+                  <img src="https://res.cloudinary.com/dafclxaa8/image/upload/v1746833395/policyscanner-logo_wjm5hq.webp" alt="PolicyScanner" className="howitworks__app-logo" width="120" height="24" loading="lazy" />
                   <div className="howitworks__app-progress"><div className="howitworks__progress-bar" style={{width: '100%'}}></div></div>
                 </div>
                 <div className="howitworks__screen-content">
@@ -155,7 +155,7 @@ export default function HowItWorksPhone() {
                 <div className="howitworks__quote-results">
                   <div className="howitworks__quote-card howitworks__quote-card--best">
                     <div className="howitworks__quote-company">
-                      <img src="https://www.compulifeapi.com/images/logosapicanada/ASSU-small.png" alt="Assumption Life" className="howitworks__company-logo" width="80" height="30" />
+                      <img src="https://www.compulifeapi.com/images/logosapicanada/ASSU-small.png" alt="Assumption Life" className="howitworks__company-logo" width="80" height="30" loading="lazy" />
                       <div className="howitworks__best-badge">Best Value</div>
                     </div>
                     <div className="howitworks__quote-price">

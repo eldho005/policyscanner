@@ -23,6 +23,7 @@ function StarsSection() {
           alt="Verified Customer"
           className="insurance-reviews-component__check-icon"
           width="16" height="16"
+          loading="lazy"
         />
         <span className="insurance-reviews-component__verified">Verified Customer</span>
       </div>
@@ -305,22 +306,22 @@ export default function HomeContent() {
 
             {/* Always visible (6) */}
             <div className="partners__card">
-              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841454/the-manufacturers-life-insurance-company_khfgho.webp" alt="Manulife" className="partners__logo" loading="eager" />
+              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841454/the-manufacturers-life-insurance-company_khfgho.webp" alt="Manulife" className="partners__logo" loading="lazy" />
             </div>
             <div className="partners__card">
-              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841449/desjardins-financial-security_qbpmug.webp" alt="Desjardins Insurance" className="partners__logo" loading="eager" />
+              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841449/desjardins-financial-security_qbpmug.webp" alt="Desjardins Insurance" className="partners__logo" loading="lazy" />
             </div>
             <div className="partners__card">
-              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841446/assumption-mutual-life-insurance-company_mggxkh.webp" alt="Assumption Life" className="partners__logo" loading="eager" />
+              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841446/assumption-mutual-life-insurance-company_mggxkh.webp" alt="Assumption Life" className="partners__logo" loading="lazy" />
             </div>
             <div className="partners__card">
-              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841453/the-canada-life-assurance-company_tn7ojx.webp" alt="Canada Life" className="partners__logo" loading="eager" />
+              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841453/the-canada-life-assurance-company_tn7ojx.webp" alt="Canada Life" className="partners__logo" loading="lazy" />
             </div>
             <div className="partners__card">
-              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841447/bmo-life-assurance-company_oolost.webp" alt="BMO Insurance" className="partners__logo" loading="eager" />
+              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841447/bmo-life-assurance-company_oolost.webp" alt="BMO Insurance" className="partners__logo" loading="lazy" />
             </div>
             <div className="partners__card">
-              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841452/sun-life-assurance-company-of-canada_bsrktt.webp" alt="Sun Life" className="partners__logo" loading="eager" />
+              <img src="https://res.cloudinary.com/dafclxaa8/image/upload/w_120,q_85,f_auto/v1746841452/sun-life-assurance-company-of-canada_bsrktt.webp" alt="Sun Life" className="partners__logo" loading="lazy" />
             </div>
 
             {/* Expandable partners (shown on mobile when toggled) */}
