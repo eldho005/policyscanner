@@ -1,0 +1,502 @@
+/* ==========================================================================
+   MULTI-STEP MODAL COMPONENT CSS - UPDATED WITH PROVINCE SELECTION
+   Requires: enhanced_global_css.css to be loaded first
+   ========================================================================== */
+
+/* Modal System */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-50);
+  padding: var(--space-4);
+  overflow-y: auto;
+}
+
+.modal--active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__content {
+  background: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+  max-width: 480px;
+  margin: 2vh auto;
+  box-shadow: var(--shadow-form);
+  border: 1px solid var(--border-light);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Modal Header */
+.modal__header {
+  padding: var(--space-4);
+  text-align: center;
+  border-bottom: 1px solid rgba(229, 237, 237, 0.3);
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: none;
+  border: none;
+  font-size: var(--font-size-lg);
+  color: var(--secondary-text);
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+}
+
+.modal__close:hover {
+  background: var(--bg-light);
+  color: var(--primary-text);
+}
+
+/* Progress Indicator - Updated for 5 steps */
+.modal__progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+  gap: 6px;
+}
+
+.modal__progress-step {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(107, 114, 128, 0.2);
+  transition: all var(--transition-base);
+}
+
+.modal__progress-step--active {
+  background: var(--primary-teal);
+  transform: scale(1.33);
+}
+
+.modal__progress-step--completed {
+  background: var(--primary-teal);
+}
+
+.modal__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-1);
+  color: var(--primary-text);
+}
+
+.modal__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+  line-height: var(--line-height-normal);
+}
+
+/* Modal Body & Steps */
+.modal__body {
+  padding: var(--space-4);
+}
+
+.step {
+  display: none;
+}
+
+.step--active {
+  display: block;
+}
+
+/* Date Input Group (Modal-specific) */
+.date-input-group {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.date-input-group > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-input {
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  padding: 12px var(--space-2);
+}
+
+.date-input:focus {
+  background: var(--bg-white);
+  border-color: var(--primary-teal);
+  box-shadow: var(--shadow-input-focus);
+}
+
+.date-input::placeholder {
+  color: var(--secondary-text);
+  font-weight: var(--font-weight-normal);
+}
+
+.date-input-group > div:nth-child(1), 
+.date-input-group > div:nth-child(2) {
+  flex: 0 0 60px;
+}
+
+.date-input-group > div:nth-child(3) {
+  flex: 0 0 80px;
+}
+
+/* Step 5 Header (was Step 4) */
+.step-header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.step-header__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin-bottom: var(--space-1);
+}
+
+.step-header__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--secondary-text);
+  margin-bottom: 0;
+}
+
+/* Phone Input Group */
+.phone-input-group {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.phone-country {
+  flex: 0 0 100px;
+  padding-right: 8px;
+}
+
+.phone-number {
+  flex: 1;
+}
+
+/* Legal Disclaimer */
+.legal-disclaimer {
+  font-size: var(--font-size-xs);
+  color: var(--secondary-text);
+  text-align: center;
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-light);
+}
+
+.legal-disclaimer a {
+  color: var(--primary-teal);
+  text-decoration: none;
+}
+
+.legal-disclaimer a:hover {
+  text-decoration: underline;
+}
+
+/* Yes/No Toggle Buttons - Enhanced for Province Selection */
+.radio-group {
+  display: flex;
+  gap: var(--space-2);
+  max-width: 240px; /* Slightly wider for "Ontario"/"Other" */
+  margin: var(--space-3) auto 0 auto; /* Added top margin for better spacing */
+  justify-content: center;
+}
+
+.radio-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px var(--space-4); /* Slightly more padding */
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex: 1;
+  min-height: 44px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-text);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  min-width: 80px;
+}
+
+.radio-option:hover:not(.radio-option--selected) {
+  border-color: var(--primary-teal);
+  background: rgba(59, 197, 185, 0.03);
+  transform: translateY(-1px);
+}
+
+.radio-option--selected {
+  background: var(--primary-teal);
+  border-color: var(--primary-teal);
+  color: var(--white-text);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.radio-option--selected:hover {
+  background: var(--primary-teal);
+  border-color: var(--primary-teal);
+  color: var(--white-text);
+}
+
+.radio-option__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Enhanced Buttons for Modal */
+.button--back {
+  background: none;
+  color: var(--secondary-text);
+  border: none;
+  box-shadow: none;
+  padding: 8px var(--space-2);
+  font-size: var(--font-size-sm);
+  min-height: auto;
+  flex: none;
+}
+
+.button--back:hover {
+  background: var(--bg-light);
+  color: var(--primary-teal);
+  transform: none;
+}
+
+/* Modal Footer */
+.modal__footer {
+  padding: var(--space-3) var(--space-4) var(--space-4) var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(229, 237, 237, 0.3);
+}
+
+/* Form Row */
+.form__row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.form__row .form__group {
+  flex: 1;
+}
+
+/* Select dropdown styling */
+.form__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form__select:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233BC5B9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Error states */
+.form__control--error {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 1px var(--error);
+}
+
+.form__control--error:focus {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15), 0 0 0 1px var(--error);
+}
+
+.form__error {
+  font-size: var(--font-size-xs);
+  color: var(--error);
+  margin-top: 8px;
+  display: none; /* Hidden by default */
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  border: 1px solid var(--error);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(220, 53, 69, 0.05);
+  text-align: center;
+}
+
+.form__help {
+  font-size: var(--font-size-xs);
+  color: var(--secondary-text);
+  margin-top: var(--space-1);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+/* Province Not Available Modal Specific Styles */
+#provinceNotAvailableModal .modal__content {
+  max-width: 420px;
+}
+
+#provinceNotAvailableModal .modal__body p {
+  margin-bottom: var(--space-3);
+}
+
+#provinceNotAvailableModal .modal__body p:last-of-type {
+  margin-bottom: 0;
+}
+
+#provinceNotAvailableModal .modal__footer {
+  gap: var(--space-2);
+}
+
+#provinceNotAvailableModal .button {
+  flex: 1;
+}
+
+/* Agent Avatar Styles - For Main Modal Header */
+.agent-avatar {
+  margin-bottom: var(--space-2);
+  display: block; /* Always visible for consistency */
+}
+
+.agent-avatar__image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--bg-white);
+}
+
+/* Button No Wrap - Ensure CTA text stays on one line */
+.button--no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .modal {
+    padding: var(--space-2);
+  }
+
+  .modal__content {
+    margin: 1vh auto;
+    max-height: 95vh;
+  }
+
+  .modal__header {
+    padding: var(--space-3);
+  }
+
+  .modal__body {
+    padding: var(--space-3);
+  }
+
+  .modal__footer {
+    padding: var(--space-2) var(--space-3) var(--space-3) var(--space-3);
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .form__row {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .modal__title {
+    font-size: var(--font-size-base);
+  }
+
+  .radio-group {
+    max-width: 100%;
+  }
+
+  .radio-option {
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  /* Province modal responsive */
+  #provinceNotAvailableModal .modal__content {
+    max-width: 360px;
+  }
+
+  #provinceNotAvailableModal .modal__footer {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal__content {
+    max-width: 520px;
+  }
+
+  .modal__header {
+    padding: var(--space-5) var(--space-5) var(--space-3) var(--space-5);
+  }
+
+  .modal__body {
+    padding: var(--space-5);
+  }
+
+  .modal__footer {
+    padding: var(--space-3) var(--space-5) var(--space-5) var(--space-5);
+  }
+
+  .modal__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .radio-group {
+    max-width: 280px; /* Wider for desktop to accommodate "Ontario" */
+    margin: var(--space-4) auto 0 auto; /* Increased top margin for desktop */
+  }
+  
+  .radio-option {
+    min-width: 110px; /* Wider for "Ontario" text */
+    padding: 14px var(--space-5);
+    min-height: 48px;
+  }
+
+  /* Province modal desktop */
+  #provinceNotAvailableModal .modal__content {
+    max-width: 480px;
+  }
+  
+  /* Main modal agent avatar desktop adjustments */
+  .agent-avatar__image {
+    width: 70px;
+    height: 70px;
+  }
+}

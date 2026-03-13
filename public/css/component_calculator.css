@@ -1,0 +1,366 @@
+/* ==========================================================================
+    CALCULATOR COMPONENT - COMPACT WORLD-CLASS DESIGN
+    Optimized for space efficiency while maintaining visual rhythm
+    Uses global variables throughout for consistency
+    ========================================================================== */
+
+.calculator-container {
+    container-type: inline-size;
+    width: 100%;
+}
+
+.calculator-component {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--component-border-radius);
+    padding: clamp(0.75rem, 2.5vw, 2rem);
+    width: 100%;
+}
+
+/* ========== HEADER - TIGHTER SPACING ========== */
+.calculator-component .header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.calculator-component .title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-primary);
+    letter-spacing: -0.01em;
+}
+
+.calculator-component .subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--leading-snug);
+    font-weight: 400;
+}
+
+/* ========== FORM - COMPACT LAYOUT ========== */
+.calculator-component .form {
+    margin-bottom: var(--space-lg);
+}
+
+.calculator-component .section {
+    margin-bottom: 0;
+}
+
+.calculator-component .section-title {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+    text-align: left;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* ========== TWO-COLUMN GRID - ALWAYS ACTIVE ========== */
+.calculator-component .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.calculator-component .row:last-child {
+    margin-bottom: 0;
+}
+
+/* ========== FIELDS - COMPACT DESIGN ========== */
+.calculator-component .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.calculator-component .label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+/* ========== INPUTS - USING GLOBAL TOKENS ========== */
+.calculator-component .input,
+.calculator-component .select {
+    padding: var(--input-padding-y) var(--input-padding-x);
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    background: var(--input-bg);
+    font-size: var(--input-font-size);
+    font-weight: var(--input-font-weight);
+    color: var(--input-color);
+    font-family: inherit;
+    transition: var(--transition-micro);
+    width: 100%;
+    height: var(--input-height-standard);
+    box-sizing: border-box;
+}
+
+.calculator-component .input:focus,
+.calculator-component .select:focus {
+    outline: none;
+    border-color: var(--color-brand-primary);
+    box-shadow: 0 0 0 3px rgba(45, 181, 168, 0.1);
+}
+
+.calculator-component .select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right var(--space-md) center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    padding-right: var(--space-2xl);
+    cursor: pointer;
+}
+
+/* ========== TOGGLE GROUPS - COMPACT HEIGHT ========== */
+.calculator-component .toggle-group {
+    display: flex;
+    background: white;
+    border: var(--toggle-border);
+    border-radius: var(--toggle-border-radius);
+    overflow: hidden;
+    height: var(--toggle-height);
+    box-sizing: border-box;
+}
+
+.calculator-component .toggle {
+    flex: 1;
+    position: relative;
+}
+
+.calculator-component .toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.calculator-component .toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-inline: var(--space-md);
+    font-size: var(--toggle-font-size);
+    font-weight: var(--toggle-font-weight);
+    color: var(--toggle-inactive-color);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-micro);
+    border-right: 1px solid #e2e8f0;
+    box-sizing: border-box;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+.calculator-component .toggle:last-child .toggle-label {
+    border-right: none;
+}
+
+.calculator-component .toggle-input:checked + .toggle-label {
+    background: var(--toggle-active-bg);
+    color: var(--toggle-active-color);
+    font-weight: 600;
+}
+
+/* ========== RESULTS - STREAMLINED DESIGN ========== */
+.calculator-component .results {
+    background: linear-gradient(135deg, #fafbfc 0%, white 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--component-border-radius);
+    padding: var(--space-lg);
+    text-align: center;
+    position: relative;
+}
+
+/* Accent bar - thinner */
+.calculator-component .results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(24px, 6vw, 32px);
+    height: 2px;
+    background: var(--color-brand-primary);
+    border-radius: 0 0 2px 2px;
+}
+
+.calculator-component .rate-display {
+    margin-bottom: var(--space-md);
+}
+
+.calculator-component .rate-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+/* ========== RATE DISPLAY - BALANCED PROMINENCE ========== */
+.calculator-component .rate {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.calculator-component .rate-period {
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-left: var(--space-xs);
+}
+
+.calculator-component .company {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    margin-block: var(--space-sm);
+    line-height: var(--leading-snug);
+}
+
+.calculator-component .company-name {
+    font-weight: 600;
+    color: var(--color-brand-primary);
+}
+
+/* ========== CTA SECTION - TWO BUTTONS LAYOUT ========== */
+.calculator-component .cta {
+    margin-top: var(--space-md);
+    /* display: flex; */
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center;
+}
+
+/* When both buttons are visible, show them side by side on larger screens */
+.calculator-component .cta.two-buttons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========== CTA BUTTONS - USING GLOBAL TOKENS ========== */
+.calculator-component .button {
+    height: var(--button-secondary-height);
+    min-width: clamp(140px, 35vw, 180px);
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border: none;
+    border-radius: var(--button-border-radius);
+    
+    /* Typography */
+    font-size: var(--button-secondary-font);
+    font-weight: var(--button-font-weight);
+    letter-spacing: var(--button-letter-spacing);
+    font-family: inherit;
+    
+    /* Display */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    /* Transitions */
+    transition: var(--button-transition);
+    text-decoration: none;
+}
+
+/* Primary CTA - Get Quote */
+.calculator-component .button-primary {
+    background: var(--button-secondary-bg);
+    color: var(--button-secondary-color);
+}
+
+.calculator-component .button-primary:hover {
+    background: var(--button-secondary-hover);
+    color: var(--button-secondary-color);
+    text-decoration: none;
+}
+
+/* Secondary CTA - Personalize My Quote */
+.calculator-component .button-secondary {
+    background: rgba(45, 181, 168, 0.04);
+    color: var(--color-text-primary);
+    border: 1px solid rgba(45, 181, 168, 0.15);
+    font-weight: 500;
+    letter-spacing: 0.002em;
+}
+
+/* NO hover effects - as requested */
+.calculator-component .button-secondary:hover {
+    background: rgba(45, 181, 168, 0.04);
+    color: var(--color-text-primary);
+    border: 1px solid rgba(45, 181, 168, 0.15);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.calculator-component .button:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+}
+
+.calculator-component .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Hidden state for second button */
+.calculator-component .button-hidden {
+    display: none;
+}
+
+/* Responsive behavior for buttons */
+@container (max-width: 480px) {
+    .calculator-component .cta.two-buttons {
+        flex-direction: column;
+    }
+    
+    .calculator-component .button {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* ========== FOOTER - MINIMAL HEIGHT ========== */
+.calculator-component .footer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid #f1f5f9;
+    font-size: var(--text-xs);
+    color: var(--color-text-quaternary);
+    text-align: center;
+    line-height: var(--leading-snug);
+}
+
+.calculator-component .footer strong {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@container (max-width: 360px) {
+    .calculator-component .row {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .calculator-component {
+        padding: var(--space-md);
+    }
+}

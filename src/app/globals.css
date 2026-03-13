@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@source "./**/*.tsx";
+@source "../components/**/*.tsx";
+
+@theme {
+  --color-brand-orange: #FF7A2A;
+  --color-brand-orange-hover: #FFA35C;
+  --color-brand-bg: #F8FAFC;
+  --color-brand-dark: #3D4A59;
+  --shadow-float: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -1px rgb(0 0 0 / 0.03);
+  --shadow-depth: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+  --ease-rigid: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Import the original PolicyScanner global CSS */
+/* The actual styles are in /public/css/global.css, nav.css, footer.css */
+/* They are loaded via <link> tags in the layout components */
+
+/* Reset / base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

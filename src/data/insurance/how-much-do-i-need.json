@@ -1,0 +1,216 @@
+{
+  "title": "How Much Life Insurance Do I Need in Canada?",
+  "seo_title": "How Much Life Insurance Do I Need Canada? | 2024 Guide | PolicyScanner",
+  "seo_description": "Use our guide to calculate exactly how much life insurance you need in Canada. DIME method, income multiplier, and real Ontario examples. Free quote comparison.",
+  "slug": "how-much-do-i-need",
+  "tag": "Coverage Guide",
+  "read_time": "9 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 2000,
+    "primary_keyword": "how much life insurance do i need",
+    "secondary_keywords": [
+      "how much life insurance do i need canada",
+      "life insurance coverage amount canada",
+      "life insurance needs calculator",
+      "life insurance coverage calculator ontario"
+    ],
+    "conversion_goal": "Lead capture and calculator usage — reader calculates their needs and then gets quotes for that exact amount",
+    "page_role": "Educational content page — high search volume, middle-of-funnel. Links to calculator tool page and quote comparison.",
+    "writer_focus": "Answer the question clearly and practically. Canadians want a number. Give them the tools and examples to arrive at a number with confidence. Avoid generic 'it depends' answers — be specific.",
+    "seo_keywords": {
+      "use_primary_exact": "how much life insurance do I need",
+      "density_rule": "Use 'how much life insurance' 2–3 times per 500 words. The question form is the natural phrase — use it naturally.",
+      "synonyms": [
+        "the right amount of life insurance",
+        "life insurance coverage needs",
+        "ideal coverage amount",
+        "right coverage level"
+      ],
+      "lsi_terms": [
+        "DIME method",
+        "income multiplier",
+        "income replacement",
+        "debt payoff",
+        "mortgage coverage",
+        "education funding",
+        "final expenses",
+        "dependents",
+        "coverage gap",
+        "net worth"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "Canada",
+        "FSRA",
+        "Statistics Canada",
+        "CLHIA"
+      ],
+      "action_keywords": [
+        "calculate your life insurance needs",
+        "find the right coverage amount",
+        "estimate your life insurance",
+        "use our needs calculator"
+      ],
+      "natural_variations": [
+        "figuring out how much coverage to get",
+        "what amount of life insurance is enough",
+        "life insurance coverage target for a Canadian family"
+      ],
+      "real_example_to_use": "Jennifer, 36, Mississauga, 2 kids, $85K income, $550K mortgage, $30K car/student debt. DIME = $1.35M. She bought $1.25M 20-year term for $82/month.",
+      "avoid": "Do not give a single 'rule of thumb' as the only answer. Show the methods, let readers calculate, then give a recommendation based on common Canadian situations."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "How Much Life Insurance Do You Actually Need?",
+      "subheading": "Too little leaves your family short. Too much wastes money. This guide shows you exactly how to calculate the right number for your situation.",
+      "cta_primary": "Use Our Coverage Calculator",
+      "_writer_notes": {
+        "target_words": 60,
+        "focus": "Frame the problem: people don't know how much to get, and the answer varies by situation. Position this page as the trusted guide.",
+        "key_points": [
+          "No single answer — depends on income, debts, family size, existing coverage",
+          "Two methods: DIME (detailed) and income multiplier (quick estimate)"
+        ]
+      }
+    },
+    {
+      "_type": "whyItMattersSection",
+      "heading": "Why Getting the Amount Right Matters",
+      "_writer_notes": {
+        "target_words": 180,
+        "focus": "Quick motivation section. Two dangers: under-insured (family struggles) and over-insured (wasted premiums).",
+        "key_points": [
+          "Under-insured: family can't maintain lifestyle, may lose home or struggle with debt",
+          "Over-insured: paying for more coverage than needed — money that could go to savings or RRSPs",
+          "CLHIA data: 56% of life insurance policyholders in Canada may be under-insured",
+          "The sweet spot: covers all major financial obligations + income replacement for dependents"
+        ]
+      }
+    },
+    {
+      "_type": "incomeMultiplierSection",
+      "heading": "Method 1: The Income Multiplier (Quick Estimate)",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Explain the quick 10x rule and why it's a starting point, not a final answer.",
+        "key_points": [
+          "Simple rule: annual income × 10. If you earn $80K, get $800K in coverage.",
+          "Adjustments: fewer dependents → lower multiplier. Young children + large mortgage → higher multiplier.",
+          "Better multipliers by situation: no-mortgage renter with no kids = 5–7x; mortgage + 2 kids = 10–15x",
+          "Limitation: ignores specific debts, mortgage size, spouse income, and education needs"
+        ],
+        "structure": "Explain the rule. Quick table: income level × multiplier = coverage estimate. Then note limitations."
+      }
+    },
+    {
+      "_type": "dimeMethodSection",
+      "heading": "Method 2: The DIME Method (Complete Needs Analysis)",
+      "_writer_notes": {
+        "target_words": 300,
+        "focus": "Full DIME breakdown. Most authoritative method — used by licensed advisors.",
+        "key_points": [
+          "D = Debt: total non-mortgage debts (credit cards, car loans, student loans, personal debt)",
+          "I = Income: annual income × number of years family needs income replacement (usually 10–20 years)",
+          "M = Mortgage: outstanding mortgage balance",
+          "E = Education: estimated post-secondary costs for each child ($40–60K per child in Canada)",
+          "Formula: D + I + M + E = Total Gross Need",
+          "Then subtract: existing life insurance coverage from all sources (employer group, existing policy)",
+          "Result = your coverage gap — the amount of new insurance you need"
+        ],
+        "real_example": "Jennifer, 36, Mississauga: D=$30K + I=($85K × 15 years = $1.275M) + M=$550K + E=($50K × 2 kids = $100K) = $1.955M gross. Minus $100K group life from employer = $1.855M. She rounded to $1.25M as a realistic target within budget.",
+        "structure": "Acronym breakdown with bullet for each letter → formula summary → Jennifer example worked out step by step."
+      }
+    },
+    {
+      "_type": "factorsByLifeStageSection",
+      "heading": "How Much Do You Need? By Life Stage",
+      "_writer_notes": {
+        "target_words": 300,
+        "focus": "Segmented guidance for common Canadian life situations.",
+        "key_points": [
+          "Single, no dependents: $100K–$300K (covers debts, funeral, small gift to parents/partner)",
+          "Married, no kids, both working: 5–7x each income (covers mortgage if one dies)",
+          "Married with young children: 10–15x income for primary earner; 5–7x for secondary earner",
+          "Single parent: 15x income minimum — sole earner, full childcare costs on one policy",
+          "Married, kids grown, mortgage almost done: 3–5x income — most debts gone, kids independent",
+          "Retired, no mortgage: $100–$200K for final expenses, estate equalization, legacy"
+        ],
+        "structure": "6 life stage profiles in a clean table. Life stage / Coverage range / Rationale."
+      }
+    },
+    {
+      "_type": "commonMistakesSection",
+      "heading": "5 Things People Forget When Calculating Coverage",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Quick, scannable list of overlooked factors.",
+        "key_points": [
+          "Childcare costs: if primary caregiver dies, surviving parent may need $2,000–$4,000/month for childcare in Ontario",
+          "Inflation: income replacement in year 15 buys less than today — consider a COLA rider or higher initial coverage",
+          "Group coverage isn't portable: employer DI or group life disappears if you change jobs",
+          "Spouse income uncertainty: don't assume spouse will work full-time immediately — recovery takes time",
+          "Business debts: if self-employed, include business liabilities in your coverage calculation"
+        ]
+      }
+    },
+    {
+      "_type": "calculatorLinkSection",
+      "heading": "Try Our Free Coverage Calculator",
+      "_writer_notes": {
+        "target_words": 80,
+        "focus": "Bridge to calculator page or embedded mini-calculator. Keep copy short — get them to the tool.",
+        "key_points": [
+          "Fill in 6 fields → instant DIME estimate",
+          "No email required",
+          "Then compare quotes for that exact coverage amount"
+        ],
+        "callout_after": "Blue box: 'Not sure what inputs to use? Use the defaults we've pre-filled for an average Ontario family with 2 children and a $500K mortgage.'"
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Coverage Amount — Frequently Asked Questions",
+      "faqs": [
+        {
+          "question": "Is $500,000 enough life insurance in Canada?",
+          "answer": "For some Canadians, yes — but for many it's not enough. If you have a $600,000 mortgage, two young children, and earn $80,000/year, $500,000 would leave your family significantly under-protected. Run the DIME calculation with your own numbers to find out if $500K covers your needs.",
+          "_guidance": "Real answer with specifics. Don't just say 'it depends' — illustrate with numbers."
+        },
+        {
+          "question": "Can I have too much life insurance?",
+          "answer": "Technically unlimited coverage is available, but most insurers cap coverage at a multiple of your income to prevent over-insurance. From a practical standpoint, there's little financial reason to carry more than your DIME total. Over-insuring means higher premiums that could be better spent on savings or investments.",
+          "_guidance": "Practical answer. Note that insurers do impose limits."
+        },
+        {
+          "question": "Does my spouse need life insurance if they don't work?",
+          "answer": "Yes. A stay-at-home parent provides substantial economic value — childcare, home management, and support that would cost $40,000–$80,000/year to replace. If your spouse died, you'd need coverage to pay for those services while maintaining your career.",
+          "_guidance": "This is a commonly overlooked gap. Give the economic value framing."
+        },
+        {
+          "question": "Should I include my group life insurance from work?",
+          "answer": "Yes, but with caution. Group life insurance from your employer typically covers 1–2x your annual salary and is not portable — if you leave your job, coverage ends. Include it in your coverage gap calculation, but consider whether you'd still be covered if you changed employers.",
+          "_guidance": "Acknowledge group coverage but flag the portability risk."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Know Your Number? Get Quotes Now",
+      "subheading": "Once you've calculated your ideal coverage, PolicyScanner finds the lowest rate for your exact amount from 10+ Canadian insurers.",
+      "cta_button": "Compare Quotes for My Coverage Amount",
+      "_writer_notes": {
+        "target_words": 50,
+        "focus": "Clean conversion bridge from 'I know my number' to 'now get my quote'. Reinforce speed and ease.",
+        "key_points": [
+          "Enter your coverage amount and get quotes in 2 minutes",
+          "Ontario-licensed advisor reviews before you commit",
+          "No obligation"
+        ]
+      }
+    }
+  ]
+}

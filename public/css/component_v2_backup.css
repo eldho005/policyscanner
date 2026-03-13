@@ -1,0 +1,76 @@
+/* ===================================================================
+   POLICYSCANNER - COMPONENT MOBILE OVERRIDES (component.css)
+   Companion to content_global.css. Only contains breakpoint-specific
+   adjustments that fluid clamp() cannot handle.
+   =================================================================== */
+
+/* ===================================================================
+   SMALL SCREENS  (< 600px)
+   =================================================================== */
+@media (max-width: 600px) {
+
+  /* Trust bar: wrap to 2 rows, hide dividers */
+  .trust-bar {
+    gap: var(--sp-xs) 0;
+  }
+  .trust-bar__item {
+    flex: 0 0 33.33%;
+    padding-inline: var(--sp-xs);
+  }
+  .trust-bar__item + .trust-bar__item::before {
+    display: none;
+  }
+
+  /* Calculator grid stacks */
+  .calculator-component .row {
+    grid-template-columns: 1fr;
+    gap: var(--sp-sm);
+  }
+
+  /* Tables scroll hint */
+  .table-container {
+    position: relative;
+  }
+  .table-container::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 24px;
+    background: linear-gradient(to left, rgba(255,255,255,0.9), transparent);
+    pointer-events: none;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  /* CTA button full width */
+  .cta-banner__button,
+  .cta-button {
+    width: 100%;
+  }
+  .cta-banner__actions {
+    flex-direction: column;
+  }
+
+  /* Page header meta stacks */
+  .page-header__meta {
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .page-header__meta span + span::before {
+    display: none;
+  }
+}
+
+/* ===================================================================
+   VERY SMALL SCREENS  (< 400px)
+   =================================================================== */
+@media (max-width: 400px) {
+  .trust-bar__item {
+    flex: 0 0 50%;
+  }
+
+  /* Toggle labels tighter */
+  .calculator-component .toggle-label {
+    padding-inline: var(--sp-xs);
+    font-size: 0.65rem;
+  }
+}

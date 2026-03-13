@@ -1,0 +1,396 @@
+{
+  "title": "Term Life Insurance Canada: Complete Guide (2026)",
+  "seo_title": "Term Life Insurance Canada | Get Affordable Coverage | PolicyScanner",
+  "seo_description": "Get affordable term life insurance in Canada. 10, 20, or 30-year terms available. Compare quotes from 20+ insurers. Starting at $20/month.",
+  "slug": "term",
+  "tag": "Term Life Insurance",
+  "read_time": "15 min read",
+  "prepared_by": "Prepared by Baljit Kaur LLQP",
+  "reviewed_by": "Reviewed by Eldho George LLQP",
+  "_meta": {
+    "target_words": "2,000–2,500",
+    "primary_keyword": "term life insurance canada",
+    "secondary_keywords": ["term life insurance cost", "term life insurance quote", "best term life insurance"],
+    "conversion_goal": "20-30% click to 20-year term page, 10-15% to quotes",
+    "seo_keywords": {
+      "use_primary_exact": "term life insurance",
+      "density_rule": "Use 'term life insurance' 3–4 times per 500 words. For all other uses, rotate through the synonyms below.",
+      "synonyms": ["term life coverage", "term insurance", "term life policy", "temporary life insurance", "fixed-term coverage", "term protection"],
+      "lsi_terms": ["term length", "renewable term", "convertible term", "level term", "decreasing term", "return of premium", "death benefit", "fixed premiums", "beneficiaries", "coverage period"],
+      "entity_keywords": ["Canada", "Canadian families", "Ontario", "FSRA", "Sun Life", "Manulife", "Empire Life"],
+      "action_keywords": ["buy term life", "get term coverage", "compare term rates", "apply for term insurance", "lock in your rate"],
+      "natural_variations": ["a 20-year term policy", "term coverage for your family", "temporary protection", "your term", "this policy"],
+      "avoid": "Do not write 'term life insurance canada' as a visible phrase — use 'in Canada' naturally after the keyword."
+    }
+  },
+  "page_data": [
+    {
+      "component": "hero_section",
+      "title": "Term Life Insurance in Canada: Complete Guide (2026)",
+      "description": "",
+      "_writer_notes": {
+        "target_words": "80–100",
+        "focus": "Hook the reader — term life is the most popular, affordable choice in Canada",
+        "key_points": [
+          "Define term life insurance in plain language",
+          "State it is the most popular choice in Canada (65% of policies)",
+          "Mention who should buy it (families, homeowners, income earners)",
+          "Include breadcrumb context: Home > Life Insurance > Term Life Insurance"
+        ],
+        "example": "Lead with: 'Term life insurance is the most popular — and most affordable — type of life insurance in Canada. Here's everything you need to know to choose the right coverage, at the right price, for the right length of time.'"
+      }
+    },
+    {
+      "component": "trust_badges"
+    },
+    {
+      "component": "content_block",
+      "id": "WhatIsTermLife",
+      "heading": "What is Term Life Insurance?",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "250–300",
+        "focus": "Clear, jargon-free explanation of how term life works",
+        "key_points": [
+          "DEFINITION: Term provides coverage for a specific period (10, 20, 30 years). If you die during the term, beneficiaries receive a tax-free death benefit.",
+          "HOW IT WORKS: You choose coverage amount ($100K–$5M+) → choose term length → pay fixed premiums → if you die during term, beneficiaries get full payout → if you survive, coverage ends (can renew or convert)",
+          "KEY FEATURES: Most affordable type, simple and straightforward, high coverage amounts, fixed premiums, convertible to permanent without medical exam",
+          "WHY POPULAR: 65% of Canadian life insurance policies are term life, perfect for temporary needs (mortgage, kids' education), lowest cost per dollar of coverage"
+        ],
+        "callout_after": "Include insight box: 'Term life insurance costs 5–10x less than whole life insurance for the same coverage amount.'"
+      }
+    },
+    {
+      "component": "callout",
+      "type": "insight",
+      "title": "Key Insight",
+      "text": "Term life insurance costs 5–10x less than whole life insurance for the same coverage amount — making it the most efficient way to protect your family during your peak financial years."
+    },
+    {
+      "component": "content_block",
+      "id": "TermLengths",
+      "heading": "Types of Term Life Insurance by Length",
+      "paragraphs": ["Term life insurance comes in different lengths to match your needs. Here's how to choose the right term for you."],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "50 word intro only — detail is in the sub-sections below",
+        "focus": "Transition paragraph leading into the 10/20/30-year breakdowns"
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "TenYearTerm",
+      "heading": "10-Year Term Life Insurance",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "150–180",
+        "focus": "Lowest cost option for short-term needs",
+        "key_points": [
+          "BEST FOR: Short-term financial obligations, car loans or small business loans, supplementing employer coverage temporarily, ages 25-40 looking for lowest premium",
+          "PROS: Lowest premium cost, good for specific short-term needs, can renew or convert later",
+          "CONS: Coverage ends after 10 years, renewal at higher rate if needed, may not cover full mortgage period",
+          "COST: Age 30 $500K = $18–28/month | Age 40 $500K = $30–50/month"
+        ],
+        "structure": "Write as connected paragraphs, not just bullet points. Include 2 cost examples inline."
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "TwentyYearTerm",
+      "heading": "20-Year Term Life Insurance (Most Popular)",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "200–250",
+        "focus": "This is the #1 choice — explain why and make the reader feel confident choosing it",
+        "key_points": [
+          "BEST FOR: New homeowners with 20-25 year mortgages, parents of young children, ages 30-50, most common choice in Canada",
+          "WHY #1: Matches typical mortgage amortization (20-25 years), covers child-rearing years (birth to age 20+), locks in rates during peak earning years, balances affordability and long-term coverage",
+          "PROS: Longer coverage than 10-year, still affordable vs. 30-year, matches most financial obligations, convertible to permanent",
+          "CONS: Higher premium than 10-year, may not cover full 30-year mortgage, coverage ends at age 50-70 depending on purchase age",
+          "COST: Age 30 $500K = $25–40/month | Age 35 $750K = $35–55/month | Age 40 $1M = $60–95/month"
+        ],
+        "real_example": "Michael, 35, bought $750,000 of 20-year term coverage for $42/month. This covers his $600K mortgage and provides extra for his family during his children's school years.",
+        "structure": "Include the real example as a callout or example box. Mark as 'Most Popular' clearly."
+      }
+    },
+    {
+      "component": "example_card",
+      "name": "Michael, Age 35",
+      "headline": "20-Year Term in Action",
+      "scenario": "Non-smoker, new homeowner with $600K mortgage and two young children",
+      "coverage": "$750,000 for 20 years",
+      "monthly_cost": "$42/month",
+      "outcome": "Full mortgage covered + additional income replacement for family during school years. Coverage runs until age 55."
+    },
+    {
+      "component": "content_block",
+      "id": "ThirtyYearTerm",
+      "heading": "30-Year Term Life Insurance",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "150–180",
+        "focus": "Best for very young families and 30-year mortgages — longest affordable term",
+        "key_points": [
+          "BEST FOR: Parents of newborns/very young children, 30-year mortgages, ages 25-40 wanting long-term rate lock, maximum term before Term-to-100",
+          "PROS: Longest affordable term, locks in rate for 30 years, covers children from birth to adulthood, maximum protection during working years",
+          "CONS: Higher premium than 10 or 20-year, may be paying for longer than needed, less flexible if circumstances change",
+          "COST: Age 30 $500K = $35–55/month | Age 35 $500K = $45–70/month"
+        ]
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "TermTo100",
+      "heading": "Term-to-100 Life Insurance",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "120–150",
+        "focus": "Permanent-like coverage without the cash value — budget option for those who missed buying earlier",
+        "key_points": [
+          "WHAT IT IS: Term insurance that lasts until age 100 (effectively lifetime coverage). Lower cost alternative to whole life.",
+          "BEST FOR: Permanent coverage needs on a budget, final expense coverage, ages 45+ who need guaranteed payout, estate planning",
+          "PROS: Coverage guaranteed to age 100, less expensive than whole life, fixed premiums for life",
+          "CONS: No cash value accumulation, higher premiums than shorter terms, coverage ends at 100 (rare to outlive)",
+          "COST: Age 45 $250K = $140–220/month | Age 55 $100K = $120–180/month"
+        ]
+      }
+    },
+    {
+      "component": "table",
+      "title": "Term Length Comparison",
+      "headers": ["Term Length", "Best For", "Avg Cost (Age 35, $500K)", "Coverage Until"],
+      "rows": [
+        ["10-Year", "Short-term needs", "$22–35/month", "Age 45"],
+        ["20-Year ★ Most Popular", "Most families", "$35–55/month", "Age 55"],
+        ["30-Year", "Young families", "$45–70/month", "Age 65"],
+        ["Term-to-100", "Permanent needs", "$180–280/month", "Age 100"]
+      ],
+      "footnote": "Rates shown for a healthy, non-smoking male aged 35. Female rates are typically 20–30% lower."
+    },
+    {
+      "component": "content_block",
+      "id": "TermFeatureTypes",
+      "heading": "Types of Term Life Insurance by Features",
+      "paragraphs": ["Beyond term length, there are different types of term life insurance with unique features worth understanding before you buy."],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "300–350 total for this section and all sub-sections below",
+        "focus": "Educate on the different feature variations — most people only know about level term",
+        "key_points": [
+          "Level Term: Standard — same death benefit and same premium throughout. Most common.",
+          "Decreasing Term: Death benefit shrinks over time. Often sold as mortgage insurance by banks. WARN against this.",
+          "Renewable Term: Can renew at end of term without medical exam. Premium jumps at renewal.",
+          "Convertible Term: Can convert to permanent insurance without medical exam, usually before age 70.",
+          "Return of Premium (ROP): Gets all premiums back if you survive the term, but costs double. Usually NOT worth it."
+        ],
+        "warning_box": "Add warning callout for decreasing term: 'Independent level term life insurance is usually cheaper and provides better value. See our mortgage protection comparison.'",
+        "opinion_box": "Add opinion box for ROP: 'Is ROP worth it? Usually not. You're better off buying regular term and investing the difference.'"
+      }
+    },
+    {
+      "component": "callout",
+      "type": "warning",
+      "title": "Watch Out: Decreasing Term / Bank Mortgage Insurance",
+      "text": "Bank mortgage insurance is a type of decreasing term policy where your coverage shrinks as your mortgage goes down — but your premiums stay the same. Independent level term life insurance usually costs less AND provides more coverage. See our full mortgage protection comparison before buying from your bank."
+    },
+    {
+      "component": "content_block",
+      "id": "WhoShouldBuy",
+      "heading": "Who Should Buy Term Life Insurance?",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "250–300",
+        "focus": "Help the reader personally identify — make them feel: 'yes, that's me'",
+        "key_points": [
+          "IDEAL FOR: Ages 25-60 with dependents, have a mortgage or debts, need high coverage on a budget, have temporary financial obligations, want to replace income during working years, are a parent with dependent children, own a business with loans or partners",
+          "SPECIFIC SCENARIOS TO COVER:",
+          "1. Young Families (25-40): High coverage ($500K-$1M+), protect spouse/children/mortgage, recommend 20 or 30-year term. Link to: Life insurance for young families",
+          "2. New Homeowners: Coverage equal to mortgage, recommend 20-year term. Link to: Mortgage protection guide",
+          "3. Self-Employed: Income replacement + business debt coverage, no group life from employer, recommend term + disability. Link to: Life insurance for self-employed",
+          "4. Single Income Families: 15-20x annual income needed, recommend 20-year with high coverage"
+        ],
+        "callout_after": "Add: 'Not sure if term life is right for you? Compare term vs. whole life insurance.' Link to term-vs-whole-life page."
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "TermLifeCost",
+      "heading": "How Much Does Term Life Insurance Cost?",
+      "paragraphs": ["Term life insurance is the most affordable life insurance option. Here's what you can expect to pay based on your age, gender, and smoking status."],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "400–500",
+        "focus": "Show real numbers — readers want to see actual dollar amounts before committing to a quote",
+        "key_points": [
+          "Use the two tables below (pre-filled). Write 2-3 sentences introducing each table.",
+          "FACTORS SECTION (write after tables): Age (doubles every 10 years), Gender (women 20-30% less), Smoking (2-4x more, includes vaping, must be nicotine-free 12 months for non-smoker rates), Health history, Coverage amount, Term length, Occupation/hobbies",
+          "Add tip callout: 'Get quotes from multiple insurers. Rates can vary by 30-50% for the same coverage.'"
+        ]
+      }
+    },
+    {
+      "component": "table",
+      "title": "$500,000 Coverage – 20-Year Term Monthly Premiums",
+      "headers": ["Age", "Male Non-Smoker", "Female Non-Smoker", "Male Smoker", "Female Smoker"],
+      "rows": [
+        ["25", "$20–30", "$15–25", "$55–85", "$45–70"],
+        ["30", "$25–38", "$20–32", "$70–110", "$55–90"],
+        ["35", "$32–50", "$25–40", "$95–150", "$75–125"],
+        ["40", "$48–75", "$38–60", "$140–220", "$110–180"],
+        ["45", "$72–115", "$55–90", "$210–340", "$165–275"],
+        ["50", "$115–180", "$90–145", "$340–550", "$270–440"]
+      ],
+      "footnote": "Sample rates from top Canadian insurers, 2026. Actual premium depends on health history, insurer selected, and underwriting outcome."
+    },
+    {
+      "component": "table",
+      "title": "$1,000,000 Coverage – 20-Year Term Monthly Premiums",
+      "headers": ["Age", "Male Non-Smoker", "Female Non-Smoker"],
+      "rows": [
+        ["30", "$45–65", "$35–55"],
+        ["35", "$55–85", "$45–70"],
+        ["40", "$85–135", "$70–110"],
+        ["45", "$130–210", "$100–170"],
+        ["50", "$210–340", "$170–275"]
+      ],
+      "footnote": "Sample rates from top Canadian insurers, 2026. $1M coverage is common for dual-income households, business owners, and high-income earners."
+    },
+    {
+      "component": "callout",
+      "type": "tip",
+      "title": "Save Up to 50% by Comparing",
+      "text": "Rates can vary by 30–50% between Canadian insurers for the exact same coverage. PolicyScanner compares 20+ top insurers in minutes so you always get the best available rate for your age and health profile."
+    },
+    {
+      "component": "rate_calculator",
+      "title": "Calculate Your Term Life Insurance Cost"
+    },
+    {
+      "component": "table",
+      "title": "Term Life vs. Whole Life Insurance",
+      "headers": ["Feature", "Term Life", "Whole Life"],
+      "rows": [
+        ["Duration", "10–30 years", "Lifetime"],
+        ["Cost (age 35, $500K)", "$32–50/month", "$250–350/month"],
+        ["Cash value", "No", "Yes (tax-deferred)"],
+        ["Best for", "Temporary needs, budget", "Permanent needs, estate planning"],
+        ["Coverage amount", "High ($500K–$2M+)", "Lower ($100K–$500K)"],
+        ["Guaranteed payout", "Only if die during term", "Yes (if premiums paid)"],
+        ["Flexibility", "High (convert, renew)", "Low"]
+      ],
+      "footnote": "Can you have both? Yes — many Canadians combine $750K term for their working years with a $100K whole life policy for permanent estate coverage.",
+      "_writer_notes": {
+        "target_words": "200–250 written content around this table",
+        "focus": "Help reader decide between term and whole life",
+        "key_points": [
+          "Write a paragraph before the table: Quick comparison overview",
+          "After table: CHOOSE TERM IF: need high coverage on budget, temporary obligations, under 55, want most coverage per dollar",
+          "After table: CHOOSE WHOLE IF: permanent lifetime coverage needed, want cash value, planning estate, can afford $200-500+/month",
+          "Add: 'Can you have both? Yes!' example: $750K term + $100K whole life = $160/month total",
+          "Link to: Term vs. Whole Life full comparison page"
+        ]
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "WhatHappensAtEnd",
+      "heading": "What Happens at the End of Your Term?",
+      "paragraphs": [""],
+      "ordered": [],
+      "_writer_notes": {
+        "target_words": "200–250",
+        "focus": "Answer a question many buyers have but are afraid to ask",
+        "key_points": [
+          "OPTION 1 — Let it expire: If you no longer need coverage, stop paying. No refund (unless ROP).",
+          "OPTION 2 — Renew: No medical exam, but premium increases significantly (3-5x). Example: orig $40/mo at 35 → renewal $180-240/mo at 55.",
+          "OPTION 3 — Convert to permanent: No medical exam required, must do before deadline (usually age 70). Premium jumps to whole life rates.",
+          "OPTION 4 — Buy new term: Apply fresh, new medical exam, premium based on current age.",
+          "BEST PRACTICE callout: Apply for new coverage 1-2 years before term ends to avoid gaps."
+        ],
+        "recommendation_box": "✅ Best Practice: If you still need coverage, apply for a new term policy 1–2 years before your current term ends. This gives you time for underwriting while keeping coverage continuous."
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "HowToBuyTerm",
+      "heading": "How to Buy Term Life Insurance in Canada",
+      "paragraphs": [""],
+      "ordered": [],
+      "_writer_notes": {
+        "target_words": "250–300",
+        "focus": "Remove fear from the process — show it's simple and fast",
+        "key_points": [
+          "STEP 1: Determine coverage needed (use calculator, rule of thumb 10-15x income, consider mortgage/debts/education/income)",
+          "STEP 2: Choose term length (10-year: short-term, 20-year: most popular/mortgage, 30-year: young kids/long-term)",
+          "STEP 3: Compare quotes from multiple insurers (rates vary significantly, PolicyScanner compares 20+)",
+          "STEP 4: Complete application (online/phone/in-person, 15-30 minutes, health and lifestyle questions)",
+          "STEP 5: Medical exam if required (over $500K typically, paramedical at home/office, blood test/urine/height-weight/BP, 20-30 min, results in 1-2 weeks)",
+          "STEP 6: Underwriting review (2-6 weeks, may request medical records from doctor)",
+          "STEP 7: Approval and coverage starts (policy issued, coverage begins with first premium)",
+          "ALTERNATE PATH note: Simplified issue or instant decision — no medical exam, approval in 24-48 hours. Link to: No medical exam life insurance"
+        ]
+      }
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Get Your Free Term Life Insurance Quote",
+      "body": "Compare rates from 20+ top Canadian insurers including Sun Life, Manulife, Empire Life, and Canada Life. Free, no obligation.",
+      "button_text": "Compare Quotes Now",
+      "url": "/compare-insurance-quotes"
+    },
+    {
+      "component": "faq",
+      "items": [
+        {
+          "question": "Can I cancel my term life insurance policy?",
+          "answer": "Yes, you can cancel anytime with no penalty. Since term life has no cash value, you won't receive any money back for premiums paid. Simply stop paying and coverage will lapse after the grace period."
+        },
+        {
+          "question": "What if I develop health problems during my term?",
+          "answer": "Your coverage continues as long as you pay premiums, and your premium won't increase due to health changes during the term. This is exactly why buying when you're young and healthy is so important — you lock in those low rates for the entire term."
+        },
+        {
+          "question": "Can I increase my coverage amount during the term?",
+          "answer": "Not on the existing policy. To increase coverage, you'd apply for an additional policy (requires new underwriting). Some policies include a 'guaranteed insurability' rider that lets you buy more coverage without a medical exam at certain life events (marriage, new child, home purchase)."
+        },
+        {
+          "question": "Is term life insurance cheaper than whole life?",
+          "answer": "Yes, significantly. Term life is typically 5–10x cheaper than whole life for the same death benefit. A 35-year-old might pay $40/month for $500K term vs. $300/month for $500K whole life."
+        },
+        {
+          "question": "Can I convert term life to whole life later?",
+          "answer": "Most term policies include a conversion option. You can convert to permanent insurance without a medical exam, usually anytime before age 70. Your premium will increase to whole life rates at your current age."
+        },
+        {
+          "question": "Do I get money back if I outlive my term?",
+          "answer": "No, unless you bought a Return of Premium (ROP) policy. Standard term life has no cash value and doesn't refund premiums."
+        },
+        {
+          "question": "How long does it take to get approved?",
+          "answer": "Traditional underwriting: 4–6 weeks. Accelerated underwriting: 1–2 weeks. Simplified issue: 24–48 hours. Instant decision: same day."
+        },
+        {
+          "question": "Can I have multiple term life insurance policies?",
+          "answer": "Yes. Many Canadians layer coverage — for example, $500K for 20 years plus $500K for 10 years — to match different financial obligations at different time horizons."
+        },
+        {
+          "question": "What happens if I miss a premium payment?",
+          "answer": "Most policies have a 30–31 day grace period. If you pay within the grace period, coverage continues uninterrupted. If you miss beyond 30 days, the policy lapses and coverage ends."
+        },
+        {
+          "question": "Is term life insurance worth it if I'm young and healthy?",
+          "answer": "Absolutely — this is the BEST time to buy. Premiums are lowest when you're young and healthy. Buying now locks in your rate before any health issues arise. Every year you wait typically means higher premiums."
+        }
+      ],
+      "_writer_notes": {
+        "focus": "These 10 Q&As are pre-written — review and refine the answers to be conversational and clear. Add any Ontario/Canada-specific nuance if relevant."
+      }
+    }
+  ]
+}

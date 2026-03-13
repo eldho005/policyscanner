@@ -1,0 +1,253 @@
+{
+  "title": "Term Life Insurance Canada: Complete Guide for 2026",
+  "seo_description": "Everything Canadians need to know about term life insurance — how it works, how much it costs, which insurers offer the best rates, and how to apply.",
+  "slug": "what-is-term-life-insurance",
+  "tag": "Term Life Insurance",
+  "read_time": "11 min read",
+  "prepared_by": "Prepared by Baljit Kaur LLQP",
+  "reviewed_by": "Reviewed by Eldho George LLQP",
+  "page_data": [
+    {
+      "component": "hero_section",
+      "title": "Term Life Insurance Canada: Complete Guide for 2026",
+      "description": "Everything you need to know about term life insurance in Canada — how it works, what it costs, and how to choose the right coverage for your family."
+    },
+    {
+      "component": "trust_badges"
+    },
+    {
+      "component": "content_block",
+      "id": "WhatIsTermLife",
+      "heading": "What Is Term Life Insurance?",
+      "image": {
+        "src": "/assets/images/what-is-term-life-insurance-family.jpg",
+        "alt": "Canadian family enjoying time together at home — protected by term life insurance"
+      },
+      "paragraphs": [
+        "Term life insurance is a policy that covers you for a fixed period — usually 10, 20, or 30 years. If you die while the policy is active, the insurer pays a tax-free lump sum (the death benefit) to your named beneficiaries. If you outlive the term, the policy simply expires.",
+        "It is the most straightforward and affordable form of life insurance in Canada, designed to replace your income and cover debts during the years when your family depends on you most."
+      ]
+    },
+    {
+      "component": "definition_block",
+      "term": "Term Life Insurance",
+      "definition": "A life insurance policy that provides a tax-free death benefit to your beneficiaries if you die within a specified term length (typically 10–30 years). Premiums remain level throughout the term and the policy has no cash value."
+    },
+    {
+      "component": "content_block",
+      "id": "HowItWorks",
+      "heading": "How Does Term Life Insurance Work?",
+      "paragraphs": [
+        "When you apply for term life insurance, you choose two things: the coverage amount (death benefit) and the term length. The insurer calculates your monthly or annual premium based on your age, gender, health, and smoking status.",
+        "As long as you keep paying premiums, your beneficiaries are covered. If you die during the term, the insurer pays out tax-free. If the term ends and you are still alive, your coverage stops — though most policies allow you to renew or convert to permanent coverage."
+      ]
+    },
+    {
+      "component": "example_card",
+      "title": "Real Example: $500,000 / 20-Year Term Policy",
+      "paragraphs": [
+        "Jennifer is a 35-year-old non-smoker in Ontario. She has a mortgage and two young children. She buys a $500,000 / 20-year term policy for $28/month.",
+        "If Jennifer passes away at any point during those 20 years, her family receives $500,000 tax-free — enough to pay off the mortgage and cover living expenses for years.",
+        "If Jennifer is still alive at 55 when the term ends, she can renew the policy (at higher rates based on her new age) or convert to permanent coverage without a medical exam."
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "TypesOfTerm",
+      "heading": "Types of Term Life Insurance in Canada",
+      "paragraphs": [
+        "Most Canadian insurers offer several term lengths and structures. Understanding the differences helps you choose the right fit."
+      ],
+      "bullets": [
+        { "bold": "Level term (most common):", "text": "Premiums stay the same for the entire term. Coverage amounts are fixed. Best for predictable budgeting." },
+        { "bold": "Renewable term:", "text": "Can be renewed at the end of each term without a medical exam, but premiums increase at renewal based on your new age." },
+        { "bold": "Convertible term:", "text": "Allows you to convert to a permanent (whole or universal life) policy before the term ends — without proving insurability." },
+        { "bold": "Decreasing term:", "text": "Death benefit decreases over the term, usually paired with a mortgage. Less flexible than level term." },
+        { "bold": "Return of premium (ROP):", "text": "Premiums are refunded if you outlive the term. Costs significantly more than standard term — rarely worth the extra cost." }
+      ]
+    },
+    {
+      "component": "callout",
+      "type": "insight",
+      "title": "Which type do most Canadians choose?",
+      "text": "The vast majority of Canadians choose level, convertible term life insurance — it gives you locked-in premiums, flexibility to extend coverage, and the option to convert to permanent without a medical exam if your health changes."
+    },
+    {
+      "component": "content_block",
+      "id": "HowMuchCoverage",
+      "heading": "How Much Term Life Insurance Do You Need?",
+      "paragraphs": [
+        "A common starting point is 10–12 times your annual income. But your actual needs depend on several factors."
+      ],
+      "bullets": [
+        { "bold": "Income replacement:", "text": "How many years of your salary should your family have access to?" },
+        { "bold": "Mortgage and debts:", "text": "Include the full balance of your mortgage, car loans, and any co-signed debts." },
+        { "bold": "Children's future:", "text": "Post-secondary education in Canada averages $20,000–$40,000 per year per child." },
+        { "bold": "Final expenses:", "text": "Funeral costs in Canada typically range from $10,000–$20,000." },
+        { "bold": "Existing savings:", "text": "Subtract your current savings, investments, and any group life insurance from work." }
+      ]
+    },
+    {
+      "component": "rate_calculator",
+      "title": "How Much Will Term Life Insurance Cost You?"
+    },
+    {
+      "component": "content_block",
+      "id": "CostOfTermLife",
+      "heading": "How Much Does Term Life Insurance Cost in Canada?",
+      "paragraphs": [
+        "Term life insurance is the most affordable type of life insurance available. Your monthly premium depends on your age, gender, smoking status, health, coverage amount, and term length.",
+        "Below are sample monthly premiums for a $500,000 / 20-year term policy for a healthy non-smoker from a top Canadian insurer:"
+      ]
+    },
+    {
+      "component": "table",
+      "title": "Sample Monthly Premiums — $500,000 / 20-Year Term",
+      "headers": ["Your Age", "Male (Non-Smoker)", "Female (Non-Smoker)"],
+      "rows": [
+        ["25", "$18/mo", "$14/mo"],
+        ["30", "$22/mo", "$17/mo"],
+        ["35", "$28/mo", "$22/mo"],
+        ["40", "$42/mo", "$33/mo"],
+        ["45", "$68/mo", "$51/mo"],
+        ["50", "$110/mo", "$82/mo"]
+      ],
+      "footnote": "Sample rates only — from Empire Life, 2026. Your actual premium depends on your health, lifestyle, and the insurer selected. Use our calculator above for a personalized quote."
+    },
+    {
+      "component": "callout",
+      "type": "tip",
+      "title": "Lock in rates while you're young",
+      "text": "Life insurance premiums increase significantly with age. A 35-year-old pays roughly 50% less than a 45-year-old for the same coverage. The sooner you apply, the more you save over the life of your policy."
+    },
+    {
+      "component": "content_block",
+      "id": "ChoosingTermLength",
+      "heading": "What Term Length Should You Choose?",
+      "paragraphs": [
+        "Match your term length to your largest financial obligation. The most common approach is to choose a term that covers you until your mortgage is paid off or your children are financially independent.",
+        "Here is a general guide based on your life stage:"
+      ]
+    },
+    {
+      "component": "table",
+      "headers": ["Life Stage", "Recommended Term", "Why"],
+      "rows": [
+        ["Young single with debts", "10–15 years", "Covers debts and builds insurability while young"],
+        ["New homeowner", "20–25 years", "Covers the mortgage and replaces income for a partner"],
+        ["Young family with children", "20–30 years", "Covers until children are independent and mortgage is paid"],
+        ["45+ recalibrating coverage", "10–15 years", "Bridges gap to retirement and supplements existing coverage"],
+        ["Self-employed / business owner", "20–30 years", "Covers key-person and business debt obligations"]
+      ],
+      "footnote": "If your needs span multiple categories, choose the longer term — you can always reduce coverage later, but you cannot get cheaper rates after your health changes."
+    },
+    {
+      "component": "content_block",
+      "id": "BestInsurers",
+      "heading": "Best Term Life Insurance Companies in Canada",
+      "paragraphs": [
+        "Canada's life insurance market is heavily regulated and financially stable. The best company for you depends on your age, health, and coverage needs. These are consistently rated among the top term life insurers in Canada:"
+      ],
+      "bullets": [
+        { "bold": "Empire Life:", "text": "Frequently the most competitive term rates in Canada, especially for non-smokers aged 30–50." },
+        { "bold": "Manulife:", "text": "Flexible term products, strong digital experience, competitive rates for healthy applicants." },
+        { "bold": "Sun Life Financial:", "text": "Canada's largest insurer, excellent financial strength rating, wide product range." },
+        { "bold": "iA Financial Group:", "text": "Strong track record for pricing competitive term rates, especially industrial alliance plans." },
+        { "bold": "Canada Life:", "text": "Comprehensive product lineup, strong advisor network across the country." },
+        { "bold": "Equitable Life:", "text": "Canadian-owned mutual company, competitive pricing for preferred health classes." }
+      ]
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Compare Your Options",
+      "body": "Enter your details once and get real rates from all of them, side by side.",
+      "button_text": "View My Rates",
+      "url": "/compare-insurance-quotes"
+    },
+    {
+      "component": "content_block",
+      "id": "HowToApply",
+      "heading": "How to Apply for Term Life Insurance in Canada",
+      "ordered": [
+        { "bold": "Calculate your coverage needs:", "text": "Use our calculator above to estimate how much coverage is right for your situation." },
+        { "bold": "Compare quotes:", "text": "Use PolicyScanner to compare 20+ insurers instantly — no broker calls required." },
+        { "bold": "Choose your policy:", "text": "Select the insurer, coverage amount, and term length that fits your budget and goals." },
+        { "bold": "Complete the application:", "text": "Answer health and lifestyle questions honestly. Misrepresentation can void a claim." },
+        { "bold": "Medical exam (if required):", "text": "Policies over $1 million or applicants over 50 may require a paramedical exam, done at no cost to you." },
+        { "bold": "Approval and issuance:", "text": "Standard policies take 2–6 weeks. No-medical policies can be issued in as little as 24 hours." }
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "TermVsPermanent",
+      "heading": "Term Life vs. Permanent Life Insurance",
+      "paragraphs": [
+        "The biggest question most Canadians face is whether to choose term or permanent (whole/universal) life insurance. Here is a simple comparison:"
+      ]
+    },
+    {
+      "component": "table",
+      "headers": ["Feature", "Term Life", "Permanent Life"],
+      "rows": [
+        ["Coverage duration", "10–30 years", "Your entire lifetime"],
+        ["Monthly premiums", "Low — most affordable option", "3–5× higher than term"],
+        ["Cash value / savings", "None", "Builds over time (whole/universal life)"],
+        ["Best for", "Income replacement, mortgage, young families", "Estate planning, final expenses, high-net-worth"],
+        ["Renew / convert option", "Yes (at higher cost)", "Not needed — never expires"],
+        ["Complexity", "Simple and transparent", "More complex — many variables"]
+      ],
+      "footnote": "For most Canadians — especially those under 50 — term life insurance offers the best combination of value, simplicity, and adequate protection."
+    },
+    {
+      "component": "content_block",
+      "id": "TaxInfo",
+      "heading": "Is Term Life Insurance Tax-Free in Canada?",
+      "paragraphs": [
+        "Yes. In almost all cases, the death benefit paid to your beneficiaries is completely tax-free in Canada under the Income Tax Act.",
+        "If you name a direct beneficiary (spouse, child, parent), the payout also bypasses your estate entirely — meaning it is not subject to probate fees and goes directly to your beneficiaries, quickly and privately."
+      ]
+    },
+    {
+      "component": "callout",
+      "type": "note",
+      "title": "Exception: No named beneficiary",
+      "text": "If you name your estate as beneficiary (or fail to name one), the death benefit passes through probate, which can delay payment by months and reduce the amount through legal fees. Always name a specific beneficiary."
+    },
+    {
+      "component": "faq",
+      "items": [
+        {
+          "question": "When is the best time to buy term life insurance in Canada?",
+          "answer": "The best time is when you are young and healthy — premiums are lowest at this point and you lock in your rate for the entire term. Key moments to buy include: getting married, having children, buying a home or taking on a mortgage, or starting a business. Every year you wait costs more."
+        },
+        {
+          "question": "What happens when my term life insurance expires?",
+          "answer": "When your term ends, you have three options. You can renew the policy for another term at a higher premium based on your current age (no medical exam required for most policies). You can convert to permanent coverage if your policy has a conversion privilege. Or you can let it lapse if you no longer need coverage — for example, if your mortgage is paid off and your children are independent."
+        },
+        {
+          "question": "Can I have more than one term life insurance policy in Canada?",
+          "answer": "Yes. There is no legal limit to the number of life insurance policies you can hold. Many Canadians have both individual coverage and group coverage through their employer. Insurers will ask about other policies when you apply, but holding multiple policies is perfectly legal and common."
+        },
+        {
+          "question": "Does term life insurance cover death by suicide in Canada?",
+          "answer": "Most Canadian policies include a suicide exclusion clause for the first two years. After this exclusion period, suicide is generally covered and the death benefit is paid to beneficiaries. The exact terms vary by insurer and province."
+        },
+        {
+          "question": "What is a conversion privilege and should I pay for it?",
+          "answer": "A conversion privilege allows you to convert your term policy into a permanent policy before the term ends — without providing evidence of insurability (no medical exam). This is valuable if your health changes and you would otherwise be uninsurable. Most term policies in Canada include this feature at no extra cost, but the conversion deadline is usually age 65 or 70."
+        },
+        {
+          "question": "What is the difference between the policyholder, insured, and beneficiary?",
+          "answer": "The policyholder (owner) is the person who owns the policy and pays the premiums. The insured is the person whose life is covered. The beneficiary is the person who receives the death benefit payout. In most individual policies, the policyholder and insured are the same person — but they can be different in business or estate planning scenarios."
+        }
+      ]
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Find the Right Coverage for Your Family",
+      "body": "Personalized quotes from Canada's top insurers. Compare your options at your own pace.",
+      "button_text": "Get Your Free Quote",
+      "url": "/compare-insurance-quotes"
+    }
+  ]
+}

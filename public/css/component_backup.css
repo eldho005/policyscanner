@@ -1,0 +1,2333 @@
+/* ==========================================================================
+   POLICYscanner COMPONENT CSS - PHASE 3 COMPLETE: HERO OPTIMIZATION
+   Each component with systematic spacing using rhythm-based variables
+   Phase 3 Complete: Hero section optimized with global font system
+   All hero typography now uses unified 2.5vw scaling and global variables
+   ========================================================================== */
+
+/* ==========================================================================
+   UNIFIED SPACING SYSTEM - PHASE 3: RHYTHM-BASED COMPONENT SPACING
+   Clean, systematic approach using global rhythm variables
+   ========================================================================== */
+
+/* STANDARDIZED COMPONENT SPACING - All components use rhythm base */
+.callout-component,
+.coverage-calculator-component,
+.calculator-component,
+.table-container,
+.faq-component,
+.cta-banner,
+.definition-block,
+.example-card {
+    margin: 0;
+    margin-bottom: var(--component-gap); /* Uses --rhythm-base: 20px → 28px */
+}
+
+/* When a heading opens a section, the preceding component's margin-bottom
+   already provides the gap — avoid double-spacing */
+.main-content section > h2:first-child,
+.main-content section > h3:first-child {
+    margin-top: 0;
+}
+
+/* Clean last-child rule without !important */
+.main-content section > *:last-child {
+    margin-bottom: 0;
+}
+
+/* CONTENT FLOW INTEGRATION - Simple, consistent approach */
+.main-content section > * + * {
+    margin-top: var(--component-gap); /* Consistent spacing between all elements */
+}
+
+/* Tighter spacing after headings for better visual hierarchy */
+.main-content section h2 + *,
+.main-content section h3 + *,
+.main-content section h4 + * {
+    margin-top: var(--component-tight-gap); /* Uses --rhythm-base * 0.5: 10px → 14px */
+}
+
+/* Special handling for paragraph following paragraph (use paragraph gap) */
+.main-content section p + p {
+    margin-top: var(--paragraph-gap); /* Proper paragraph spacing */
+}
+
+/* Multiple CTA banners get consistent spacing */
+.cta-banner + .cta-banner {
+    margin-top: var(--component-gap);
+}
+
+/* ==========================================================================
+   CONTENT BLOCK CSS - OPTIMIZED TYPOGRAPHY WITH GLOBAL FONT SYSTEM
+   ========================================================================== */
+
+/* Basic heading styles */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--text-3xl);  /* Optimized: 24px → 32px (was 34px → 44px) */
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-lg);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--text-2xl);  /* Optimized: 20px → 24px (was 24px → 32px) */
+    line-height: var(--leading-snug);
+    margin-block: var(--heading-gap) var(--space-lg);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: var(--text-xl);  /* Optimized: 18px → 20px (was 20px → 24px) */
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    margin-block: var(--space-2xl) var(--space-md);
+}
+
+h4 {
+    font-size: var(--text-lg);  /* Optimized: 16px → 18px (was 18px → 22px) */
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    margin-block: var(--space-xl) var(--space-sm);
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: var(--paragraph-gap);
+    line-height: var(--leading-normal);
+    text-wrap: pretty;
+    max-width: 75ch; /* Optimal reading width */
+    font-size: var(--text-base);  /* Optimized: 14px → 16px (was 16px → 18px) */
+    color: var(--color-text-primary);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lead text */
+.lead-text {
+    font-size: var(--text-lg);  /* Optimized: 16px → 18px (was 18px → 22px) */
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-xl);
+    font-weight: 400;
+    max-width: 65ch;
+}
+
+/* Lists */
+ul, ol {
+    margin-block: var(--space-lg);
+    padding-left: var(--space-xl);
+    max-width: 70ch;
+}
+
+li {
+    margin-bottom: var(--space-sm);
+    line-height: var(--leading-normal);
+}
+
+li::marker {
+    color: var(--color-brand-primary);
+    font-weight: 500;
+}
+
+/* Links */
+a {
+    color: var(--color-brand-primary);
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--color-brand-hover);
+}
+
+/* Text emphasis */
+strong {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+em {
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+small {
+    font-size: var(--text-sm);  /* Optimized: 13px → 14px (was 14px → 15px) */
+    color: var(--color-text-tertiary);
+}
+
+/* Section spacing */
+section {
+    margin-bottom: var(--section-gap);
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* Optimized fluid headline classes - Using new global font system */
+.fluid-headline {
+    font-size: clamp(1.375rem, 2.5vw + 0.5rem, 2rem);     /* Optimized and unified 2.5vw */
+    line-height: var(--leading-tight);
+}
+
+.fluid-heading {
+    font-size: clamp(1.125rem, 2.5vw + 0.25rem, 1.5rem);  /* Optimized and unified 2.5vw */
+    line-height: var(--leading-snug);
+}
+
+.fluid-body-large {
+    font-size: clamp(1rem, 2.5vw + 0.125rem, 1.125rem);   /* Optimized and unified 2.5vw */
+    line-height: var(--leading-relaxed);
+}
+
+/* ==========================================================================
+   BREADCRUMB COMPONENT - OPTIMIZED WITH GLOBAL FONT SYSTEM
+   ========================================================================== */
+
+.breadcrumb-component a {
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color var(--transition-micro);
+}
+
+.breadcrumb-component a:hover {
+    color: var(--color-brand-primary);
+}
+
+.breadcrumb-component .separator {
+    margin-inline: clamp(0.375rem, 1vw, 0.5rem);
+    color: var(--color-text-quaternary);
+    font-size: var(--text-xs);  /* Now uses global variable: 11px → 13px */
+}
+
+.breadcrumb-component .current {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* Focus states for accessibility */
+.breadcrumb-component a:focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   HERO COMPONENT - PHASE 3 OPTIMIZED: GLOBAL FONT SYSTEM INTEGRATION
+   All hero typography now uses unified global font scale with 2.5vw scaling
+   ========================================================================== */
+
+/* HERO CONTAINER - Ensure grid layout works (override any conflicts) */
+.hero-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: clamp(1.5rem, 3vw, 3rem) !important;
+    max-width: min(100vw - 1rem, 1200px) !important;
+    margin-inline: auto !important;
+    padding-inline: clamp(0.5rem, 1.5vw, 2.5rem) !important;
+    width: 100% !important;
+    align-items: center !important;
+}
+
+/* HERO CONTENT - Progressive scaling */
+.hero-content {
+    width: 100%;
+    min-width: 0;
+    padding-top: clamp(1.5rem, 4vw, 3rem); /* Add this line */
+
+}
+
+.hero-content .article-meta {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+    font-size: var(--text-sm);  /* PHASE 3: Now uses global variable */
+    color: var(--color-text-secondary);
+    flex-wrap: wrap;
+    font-weight: 400;
+}
+
+.hero-content .read-time {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.hero-content .separator {
+    color: var(--color-text-quaternary);
+    font-weight: 300;
+}
+
+.hero-content .author {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+}
+
+.hero-content .expert-reviewed {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+.hero-content .reviewer {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+}
+
+.hero-content h1 {
+    font-size: var(--text-3xl);  /* PHASE 3: 24px → 32px (was 28px → 44px) */
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    margin-bottom: clamp(0.5rem, 2vw, 1.25rem);
+    color: var(--color-text-primary);
+    text-wrap: balance;
+    letter-spacing: -0.025em;
+    position: relative;
+    padding-bottom: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: clamp(40px, 10vw, 48px);
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-brand-primary) 0%, rgba(45, 181, 168, 0.4) 100%);
+    border-radius: 2px;
+}
+
+.hero-content .lead-text {
+    font-size: var(--text-lg);  /* PHASE 3: 16px → 18px (was 16px → 19px) */
+    color: rgba(90, 107, 122, 0.85);
+    line-height: 1.65;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-wrap: pretty;
+    max-width: min(65ch, 100%);
+}
+
+/* HERO FORM - Fluid responsive form */
+.hero-form {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    background: var(--color-bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    container-type: inline-size;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(45, 181, 168, 0.08);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.hero-form h3 {
+    font-size: var(--text-xl);  /* PHASE 3: Uses global variable 18px → 20px */
+    font-weight: 600;
+    margin-bottom: clamp(2.5rem, 4vw, 3rem);
+    color: var(--color-text-primary);
+    text-align: center;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.hero-form .quote-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+    row-gap: clamp(1.75rem, 3vw, 2rem);
+    background: rgba(45, 181, 168, 0.04);
+    padding: clamp(1rem, 2vw, 1.5rem);
+    border-radius: clamp(6px, 1.5vw, 8px);
+}
+
+.hero-form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1.25vw, 0.75rem);
+    min-width: 0;
+    width: 100%;
+}
+
+.hero-form .form-field--full {
+    grid-column: 1 / -1;
+}
+
+.hero-form .form-field--cta {
+    grid-column: 1 / -1;
+    margin-top: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.hero-form label {
+    font-size: var(--text-sm);  /* PHASE 3: Uses global variable */
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+
+.hero-form input[type="number"],
+.hero-form select {
+    width: 100%;
+    min-width: 0;
+    padding: clamp(0.75rem, 2vw, 0.875rem) clamp(0.875rem, 2vw, 1rem);
+    border: var(--border-medium);
+    border-radius: clamp(8px, 2vw, 10px);
+    font-size: var(--text-sm);  /* PHASE 3: Uses global variable */
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background: var(--color-bg-primary);
+    font-family: inherit;
+    height: clamp(46px, 10vw, 50px);
+    box-sizing: border-box;
+}
+
+.hero-form input[type="number"]::placeholder {
+    color: var(--color-text-quaternary);
+    font-weight: 400;
+}
+
+.hero-form input[type="number"]:focus,
+.hero-form select:focus {
+    outline: none;
+    border-color: var(--color-brand-primary);
+}
+
+.hero-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%235A6B7A' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right clamp(0.75rem, 2vw, 1rem) center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: clamp(2rem, 4vw, 2.5rem);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Professional Toggle Button Groups - Prevent 3-line wrapping */
+.hero-form .toggle-group {
+    display: flex;
+    background: var(--color-bg-primary);
+    border: var(--border-medium);
+    border-radius: clamp(8px, 2vw, 10px);
+    overflow: hidden;
+    height: clamp(48px, 10vw, 52px);
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+}
+
+.hero-form .toggle-group:focus-within {
+    border-color: var(--color-brand-primary);
+}
+
+.hero-form .toggle {
+    flex: 1;
+    position: relative;
+}
+
+.hero-form .toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero-form .toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-inline: clamp(0.375rem, 1.25vw, 0.625rem);
+    font-size: var(--text-xs);  /* PHASE 3: Uses global variable 11px → 13px */
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-align: center;
+    cursor: pointer;
+    border-right: var(--border-subtle);
+    box-sizing: border-box;
+    letter-spacing: 0;
+    position: relative;
+    white-space: normal;
+    line-height: 1.1;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.hero-form .toggle:last-child .toggle-label {
+    border-right: none;
+}
+
+.hero-form .toggle-input:checked + .toggle-label {
+    background: var(--color-brand-primary);
+    color: var(--color-text-inverse);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   STANDARDIZED CTA BUTTON - NOW USES GLOBAL DESIGN TOKENS
+   Hero-shaped button system with flatter curves for modern polish
+   ========================================================================== */
+
+.hero-form .cta-button {
+    /* Layout */
+    width: 100%;
+    height: var(--button-primary-height);                  /* 48px → 52px */
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border: none;
+    border-radius: var(--button-border-radius);            /* Flatter: 6px → 8px */
+    
+    /* Typography */
+    font-size: var(--button-primary-font);                 /* var(--text-base): 14px → 16px */
+    font-weight: var(--button-font-weight);                /* 600 */
+    letter-spacing: var(--button-letter-spacing);          /* 0 */
+    font-family: inherit;
+    
+    /* Colors */
+    background: var(--button-primary-bg);                  /* #FF7A2A */
+    color: var(--button-primary-color);                    /* white */
+    
+    /* Display & Interaction */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    /* Transitions */
+    transition: var(--transition-smooth);
+}
+
+.hero-form .cta-button:hover {
+    background: var(--button-primary-hover);               /* #FFA35C */
+}
+
+.hero-form .cta-button:focus-visible {
+    outline: var(--focus-ring);                            /* 2px solid brand */
+    outline-offset: var(--focus-ring-offset);              /* 2px */
+}
+
+.hero-form .trust-indicators {
+    margin-top: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-size: var(--text-xs);  /* PHASE 3: Uses global variable 11px → 13px */
+    color: var(--color-text-tertiary);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.875rem, 2.5vw, 1.25rem);
+    font-weight: 500;
+    letter-spacing: 0;
+    flex-wrap: wrap;
+}
+
+.hero-form .trust-indicators span {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.25rem, 0.75vw, 0.375rem);
+    white-space: nowrap;
+}
+
+.hero-form .trust-indicators span::before {
+    content: '✓';
+    color: var(--color-brand-primary);
+    font-weight: 600;
+    font-size: var(--text-xs);  /* PHASE 3: Uses global variable for consistency */
+}
+
+/* Hero Component Media Queries */
+@container (min-width: 300px) {
+    .hero-form .quote-form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(1rem, 2.5vw, 1.5rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1.618fr 1fr !important;
+        align-items: start !important;
+    }
+}
+
+
+/* ==========================================================================
+   ENHANCED TOC COMPONENT - MOBILE & DESKTOP
+   ========================================================================== */
+
+/* MOBILE TOC - Sticky Accordion at top of page */
+.toc-mobile {
+    display: block;
+    position: sticky;
+    top: 55px;
+    z-index: 20;
+    background: var(--color-bg-primary);
+    width: 100%;
+    margin: 0;
+    padding: clamp(0.5rem, 1.5vw, 0.75rem) var(--container-padding);
+    margin-bottom: clamp(1rem, 2.5vw, 2rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toc-mobile__button {
+    width: 100%;
+    background: rgba(45, 181, 168, 0.08);
+    color: var(--color-text-primary);
+    border: none;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
+    border-radius: var(--radius-lg);
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    transition: all var(--transition-smooth);
+    min-height: clamp(44px, 10vw, 48px);
+    border: 1px solid rgba(45, 181, 168, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.toc-mobile__button:hover {
+    background: rgba(45, 181, 168, 0.12);
+    border-color: rgba(45, 181, 168, 0.2);
+}
+
+.toc-mobile__icon {
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    transition: transform var(--transition-smooth);
+}
+
+.toc-mobile__icon--expanded {
+    transform: rotate(180deg);
+}
+
+.toc-mobile__content {
+    background: var(--color-bg-card);
+    border: var(--border-subtle);
+    border-top: none;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.toc-mobile__content--expanded {
+    max-height: min(70vh, 500px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-text-quaternary) transparent;
+}
+
+.toc-mobile__content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.toc-mobile__content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toc-mobile__content::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-quaternary);
+    border-radius: 2px;
+}
+
+.toc-mobile__list {
+    list-style: none;
+    margin: 0;
+    padding: clamp(1rem, 2.5vw, 1.25rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.25rem, 0.5vw, 0.375rem);
+}
+
+.toc-mobile__item {
+    margin: 0;
+}
+
+.toc-mobile__link {
+    display: flex;
+    align-items: center;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(0.875rem, 2vw, 1rem);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-micro);
+    font-size: clamp(0.8125rem, 2vw, 0.875rem);
+    line-height: 1.4;
+    min-height: clamp(40px, 10vw, 44px);
+}
+
+.toc-mobile__link:hover {
+    color: var(--color-brand-primary);
+}
+
+.toc-mobile__link:hover .toc-mobile__number {
+    background: var(--color-brand-hover);
+}
+
+.toc-mobile__number {
+    background: var(--color-brand-primary);
+    color: white;
+    width: clamp(20px, 5vw, 24px);
+    height: clamp(20px, 5vw, 24px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.6875rem, 1.5vw, 0.75rem);
+    font-weight: 600;
+    margin-right: clamp(0.75rem, 2vw, 1rem);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.toc-mobile__text {
+    flex: 1;
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.4;
+}
+
+.toc-mobile__link--current {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+.toc-mobile__link--current .toc-mobile__number {
+    background: var(--color-brand-primary);
+    transform: scale(1.1);
+}
+
+/* DESKTOP TOC - Fixed height with internal scrolling */
+.toc-desktop {
+    display: none;
+    background: var(--color-bg-primary);
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    position: sticky;
+    top: var(--space-lg);
+    height: fit-content;
+    max-height: min(calc(100vh - 4rem), 600px);
+    overflow: hidden;
+    width: 100%;
+    z-index: 10;
+}
+
+.toc-desktop__nav {
+    padding: clamp(1rem, 2.5vw, 1.25rem);
+    max-height: calc(min(calc(100vh - 4rem), 600px) - 140px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-text-quaternary) transparent;
+}
+
+.toc-desktop__nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.toc-desktop__nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toc-desktop__nav::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-quaternary);
+    border-radius: 2px;
+}
+
+.toc-desktop__nav::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-brand-primary);
+}
+
+.toc-desktop__header {
+    padding: clamp(1.25rem, 3vw, 1.5rem);
+    border-bottom: var(--border-subtle);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.toc-desktop__title {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+    margin: 0 0 clamp(0.375rem, 1vw, 0.5rem) 0;
+    color: var(--color-text-primary);
+    text-wrap: balance;
+}
+
+.toc-desktop__progress {
+    font-size: clamp(0.6875rem, 1.5vw, 0.75rem);
+    color: var(--color-text-tertiary);
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.toc-desktop__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.25rem, 0.5vw, 0.375rem);
+}
+
+.toc-desktop__item {
+    margin: 0;
+    transition: all var(--transition-micro);
+}
+
+.toc-desktop__link {
+    display: flex;
+    align-items: center;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-micro);
+    font-size: clamp(0.8125rem, 2vw, 0.875rem);
+    line-height: 1.4;
+    min-height: clamp(40px, 10vw, 44px);
+    position: relative;
+}
+
+.toc-desktop__link:hover {
+    color: var(--color-brand-primary);
+}
+
+.toc-desktop__link:hover .toc-desktop__number {
+    color: var(--color-brand-primary);
+}
+
+.toc-desktop__link--current {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+.toc-desktop__number {
+    font-size: clamp(0.6875rem, 1.5vw, 0.75rem);
+    color: var(--color-text-quaternary);
+    font-weight: 500;
+    min-width: clamp(24px, 6vw, 28px);
+    margin-right: clamp(0.75rem, 2vw, 1rem);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.toc-desktop__link--current .toc-desktop__number {
+    color: var(--color-brand-primary);
+    font-weight: 600;
+}
+
+.toc-desktop__text {
+    flex: 1;
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.4;
+}
+
+/* TOC Component Media Queries */
+@media (min-width: 64rem) {
+    .toc-mobile {
+        display: none;
+    }
+    
+    .toc-desktop {
+        display: block;
+    }
+    
+    /* Ensure proper grid layout using global CSS variables */
+    .main-layout {
+        display: grid !important;
+        grid-template-columns: minmax(var(--toc-min-width), var(--toc-max-width)) 1fr !important;
+        grid-template-areas: "sidebar content" !important;
+        gap: var(--content-gap) !important;
+        align-items: start !important;
+    }
+    
+    .toc-sidebar {
+        grid-area: sidebar !important;
+    }
+    
+    .main-content {
+        grid-area: content !important;
+        min-width: 0 !important;
+    }
+}
+
+/* ==========================================================================
+   CALLOUT COMPONENT
+   ========================================================================== */
+
+.callout-component {
+    background: rgba(248, 250, 252, 0.8);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.callout-component.callout-component--warning {
+    background: rgba(255, 247, 237, 0.8);
+    border-color: rgba(251, 211, 141, 0.6);
+}
+
+.callout-component .header {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(0.625rem, 2vw, 0.75rem);
+    margin-bottom: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.callout-component .icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.8125rem, 2vw, 0.875rem);
+    color: rgba(45, 181, 168, 0.8);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.callout-component.callout-component--warning .icon {
+    color: rgba(245, 158, 11, 0.8);
+}
+
+.callout-component .title {
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
+    font-weight: 600;
+    margin: 0;
+    color: #1a202c;
+    line-height: 1.3;
+}
+
+.callout-component .content {
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
+    line-height: var(--leading-normal);
+    margin: 0;
+    color: #4a5568;
+}
+
+.callout-component .content p {
+    margin-bottom: clamp(0.625rem, 2vw, 0.75rem);
+    line-height: var(--leading-normal);
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
+    color: #4a5568;
+}
+
+.callout-component .content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   COVERAGE CALCULATOR COMPONENT - PHASE 4 OPTIMIZED
+   All typography now uses global font system with unified 2.5vw scaling
+   ========================================================================== */
+
+.coverage-calculator-container {
+    container-type: inline-size;
+    width: 100%;
+}
+
+.coverage-calculator-component {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    padding: clamp(0.75rem, 2.5vw, 2rem);
+    width: 100%;
+}
+
+/* ========== HEADER SECTION ========== */
+.coverage-calculator-component__header {
+    text-align: center;
+    margin-bottom: clamp(0.75rem, 2.5vw, 2rem);
+    padding-bottom: clamp(0.5rem, 1.5vw, 1.5rem);
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.coverage-calculator-component__title {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: clamp(0.5rem, 2vw, 0.75rem);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.coverage-calculator-component__subtitle {
+    font-size: var(--text-sm);
+    color: #64748b;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* ========== MAIN LAYOUT - OPTIMIZED PROPORTIONS ========== */
+.coverage-calculator-component__main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(0.75rem, 2.5vw, 2rem);
+    align-items: start;
+    margin-bottom: 0;
+}
+
+/* ========== FORM SECTION - CLEAN & MINIMAL ========== */
+.coverage-calculator-component__form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 2vw, 1.75rem);
+}
+
+.coverage-calculator-component__form-section {
+    background: #fafbfc;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    border-radius: var(--radius-md);
+    border: 1px solid #f1f5f9;
+}
+
+.coverage-calculator-component__form-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: clamp(0.625rem, 1.5vw, 1.25rem);
+    text-align: left;
+    letter-spacing: 0;
+}
+
+.coverage-calculator-component__form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(0.5rem, 1.25vw, 1rem);
+    margin-bottom: clamp(0.5rem, 1.25vw, 1rem);
+}
+
+.coverage-calculator-component__form-row:last-child {
+    margin-bottom: 0;
+}
+
+.coverage-calculator-component__form-row--full {
+    grid-template-columns: 1fr;
+}
+
+/* ========== FORM FIELDS - REFINED INPUTS ========== */
+.coverage-calculator-component__field {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.25rem, 0.75vw, 0.5rem);
+}
+
+.coverage-calculator-component__label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: #374151;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+.coverage-calculator-component__input-wrapper {
+    position: relative;
+}
+
+.coverage-calculator-component__input-wrapper--currency {
+    position: relative;
+}
+
+.coverage-calculator-component__input-wrapper--currency::after {
+    content: 'CAD';
+    position: absolute;
+    right: clamp(0.75rem, 2vw, 1rem);
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    pointer-events: none;
+    z-index: 1;
+    letter-spacing: 0.02em;
+}
+
+/* ========== CLEAN INPUT STYLING - MATCH RATE CALCULATOR ========== */
+.coverage-calculator-component__input,
+.coverage-calculator-component__input[type="text"],
+select.coverage-calculator-component__input {
+    width: 100%;
+    padding: clamp(0.75rem, 2vw, 0.875rem) clamp(0.875rem, 2vw, 1rem);
+    border: 1.5px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    background: white;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: #374151;
+    font-family: inherit;
+    transition: border-color var(--transition-smooth);
+    height: clamp(44px, 10vw, 48px);
+    box-sizing: border-box;
+}
+
+.coverage-calculator-component__input--currency {
+    padding-right: clamp(3rem, 7vw, 3.5rem);
+}
+
+.coverage-calculator-component__input:focus,
+select.coverage-calculator-component__input:focus {
+    outline: none;
+    border-color: #2DB5A8;
+    box-shadow: 0 0 0 3px rgba(45, 181, 168, 0.1);
+}
+
+/* Select dropdown styling - match rate calculator */
+select.coverage-calculator-component__input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right clamp(0.75rem, 2vw, 1rem) center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: clamp(2rem, 5vw, 2.5rem);
+    cursor: pointer;
+}
+
+/* ========== RESULTS SECTION - CLEAN PROFESSIONAL STYLE ========== */
+.coverage-calculator-component__results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.coverage-calculator-component__result-card {
+    background: linear-gradient(135deg, #2DB5A8 0%, #26a69a 100%);
+    color: white;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border-radius: var(--radius-lg);
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle pattern overlay - minimal */
+.coverage-calculator-component__result-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    pointer-events: none;
+}
+
+.coverage-calculator-component__result-amount {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);    /* Further reduced: 24px to 32px */
+    font-weight: 600;                          /* Reduced from 700 to 600 */
+    margin-bottom: clamp(0.375rem, 1vw, 0.5rem);
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.01em;
+    transition: all 0.3s ease;
+    line-height: 1.2;
+}
+.coverage-calculator-component__result-label {
+    font-size: var(--text-base);
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   STANDARDIZED CTA SECTION - NOW USES GLOBAL DESIGN TOKENS
+   Secondary button with Hero-shaped styling and flatter curves
+   ========================================================================== */
+.coverage-calculator-component__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.625rem, 2vw, 0.75rem);
+    width: 100%;
+}
+
+.coverage-calculator-component__cta-button {
+    /* Layout */
+    width: 100%;
+    height: var(--button-secondary-height);                 /* 44px → 48px */
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border: none;
+    border-radius: var(--button-border-radius);             /* Flatter: 6px → 8px */
+    
+    /* Typography */
+    font-size: var(--button-secondary-font);                /* var(--text-sm): 13px → 14px */
+    font-weight: var(--button-font-weight);                 /* 600 */
+    letter-spacing: var(--button-letter-spacing);           /* 0 */
+    font-family: inherit;
+    
+    /* Colors */
+    background: var(--button-secondary-bg);                 /* #FF7A2A */
+    color: var(--button-secondary-color);                   /* white */
+    
+    /* Display & Interaction */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    /* Transitions */
+    transition: var(--transition-smooth);
+}
+
+.coverage-calculator-component__cta-button:hover {
+    background: var(--button-secondary-hover);              /* #FFA35C */
+}
+
+.coverage-calculator-component__cta-button:focus-visible {
+    outline: var(--focus-ring);                             /* 2px solid brand */
+    outline-offset: var(--focus-ring-offset);               /* 2px */
+}
+
+.coverage-calculator-component__cta-features {
+    display: flex;
+    gap: clamp(0.625rem, 2vw, 0.75rem);
+    font-size: var(--text-xs);
+    color: #64748b;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.coverage-calculator-component__cta-feature {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.125rem, 0.5vw, 0.25rem);
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: var(--text-xs);
+}
+
+.coverage-calculator-component__cta-feature::before {
+    content: '✓';
+    color: #2DB5A8;
+    font-weight: 600;
+    font-size: var(--text-xs);
+    margin-right: clamp(0.0625rem, 0.25vw, 0.125rem);
+}
+
+/* ========== CHART SECTION - NOW AT TOP OF RESULTS ========== */
+.coverage-calculator-component__chart-section {
+    margin-top: 0;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    padding-top: 0;
+    border-top: none;
+}
+
+.coverage-calculator-component__chart {
+    background: linear-gradient(135deg, #fdfdfd 0%, #f8fafc 100%);
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    border-radius: var(--radius-xl);
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    width: 100%;
+    position: relative;
+}
+
+.coverage-calculator-component__chart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(45, 181, 168, 0.15) 50%, transparent 100%);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.coverage-calculator-component__chart-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: clamp(0.875rem, 2vw, 1rem);
+    text-align: center;
+    letter-spacing: -0.005em;
+    position: relative;
+}
+
+.coverage-calculator-component__chart-layout {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.625rem, 2vw, 0.75rem);
+    align-items: center;
+}
+
+/* ========== DONUT CHART VISUAL - ENHANCED DESIGN ========== */
+.coverage-calculator-component__chart-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.coverage-calculator-component__donut {
+    width: clamp(120px, 30vw, 160px);
+    height: clamp(120px, 30vw, 160px);
+    border-radius: 50%;
+    background: conic-gradient(#2DB5A8 0deg 120deg, #64B5F6 120deg 240deg, #FFB74D 240deg 360deg);
+    position: relative;
+    transition: none;
+    transform-origin: center;
+}
+
+.coverage-calculator-component__donut::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(74px, 18vw, 98px);
+    height: clamp(74px, 18vw, 98px);
+    background: radial-gradient(circle, #ffffff 0%, #fafbfc 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+
+/* ========== CHART CENTER LABEL - ENHANCED TYPOGRAPHY ========== */
+.coverage-calculator-component__chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.coverage-calculator-component__chart-center-label {
+    font-size: var(--text-xs);
+    color: #64748b;
+    margin-bottom: clamp(0.125rem, 0.5vw, 0.25rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1;
+}
+
+.coverage-calculator-component__chart-center-amount {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+}
+
+/* ========== LEGEND STYLING - COMPACT DESIGN ========== */
+.coverage-calculator-component__legend {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.25rem, 1vw, 0.375rem);
+    width: 100%;
+    max-width: 280px;
+}
+
+.coverage-calculator-component__legend-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.375rem, 1vw, 0.5rem);
+    padding-block: clamp(0.25rem, 1vw, 0.375rem);
+    background: none;
+    border: none;
+    border-radius: 0;
+    transition: none;
+    position: relative;
+}
+
+.coverage-calculator-component__legend-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(226, 232, 240, 0.3) 0%, rgba(226, 232, 240, 0.1) 100%);
+}
+
+.coverage-calculator-component__legend-item:last-child::after {
+    display: none;
+}
+
+.coverage-calculator-component__legend-color {
+    width: clamp(8px, 2vw, 10px);
+    height: clamp(8px, 2vw, 10px);
+    border-radius: 2px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.coverage-calculator-component__legend-color::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.coverage-calculator-component__legend-color--income {
+    background: linear-gradient(135deg, #2DB5A8 0%, #26a69a 100%);
+}
+
+.coverage-calculator-component__legend-color--debts {
+    background: linear-gradient(135deg, #64B5F6 0%, #5aa3f0 100%);
+}
+
+.coverage-calculator-component__legend-color--education {
+    background: linear-gradient(135deg, #FFB74D 0%, #ffab40 100%);
+}
+
+.coverage-calculator-component__legend-text {
+    flex: 1;
+    font-size: var(--text-xs);
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.002em;
+}
+
+.coverage-calculator-component__legend-amount {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: #0f172a;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    min-width: clamp(55px, 15vw, 65px);
+    letter-spacing: -0.01em;
+}
+
+/* Coverage Calculator Component Container Queries */
+@container (min-width: 400px) {
+    .coverage-calculator-component__form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@container (min-width: 700px) {
+    .coverage-calculator-component__main-layout {
+        grid-template-columns: 1fr 280px;
+    }
+}
+/* ==========================================================================
+   CALCULATOR COMPONENT - COMPACT WORLD-CLASS DESIGN
+   Optimized for space efficiency while maintaining visual rhythm
+   Uses global variables throughout for consistency
+   ========================================================================== */
+
+.calculator-container {
+    container-type: inline-size;
+    width: 100%;
+}
+
+.calculator-component {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--component-border-radius);
+    padding: clamp(0.75rem, 2.5vw, 2rem);
+    width: 100%;
+}
+
+/* ========== HEADER - TIGHTER SPACING ========== */
+.calculator-component .header {
+    text-align: center;
+    margin-bottom: var(--space-lg);  /* Reduced from clamp(1rem, 3vw, 2rem) */
+    padding-bottom: var(--space-md); /* Reduced from clamp(0.75rem, 2vw, 1.5rem) */
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.calculator-component .title {
+    font-size: var(--text-xl);      /* Reduced from var(--text-2xl) */
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-sm); /* Reduced spacing */
+    color: var(--color-text-primary);
+    letter-spacing: -0.01em;
+}
+
+.calculator-component .subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--leading-snug);
+    font-weight: 400;
+}
+
+/* ========== FORM - COMPACT LAYOUT ========== */
+.calculator-component .form {
+    margin-bottom: var(--space-lg); /* Reduced from clamp(1rem, 3vw, 2rem) */
+}
+
+.calculator-component .section {
+    margin-bottom: 0; /* Removed section spacing - fields handle their own */
+}
+
+.calculator-component .section-title {
+    font-size: var(--text-sm);       /* Reduced from var(--text-base) */
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);  /* Tighter spacing */
+    text-align: left;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* ========== TWO-COLUMN GRID - ALWAYS ACTIVE ========== */
+.calculator-component .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);            /* Using consistent spacing */
+    margin-bottom: var(--space-md);  /* Consistent vertical rhythm */
+}
+
+.calculator-component .row:last-child {
+    margin-bottom: 0;
+}
+
+/* ========== FIELDS - COMPACT DESIGN ========== */
+.calculator-component .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);            /* Minimal label-input gap */
+}
+
+.calculator-component .label {
+    font-size: var(--text-xs);       /* Smaller labels */
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+/* ========== INPUTS - USING GLOBAL TOKENS ========== */
+.calculator-component .input,
+.calculator-component .select {
+    padding: var(--input-padding-y) var(--input-padding-x);
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    background: var(--input-bg);
+    font-size: var(--input-font-size);
+    font-weight: var(--input-font-weight);
+    color: var(--input-color);
+    font-family: inherit;
+    transition: var(--transition-micro);
+    width: 100%;
+    height: var(--input-height-standard);
+    box-sizing: border-box;
+}
+
+.calculator-component .input:focus,
+.calculator-component .select:focus {
+    outline: none;
+    border-color: var(--color-brand-primary);
+    box-shadow: 0 0 0 3px rgba(45, 181, 168, 0.1);
+}
+
+.calculator-component .select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right var(--space-md) center;
+    background-repeat: no-repeat;
+    background-size: 14px;           /* Slightly smaller icon */
+    padding-right: var(--space-2xl);
+    cursor: pointer;
+}
+
+/* ========== TOGGLE GROUPS - COMPACT HEIGHT ========== */
+.calculator-component .toggle-group {
+    display: flex;
+    background: white;
+    border: var(--toggle-border);
+    border-radius: var(--toggle-border-radius);
+    overflow: hidden;
+    height: var(--toggle-height);
+    box-sizing: border-box;
+}
+
+.calculator-component .toggle {
+    flex: 1;
+    position: relative;
+}
+
+.calculator-component .toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.calculator-component .toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-inline: var(--space-md);
+    font-size: var(--toggle-font-size);
+    font-weight: var(--toggle-font-weight);
+    color: var(--toggle-inactive-color);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-micro);
+    border-right: 1px solid #e2e8f0;
+    box-sizing: border-box;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+.calculator-component .toggle:last-child .toggle-label {
+    border-right: none;
+}
+
+.calculator-component .toggle-input:checked + .toggle-label {
+    background: var(--toggle-active-bg);
+    color: var(--toggle-active-color);
+    font-weight: 600;
+}
+
+/* ========== RESULTS - STREAMLINED DESIGN ========== */
+.calculator-component .results {
+    background: linear-gradient(135deg, #fafbfc 0%, white 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--component-border-radius);
+    padding: var(--space-lg);        /* Reduced padding */
+    text-align: center;
+    position: relative;
+}
+
+/* Accent bar - thinner */
+.calculator-component .results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(24px, 6vw, 32px);  /* Smaller accent */
+    height: 2px;                     /* Thinner bar */
+    background: var(--color-brand-primary);
+    border-radius: 0 0 2px 2px;
+}
+
+.calculator-component .rate-display {
+    margin-bottom: var(--space-md);  /* Tighter spacing */
+}
+
+.calculator-component .rate-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+/* ========== RATE DISPLAY - BALANCED PROMINENCE ========== */
+.calculator-component .rate {
+    font-size: clamp(2rem, 3vw, 2.5rem);  /* Reduced from var(--text-5xl) */
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.calculator-component .rate-period {
+    font-size: var(--text-sm);       /* Reduced from var(--text-base) */
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-left: var(--space-xs);
+}
+
+.calculator-component .company {
+    font-size: var(--text-xs);       /* Smaller company text */
+    color: var(--color-text-tertiary);
+    margin-block: var(--space-sm);
+    line-height: var(--leading-snug);
+}
+
+.calculator-component .company-name {
+    font-weight: 600;
+    color: var(--color-brand-primary);
+}
+
+/* ========== CTA SECTION - COMPACT ========== */
+.calculator-component .cta {
+    margin-top: var(--space-md);     /* Reduced spacing */
+}
+
+/* ========== CTA BUTTON - USING GLOBAL TOKENS ========== */
+.calculator-component .button {
+    /* Using secondary button specs */
+    height: var(--button-secondary-height);
+    min-width: clamp(140px, 35vw, 180px);  /* Slightly smaller */
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border: none;
+    border-radius: var(--button-border-radius);
+    
+    /* Typography */
+    font-size: var(--button-secondary-font);
+    font-weight: var(--button-font-weight);
+    letter-spacing: var(--button-letter-spacing);
+    font-family: inherit;
+    
+    /* Colors */
+    background: var(--button-secondary-bg);
+    color: var(--button-secondary-color);
+    text-decoration: none;
+    
+    /* Display */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    /* Transitions */
+    transition: var(--button-transition);
+}
+
+.calculator-component .button:hover {
+    background: var(--button-secondary-hover);
+    text-decoration: none;
+    color: var(--button-secondary-color);
+}
+
+.calculator-component .button:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+}
+
+/* ========== FOOTER - MINIMAL HEIGHT ========== */
+.calculator-component .footer {
+    margin-top: var(--space-md);     /* Reduced spacing */
+    padding-top: var(--space-sm);    /* Tighter padding */
+    border-top: 1px solid #f1f5f9;
+    font-size: var(--text-xs);
+    color: var(--color-text-quaternary);
+    text-align: center;
+    line-height: var(--leading-snug);
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+/* Mobile optimization - stack on very small screens */
+@container (max-width: 360px) {
+    .calculator-component .row {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .calculator-component {
+        padding: var(--space-md);
+    }
+}
+/* ==========================================================================
+   TABLE COMPONENT - PHASE 5 OPTIMIZED
+   All typography now uses global font system with unified 2.5vw scaling
+   ========================================================================== */
+
+.table-container {
+    container-type: inline-size;
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid #e2e8f0;
+}
+
+.table-component {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    min-width: 600px; /* Ensure table doesn't get too narrow */
+}
+
+.table-component th {
+    background: #f8fafc;
+    padding: clamp(0.625rem, 2vw, 0.75rem) clamp(0.875rem, 2vw, 1rem);
+    text-align: start;
+    font-weight: 600;
+    font-size: var(--text-xs);
+    color: #374151;
+    border-bottom: 2px solid #e2e8f0;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.table-component td {
+    padding: clamp(0.5rem, 1.5vw, 0.625rem) clamp(0.875rem, 2vw, 1rem);
+    border-bottom: 1px solid #f1f5f9;
+    font-size: var(--text-sm);
+    font-variant-numeric: tabular-nums;
+    vertical-align: middle;
+    color: #374151;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.table-component tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-component tbody tr:nth-child(even) {
+    background: #fafbfc;
+}
+
+.table-component tbody tr:hover {
+    background: #f0f9ff;
+    transition: background-color var(--transition-micro);
+}
+
+.table-component tbody tr:nth-child(even):hover {
+    background: #f0f9ff;
+}
+
+/* Highlighted row styling */
+.table-component tbody tr.table-component__row--highlight {
+    background: rgba(240, 253, 250, 0.8) !important;
+    border-left: 3px solid rgba(45, 181, 168, 0.4);
+    position: relative;
+}
+
+.table-component tbody tr.table-component__row--highlight:hover {
+    background: rgba(236, 253, 245, 0.9) !important;
+}
+
+/* Data type specific styling */
+.table-component .table-component__currency {
+    font-weight: 600;
+    color: #059669;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+}
+
+.table-component .table-component__status--good {
+    color: #059669;
+    font-weight: 600;
+    font-size: var(--text-xs);
+}
+
+.table-component .table-component__status--poor {
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Column width optimization for readability */
+.table-component .table-component__col--narrow {
+    width: 15%;
+    min-width: 80px;
+}
+
+.table-component .table-component__col--medium {
+    width: 25%;
+    min-width: 120px;
+}
+
+.table-component .table-component__col--wide {
+    width: 35%;
+    min-width: 160px;
+}
+
+.table-component .table-component__col--auto {
+    width: auto;
+    min-width: 120px;
+}
+
+/* Text alignment classes */
+.table-component .table-component__text--center {
+    text-align: center;
+}
+
+.table-component .table-component__text--right {
+    text-align: right;
+}
+
+.table-component .table-component__text--left {
+    text-align: left;
+}
+
+/* ==========================================================================
+   FAQ COMPONENT - PHASE 6 OPTIMIZED
+   All typography now uses global font system with unified 2.5vw scaling
+   ========================================================================== */
+
+.faq-component {
+    max-width: min(720px, 100%);
+    margin-inline: auto;
+    width: 100%;
+}
+
+.faq-component__item {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-component__item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.faq-component__question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: clamp(1rem, 2.5vw, 1.25rem) 0;
+    text-align: left;
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+    transition: color var(--transition-smooth);
+}
+
+.faq-component__question:hover {
+    color: #1f2937;
+}
+
+.faq-component__question:focus {
+    outline: none;
+}
+
+.faq-component__question:focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.faq-component__question-text {
+    flex: 1;
+    padding-right: clamp(0.75rem, 2vw, 1rem);
+    text-wrap: pretty;
+    font-size: var(--text-base);
+    line-height: 1.5;
+}
+
+/* Minimalistic Plus/Minus Icon */
+.faq-component__icon {
+    width: clamp(18px, 4vw, 20px);
+    height: clamp(18px, 4vw, 20px);
+    position: relative;
+    flex-shrink: 0;
+    transition: transform var(--transition-smooth);
+}
+
+.faq-component__icon::before,
+.faq-component__icon::after {
+    content: '';
+    position: absolute;
+    background: #64748b;
+    transition: all var(--transition-smooth);
+}
+
+/* Horizontal line (always visible) */
+.faq-component__icon::before {
+    top: 50%;
+    left: 50%;
+    width: clamp(10px, 2.5vw, 12px);
+    height: 1.5px;
+    transform: translate(-50%, -50%);
+}
+
+/* Vertical line (hidden when active) */
+.faq-component__icon::after {
+    top: 50%;
+    left: 50%;
+    width: 1.5px;
+    height: clamp(10px, 2.5vw, 12px);
+    transform: translate(-50%, -50%);
+}
+
+.faq-component__answer {
+    display: none;
+    padding-bottom: clamp(1rem, 2.5vw, 1.25rem);
+    color: #4a5568;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+}
+
+.faq-component__answer p {
+    margin-bottom: clamp(0.875rem, 2vw, 1rem);
+}
+
+.faq-component__answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-component__answer ul,
+.faq-component__answer ol {
+    margin-block: clamp(0.875rem, 2vw, 1rem);
+    padding-left: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.faq-component__answer li {
+    margin-bottom: clamp(0.375rem, 1vw, 0.5rem);
+    line-height: var(--leading-normal);
+}
+
+.faq-component__answer li::marker {
+    color: var(--color-brand-primary);
+    font-weight: 500;
+}
+
+.faq-component__answer a {
+    color: var(--color-brand-primary);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(45, 181, 168, 0.3);
+}
+
+.faq-component__answer a:hover {
+    color: #1f9b8f;
+    border-bottom-color: var(--color-brand-primary);
+    text-decoration: none;
+}
+
+/* Active state styling */
+.faq-component__item--active .faq-component__question {
+    color: #1f2937;
+}
+
+.faq-component__item--active .faq-component__icon::before {
+    background: var(--color-brand-primary);
+}
+
+.faq-component__item--active .faq-component__icon::after {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-component__item--active .faq-component__answer {
+    display: block;
+}
+
+/* ==========================================================================
+   CTA BANNER COMPONENT - PHASE 6 OPTIMIZED
+   All typography now uses global font system with unified 2.5vw scaling
+   ========================================================================== */
+
+/* Component Container - Basic Structure Only */
+.cta-banner {
+    /* Layout - Clean structure */
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0; /* Reset - spacing will be handled by new system */
+    /*padding: 0;*/
+    padding: 30px 0 30px 0;
+    
+    /* Typography inheritance from global CSS */
+    font-family: inherit;
+    color: var(--color-text-primary);
+    
+    /* Clean reset */
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Component Title - Typography Only */
+.cta-banner__title {
+    /* Reset */
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    
+    /* Typography - Uses global scale */
+    font-family: inherit;
+    font-size: var(--text-xl); /* 18px → 20px, matches content H3 */
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    letter-spacing: -0.01em;
+    
+    /* Color from global CSS */
+    color: var(--color-text-primary);
+    
+    /* Layout - Basic centering, spacing handled by new system */
+    text-align: center;
+    max-width: 42ch;
+    margin: 0 auto var(--space-xl) auto; /* Bottom margin from existing system */
+    
+    /* Text rendering */
+    text-wrap: balance;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+}
+
+/* Button Container */
+.cta-banner__actions {
+    /* Reset */
+    margin: 0;
+    padding: 0;
+    border: none;
+    
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   STANDARDIZED CTA BANNER BUTTON - NOW USES GLOBAL DESIGN TOKENS
+   Secondary button with Hero-shaped styling and flatter curves
+   ========================================================================== */
+.cta-banner__button {
+    /* Layout */
+    height: var(--button-secondary-height);                 /* 44px → 48px */
+    min-width: clamp(140px, 35vw, 160px);
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border: none;
+    border-radius: var(--button-border-radius);             /* Flatter: 6px → 8px */
+    
+    /* Typography */
+    font-size: var(--button-secondary-font);                /* var(--text-sm): 13px → 14px */
+    font-weight: var(--button-font-weight);                 /* 600 */
+    letter-spacing: var(--button-letter-spacing);           /* 0 */
+    font-family: inherit;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    
+    /* Colors */
+    background: var(--button-secondary-bg);                 /* #FF7A2A */
+    color: var(--button-secondary-color);                   /* white */
+    text-decoration: none;
+    
+    /* Display & Interaction */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    /* Accessibility & Performance */
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    
+    /* Transitions */
+    transition: var(--transition-smooth);
+}
+
+.cta-banner__button:hover {
+    background: var(--button-secondary-hover);              /* #FFA35C */
+    color: var(--button-secondary-color);                   /* white */
+    text-decoration: none;
+}
+
+.cta-banner__button:focus-visible {
+    outline: var(--focus-ring);                             /* 2px solid brand */
+    outline-offset: var(--focus-ring-offset);               /* 2px */
+}
+
+.cta-banner__button:active {
+    background: var(--button-secondary-hover);              /* #FFA35C */
+}
+
+/* Ensure all pseudo-elements use global box-sizing */
+.cta-banner *,
+.cta-banner *::before,
+.cta-banner *::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   COMPONENT INTERNAL SPACING - Uses rhythm-based system
+   ========================================================================== */
+
+/* Ensure paragraphs within components use rhythm-based spacing */
+.callout-component p,
+.coverage-calculator-component p,
+.calculator-component p,
+.faq-component p,
+.cta-banner p {
+    margin-bottom: var(--component-internal-gap); /* Uses --rhythm-base * 0.75: 15px → 21px */
+}
+
+.callout-component p:last-child,
+.coverage-calculator-component p:last-child,
+.calculator-component p:last-child,
+.faq-component p:last-child,
+.cta-banner p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   GLOBAL ACCESSIBILITY & REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .faq-component__question,
+    .faq-component__icon,
+    .toc-mobile__button,
+    .toc-mobile__icon,
+    .toc-mobile__content,
+    .toc-desktop__link,
+    .coverage-calculator-component__donut,
+    .coverage-calculator-component__result-amount,
+    .hero-form input,
+    .hero-form select,
+    .calculator-component .input,
+    .calculator-component .select,
+    .hero-form .toggle-label,
+    .calculator-component .toggle-label,
+    .coverage-calculator-component__input,
+    .callout-component,
+    .cta-banner,
+    .cta-banner__button,
+    .table-component tbody tr {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .coverage-calculator-component__donut {
+        border: 2px solid #000;
+    }
+    
+    .coverage-calculator-component__legend-color {
+        border: 1px solid #000;
+    }
+    
+    .table-component th,
+    .table-component td {
+        border-color: #666;
+    }
+    
+    .hero-form input,
+    .hero-form select,
+    .calculator-component .input,
+    .calculator-component .select,
+    .coverage-calculator-component__input {
+        border-color: #333;
+    }
+    
+    .toc-mobile__button,
+    .toc-desktop {
+        border-color: #333;
+    }
+    
+    .cta-banner__button {
+        border: 2px solid currentColor;
+    }
+    
+    .cta-banner__title {
+        color: var(--color-text-primary);
+    }
+}
+
+/* ==========================================================================
+   GLOBAL PRINT OPTIMIZATION
+   ========================================================================== */
+
+@media print {
+    .hero-form,
+    .trust-badge-component,
+    .toc-mobile,
+    .toc-desktop,
+    .coverage-calculator-component__cta,
+    .calculator-component .cta,
+    .cta-banner {
+        display: none !important;
+    }
+    
+    .coverage-calculator-component__chart {
+        background: white !important;
+        border: 1px solid #ccc !important;
+    }
+    
+    .coverage-calculator-component__donut {
+        background: #f0f0f0 !important;
+        border: 2px solid #999 !important;
+    }
+    
+    .table-component {
+        border: 1px solid #ccc !important;
+    }
+    
+    .callout-component {
+        border: 1px solid #ccc !important;
+        background: white !important;
+    }
+}
+
+
+.calculator-component .footer {
+    background: none;
+    padding-bottom: 0px;
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   BUTTON SYSTEM STANDARDIZATION COMPLETE - ALL CTA BUTTONS UNIFIED
+   
+   ✅ HERO CTA BUTTON: Primary size (48px-52px) with Hero-shaped design
+   ✅ CALCULATOR CTA BUTTONS: Secondary size (44px-48px) with Hero-shaped design  
+   ✅ COVERAGE CALCULATOR CTA: Secondary size (44px-48px) with Hero-shaped design
+   ✅ CTA BANNER BUTTONS: Secondary size (44px-48px) with Hero-shaped design
+   
+   ALL BUTTONS NOW SHARE:
+   ✅ HERO-SHAPED DNA: Same proportions, padding system, design language
+   ✅ FLATTER CURVES: Modern 6px-8px border radius (vs original 8px-10px)
+   ✅ UNIFIED TYPOGRAPHY: Global font variables, weights, letter spacing
+   ✅ CONSISTENT COLORS: Global color token system
+   ✅ PROFESSIONAL FOCUS STATES: Unified accessibility system
+   ✅ SMOOTH INTERACTIONS: Global transition system
+   
+   RESULT: World-class button system with perfect consistency across all
+   components while maintaining proper visual hierarchy (Primary vs Secondary)
+   ========================================================================== */

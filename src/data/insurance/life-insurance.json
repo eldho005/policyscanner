@@ -1,0 +1,328 @@
+{
+  "title": "Life Insurance in Canada: Complete Guide (2026)",
+  "slug": "life-insurance",
+  "tag": "Life Insurance Guide",
+  "read_time": "12 min read",
+  "prepared_by": "Baljit Kaur LLQP",
+  "reviewed_by": "Eldho George LLQP",
+  "seo_description": "Get affordable life insurance in Ontario. Compare quotes from 20+ top Canadian insurers. Term, whole life, critical illness & more. Free quotes.",
+  "seo_title": "Life Insurance in Canada | Ontario Quotes | PolicyScanner",
+  "_meta": {
+    "target_words": "1200-1500",
+    "primary_keyword": "life insurance ontario",
+    "secondary_keywords": ["life insurance canada", "term life insurance", "whole life insurance", "critical illness insurance"],
+    "page_role": "Level 1 Hub - comprehensive overview of life insurance in Ontario, linking to sub-pages",
+    "writer_focus": "Warm, professional tone. Include relatable opening question. Ontario-specific details (FSRA, OHIP, GTA context). Multiple CTAs throughout."
+  },
+  "page_data": [
+    {
+      "component": "hero_section",
+      "title": "Life Insurance in Canada: Complete Guide (2026)",
+      "description": "If you died tomorrow, could your family afford to stay in their home? Compare life insurance quotes from 20+ top Canadian insurers. Free quotes, no obligation."
+    },
+    {
+      "component": "trust_badges"
+    },
+    {
+      "component": "content_block",
+      "id": "WhatIsLifeInsurance",
+      "heading": "What is life insurance?",
+      "heading_level": 2,
+      "paragraphs": [
+        "Life insurance ensures your family can maintain their lifestyle if you're no longer here. It pays a tax-free death benefit to your beneficiaries — typically $250,000 to $1 million+ — that can be used for any purpose: mortgage payments, daily expenses, children's education, or outstanding debts. In Ontario, life insurance is regulated by the Financial Services Regulatory Authority (FSRA), which ensures consumer protection and fair industry practices.",
+        "You pay monthly or annual premiums to an insurance company. If you die during the coverage period, your beneficiaries receive a tax-free death benefit. Your beneficiaries can use the money for any purpose, with no restrictions. Coverage amounts range from $100,000 to $5 million or more.",
+        "Life insurance provides financial protection for people who depend on your income. The death benefit replaces the paycheques you would have earned, covers debts you leave behind, and funds the future you won't be there to provide. For families in the GTA where the average home price exceeds $1 million, life insurance often means the difference between your family keeping their home or having to sell and move."
+      ],
+      "bullets": [
+        { "bold": "You pay", "text": "monthly or annual premiums to an insurance company." },
+        { "bold": "If you die", "text": "your beneficiaries receive a tax-free death benefit — typically $250,000 to $1,000,000+." },
+        { "bold": "Use it for anything:", "text": "mortgage payments, daily expenses, children's education, outstanding debts." },
+        { "bold": "Coverage range:", "text": "$100,000 to $5 million or more." }
+      ]
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Get Your Free Life Insurance Quote",
+      "body": "Compare quotes from 20+ top Canadian insurers. Free, no obligation. Results in minutes.",
+      "button_text": "Get Free Quote",
+      "url": "/compare-insurance-quotes"
+    },
+    {
+      "component": "content_block",
+      "id": "TypesOfLifeInsurance",
+      "heading": "Types of life insurance",
+      "heading_level": 2,
+      "paragraphs": [
+        "The main types of life insurance in Canada are term life, whole life, critical illness, and disability insurance. Each type serves a different purpose for Ontario families."
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "TermLifeInsurance",
+      "heading": "Term life insurance",
+      "heading_level": 3,
+      "paragraphs": [
+        "Term life is the most affordable life insurance option in Canada, offering high death benefits at the lowest cost. Your premiums stay fixed for the entire term, and you can convert to permanent coverage later without a new medical exam. Most families in Brampton, Mississauga, and Toronto choose 20-year term policies — long enough to cover the mortgage and get the kids through university, at a price that fits a household budget.",
+        "Example: A 35-year-old non-smoker in Mississauga with $750,000 of 20-year coverage pays $42 per month."
+      ],
+      "bullets": [
+        { "bold": "What it is:", "text": "Coverage for a set period of time — usually 10, 20, or 30 years." },
+        { "bold": "Cost:", "text": "$30-50 per month for $500,000 of coverage (age 35, non-smoker)." },
+        { "bold": "Best for:", "text": "Young families, mortgage protection, income replacement." }
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "WholeLifeInsurance",
+      "heading": "Whole life insurance",
+      "heading_level": 3,
+      "paragraphs": [
+        "Whole life insurance never expires and builds cash value over time. You can borrow against the cash value while you're alive. Premiums are significantly higher than term life, but they never increase.",
+        "Example: A 45-year-old in Toronto with $250,000 of permanent coverage pays $285 per month."
+      ],
+      "bullets": [
+        { "bold": "What it is:", "text": "Permanent coverage that lasts your entire lifetime." },
+        { "bold": "Cost:", "text": "$200-400 per month for $250,000 of coverage (age 40)." },
+        { "bold": "Best for:", "text": "Estate planning, permanent protection needs." }
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "CriticalIllnessInsurance",
+      "heading": "Critical illness insurance",
+      "heading_level": 3,
+      "paragraphs": [
+        "Critical illness insurance pays out upon diagnosis (after a 30-day survival period). You can use the money for medical bills not covered by OHIP, mortgage payments while you recover, private care, or any other purpose. This is particularly valuable in Ontario where OHIP covers hospital care but not prescription drugs, physiotherapy, or lost income during recovery."
+      ],
+      "bullets": [
+        { "bold": "What it is:", "text": "Pays a lump sum if you're diagnosed with a serious illness." },
+        { "bold": "Covered conditions:", "text": "Cancer, heart attack, stroke, plus 25+ other conditions." },
+        { "bold": "Cost:", "text": "$50-80 per month for $50,000 of coverage (age 40)." }
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "DisabilityInsurance",
+      "heading": "Disability insurance",
+      "heading_level": 3,
+      "paragraphs": [
+        "Disability insurance pays monthly benefits during the period you're unable to work. Coverage can be short-term (3-6 months) or long-term (to age 65). If you're self-employed or don't have disability coverage through your employer, this protects your income if illness or injury keeps you from working."
+      ],
+      "bullets": [
+        { "bold": "What it is:", "text": "Replaces 60-70% of your income if you can't work due to injury or illness." },
+        { "bold": "Cost:", "text": "$100-200 per month for $5,000 per month benefit." },
+        { "bold": "Best for:", "text": "Self-employed, professionals, primary income earners." }
+      ]
+    },
+    {
+      "component": "table_block",
+      "title": "Quick comparison",
+      "headers": ["Type", "Duration", "Cost (Age 35)", "Best For"],
+      "rows": [
+        ["Term Life", "10-30 years", "$30-50/mo", "Young families"],
+        ["Whole Life", "Lifetime", "$250-350/mo", "Estate planning"],
+        ["Critical Illness", "10-20 years", "$50-80/mo", "Income protection"],
+        ["Disability", "To age 65", "$100-200/mo", "Self-employed"]
+      ],
+      "footnote": "Costs shown for $500K term life, $250K whole life, $50K critical illness, and $5K/month disability benefit."
+    },
+    {
+      "component": "content_block",
+      "id": "HowMuchCoverageNeeded",
+      "heading": "How much life insurance do you need?",
+      "heading_level": 2,
+      "paragraphs": [
+        "Most Canadians need 10-15 times their annual income in life insurance coverage. If you earn $75,000 per year, you should carry $750,000 to $1,125,000 in coverage. But the real question is: how much money would your family actually need to maintain their lifestyle without your income?"
+      ]
+    },
+    {
+      "component": "definition_block",
+      "term": "The 10x rule",
+      "definition": "Multiply your annual income by 10. Example: $50,000 income → $500,000 minimum coverage; $75,000 income → $750,000 minimum coverage; $100,000 income → $1,000,000 minimum coverage."
+    },
+    {
+      "component": "definition_block",
+      "term": "The DIME method",
+      "definition": "Add up four categories: D (Debt: mortgage, loans, credit cards), I (Income: 10-15 years of salary replacement), M (Mortgage: remaining balance), E (Education: children's education costs)."
+    },
+    {
+      "component": "callout_block",
+      "type": "insight",
+      "title": "Real GTA Example",
+      "text": "David, 38, earns $80,000/year in Mississauga. Debt: $25,000 (car loan + credit cards). Income: $800,000 (10 years × $80K). Mortgage: $580,000 remaining (typical for GTA). Education: $100,000 (two kids, $50K each). Total needed: $1,505,000 → He should get $1.5M in coverage."
+    },
+    {
+      "component": "content_block",
+      "id": "CoverageByLifeStage",
+      "heading": "Coverage by life stage",
+      "heading_level": 3,
+      "bullets": [
+        { "bold": "Single, no dependents:", "text": "$100,000-$250,000" },
+        { "bold": "Young family with mortgage:", "text": "$500,000-$1,000,000" },
+        { "bold": "Established family:", "text": "$750,000-$1,500,000" },
+        { "bold": "Empty nesters:", "text": "$250,000-$500,000" }
+      ]
+    },
+    {
+      "component": "cta_block",
+      "heading": "Calculate Your Coverage Needs",
+      "body": "Use our interactive calculator to determine exactly how much coverage you need.",
+      "button_text": "Calculate Coverage",
+      "url": "/calculator"
+    },
+    {
+      "component": "content_block",
+      "id": "LifeInsuranceCost",
+      "heading": "How much does life insurance cost in Ontario?",
+      "heading_level": 2,
+      "paragraphs": [
+        "Here's what you'll actually pay: A healthy 35-year-old non-smoker pays $35-50 per month for $500,000 of 20-year term life coverage. That's about the cost of your monthly phone bill. Costs increase with age: 25-year-olds pay $20-30/month, 40-year-olds pay $45-70/month, and 50-year-olds pay $100-160/month for the same coverage."
+      ]
+    },
+    {
+      "component": "table_block",
+      "title": "Average life insurance rates by age (Ontario, 20-year term)",
+      "headers": ["Age", "Male (Non-Smoker)", "Female (Non-Smoker)", "Male (Smoker)"],
+      "rows": [
+        ["25", "$20-30", "$15-25", "$50-80"],
+        ["30", "$25-35", "$20-30", "$60-100"],
+        ["35", "$30-50", "$25-40", "$80-140"],
+        ["40", "$45-70", "$35-55", "$120-200"],
+        ["45", "$65-100", "$50-80", "$180-300"],
+        ["50", "$100-160", "$80-130", "$280-450"]
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "WhatAffectsCost",
+      "heading": "What affects your cost",
+      "heading_level": 3,
+      "bullets": [
+        { "bold": "Age:", "text": "Premiums roughly double every 10 years. The younger you buy, the lower your rates." },
+        { "bold": "Gender:", "text": "Women pay 20-30% less than men due to longer life expectancy." },
+        { "bold": "Smoking status:", "text": "Smokers pay 2-3 times more than non-smokers. This includes cigarettes, cigars, vaping, and marijuana. You must be nicotine-free for 12 months to qualify for non-smoker rates." },
+        { "bold": "Health:", "text": "Better health = lower rates. Insurers categorize applicants as Preferred Plus (excellent health), Standard (good health), or Rated (health issues)." },
+        { "bold": "Coverage amount and term length:", "text": "More coverage and longer terms cost more, but the cost per $1,000 of coverage decreases as you buy more." },
+        { "bold": "Occupation and hobbies:", "text": "High-risk jobs (construction, mining) or dangerous hobbies (skydiving, racing) can add 25-100% to your premium." }
+      ]
+    },
+    {
+      "component": "cta_block",
+      "heading": "Get Your Personalized Quote",
+      "body": "See what you'll actually pay based on your age, health, and coverage needs.",
+      "button_text": "Get Quote",
+      "url": "/compare-insurance-quotes"
+    },
+    {
+      "component": "content_block",
+      "id": "HowToBuy",
+      "heading": "How to buy life insurance in Ontario",
+      "heading_level": 2,
+      "paragraphs": [
+        "The process is straightforward. Here are the four steps:"
+      ],
+      "ordered": [
+        { "bold": "Calculate your coverage needs.", "text": "Use the 10x income rule or our online calculator. Consider your mortgage, debts, income replacement needs, and dependents." },
+        { "bold": "Compare quotes from multiple insurers.", "text": "Rates vary by 30-50% between companies for identical coverage. Get quotes from 20+ top Canadian insurers including Sun Life, Manulife, Canada Life, and RBC." },
+        { "bold": "Complete your application and medical exam.", "text": "Fill out an application online, by phone, or in person. Medical exams are typically required for coverage over $500,000. Some policies don't require a medical exam." },
+        { "bold": "Get approved and coverage starts.", "text": "Approval takes 2-6 weeks for traditional underwriting, or 24-48 hours for simplified issue policies. Coverage begins when you pay your first premium." }
+      ]
+    },
+    {
+      "component": "callout_block",
+      "type": "insight",
+      "title": "Why use an independent broker",
+      "text": "Access to 20+ insurers, not just one company. We compare the best life insurance companies to find the lowest rates for your situation. No cost to you (insurers pay broker commissions). Expert guidance through the application process. Licensed by FSRA in Ontario. We serve families throughout the GTA — from Brampton to Mississauga to downtown Toronto — and understand the unique needs of Ontario homeowners and families."
+    },
+    {
+      "component": "content_block",
+      "id": "LifeInsuranceCostHeading",
+      "heading": "Life insurance rates in Ontario: How much does coverage cost?",
+      "heading_level": 2,
+      "paragraphs": [
+        "Here's what you'll actually pay: A healthy 35-year-old non-smoker pays $35-50 per month for $500,000 of 20-year term life coverage. That's about the cost of your monthly phone bill. Costs increase with age: 25-year-olds pay $20-30/month, 40-year-olds pay $45-70/month, and 50-year-olds pay $100-160/month for the same coverage."
+      ]
+    },
+    {
+      "component": "content_block",
+      "id": "LifeInsuranceOntario",
+      "heading": "Life insurance in Ontario: What you need to know",
+      "heading_level": 2,
+      "bullets": [
+        { "bold": "Regulation:", "text": "The Financial Services Regulatory Authority (FSRA) regulates life insurance in Ontario. FSRA ensures insurance companies operate fairly and protects consumer rights." },
+        { "bold": "Tax benefits:", "text": "Death benefits are 100% tax-free to beneficiaries. No PST or GST on life insurance premiums in Ontario. Premiums are not tax-deductible for personal policies." },
+        { "bold": "Consumer protections:", "text": "10-day free look period (cancel for full refund). Right to replace existing policy with proper disclosure. Complaint process through FSRA. Coverage through Assuris if your insurer fails." },
+        { "bold": "Creditor protection:", "text": "If your beneficiary is a family member (spouse, children, parents), your life insurance may be protected from creditors under Ontario law." }
+      ]
+    },
+    {
+      "component": "faq_block",
+      "items": [
+        {
+          "question": "Do I need life insurance if I'm single with no kids?",
+          "answer": "It depends on your debts. If you have student loans, car loans, or credit card debt, a small policy ($100,000-$250,000) ensures these don't fall on your family. If you're debt-free and no one depends on your income, life insurance may not be necessary."
+        },
+        {
+          "question": "Is life insurance tax-deductible in Canada?",
+          "answer": "No, personal life insurance premiums are not tax-deductible. However, the death benefit your beneficiaries receive is completely tax-free."
+        },
+        {
+          "question": "Can I get life insurance with pre-existing health conditions?",
+          "answer": "Yes. Options include simplified issue (limited health questions), guaranteed issue (no health questions for ages 40-85), or traditional underwriting with higher premiums. Coverage is available, but you may pay more."
+        },
+        {
+          "question": "What happens if I miss a premium payment?",
+          "answer": "Most policies have a 30-31 day grace period. If you pay within this period, coverage continues. If you don't pay within 30 days, the policy lapses and coverage ends."
+        },
+        {
+          "question": "Can I cancel my life insurance policy?",
+          "answer": "Yes, you can cancel anytime with no penalty. Term life policies have no cash value, so you won't receive a refund. Whole life policies can be surrendered for their accumulated cash value."
+        },
+        {
+          "question": "How long does it take to get approved?",
+          "answer": "Traditional underwriting takes 4-6 weeks. Accelerated underwriting takes 1-2 weeks. Simplified issue takes 24-48 hours. Some insurers offer same-day decisions for small coverage amounts."
+        },
+        {
+          "question": "Is my work life insurance enough?",
+          "answer": "Probably not. Most employer policies provide 1-2x your annual salary (typically $50,000-$100,000). Financial experts recommend 10-15x your income for adequate protection. With the high cost of living in the GTA, that employer coverage wouldn't come close to replacing your income or covering your family's expenses. Work coverage also ends when you leave your job. Use it as a supplement, not your primary coverage."
+        },
+        {
+          "question": "Can I have multiple life insurance policies?",
+          "answer": "Yes. Many people layer coverage — for example, $500,000 for 20 years plus $500,000 for 10 years — to match different financial obligations. Different insurers may offer better rates for different coverage amounts."
+        },
+        {
+          "question": "What exclusions should I know about?",
+          "answer": "Common exclusions include suicide in the first 2 years (premiums refunded), material misrepresentation during the first 2 years, and death during illegal activities. High-risk hobbies must be disclosed upfront. After 2 years, claims can't be contested for any reason."
+        },
+        {
+          "question": "When is the best time to buy life insurance?",
+          "answer": "Now. Life insurance rates increase approximately 8-10% for every year you wait, and premiums double approximately every 10 years. Buying young locks in low rates. You also can't predict when health issues will arise. Waiting even a few years can cost thousands more over the life of your policy."
+        }
+      ]
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Ready to Compare Quotes?",
+      "body": "Get instant quotes from 20+ Canadian insurers. Free, no obligation. Results in minutes.",
+      "button_text": "Get Free Quote",
+      "url": "/compare-insurance-quotes"
+    },
+    {
+      "component": "content_block",
+      "id": "GetQuote",
+      "heading": "Get your free life insurance quote",
+      "heading_level": 2,
+      "paragraphs": [
+        "We'll compare life insurance rates from 20+ of the best life insurance companies in Canada including Sun Life, Manulife, Canada Life, RBC Insurance, and BMO to find you the best rate."
+      ]
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Ready to Compare Quotes?",
+      "body": "Get instant quotes from 20+ Canadian insurers. Free, no obligation. Results in minutes.",
+      "button_text": "Get Free Quote",
+      "url": "/compare-insurance-quotes"
+    }
+  ]
+}
+

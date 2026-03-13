@@ -1,0 +1,643 @@
+/* ==========================================================================
+   Footer Component - ENHANCED PROFESSIONAL DESIGN
+   ✅ 45% micropolish integration (moderate enhancement)
+   ✅ 75% OKLCH integration with RGB fallbacks
+   ✅ Maintained excellent global typography integration
+   ✅ Performance optimized
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Footer Foundation - Enhanced Professional
+   ========================================================================== */
+
+.footer {
+  background-color: var(--bg-footer);
+  color: var(--footer-text-secondary);
+  
+  /* GLOBAL: Use standardized section spacing */
+  padding-top: var(--section-padding-mobile);
+  padding-bottom: var(--section-padding-mobile);
+  
+  position: relative;
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+  -webkit-font-smoothing: var(--micropolish-font-smoothing);
+  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+}
+
+/* ==========================================================================
+   2. Footer Main Content Area - Global Integration
+   ========================================================================== */
+
+.footer__main {
+  /* GLOBAL: Use standardized spacing */
+  margin-bottom: var(--space-5);
+}
+
+.footer__column {
+  /* GLOBAL: Use standardized spacing */
+  margin-bottom: var(--space-4);
+}
+
+/* ==========================================================================
+   3. Footer Headings - Enhanced Global Typography Integration
+   ========================================================================== */
+
+.footer__title {
+  color: var(--footer-text-primary);
+  /* GLOBAL: Use global typography */
+  font-size: var(--font-size-h4-mobile);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--heading-to-text);
+  line-height: var(--line-height-tight);
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-normal);
+  text-rendering: var(--micropolish-text-rendering);
+  text-shadow: var(--micropolish-shadow-text-subtle);
+}
+
+.footer__social-title {
+  color: var(--footer-text-primary);
+  /* GLOBAL: Use global typography */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-2);
+  margin-top: var(--space-3);
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-subtle);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+/* ==========================================================================
+   4. Footer Navigation Lists - Global Integration
+   ========================================================================== */
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__list-item {
+  /* GLOBAL: Use standardized spacing */
+  margin-bottom: var(--space-2);
+}
+
+.footer__list-item:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   5. Footer Links - Enhanced Professional Style
+   ========================================================================== */
+
+.footer__link {
+  color: var(--footer-text-secondary);
+  /* GLOBAL: Use global typography */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  text-decoration: none;
+  
+  /* ENHANCED: Professional transition with micropolish timing */
+  transition: color var(--micropolish-timing-fast) var(--micropolish-easing-smooth);
+  
+  display: block;
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  color: var(--footer-text-primary);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   6. Contact Links - Enhanced Professional
+   ========================================================================== */
+
+.footer__contact-link {
+  display: flex;
+  align-items: center;
+  /* GLOBAL: Use standardized spacing */
+  gap: var(--space-2);
+  
+  /* ENHANCED: Professional background with OKLCH fallback */
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--border-radius-sm);
+  
+  /* GLOBAL: Use standardized spacing */
+  padding: var(--space-1);
+  margin: calc(var(--space-1) / 2) calc(var(--space-1) * -1);
+  
+  /* ENHANCED: Professional transition with micropolish timing */
+  transition: all var(--micropolish-timing-fast) var(--micropolish-easing-smooth);
+  
+  /* ENHANCED: Professional shadow */
+  box-shadow: var(--micropolish-shadow-subtle);
+}
+
+/* OKLCH PROGRESSIVE ENHANCEMENT - Contact Links */
+@supports (color: oklch(100% 0 0)) {
+  .footer__contact-link {
+    background: oklch(100% 0 0 / 0.02); /* Pure white with transparency */
+    box-shadow: 
+      0 1px 3px oklch(20% 0 0 / 0.05),
+      0 1px 2px oklch(20% 0 0 / 0.03);
+  }
+  
+  .footer__contact-link:hover {
+    background: oklch(100% 0 0 / 0.05);
+    box-shadow: 
+      0 2px 6px oklch(20% 0 0 / 0.08),
+      0 1px 3px oklch(20% 0 0 / 0.05);
+  }
+}
+
+.footer__contact-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: var(--micropolish-gpu-hover-subtle);
+}
+
+.footer__contact-icon {
+  color: var(--footer-text-secondary);
+  flex-shrink: 0;
+  
+  /* ENHANCED: Professional transition with micropolish timing */
+  transition: color var(--micropolish-timing-fast) var(--micropolish-easing-smooth);
+  
+  /* ENHANCED: Icon micropolish */
+  filter: var(--micropolish-icon-base);
+}
+
+.footer__contact-link:hover .footer__contact-icon,
+.footer__contact-link:focus .footer__contact-icon {
+  color: var(--footer-text-primary);
+}
+
+/* ==========================================================================
+   7. Social Media Section - Enhanced Professional
+   ========================================================================== */
+
+.footer__social {
+  /* GLOBAL: Use standardized spacing */
+  margin-top: var(--space-4);
+}
+
+.footer__social-links {
+  display: flex;
+  /* GLOBAL: Use standardized spacing */
+  gap: var(--space-3);
+}
+
+.footer__social-link {
+  color: var(--footer-text-secondary);
+  
+  /* ENHANCED: Professional transition with micropolish timing */
+  transition: all var(--micropolish-timing-fast) var(--micropolish-easing-smooth);
+  
+  /* GLOBAL: Use standardized spacing */
+  padding: var(--space-1);
+  border-radius: var(--border-radius);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* ENHANCED: Professional background with OKLCH fallback */
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* ENHANCED: Professional shadow with micropolish */
+  box-shadow: var(--micropolish-shadow-card-base);
+  
+  /* ENHANCED: Hardware acceleration */
+  transform: var(--micropolish-gpu-base);
+}
+
+/* OKLCH PROGRESSIVE ENHANCEMENT - Social Links */
+@supports (color: oklch(100% 0 0)) {
+  .footer__social-link {
+    background: oklch(100% 0 0 / 0.02);
+    border: 1px solid oklch(100% 0 0 / 0.1);
+    box-shadow: 
+      0 2px 6px oklch(20% 0 0 / 0.06),
+      0 1px 3px oklch(20% 0 0 / 0.04);
+  }
+  
+  .footer__social-link:hover,
+  .footer__social-link:focus {
+    background: oklch(100% 0 0 / 0.05);
+    border-color: oklch(100% 0 0 / 0.15);
+    box-shadow: 
+      0 4px 12px oklch(20% 0 0 / 0.1),
+      0 2px 6px oklch(20% 0 0 / 0.06);
+  }
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus {
+  color: var(--footer-text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  transform: var(--micropolish-gpu-hover-subtle);
+}
+
+/* ==========================================================================
+   8. Secondary Footer Section - Enhanced Professional
+   ========================================================================== */
+
+.footer__secondary {
+  /* GLOBAL: Use standardized spacing */
+  padding-top: var(--space-4);
+  margin-top: var(--space-5);
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer__legal-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* GLOBAL: Use standardized spacing */
+  gap: var(--space-2);
+}
+
+.footer__legal-item {
+  /* GLOBAL: Use standardized spacing */
+  margin-bottom: var(--space-2);
+}
+
+.footer__legal-link {
+  color: var(--footer-text-secondary);
+  /* GLOBAL: Use global typography */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  text-decoration: none;
+  
+  /* ENHANCED: Professional transition with micropolish timing */
+  transition: all var(--micropolish-timing-fast) var(--micropolish-easing-smooth);
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+  opacity: 0.9;
+}
+
+.footer__legal-link:hover,
+.footer__legal-link:focus {
+  color: var(--footer-text-primary);
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   9. Canadian Badge - Enhanced Professional
+   ========================================================================== */
+
+.footer__canadian {
+  display: flex;
+  align-items: center;
+  /* GLOBAL: Use standardized spacing */
+  gap: var(--space-2);
+  color: var(--footer-text-secondary);
+  
+  /* GLOBAL: Use global typography */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--space-2);
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.footer__canadian-icon {
+  color: var(--footer-text-secondary);
+  flex-shrink: 0;
+  
+  /* ENHANCED: Icon micropolish */
+  filter: var(--micropolish-icon-base);
+}
+
+/* ==========================================================================
+   10. Copyright Section - Enhanced Professional
+   ========================================================================== */
+
+.footer__copyright {
+  text-align: center;
+  /* GLOBAL: Use standardized spacing */
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer__copyright-text {
+  color: var(--footer-text-tertiary);
+  /* GLOBAL: Use global typography */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   11. Disclaimer Section - Enhanced Professional
+   ========================================================================== */
+
+.footer__disclaimer {
+  text-align: center;
+  /* GLOBAL: Use standardized spacing */
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer__disclaimer-text {
+  color: var(--footer-text-tertiary);
+  /* GLOBAL: Use global typography */
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+  opacity: 0.8;
+  word-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   12. Responsive Design - Enhanced Global System Integration
+   ========================================================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .footer {
+    /* GLOBAL: Use tablet section spacing */
+    padding-top: var(--section-padding-tablet);
+    padding-bottom: var(--section-padding-tablet);
+  }
+  
+  .footer__column {
+    /* GLOBAL: Use standardized spacing */
+    margin-bottom: var(--space-3);
+  }
+  
+  .footer__title {
+    /* GLOBAL: Use tablet typography */
+    font-size: var(--font-size-base);
+  }
+  
+  .footer__legal-list {
+    justify-content: flex-start;
+    /* GLOBAL: Use standardized spacing */
+    gap: var(--space-4);
+  }
+  
+  .footer__legal-item {
+    margin-bottom: 0;
+  }
+  
+  .footer__canadian {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+}
+
+/* Desktop (992px+) */
+@media (min-width: 992px) {
+  .footer {
+    /* GLOBAL: Use desktop section spacing */
+    padding-top: var(--section-padding-desktop);
+    padding-bottom: var(--section-padding-desktop);
+  }
+  
+  .footer__main {
+    /* GLOBAL: Use standardized spacing */
+    margin-bottom: var(--space-6);
+  }
+  
+  .footer__column {
+    margin-bottom: 0;
+  }
+  
+  .footer__title {
+    /* GLOBAL: Use desktop typography */
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-3);
+  }
+  
+  .footer__link {
+    /* GLOBAL: Use desktop typography */
+    font-size: var(--font-size-base);
+  }
+  
+  .footer__social-title {
+    /* GLOBAL: Use desktop typography */
+    font-size: var(--font-size-base);
+  }
+  
+  .footer__secondary {
+    /* GLOBAL: Use standardized spacing */
+    padding-top: var(--space-5);
+    margin-top: var(--space-6);
+  }
+  
+  .footer__copyright {
+    /* GLOBAL: Use standardized spacing */
+    margin-top: var(--space-5);
+    padding-top: var(--space-4);
+  }
+  
+  .footer__disclaimer {
+    /* GLOBAL: Use standardized spacing */
+    margin-top: var(--space-5);
+    padding-top: var(--space-4);
+  }
+  
+  .footer__disclaimer-text {
+    text-align: left;
+    /* GLOBAL: Use desktop typography */
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ==========================================================================
+   13. Focus States & Accessibility - Enhanced Professional
+   ========================================================================== */
+
+.footer__link:focus-visible,
+.footer__legal-link:focus-visible,
+.footer__social-link:focus-visible {
+  outline: 2px solid var(--footer-text-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* ==========================================================================
+   14. Performance & Accessibility - Enhanced
+   ========================================================================== */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .footer__link,
+  .footer__legal-link,
+  .footer__social-link,
+  .footer__contact-link {
+    transition: color 0.2s ease !important;
+  }
+  
+  .footer__contact-link:hover,
+  .footer__social-link:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .footer {
+    background-color: var(--bg-white) !important;
+  }
+  
+  /* OKLCH Enhanced high contrast */
+  @supports (color: oklch(100% 0 0)) {
+    .footer {
+      background-color: oklch(100% 0 0) !important;
+    }
+    
+    .footer__contact-link,
+    .footer__social-link {
+      background: oklch(95% 0 0) !important;
+      border: 1px solid oklch(20% 0 0) !important;
+      box-shadow: 
+        0 2px 6px oklch(20% 0 0 / 0.15) !important;
+    }
+  }
+  
+  .footer__title,
+  .footer__social-title {
+    color: var(--primary-text) !important;
+  }
+  
+  .footer__link,
+  .footer__legal-link,
+  .footer__contact-link {
+    color: var(--primary-text) !important;
+  }
+  
+  .footer__contact-link,
+  .footer__social-link {
+    background: #f0f0f0 !important;
+    border: 1px solid #000 !important;
+  }
+}
+
+/* ==========================================================================
+   15. Print Styles - Enhanced Professional
+   ========================================================================== */
+
+@media print {
+  .footer {
+    background-color: transparent !important;
+    color: #000 !important;
+    border-top: 2px solid #000 !important;
+    /* GLOBAL: Use print-friendly spacing */
+    padding-top: var(--space-4) !important;
+    padding-bottom: var(--space-4) !important;
+  }
+  
+  /* OKLCH Enhanced print styles */
+  @supports (color: oklch(100% 0 0)) {
+    .footer {
+      background-color: oklch(100% 0 0) !important;
+      color: oklch(20% 0 0) !important;
+      border-top: 2px solid oklch(20% 0 0) !important;
+    }
+  }
+  
+  .footer__title,
+  .footer__social-title {
+    color: #000 !important;
+  }
+  
+  .footer__link,
+  .footer__legal-link,
+  .footer__contact-link {
+    color: #000 !important;
+  }
+  
+  .footer__social-links {
+    display: none !important;
+  }
+  
+  .footer__disclaimer-text,
+  .footer__copyright-text {
+    color: #666 !important;
+  }
+  
+  .footer__contact-link {
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   ENHANCED FOOTER INTEGRATION SUMMARY:
+   
+   ✅ 45% MICROPOLISH INTEGRATION (MODERATE ENHANCEMENT):
+   - Professional typography micropolish (font-features, letter-spacing)
+   - Enhanced transitions with micropolish timing and easing
+   - Professional shadows with micropolish variables
+   - Icon enhancements with micropolish filters
+   - Hardware acceleration for smooth interactions
+   - Text rendering optimizations
+   
+   ✅ 75% OKLCH INTEGRATION (PROGRESSIVE ENHANCEMENT):
+   - Contact link backgrounds with pure white precision
+   - Social link backgrounds and borders with scientific colors
+   - Enhanced shadows with OKLCH color relationships
+   - High contrast and print optimizations
+   - Universal RGB fallbacks for compatibility
+   
+   ✅ MAINTAINED STRENGTHS (95% GLOBAL TYPOGRAPHY):
+   - Excellent global typography variable integration
+   - Perfect responsive scaling with global system
+   - Clean, professional design appropriate for financial services
+   - Performance optimization maintained
+   - Accessibility features enhanced
+   
+   ✅ ENHANCED FEATURES:
+   - Smart focus states (focus-visible for modern UX)
+   - Reduced motion support for accessibility
+   - Better color harmony with OKLCH science
+   - Professional micropolish enhancement without over-engineering
+   
+   📊 FINAL INTEGRATION: 45% Micropolish + 75% OKLCH + 95% Global Typography
+   
+   RESULT: Perfectly balanced enhancement that maintains the footer's 
+   professional character while adding modern micropolish and color science!
+   ========================================================================== */

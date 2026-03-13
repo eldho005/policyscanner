@@ -1,0 +1,223 @@
+{
+  "title": "Mortgage Life Insurance in Canada",
+  "seo_title": "Mortgage Life Insurance Canada | Is It Worth It? | PolicyScanner",
+  "seo_description": "Compare mortgage life insurance vs. term life insurance in Canada. Find out what banks don't tell you and get better coverage for less. Ontario-licensed advisors.",
+  "slug": "mortgage-protection",
+  "tag": "Mortgage Insurance",
+  "read_time": "9 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 2000,
+    "primary_keyword": "mortgage life insurance canada",
+    "secondary_keywords": [
+      "mortgage protection insurance ontario",
+      "bank mortgage insurance vs term life",
+      "creditor insurance canada",
+      "mortgage insurance alternative"
+    ],
+    "conversion_goal": "Lead capture — convince homeowners to choose term life over bank mortgage insurance, then get quotes through PolicyScanner",
+    "page_role": "Product page targeting homeowners. Educates on bank CI/mortgage insurance weakness vs. independent term life. High-intent audience: recent homebuyers.",
+    "writer_focus": "This page has a clear editorial position: bank mortgage insurance (creditor insurance) is almost always worse than owning a personal term life policy. That's the honest, defensible truth. Write it clearly without being inflammatory.",
+    "seo_keywords": {
+      "use_primary_exact": "mortgage life insurance",
+      "density_rule": "Use 'mortgage life insurance' 2–3 times per 500 words. Also use 'mortgage protection' and 'creditor insurance' naturally.",
+      "synonyms": [
+        "mortgage protection insurance",
+        "creditor insurance",
+        "bank mortgage life insurance",
+        "mortgage decreasing term insurance",
+        "home loan insurance"
+      ],
+      "lsi_terms": [
+        "decreasing benefit",
+        "post-claim underwriting",
+        "portability",
+        "beneficiary designation",
+        "renewal at higher rate",
+        "group mortgage insurance",
+        "level term life",
+        "CMHC"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "FSRA",
+        "CMHC",
+        "TD Bank",
+        "RBC",
+        "Scotiabank",
+        "CIBC",
+        "BMO"
+      ],
+      "action_keywords": [
+        "compare mortgage insurance",
+        "get term life instead",
+        "protect your mortgage",
+        "replace bank mortgage insurance"
+      ],
+      "natural_variations": [
+        "insurance to cover your mortgage",
+        "what protects your family's home",
+        "if you die with a mortgage",
+        "covering the balance on your home loan"
+      ],
+      "real_example_to_use": "Mark and Lisa, Brampton — bought $850K home, declined bank mortgage insurance, got $1M 20-year term policy for $78/month instead of $210/month — and the payout goes to their family, not the bank",
+      "avoid": "Do not say bank mortgage insurance is a scam — say it's a weaker product and explain why. Factual and defensible."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "Mortgage Life Insurance: What the Bank Sells vs. What You Should Buy",
+      "subheading": "Your bank will offer you mortgage insurance at closing. Here's what they don't tell you — and why most Canadians choose personal term life instead.",
+      "cta_primary": "Compare Mortgage Protection Options",
+      "cta_secondary": "See Why Term Life Wins",
+      "_writer_notes": {
+        "target_words": 65,
+        "focus": "Provocative but fair. Acknowledge bank mortgage insurance exists, then frame the comparison. Don't dismiss — educate.",
+        "key_points": [
+          "Bank mortgage insurance protects the bank. Personal term life protects your family.",
+          "Most homeowners can get better coverage for the same — or less — money"
+        ]
+      }
+    },
+    {
+      "_type": "problemSection",
+      "heading": "The Problem with Bank Mortgage Insurance",
+      "_writer_notes": {
+        "target_words": 300,
+        "focus": "Explain the 3 core weaknesses of bank creditor insurance: post-claim underwriting, decreasing benefit, bank as beneficiary.",
+        "key_points": [
+          "Post-claim underwriting: bank approves you at sale, but reviews your health record AFTER you die. If they find undisclosed health issues, claim denied.",
+          "Decreasing benefit: your mortgage balance decreases over time. Your premiums don't. You pay the same but your coverage shrinks.",
+          "Bank is the beneficiary: money goes directly to the bank to pay off the mortgage — your family doesn't receive cash to use as they need",
+          "Not portable: if you switch lenders or refinance, you lose coverage",
+          "Group underwritten: everyone in the same age band pays the same regardless of health — healthy people subsidize unhealthy ones"
+        ],
+        "structure": "Use 5 clearly labelled problems. Numbered list with bold problem name + 2-sentence explanation each."
+      }
+    },
+    {
+      "_type": "comparisonSection",
+      "heading": "Bank Mortgage Insurance vs. Personal Term Life Insurance",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "Side-by-side comparison table. Be objective but let the facts speak.",
+        "key_points": [
+          "Underwriting: post-claim (bank) vs. pre-approved (term life)",
+          "Benefit: decreasing balance (bank) vs. level death benefit (term)",
+          "Beneficiary: bank (bank) vs. your family (term)",
+          "Portability: no (bank) vs. yes (term — follows you wherever you go)",
+          "Price: often higher per dollar of coverage (bank) vs. usually lower (term)",
+          "Flexibility: pays mortgage only (bank) vs. family uses money however needed (term)"
+        ],
+        "real_example": "Mark and Lisa example: $850K mortgage → bank offered insurance at $210/month for $850K decreasing coverage. PolicyScanner found $1M 20-year term for $78/month — more coverage, lower cost, family as beneficiary."
+      }
+    },
+    {
+      "_type": "whenBankInsuranceMakesSenseSection",
+      "heading": "When Does Bank Mortgage Insurance Make Sense?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Be fair — bank mortgage insurance isn't always the wrong choice. Cover edge cases.",
+        "key_points": [
+          "If you have an uninsurable health condition and can't get personal coverage",
+          "Short-term bridge: if you need coverage immediately while a personal policy is being underwritten",
+          "Convenience: some buyers just want to check the box at closing — bank makes it easy"
+        ],
+        "structure": "Short section. 3 scenarios. Then: 'For most healthy Canadians under 60, however, a personal term life policy is almost always better value.'"
+      }
+    },
+    {
+      "_type": "costComparisonSection",
+      "heading": "Cost Comparison: What You'd Actually Pay",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Real numbers. $600K mortgage example. Bank insurance vs. $600K 20-year term life.",
+        "key_points": [
+          "Bank mortgage insurance (Big 5 bank): ~$130–$180/month for $600K",
+          "$600K 20-year term life (personal), age 35, non-smoker, male: ~$60–$80/month",
+          "$600K 20-year term life (personal), age 35, non-smoker, female: ~$45–$65/month",
+          "Personal term: more coverage, lower cost, family is beneficiary",
+          "Rate increases: bank insurance premiums increase at each renewal; level-term stays flat for 20 years"
+        ],
+        "structure": "Table comparing monthly cost at different mortgage sizes ($400K, $600K, $800K). Source: illustrative estimates — recommend they get a real quote."
+      }
+    },
+    {
+      "_type": "howToReplaceSection",
+      "heading": "How to Replace Bank Mortgage Insurance with a Personal Policy",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Action steps for someone who wants to switch. Simple 4-step process.",
+        "key_points": [
+          "Step 1: Get a personal term life quote — PolicyScanner compares 10+ insurers",
+          "Step 2: Apply and get approved (medical questionnaire, health check if needed)",
+          "Step 3: Once approved and policy active, cancel bank mortgage insurance",
+          "IMPORTANT: Do not cancel bank coverage before personal policy is active",
+          "Step 4: Update beneficiary to spouse / estate — not the bank"
+        ]
+      }
+    },
+    {
+      "_type": "ontarioSection",
+      "heading": "Mortgage Insurance Regulation in Ontario",
+      "_writer_notes": {
+        "target_words": 180,
+        "focus": "FSRA regulates the insurance products. Banks sell insurance under special federal bank charters — different oversight than FSRA-licensed brokers. This matters for accountability.",
+        "key_points": [
+          "Bank-sold creditor insurance is federally regulated under OSFI — different rules than FSRA",
+          "Personal term life sold by licensed brokers = FSRA regulated with fiduciary obligation",
+          "FCAC (Financial Consumer Agency of Canada) has issued consumer alerts about creditor insurance weaknesses",
+          "Ontario advisors at PolicyScanner are FSRA-licensed and legally required to act in your best interest"
+        ]
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Mortgage Life Insurance — Frequently Asked Questions",
+      "faqs": [
+        {
+          "question": "Is mortgage life insurance mandatory in Canada?",
+          "answer": "No. Mortgage life insurance is optional in Canada. Lenders cannot require you to buy their mortgage insurance product. You can satisfy their protection requirement with a personal life insurance policy instead.",
+          "_guidance": "Common misconception — banks sometimes imply it's required. Be clear it's not."
+        },
+        {
+          "question": "What is post-claim underwriting?",
+          "answer": "Post-claim underwriting means the insurer waits until a claim is filed to fully review your health history. You were approved at the point of sale, but their investigation happens after your death — meaning claims can be denied after the fact. Personal life insurance policies use pre-claim underwriting: your health is fully reviewed before approval.",
+          "_guidance": "This is the most important concept on the page. Explain clearly."
+        },
+        {
+          "question": "Can I get mortgage insurance if I have health issues?",
+          "answer": "Bank creditor insurance is often easier to qualify for because it uses simplified (group) underwriting. However, the trade-off is weaker claims coverage and higher cost. If you have a serious health history, a no-medical or simplified-issue term life policy may be worth exploring as an alternative.",
+          "_guidance": "Fair answer — acknowledge the accessibility of bank insurance for harder-to-insure individuals."
+        },
+        {
+          "question": "What happens to mortgage insurance if I sell my home?",
+          "answer": "Bank mortgage insurance is tied to your specific mortgage at that lender. If you sell or refinance, the coverage ends. Personal term life insurance is not tied to your mortgage — it follows you, stays in force, and protects your family regardless of where you live.",
+          "_guidance": "Portability is a key differentiator — reinforce it here."
+        },
+        {
+          "question": "What happens if both spouses die at the same time?",
+          "answer": "With bank mortgage insurance, the mortgage is paid off and nothing goes to heirs. With personal term life insurance, each policy pays its full benefit to the named beneficiary — leaving your family with a cash benefit they can use for anything, not just the mortgage.",
+          "_guidance": "This is an important scenario for couples — explain clearly."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Get a Personal Mortgage Protection Quote — Free in 2 Minutes",
+      "subheading": "Compare 10+ Canadian life insurers through PolicyScanner. See if you can get better coverage than your bank is offering.",
+      "cta_button": "Compare My Options Free",
+      "_writer_notes": {
+        "target_words": 50,
+        "focus": "Call to action framing: compare before you commit. Position this as a smart financial move, not a sales pitch.",
+        "key_points": [
+          "No obligation — just compare",
+          "Take 2 minutes now, potentially save $100+/month",
+          "Ontario-licensed advisors explain your options"
+        ]
+      }
+    }
+  ]
+}

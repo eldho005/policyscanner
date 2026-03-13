@@ -1,0 +1,278 @@
+{
+  "title": "Critical Illness Insurance in Canada",
+  "seo_title": "Critical Illness Insurance Canada | Compare Plans & Quotes | PolicyScanner",
+  "seo_description": "Compare critical illness insurance in Canada. Get lump-sum coverage for cancer, heart attack, stroke, and 25+ conditions. Ontario-licensed advisors. Free quotes in minutes.",
+  "slug": "critical-illness",
+  "tag": "Critical Illness",
+  "read_time": "10 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 2200,
+    "primary_keyword": "critical illness insurance canada",
+    "secondary_keywords": [
+      "critical illness insurance ontario",
+      "ci insurance canada",
+      "critical illness coverage",
+      "cancer insurance canada"
+    ],
+    "conversion_goal": "Lead capture — get readers to compare CI quotes through PolicyScanner",
+    "page_role": "Product pillar page for Critical Illness — sits under life-insurance hub, links to CI vs Disability comparison",
+    "writer_focus": "Explain what CI pays (lump sum, tax-free, no strings), what conditions qualify, and who needs it most. Ontario context matters: OHIP doesn't cover lost income or home care during recovery. This is the coverage gap CI fills.",
+    "seo_keywords": {
+      "use_primary_exact": "critical illness insurance",
+      "density_rule": "Use 'critical illness insurance' 3–4 times per 500 words. First use on page should be exact phrase. Vary after.",
+      "synonyms": [
+        "critical illness coverage",
+        "CI insurance",
+        "critical illness plan",
+        "serious illness insurance",
+        "living benefits insurance"
+      ],
+      "lsi_terms": [
+        "lump-sum benefit",
+        "tax-free payout",
+        "survival period",
+        "return of premium",
+        "covered conditions",
+        "waiting period",
+        "partial benefit",
+        "first event coverage"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "OHIP",
+        "Canada Revenue Agency",
+        "Sun Life",
+        "Manulife",
+        "Empire Life",
+        "iA Financial",
+        "FSRA"
+      ],
+      "action_keywords": [
+        "compare critical illness quotes",
+        "get CI coverage",
+        "protect your income",
+        "apply for critical illness insurance"
+      ],
+      "natural_variations": [
+        "a critical illness plan",
+        "CI coverage in Canada",
+        "illness insurance policy",
+        "if you were diagnosed with cancer tomorrow"
+      ],
+      "real_example_to_use": "Sara, 42, from Toronto — diagnosed with breast cancer, received $300,000 lump-sum tax-free, used it to pay off mortgage, cover private treatment, and take 18 months off work",
+      "avoid": "Do not write 'critical illness insurance canada' as a stiff keyword phrase. Write naturally: 'critical illness insurance in Canada' or 'Canadian CI coverage'."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "Critical Illness Insurance: Get Paid If You're Diagnosed",
+      "subheading": "A lump-sum, tax-free payout when you survive a covered diagnosis — cancer, heart attack, stroke, and 25+ more conditions.",
+      "cta_primary": "Compare CI Quotes Free",
+      "cta_secondary": "See What's Covered",
+      "_writer_notes": {
+        "target_words": 60,
+        "focus": "Outcome-first hero. The core promise: you get a cash lump sum if you're diagnosed. Lead with the tax-free, no-restrictions angle.",
+        "key_points": [
+          "Cash goes directly to you — not to doctors or hospitals",
+          "Use it for anything: mortgage, treatment, time off work",
+          "No OHIP replacement — this fills the financial gap"
+        ]
+      }
+    },
+    {
+      "_type": "statsBar",
+      "stats": [
+        { "value": "1 in 2", "label": "Canadians will develop cancer in their lifetime" },
+        { "value": "$300K+", "label": "Average lost income during a 2-year cancer recovery" },
+        { "value": "30 days", "label": "Typical survival period before payout triggers" },
+        { "value": "25+", "label": "Conditions covered by most CI policies" }
+      ],
+      "_writer_notes": {
+        "target_words": 40,
+        "focus": "Use real Canadian statistics. The '1 in 2' cancer stat comes from Canadian Cancer Society. Income loss figure is from Sun Life research. These should feel urgent, not alarmist."
+      }
+    },
+    {
+      "_type": "whatIsSection",
+      "heading": "What Is Critical Illness Insurance?",
+      "_writer_notes": {
+        "target_words": 300,
+        "focus": "Plain language explanation. CI pays you a lump sum after you survive a diagnosis of a covered condition for 30 days (the survival period). It's not life insurance — it pays while you're alive.",
+        "key_points": [
+          "Tax-free lump sum paid directly to you — no receipts needed",
+          "Triggered by diagnosis + survival period (usually 30 days)",
+          "NOT tied to expenses — you choose how to use the money",
+          "Most plans cover 25–30 conditions; basic plans cover 3 (cancer, heart attack, stroke)",
+          "Different from disability — CI pays once, DI replaces monthly income"
+        ],
+        "structure": "Open with the gap OHIP leaves: you might survive cancer but go broke doing it. Define CI. Distinguish from life insurance and disability. End with the key benefit: freedom to use money however you want."
+      }
+    },
+    {
+      "_type": "conditionsTable",
+      "heading": "What Conditions Are Covered?",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "List the 3 core conditions (cancer, heart attack, stroke) and then the extended list. Clarify that ALL major insurers cover the Big 3. Express list varies by insurer.",
+        "key_points": [
+          "Core 3: cancer (life-threatening), heart attack, stroke",
+          "Extended includes: coronary bypass, kidney failure, MS, Parkinson's, blindness, deafness, organ transplant, aortic surgery, Alzheimer's, coma, paralysis",
+          "Some plans cover up to 30+ conditions",
+          "Partial benefit: some minor conditions (e.g., early-stage skin cancer) may pay 10–25% of benefit"
+        ],
+        "structure": "Two-tier table: Core 3 (row 1) and Extended conditions (rows 2–15). Note partial benefit column. Note: pre-existing conditions excluded from most plans."
+      }
+    },
+    {
+      "_type": "howItWorksSection",
+      "heading": "How Critical Illness Insurance Works",
+      "_writer_notes": {
+        "target_words": 300,
+        "focus": "Step-by-step process from application to payout. Keep it simple and reassuring.",
+        "key_points": [
+          "Step 1: Apply and get approved (medical questions, sometimes exam)",
+          "Step 2: Pay monthly or annual premium",
+          "Step 3: Get diagnosed with a covered condition",
+          "Step 4: Survive the survival period (usually 30 days)",
+          "Step 5: Submit claim — insurer pays lump sum within 30–60 days",
+          "Step 6: Use money however you want"
+        ],
+        "real_example": "Sara, 42, Toronto — breast cancer diagnosis in February, submitted claim in March after 30-day survival period, received $300,000 in April. Used $150K to pay down mortgage, $80K for private treatment not covered by OHIP, $70K to support family while off work for 16 months."
+      }
+    },
+    {
+      "_type": "whoNeedsItSection",
+      "heading": "Who Needs Critical Illness Insurance?",
+      "_writer_notes": {
+        "target_words": 280,
+        "focus": "Segment the audience. Not everyone has the same need. Help readers self-identify.",
+        "key_points": [
+          "Self-employed: no sick pay, short-term disability, or employer benefits",
+          "Single-income households: one earner supporting family — loss of income is catastrophic",
+          "People with family history of cancer/heart disease: higher risk, may want coverage earlier",
+          "Those with mortgages: CI can pay off or maintain mortgage during recovery",
+          "Anyone without 6+ months emergency savings"
+        ],
+        "structure": "Use 4–5 short profiles. 2–3 sentences each. End with: 'If you depend on your paycheque, critical illness insurance protects your financial life when your health fails you.'"
+      }
+    },
+    {
+      "_type": "costTable",
+      "heading": "How Much Does Critical Illness Insurance Cost?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Real monthly cost examples. Non-smoker, healthy, 10-year term CI plan. $100K coverage.",
+        "key_points": [
+          "Age 30, female, non-smoker: ~$35–$55/mo for $100K",
+          "Age 35, male, non-smoker: ~$55–$75/mo for $100K",
+          "Age 40, female, non-smoker: ~$80–$110/mo for $100K",
+          "Age 45, male, non-smoker: ~$130–$180/mo for $100K",
+          "Smokers pay 2–3x more",
+          "Return of premium option adds 30–50% to cost but refunds premiums if no claim"
+        ],
+        "structure": "Simple table: Age / Male Monthly / Female Monthly. Note: rates vary by insurer, coverage amount, and number of conditions covered. CTA after table.",
+        "callout_after": "Add a green callout box: 'These are estimates. Use our quote tool to get your exact rate in 2 minutes — no obligation.'"
+      }
+    },
+    {
+      "_type": "returnOfPremiumSection",
+      "heading": "Return of Premium: Get Your Money Back If You're Never Sick",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Explain ROP rider — popular in Canada. If you never claim, you get premiums back at expiry or death. It's not an investment but it removes the 'wasted money' objection.",
+        "key_points": [
+          "ROP on expiry: premiums returned at end of term if no claim made",
+          "ROP on death: premiums returned to estate if you die without claiming",
+          "Costs 30–50% more than non-ROP plan",
+          "Makes CI feel like a 'no-lose' product — popular with Canadians",
+          "Note: not all insurers offer both ROP options — compare"
+        ]
+      }
+    },
+    {
+      "_type": "ciVsDisabilitySection",
+      "heading": "Critical Illness vs. Disability Insurance: What's the Difference?",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "Key distinction: CI pays once (lump sum on diagnosis). DI replaces monthly income while you can't work. Many Canadians need both.",
+        "key_points": [
+          "CI: lump sum, triggered by diagnosis, use it however you want",
+          "DI: monthly income replacement, triggered by inability to work",
+          "CI is better for: mortgage payoff, treatment costs, buying time to recover",
+          "DI is better for: ongoing bills, multi-year disability, recovery over years",
+          "Ideal: have both — they cover different financial risks"
+        ],
+        "callout_after": "Link to: 'Critical Illness vs. Disability — Which One Do You Need?' comparison page"
+      }
+    },
+    {
+      "_type": "ontarioSection",
+      "heading": "Critical Illness Insurance in Ontario",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Ontario-specific context. FSRA regulates CI insurers. OHIP doesn't cover income loss, private treatment, home care, or experimental drugs. CI fills that gap.",
+        "key_points": [
+          "FSRA (Financial Services Regulatory Authority) licenses all CI insurers in Ontario",
+          "OHIP does NOT cover: lost income, private clinics, travel for treatment, home care, experimental therapies",
+          "Toronto/GTA context: high cost of living makes recovery financially brutal without CI",
+          "Ontario advisors are regulated — use a licensed broker for unbiased comparison",
+          "PolicyScanner advisors are Ontario-licensed — compare 10+ insurers at once"
+        ]
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Critical Illness Insurance — Frequently Asked Questions",
+      "faqs": [
+        {
+          "question": "Is critical illness insurance payout taxable in Canada?",
+          "answer": "No. Critical illness insurance benefits are paid tax-free when the policy is personally owned and premiums are paid with after-tax dollars. You do not report the payout as income.",
+          "_guidance": "This is one of the most searched CI questions. Be definitive. Note: if employer pays premiums, it may be taxable — but most personal CI plans are tax-free."
+        },
+        {
+          "question": "What is the survival period for critical illness insurance?",
+          "answer": "Most policies require you to survive 30 days after diagnosis before the benefit is paid. Some conditions (like aortic surgery) may have a shorter or zero survival period. Always check your policy's specific terms.",
+          "_guidance": "Explain why it exists: prevents claims for immediate death after diagnosis."
+        },
+        {
+          "question": "Can I get critical illness insurance at 55?",
+          "answer": "Yes, though it becomes more expensive with age and some conditions may be excluded based on your health history. Most insurers offer CI up to age 65 for new policies. Getting coverage at 55 is still worthwhile, especially if you have no other coverage.",
+          "_guidance": "Address the 'am I too old?' concern directly."
+        },
+        {
+          "question": "Does critical illness insurance cover pre-existing conditions?",
+          "answer": "No. If you were diagnosed with a covered condition before applying (or in recent years prior), that condition is usually excluded. Some insurers will decline coverage if the risk is too high. Always disclose fully — non-disclosure can void your claim.",
+          "_guidance": "Be honest and direct. Don't sugarcoat exclusions."
+        },
+        {
+          "question": "How many conditions does critical illness insurance cover in Canada?",
+          "answer": "Basic plans cover 3 conditions (cancer, heart attack, stroke). Comprehensive plans cover 20–30+ conditions including MS, Parkinson's, kidney failure, blindness, major organ transplant, and more. Always compare the covered conditions list before buying.",
+          "_guidance": "Help readers understand the product tier differences."
+        },
+        {
+          "question": "Can I have both critical illness and life insurance?",
+          "answer": "Yes — and most financial advisors recommend it. Life insurance pays on death; CI insurance pays if you survive a serious illness. They cover different financial risks and complement each other well.",
+          "_guidance": "Cross-sell opportunity — link to life insurance hub page."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Compare Critical Illness Insurance Plans — Free in 2 Minutes",
+      "subheading": "PolicyScanner compares 10+ Canadian insurers. Ontario-licensed advisors. No obligation, no pressure.",
+      "cta_button": "Get My Free CI Quote",
+      "_writer_notes": {
+        "target_words": 50,
+        "focus": "Closing conversion section. Reinforce trust signals: licensed, multiple insurers, free, fast.",
+        "key_points": [
+          "No spam — your number won't be sold",
+          "Compare Sun Life, Manulife, iA, Empire Life side by side",
+          "Ontario advisor reviews your options personally"
+        ]
+      }
+    }
+  ]
+}

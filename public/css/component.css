@@ -1,0 +1,24 @@
+/* ===================================================================
+   POLICYSCANNER - INSURANCE PAGE MOBILE OVERRIDES (component.css)
+   Companion to content_global.css — only rules NOT in content_global.css.
+   =================================================================== */
+
+/* ===================================================================
+   SMALL SCREENS  (< 600px)
+   =================================================================== */
+@media (max-width: 600px) {
+
+  /* Tables scroll hint (unique to component.css) */
+  .table-container {
+    position: relative;
+  }
+  .table-container::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 24px;
+    background: linear-gradient(to left, rgba(255,255,255,0.9), transparent);
+    pointer-events: none;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+}

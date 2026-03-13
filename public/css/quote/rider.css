@@ -1,0 +1,723 @@
+/* ==========================================================================
+   UNIFIED INSURANCE SIDEBAR COMPONENT - BEM METHODOLOGY
+   Uses Global CSS Foundation + Component-Specific Styles
+   
+   Dependencies: global.css must be loaded first
+   Supports: Plan Details Sidebar + Rider Details Sidebar
+   ========================================================================== */
+
+.insurance-sidebar {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--primary-text);
+}
+
+/* ==========================================================================
+   MODAL OVERLAY & CONTAINER
+   ========================================================================== */
+
+.insurance-sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-modal-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-slow);
+  backdrop-filter: blur(4px);
+}
+
+.insurance-sidebar__overlay--active {
+  opacity: 1;
+  visibility: visible;
+    z-index: 9999;
+}
+
+.insurance-sidebar__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 550px;
+  height: 100vh;
+  background: var(--bg-white);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-modal-content);
+  transform: translateX(100%);
+  transition: transform var(--transition-slow);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+    z-index: 99999;
+}
+
+.insurance-sidebar__modal--active {
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.insurance-sidebar__header {
+  position: sticky;
+  top: 0;
+  background: var(--bg-white);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.insurance-sidebar__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0;
+}
+
+.insurance-sidebar__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--secondary-text);
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.insurance-sidebar__close:hover {
+  background: var(--bg-secondary);
+  color: var(--primary-text);
+}
+
+/* ==========================================================================
+   COVERAGE SUMMARY (PLAN DETAILS ONLY)
+   ========================================================================== */
+
+.insurance-sidebar__coverage {
+  background: var(--bg-white);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.insurance-sidebar__coverage-amount {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  color: var(--primary-text);
+}
+
+.insurance-sidebar__coverage-premium {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  color: var(--primary-teal);
+  text-align: right;
+}
+
+/* ==========================================================================
+   CONTENT CONTAINER & SECTIONS
+   ========================================================================== */
+
+.insurance-sidebar__content {
+  padding: var(--space-4);
+  background: var(--bg-white);
+}
+
+.insurance-sidebar__section {
+  margin-bottom: var(--space-4);
+}
+
+.insurance-sidebar__section:last-child {
+  margin-bottom: 0;
+}
+
+.insurance-sidebar__section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.insurance-sidebar__section-text {
+  margin: 0 0 var(--space-2) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ==========================================================================
+   PLAN DETAILS SPECIFIC COMPONENTS
+   ========================================================================== */
+
+/* Plan Details Card */
+.insurance-sidebar__plan-details {
+  background: var(--bg-tertiary);
+  padding: var(--space-3);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.insurance-sidebar__plan-item {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+.insurance-sidebar__plan-label {
+  color: var(--secondary-text);
+  margin-bottom: 4px;
+  font-size: var(--font-size-sm);
+}
+
+.insurance-sidebar__plan-value {
+  color: var(--primary-text);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+}
+
+/* Company Info Card */
+.insurance-sidebar__company {
+  background: var(--bg-secondary);
+  padding: var(--space-3);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__company-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.insurance-sidebar__company-logo {
+  width: 60px;
+  height: 40px;
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--secondary-text);
+  border: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__company-details {
+  flex: 1;
+}
+
+.insurance-sidebar__company-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0 0 2px 0;
+}
+
+.insurance-sidebar__company-meta {
+  font-size: var(--font-size-xs);
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+.insurance-sidebar__company-badges {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.insurance-sidebar__badge {
+  flex: 1;
+  background: var(--bg-white);
+  padding: var(--space-2);
+  border-radius: var(--border-radius);
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__badge-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--primary-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--element-gap);
+  color: var(--white-text);
+  font-size: var(--font-size-xs);
+}
+
+.insurance-sidebar__badge-text {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-text);
+  margin: 0;
+}
+
+/* Next Steps */
+.insurance-sidebar__steps {
+  background: var(--bg-secondary);
+  padding: var(--space-3);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insurance-sidebar__steps-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.insurance-sidebar__steps-item:last-child {
+  margin-bottom: 0;
+}
+
+.insurance-sidebar__steps-number {
+  background: var(--primary-teal);
+  color: var(--white-text);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ==========================================================================
+   RIDER DETAILS SPECIFIC COMPONENTS
+   ========================================================================== */
+
+/* Free Info Banner */
+.insurance-sidebar__free-info {
+  background: var(--bg-tertiary);
+  padding: var(--space-3);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  margin-bottom: var(--space-3);
+}
+
+.insurance-sidebar__free-info-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.insurance-sidebar__free-info-text {
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* Riders List */
+.insurance-sidebar__riders {
+  background: var(--bg-white);
+}
+
+.insurance-sidebar__rider-item {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__rider-item:last-child {
+  border-bottom: none;
+}
+
+/* Rider Button (Accordion Header) */
+.insurance-sidebar__rider-button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.insurance-sidebar__rider-button:hover {
+  background: var(--bg-light);
+}
+
+.insurance-sidebar__rider-button.active {
+  background: var(--bg-tertiary);
+}
+
+.insurance-sidebar__rider-info {
+  flex: 1;
+}
+
+.insurance-sidebar__rider-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0 0 4px 0;
+}
+
+.insurance-sidebar__rider-desc {
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+.insurance-sidebar__rider-badge {
+  background: linear-gradient(135deg, rgba(59,197,185,0.08) 0%, rgba(59,197,185,0.12) 100%);
+  color: var(--primary-teal);
+  border: 1px solid rgba(59,197,185,0.25);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.insurance-sidebar__rider-toggle {
+  color: var(--secondary-text);
+  font-size: var(--font-size-sm);
+  transition: transform var(--transition-fast);
+}
+
+.insurance-sidebar__rider-toggle.active {
+  transform: rotate(180deg);
+}
+
+/* Rider Content (Accordion Body) */
+.insurance-sidebar__rider-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
+  background: var(--bg-light);
+}
+
+.insurance-sidebar__rider-content.active {
+  max-height: 500px;
+}
+
+.insurance-sidebar__rider-content > div {
+  padding: var(--space-3);
+  border-top: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__rider-content p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  padding: 20px 20px 0 20px;
+}
+
+.insurance-sidebar__rider-content p:last-child {
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   CTA FOOTER (SHARED)
+   ========================================================================== */
+
+.insurance-sidebar__cta {
+  background: var(--bg-white);
+  padding: var(--space-4);
+  text-align: center;
+  border-top: 1px solid var(--border-light);
+}
+
+.insurance-sidebar__guarantee {
+  background: var(--bg-secondary);
+  padding: var(--space-2);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-3);
+}
+
+.insurance-sidebar__guarantee-text {
+  font-size: var(--font-size-sm);
+  color: var(--primary-text);
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.insurance-sidebar__cta-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0 0 var(--element-gap) 0;
+}
+
+.insurance-sidebar__cta-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--secondary-text);
+  margin: 0 0 var(--text-to-button) 0;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 767.98px) {
+  .insurance-sidebar__modal {
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  .insurance-sidebar__coverage {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    padding: var(--space-3);
+  }
+  
+  .insurance-sidebar__coverage-premium {
+    text-align: left;
+  }
+  
+  .insurance-sidebar__content,
+  .insurance-sidebar__cta {
+    padding: var(--space-3);
+  }
+  
+  .insurance-sidebar__plan-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .insurance-sidebar__company-badges {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+
+.insurance-sidebar__header-content img {
+    width: 150px;
+}
+
+
+
+/* ==========================================================================
+   MISSING TYPOGRAPHY CLASSES FOR INSURANCE SIDEBAR
+   Add these classes to your existing CSS files
+   ========================================================================== */
+
+/* Insurance Description Text */
+.insurance-desc {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--primary-text);
+}
+
+.insurance-desc p {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-relaxed);
+}
+
+.insurance-desc p:last-child {
+  margin-bottom: 0;
+}
+
+/* Insurance Text Base Class */
+.insurance-sidebar__text {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-base);
+  color: var(--primary-text);
+}
+
+.insurance-sidebar__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Coverage Premium Styling */
+.coverage_premium {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-teal);
+  margin-top: 0;
+}
+
+.coverage_premium_text {
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+  margin-bottom: 4px;
+}
+
+.coverage_premium_amount {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+}
+
+/* Company Information Classes */
+.company-logo img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: var(--border-radius);
+}
+
+.comp_title {
+  margin-top: 0;
+  margin-bottom: var(--heading-to-text);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--primary-text);
+  font-size: var(--font-size-xl);
+}
+
+.comp_name {
+  margin-top: 0;
+  margin-bottom: var(--heading-to-text);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--primary-text);
+  font-size: var(--font-size-base);
+}
+
+.comp_rating_founded {
+  font-size: var(--font-size-xs);
+  color: var(--secondary-text);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Company Info Container */
+.insurance-sidebar__company-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Plan Specific Classes */
+
+
+.coverageAmount .insurance-sidebar__plan-value {
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-text);
+}
+
+.ageUntil {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+}
+
+
+/* Steps List Styling */
+.insurance-sidebar__steps-title {
+  margin-top: 0;
+  margin-bottom: var(--heading-to-text);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--primary-text);
+  font-size: var(--font-size-base);
+}
+
+.insurance-sidebar__steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insurance-sidebar__steps-list li {
+  position: relative;
+  padding-left: var(--space-3);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--primary-text);
+}
+
+.insurance-sidebar__steps-list li:last-child {
+  margin-bottom: 0;
+}
+
+.insurance-sidebar__steps-list li::before {
+  content: "•";
+  color: var(--primary-teal);
+  position: absolute;
+  left: 0;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Guarantee Text */
+.insurance-sidebar__guarantee p {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm);
+  color: var(--primary-text);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+/* Header Content Container */
+.insurance-sidebar__header-content {
+  flex: 1;
+}
+
+/* Responsive Typography Adjustments */
+@media (min-width: 768px) {
+  .insurance-desc {
+    font-size: var(--font-size-lg);
+  }
+  
+  
+  .coverage_premium {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .insurance-sidebar__steps-list li {
+    font-size: var(--font-size-base);
+  }
+  
+  .comp_title {
+    font-size: var(--font-size-2xl); /* Matches h2 tablet size */
+  }
+}
+
+@media (min-width: 992px) {
+  .comp_name {
+    font-size: var(--font-size-lg);
+  }
+
+  
+  .comp_title {
+    font-size: var(--font-size-2xl); /* Matches h2 desktop size */
+  }
+}

@@ -1,0 +1,233 @@
+/* ==========================================================================
+   EDUCATION SECTION - MAXIMUM GLOBAL CSS USAGE
+   Absolute minimal custom CSS - everything else uses global classes
+   ========================================================================== */
+
+/* ==========================================================================
+   1. SECTION BACKGROUND - USES GLOBAL SYSTEM WITH OKLCH
+   ========================================================================== */
+
+.education-section {
+    /* GLOBAL: Uses established background hierarchy with OKLCH support */
+    background: var(--bg-primary); /* Uses oklch(100% 0 0) when supported, #FFFFFF fallback */
+    position: relative;
+    overflow: hidden;
+}
+
+/* GLOBAL: Subtle background enhancement using global system */
+.education-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* GLOBAL: Uses global brand color with minimal opacity */
+    background: radial-gradient(ellipse at 30% 60%, rgba(59, 197, 185, 0.008) 0%, transparent 70%);
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.education-section > .layout__container {
+    position: relative;
+    z-index: var(--z-10); /* GLOBAL: Uses global z-index scale */
+}
+
+/* ==========================================================================
+   2. INTRODUCTION - USES GLOBAL TYPOGRAPHY COMPLETELY
+   ========================================================================== */
+
+.education-section__intro {
+    max-width: 700px;
+    margin: 0 auto var(--space-4); /* GLOBAL: Uses global spacing */
+    /* Text alignment handled by global .u-text-center class in HTML */
+}
+
+/* Typography fully handled by global H2 and paragraph styles */
+/* No custom typography needed - global classes handle everything */
+
+/* ==========================================================================
+   3. CONTENT LAYOUT - MINIMAL CUSTOM, GLOBAL SPACING
+   ========================================================================== */
+
+.education-section__content {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: Single column */
+    gap: var(--space-5); /* GLOBAL: Uses global spacing (40px) */
+    margin-bottom: var(--space-5); /* GLOBAL: Uses global spacing */
+}
+
+/* ==========================================================================
+   4. INSURANCE TYPE SECTIONS - GLOBAL SPACING & BORDERS
+   ========================================================================== */
+
+.education-section__type {
+    padding: var(--space-4) 0; /* GLOBAL: Uses global spacing (32px vertical) */
+    border-bottom: 1px solid var(--border-light); /* GLOBAL: Uses global border color */
+}
+
+.education-section__type:last-child {
+    border-bottom: none;
+}
+
+.education-section__type-header {
+    margin-bottom: var(--space-3); /* GLOBAL: Uses global spacing (24px) */
+    /* Text alignment handled by global .u-text-center class in HTML */
+}
+
+/* Typography fully handled by global H3 styles and .u-font-semibold utility */
+
+.education-section__type-price {
+    font-size: var(--font-size-lg); /* GLOBAL: Uses global font scale (18px mobile) */
+    color: var(--primary-teal); /* GLOBAL: Uses global brand color */
+    margin-bottom: var(--space-1); /* GLOBAL: Uses global spacing */
+    /* Font weight handled by global .u-font-semibold utility in HTML */
+}
+
+.education-section__type-price-label {
+    font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px) */
+    font-weight: var(--font-weight-medium); /* GLOBAL: Uses global font weight */
+    /* Color handled by global .text-secondary class in HTML */
+}
+
+/* ==========================================================================
+   5. TYPE CONTENT - MINIMAL CUSTOM GRID
+   ========================================================================== */
+
+.education-section__type-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: Stacked */
+    gap: var(--space-3); /* GLOBAL: Uses global spacing (24px) */
+    /* Text alignment handled by global .u-text-center class in HTML */
+}
+
+/* Typography fully handled by global paragraph styles and .text-secondary class */
+/* Font weights handled by global .u-font-semibold utility class */
+
+/* ==========================================================================
+   6. FEATURES LIST - MINIMAL STYLING WITH GLOBAL COLORS
+   ========================================================================== */
+
+.education-section__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-section__features li {
+    padding: var(--space-1) 0; /* GLOBAL: Uses global spacing (8px vertical) */
+    font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px mobile) */
+    color: var(--primary-text); /* GLOBAL: Uses global text color */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mobile: Centered */
+    border-bottom: 1px solid rgba(229, 233, 237, 0.3);
+    text-align: center;
+}
+
+.education-section__features li:last-child {
+    border-bottom: none;
+}
+
+.education-section__features li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--primary-teal); /* GLOBAL: Uses global brand color */
+    border-radius: 50%;
+    margin-right: var(--space-2); /* GLOBAL: Uses global spacing (16px) */
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN - FOLLOWS GLOBAL BREAKPOINT PATTERNS
+   ========================================================================== */
+
+/* Tablet responsive (768px+) - Following global responsive pattern */
+@media (min-width: 768px) {
+    .education-section__intro {
+        margin-bottom: var(--space-5); /* GLOBAL: Uses global spacing (40px) */
+    }
+    
+    .education-section__content {
+        gap: var(--space-6); /* GLOBAL: Uses global spacing (56px) */
+    }
+    
+    .education-section__type {
+        padding: var(--space-5) 0; /* GLOBAL: Uses global spacing (40px vertical) */
+    }
+    
+    .education-section__type-header {
+        margin-bottom: var(--space-4); /* GLOBAL: Uses global spacing (32px) */
+    }
+    
+    .education-section__type-price {
+        font-size: var(--font-size-xl); /* GLOBAL: Uses global font scale (20px tablet) */
+    }
+    
+    .education-section__type-content {
+        grid-template-columns: 1fr 1fr; /* Tablet: Side-by-side */
+        gap: var(--space-4); /* GLOBAL: Uses global spacing (32px) */
+        text-align: left;
+    }
+    
+    .education-section__description-column {
+        text-align: left;
+    }
+    
+    .education-section__features li {
+        padding: var(--space-2) 0; /* GLOBAL: Uses global spacing (16px vertical) */
+        font-size: var(--font-size-base); /* GLOBAL: Uses global font scale (16px tablet) */
+        justify-content: flex-start; /* Tablet: Left-aligned */
+        text-align: left;
+    }
+}
+
+/* Desktop responsive (992px+) - Following global responsive pattern */
+@media (min-width: 992px) {
+    .education-section__intro {
+        max-width: 800px;
+        margin-bottom: var(--space-5); /* GLOBAL: Uses global spacing (40px) */
+    }
+    
+    .education-section__content {
+        gap: var(--space-5); /* GLOBAL: Uses global spacing (40px gap) */
+    }
+    
+    .education-section__type {
+        padding: var(--space-3) 0; /* GLOBAL: Uses global spacing (24px vertical) */
+    }
+    
+    .education-section__type-header {
+        display: grid;
+        grid-template-columns: 1fr 200px; /* Desktop: Header with price column */
+        gap: var(--space-4); /* GLOBAL: Uses global spacing */
+        align-items: center;
+        text-align: left;
+        margin-bottom: var(--space-3); /* GLOBAL: Uses global spacing (24px) */
+    }
+    
+    .education-section__type-price {
+        text-align: right;
+        font-size: var(--font-size-2xl); /* GLOBAL: Uses global font scale (24px desktop) */
+        margin-bottom: 0;
+    }
+    
+    .education-section__type-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-4); /* GLOBAL: Uses global spacing (32px) */
+        margin-top: 0;
+    }
+}
+
+/* ==========================================================================
+   9. MISSING RESPONSIVE UTILITIES - EXTEND GLOBAL PATTERN
+   ========================================================================== */
+
+/* Large devices (992px+) - Following global responsive pattern */
+@media (min-width: 992px) {
+    /* Left text alignment for desktop headers */
+    .education-section__type-header {
+        text-align: left !important;
+    }
+}

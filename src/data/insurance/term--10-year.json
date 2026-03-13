@@ -1,0 +1,195 @@
+{
+  "title": "10-Year Term Life Insurance Canada (2026)",
+  "seo_title": "10-Year Term Life Insurance Canada | Lowest Rates | PolicyScanner",
+  "seo_description": "Get 10-year term life insurance in Canada from $18/month. Compare rates from 20+ top insurers. Lowest premium term option. Free quotes.",
+  "slug": "term--10-year",
+  "tag": "Term Life Insurance",
+  "read_time": "10 min read",
+  "prepared_by": "Prepared by Baljit Kaur LLQP",
+  "reviewed_by": "Reviewed by Eldho George LLQP",
+  "_meta": {
+    "target_words": "1,800–2,200",
+    "primary_keyword": "10 year term life insurance",
+    "secondary_keywords": ["10 year term life insurance canada", "cheapest term life insurance canada", "short term life insurance canada"],
+    "conversion_goal": "20-25% to quote form",
+    "page_role": "Product page targeting budget-conscious buyers and those with short-term needs",
+    "seo_keywords": {
+      "use_primary_exact": "10-year term life insurance",
+      "density_rule": "Use '10-year term' or '10-year term life insurance' 3–5 times per 500 words. Vary with synonyms below.",
+      "synonyms": ["10-year term coverage", "10-year life policy", "short-term life insurance", "a 10-year policy", "this term coverage"],
+      "lsi_terms": ["lowest premium", "affordable coverage", "short-term obligation", "supplemental coverage", "layering strategy", "renewable", "convertible", "death benefit", "fixed premiums"],
+      "entity_keywords": ["Canada", "Ontario", "Canadian insurers", "FSRA"],
+      "action_keywords": ["buy 10-year term", "get affordable coverage", "compare 10-year rates", "start with basic coverage"],
+      "avoid": "Do not imply 10-year is inferior. Position it as the right tool for specific needs — not a budget compromise."
+    }
+  },
+  "page_data": [
+    {
+      "component": "hero_section",
+      "title": "10-Year Term Life Insurance in Canada (2026)",
+      "description": "",
+      "_writer_notes": {
+        "target_words": "70–90",
+        "focus": "Lowest-cost option — lead with affordability and short-term purpose",
+        "key_points": [
+          "Position as the lowest-premium term option available",
+          "Starting from $18/month for $500K — lead with that number",
+          "Best for: short-term needs, specific financial obligations, budget buyers",
+          "Breadcrumb: Home > Life Insurance > Term Life Insurance > 10-Year Term"
+        ]
+      }
+    },
+    {
+      "component": "trust_badges"
+    },
+    {
+      "component": "content_block",
+      "id": "WhatIs10Year",
+      "heading": "What is 10-Year Term Life Insurance?",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "180–220",
+        "focus": "Clear product definition + specific use cases that make 10-year the right answer",
+        "key_points": [
+          "DEFINITION: Provides a fixed death benefit for exactly 10 years. The lowest-premium term life option.",
+          "LOCKED PREMIUM: Your monthly payment never changes during the 10-year term.",
+          "COVERAGE OPTIONS: Typically $100K–$5M+",
+          "WHEN 10 YEARS IS ENOUGH: Specific loan with 10-year repayment, supplementing employer coverage for a fixed period, bridge coverage while building wealth, ages 50+ who only need final 10-15 working years covered",
+          "WHAT HAPPENS AT 10 YEARS: Renew (higher rate, no medical exam), convert to permanent, buy new term, or let it lapse if no longer needed",
+          "CALLOUT: For many Canadians, 10-year term is the RIGHT answer — not a compromise. It depends entirely on what you're protecting."
+        ]
+      }
+    },
+    {
+      "component": "callout",
+      "type": "insight",
+      "title": "Cheapest Does Not Mean Inferior",
+      "text": "10-year term life insurance provides the same rock-solid death benefit protection as any other term length. The lower premium simply reflects the shorter coverage period. For short-term financial obligations, it may be the smartest choice."
+    },
+    {
+      "component": "content_block",
+      "id": "WhoIsItFor10",
+      "heading": "Who Should Buy 10-Year Term Life Insurance?",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "200–250",
+        "focus": "Be specific — 10-year is the right answer for clearly defined situations",
+        "key_points": [
+          "1. AGES 50–60 with 10–12 years until retirement: Cover the final working years when kids are grown and mortgage is nearly paid.",
+          "2. BUSINESS LOANS with 10-year repayment: Cover a specific business obligation precisely.",
+          "3. SUPPLEMENT GROUP COVERAGE: Employer life insurance will cover you for the next 10 years — 10-year personal term fills the gap if you change jobs.",
+          "4. LAYERING STRATEGY: Already have a 20-year term but want extra coverage for the first 10 years (mortgage peak, youngest child).",
+          "5. BUDGET BUYERS: Need SOME coverage but can only afford the lower premium right now — 10-year is better than no coverage.",
+          "6. AGES 25–35 who want to reassess in 10 years: Life changes, coverage needs change — 10-year gives flexibility.",
+          "WHO 10-YEAR IS NOT FOR: Young families with newborns, 30-year mortgage holders, those who want their coverage to last through prime child-rearing years — choose 20-year instead."
+        ]
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "Cost10Year",
+      "heading": "How Much Does 10-Year Term Life Insurance Cost?",
+      "paragraphs": ["10-year term is the most affordable type of term life insurance available. Here are real 2026 sample rates from top Canadian insurers."],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "250–300 around the table",
+        "focus": "Show specific numbers — affordability is the key selling point",
+        "key_points": [
+          "Write 2-3 sentences before table about how 10-year is typically 30-40% less than 20-year for same coverage",
+          "After table: explain age, gender, smoking as cost factors briefly",
+          "TIP: 'Even if you think you only need 10-year coverage, get quotes for both 10 and 20-year terms — the difference may be smaller than you expect.'"
+        ]
+      }
+    },
+    {
+      "component": "table",
+      "title": "$500,000 — 10-Year Term Monthly Premiums",
+      "headers": ["Age", "Male Non-Smoker", "Female Non-Smoker", "Male Smoker"],
+      "rows": [
+        ["25", "$13–20", "$10–17", "$35–55"],
+        ["30", "$18–28", "$14–23", "$50–80"],
+        ["35", "$22–35", "$17–28", "$65–105"],
+        ["40", "$30–50", "$24–40", "$95–155"],
+        ["45", "$48–78", "$36–62", "$155–255"],
+        ["50", "$78–125", "$58–99", "$260–420"],
+        ["55", "$130–210", "$98–165", "$435–710"]
+      ],
+      "footnote": "Sample rates from top Canadian insurers, 2026. Non-smoker = nicotine-free for 12+ months. Rates vary by health class and insurer."
+    },
+    {
+      "component": "callout",
+      "type": "tip",
+      "title": "Layering Strategy: 10-Year + 20-Year",
+      "text": "Many Canadians buy two policies simultaneously — a large 20-year term for long-term obligations (mortgage, family) plus a smaller 10-year term for extra coverage during the early high-need years. This 'layering' approach maximizes coverage when you need it most at minimal extra cost."
+    },
+    {
+      "component": "rate_calculator",
+      "title": "Calculate Your 10-Year Term Life Insurance Cost"
+    },
+    {
+      "component": "content_block",
+      "id": "10YearVs20Year",
+      "heading": "10-Year Term vs. 20-Year Term: Which is Right for You?",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "200–250 around the table",
+        "focus": "Honest side-by-side — don't push one, help them decide",
+        "key_points": [
+          "CHOOSE 10-YEAR: Ages 50+, specific short-term debt, supplemental coverage, layering strategy, very tight budget",
+          "CHOOSE 20-YEAR: Mortgage with 15+ years remaining, children under 10, ages 28–45, primary family protection",
+          "COST COMPARISON EXAMPLE: Age 35, $500K — 10-year: $22–35/mo vs 20-year: $32–50/mo. Difference is $10–15/month.",
+          "IMPORTANT: If you can afford $10–15 more per month, the 20-year usually makes more sense for families and homeowners."
+        ]
+      }
+    },
+    {
+      "component": "table",
+      "title": "10-Year vs 20-Year Term: Head to Head",
+      "headers": ["Factor", "10-Year Term", "20-Year Term"],
+      "rows": [
+        ["Monthly cost (age 35, $500K)", "$22–35", "$32–50"],
+        ["Difference per month", "—", "+$10–15"],
+        ["Coverage runs until (if bought at 35)", "Age 45", "Age 55"],
+        ["Best for mortgage?", "Nearly paid off only", "20–25 year amortization"],
+        ["Best for young kids?", "Kids near adulthood", "Kids aged 0–10"],
+        ["Renewal at end?", "Yes, at higher rate", "Yes, at higher rate"]
+      ],
+      "footnote": "Male non-smoker, good health. For most Canadians aged 28–45 with a young family, the extra $10–15/month for 20-year term is worth it."
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Compare 10-Year Term Life Insurance Rates",
+      "body": "See your actual rates from 20+ Canadian insurers in minutes. Free, no obligation, no pressure.",
+      "button_text": "Get My Free Quote",
+      "url": "/compare-insurance-quotes"
+    },
+    {
+      "component": "faq",
+      "items": [
+        {
+          "question": "Is 10-year term life insurance enough coverage?",
+          "answer": "It depends on what you need to protect. If your financial obligations (debts, income replacement, dependent children) extend beyond 10 years, you should consider a 20 or 30-year term. If your needs are genuinely short-term — a specific loan, supplemental coverage, ages 50+ — 10-year can be the perfect fit."
+        },
+        {
+          "question": "Can I renew a 10-year term policy when it expires?",
+          "answer": "Yes. Most 10-year term policies in Canada are renewable to age 75–80, without requiring a new medical exam. However, the premium increases significantly at renewal based on your age at that time. A 35-year-old paying $25/month might pay $120–180/month at renewal age 45."
+        },
+        {
+          "question": "What is the cheapest life insurance in Canada?",
+          "answer": "A 10-year term policy on a young, healthy, non-smoking individual is typically the most affordable life insurance available. A 25-year-old non-smoker can get $500K of coverage for as little as $13–20/month."
+        },
+        {
+          "question": "Can I have a 10-year term and a 20-year term at the same time?",
+          "answer": "Yes. This 'layering' strategy is common. For example: $500K 20-year term for mortgage protection + $250K 10-year term for extra income replacement during young child years. When the 10-year expires, your coverage steps down to match your reduced obligations."
+        },
+        {
+          "question": "Can I convert a 10-year term to permanent insurance?",
+          "answer": "Yes, most 10-year term policies include a conversion option. You can convert to whole life or universal life without a new medical exam, typically before age 65–70. The premium increases to permanent life rates at your current age."
+        }
+      ]
+    }
+  ]
+}

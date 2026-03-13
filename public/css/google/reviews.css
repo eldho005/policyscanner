@@ -1,0 +1,511 @@
+/* ==========================================================================
+   REVIEWS COMPONENT - STANDARDIZED MOBILE-FIRST DESIGN
+   Typography + Spacing + Padding fully standardized with global system
+   Uses global CSS variables and follows BEM methodology
+   ========================================================================== */
+
+/* ==========================================================================
+   COMPONENT BASE - MOBILE FIRST
+   Uses global background system with OKLCH enhancement
+   ========================================================================== */
+
+.reviews {
+    background: var(--bg-secondary); /* Uses OKLCH oklch(97.5% 0.008 195) when supported, RGB #F6F9FA fallback */
+    position: relative;
+    overflow: hidden;
+    
+    /* ENHANCED: Premium text rendering */
+    text-rendering: var(--micropolish-text-rendering);
+    -webkit-font-smoothing: var(--micropolish-font-smoothing);
+    -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+}
+
+/* Subtle background enhancement */
+.reviews::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59, 197, 185, 0.03) 0%, transparent 60%);
+    opacity: 0.4;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.reviews > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Use global section spacing */
+.reviews .layout__container {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+}
+
+@media (min-width: 768px) {
+    .reviews .layout__container {
+        padding-top: var(--section-padding-tablet);
+        padding-bottom: var(--section-padding-tablet);
+    }
+}
+
+@media (min-width: 992px) {
+    .reviews .layout__container {
+        padding-top: var(--section-padding-desktop);
+        padding-bottom: var(--section-padding-desktop);
+    }
+}
+
+/* ==========================================================================
+   HEADER SECTION
+   Uses global typography system
+   ========================================================================== */
+
+.reviews__header {
+    text-align: center;
+    margin-bottom: var(--space-5); /* Global spacing: 40px mobile */
+}
+
+.reviews__title {
+    /* STANDARDIZED: Now uses global h2 system with proper responsive scaling */
+    /* font-size: REMOVED - uses global h2 responsive scaling 24px → 28px → 32px */
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--primary-text);
+    margin-bottom: 0;
+    
+    /* ENHANCED: Premium typography rendering */
+    font-feature-settings: var(--micropolish-font-features-full);
+    text-rendering: var(--micropolish-text-rendering);
+    letter-spacing: var(--micropolish-letter-spacing-normal);
+    text-shadow: var(--micropolish-shadow-text-subtle);
+}
+
+@media (min-width: 768px) {
+    .reviews__header {
+        margin-bottom: var(--space-6); /* Global spacing: 56px tablet */
+    }
+}
+
+/* ==========================================================================
+   CAROUSEL WRAPPER
+   Mobile-first horizontal scroll
+   ========================================================================== */
+
+.reviews__wrapper {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    margin-bottom: var(--space-4); /* Global spacing: 32px mobile */
+    
+    /* Hide scrollbars */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.reviews__wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .reviews__wrapper {
+        margin-bottom: var(--space-5); /* Global spacing: 40px tablet */
+    }
+}
+
+/* ==========================================================================
+   CAROUSEL TRACK
+   Flexible layout for cards
+   ========================================================================== */
+
+.reviews__track {
+    display: flex;
+    gap: var(--space-3); /* Global spacing: 24px mobile */
+    padding: 0 var(--space-4); /* Global spacing: 32px horizontal padding */
+    width: max-content;
+    transition: transform var(--transition-base);
+}
+
+@media (min-width: 768px) {
+    .reviews__track {
+        gap: var(--space-4); /* Global spacing: 32px tablet */
+        padding: 0 var(--space-5); /* Global spacing: 40px horizontal */
+    }
+}
+
+@media (min-width: 1200px) {
+    .reviews__track {
+        gap: var(--space-5); /* Global spacing: 40px desktop */
+    }
+}
+
+/* ==========================================================================
+   REVIEW CARDS
+   STANDARDIZED: Uses global card system
+   ========================================================================== */
+
+.reviews__card {
+    flex: 0 0 clamp(280px, 85vw, 340px);
+    width: clamp(280px, 85vw, 340px);
+    min-height: 260px;
+    
+    /* STANDARDIZED: Use global card styling */
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--border-light); /* Global border */
+    border-radius: var(--border-radius-lg); /* Global radius */
+    box-shadow: var(--shadow-card); /* Global shadow */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--card-padding-mobile); /* STANDARDIZED: Global card padding */
+    scroll-snap-align: start;
+    position: relative;
+    overflow: hidden;
+    
+    transition: all var(--transition-base);
+}
+
+.reviews__card:hover {
+    box-shadow: var(--shadow-card-hover); /* Global hover shadow */
+    transform: var(--micropolish-gpu-hover-subtle); /* ENHANCED: Global hover effect */
+}
+
+@media (min-width: 768px) {
+    .reviews__card {
+        padding: var(--card-padding-tablet); /* STANDARDIZED: Global card padding */
+        min-height: 270px;
+    }
+}
+
+@media (min-width: 992px) {
+    .reviews__card {
+        padding: var(--card-padding-desktop); /* STANDARDIZED: Global card padding */
+        min-height: 280px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .reviews__card {
+        min-height: 300px;
+    }
+}
+
+/* ==========================================================================
+   CARD CONTENT
+   ========================================================================== */
+
+.reviews__content {
+    position: relative;
+    z-index: 1;
+}
+
+.reviews__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2); /* Global spacing: 16px */
+    margin-bottom: var(--space-3); /* Global spacing: 24px */
+}
+
+.reviews__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-sm); /* Global shadow */
+}
+
+.reviews__author-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* STANDARDIZED: Remove custom font-size, now uses global h4 hierarchy */
+.reviews__name {
+    /* font-size: REMOVED - now uses global h4 system with responsive scaling */
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-text);
+    line-height: var(--line-height-tight);
+    margin-bottom: 4px;
+    
+    /* ENHANCED: Premium typography */
+    font-feature-settings: var(--micropolish-font-features-base);
+    text-rendering: var(--micropolish-text-rendering);
+    letter-spacing: var(--micropolish-letter-spacing-subtle);
+}
+
+/* ==========================================================================
+   STARS RATING
+   ========================================================================== */
+
+.reviews__stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #FFB800; /* Gold color for stars */
+}
+
+.reviews__stars svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+}
+
+/* ==========================================================================
+   REVIEW TEXT
+   STANDARDIZED: Uses global paragraph system
+   ========================================================================== */
+
+.reviews__text {
+    /* font-size: REMOVED - now uses global paragraph system */
+    color: var(--primary-text);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 0;
+    opacity: 0.9;
+    
+    /* ENHANCED: Premium typography */
+    font-feature-settings: var(--micropolish-font-features-base);
+    text-rendering: var(--micropolish-text-rendering);
+    letter-spacing: var(--micropolish-letter-spacing-micro);
+    
+    transition: opacity var(--transition-fast);
+}
+
+.reviews__card:hover .reviews__text {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   NAVIGATION INDICATORS (Mobile/Tablet only)
+   ========================================================================== */
+
+.reviews__indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-1); /* Global spacing: 8px */
+    margin-top: var(--space-3); /* Global spacing: 24px */
+    opacity: 1;
+    transition: opacity var(--transition-base);
+}
+
+.reviews__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(59, 197, 185, 0.3);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color var(--transition-base), 
+                width var(--transition-base), 
+                border-radius var(--transition-base);
+}
+
+.reviews__dot--active {
+    background: var(--primary-teal);
+    width: 24px;
+    border-radius: 4px;
+}
+
+.reviews__dot:hover:not(.reviews__dot--active) {
+    background: rgba(59, 197, 185, 0.5);
+}
+
+/* Hide indicators on larger screens */
+@media (min-width: 768px) {
+    .reviews__indicators {
+        opacity: 0.6;
+    }
+}
+
+@media (min-width: 992px) {
+    .reviews__indicators {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* ==========================================================================
+   CTA SECTION
+   Uses global button system
+   ========================================================================== */
+
+.reviews__cta {
+    text-align: center;
+    margin-top: var(--space-4); /* Global spacing: 32px */
+}
+
+/* STANDARDIZED: Ensure button uses global system */
+.reviews__cta .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--button-padding-mobile-v) var(--button-padding-mobile-h);
+    font-size: var(--font-size-cta-primary); /* Global typography: 16px */
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-snug);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-height: 44px;
+    
+    /* Primary button colors */
+    background: linear-gradient(135deg, var(--cta-orange) 0%, var(--cta-hover) 100%);
+    color: var(--white-text);
+    border: 1px solid var(--cta-orange);
+    box-shadow: var(--shadow-button-primary);
+    
+    /* ENHANCED: Premium button typography */
+    font-feature-settings: var(--micropolish-font-features-base);
+    letter-spacing: var(--micropolish-letter-spacing-micro);
+    text-rendering: var(--micropolish-text-rendering);
+}
+
+.reviews__cta .button:hover,
+.reviews__cta .button:focus {
+    background: linear-gradient(135deg, var(--cta-hover) 0%, #FFB366 100%);
+    border-color: var(--cta-hover);
+    color: var(--white-text);
+    box-shadow: var(--shadow-button-primary-hover);
+    transform: var(--micropolish-gpu-hover-subtle); /* ENHANCED: Global hover effect */
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    .reviews__cta .button {
+        padding: var(--button-padding-desktop-v) var(--button-padding-desktop-h);
+    }
+}
+
+/* ==========================================================================
+   VERIFIED CUSTOMER STYLING
+   Consistent BEM naming convention
+   ========================================================================== */
+
+.reviews__credentials {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2); /* Global spacing: 16px */
+}
+
+.reviews__verification {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1); /* Global spacing: 8px */
+}
+
+.reviews__check-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.reviews__verified {
+    font-size: var(--font-size-sm); /* Global typography: 14px */
+    color: var(--secondary-text);
+    font-weight: var(--font-weight-medium);
+    
+    /* ENHANCED: Premium typography */
+    font-feature-settings: var(--micropolish-font-features-base);
+    text-rendering: var(--micropolish-text-rendering);
+}
+
+/* Backward compatibility for mixed class names */
+.insurance-reviews-component__credentials {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.insurance-reviews-component__verification {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.insurance-reviews-component__check-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.insurance-reviews-component__verified {
+    font-size: var(--font-size-sm);
+    color: var(--secondary-text);
+    font-weight: var(--font-weight-medium);
+    font-feature-settings: var(--micropolish-font-features-base);
+    text-rendering: var(--micropolish-text-rendering);
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & PERFORMANCE
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .reviews__card,
+    .reviews__indicators,
+    .reviews__dot,
+    .reviews__text,
+    .reviews__cta .button {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    .reviews__wrapper {
+        scroll-behavior: auto;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .reviews__card {
+        border: 2px solid var(--primary-text) !important;
+        background: var(--bg-white) !important;
+        box-shadow: var(--shadow-lg) !important;
+    }
+    
+    .reviews__text {
+        opacity: 1 !important;
+    }
+    
+    .reviews__avatar {
+        box-shadow: var(--shadow-sm) !important;
+    }
+    
+    .reviews__cta .button {
+        border: 3px solid var(--primary-text) !important;
+    }
+}
+
+@media print {
+    .reviews {
+        background: white !important;
+    }
+    
+    .reviews__card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        background: white !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .reviews__indicators {
+        display: none;
+    }
+    
+    .reviews__cta .button {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+        background: white !important;
+    }
+}

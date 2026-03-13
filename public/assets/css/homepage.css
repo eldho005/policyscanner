@@ -1,0 +1,2741 @@
+/* ==========================================================================
+   PolicyScanner - Homepage-Specific Stylesheet
+   
+   TABLE OF CONTENTS:
+   1. Hero Section
+   2. Trust Bar
+   3. Feature Cards
+   4. Process Section
+   5. Reviews Section
+   6. Partner Section
+   7. Articles Section
+   8. FAQ Section
+   9. CTA Section
+   10. Footer
+   11. Media Queries
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+   .hero {
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    align-items: left;
+    background-color: #16a496;
+  }
+  
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    z-index: 0;
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.1));
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .hero-text {
+    padding: 1.5rem 0;
+    color: white;
+    text-align: left;
+    max-width: 100%;
+  }
+  
+  .hero h1 {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: left;
+  }
+  
+  .hero-description {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 520px;
+    text-align: left;
+  }
+  
+  .hero-cta {
+    display: inline-block;
+    background-color: #FF7A2E;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 980px;
+    text-decoration: none;
+    transition: background-color 150ms ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-cta:hover {
+    background-color: #E66A20;
+    color: white;
+  }
+  
+  .hero-cta:active {
+    background-color: #D55D15;
+  }
+  
+  /* ==========================================================================
+     2. Trust Bar
+     ========================================================================== */
+  .trust-bar {
+    background-color: rgba(42, 180, 168, 0.05);
+    border-bottom: 1px solid #E2E8F0;
+    font-size: 1rem;
+    color: #64748b;
+    padding: 1.25rem 0;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .trust-bar .container .row {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  /* Desktop badges display */
+  .trust-badges--desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+  }
+  
+  /* Individual badge */
+  .trust-badge {
+    height: 28px;
+    width: auto;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease;
+  }
+  
+  .trust-badge:hover {
+    opacity: 0.85;
+  }
+  
+  /* Canadian badge */
+  .canadian-badge {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 1rem;
+  }
+  
+  .maple-icon {
+    margin-right: 0.5rem;
+    height: 16px;
+    width: auto;
+  }
+  
+  /* Divider between badge groups */
+  .trust-badge-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #E2E8F0;
+    margin: 0 1rem;
+  }
+  
+  /* Mobile carousel */
+  .trust-badges--mobile {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 36px;
+    padding: 0.5rem 0;
+  }
+  
+  .trust-badge-container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    width: calc(200% + 200px);
+  }
+  
+  .no-animation {
+    animation: none !important;
+  }
+  
+  .badge-group {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  
+  .badge-group--canadian {
+    margin-right: 3rem;
+  }
+  
+  /* ==========================================================================
+     3. Feature Cards (Why Us Section)
+     ========================================================================== */
+  .why-us {
+    background-color: #f3f4f6;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+  }
+  
+  .why-us::before,
+  .why-us::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      rgba(0,0,0,0) 0%, 
+      rgba(0,0,0,0.05) 50%, 
+      rgba(0,0,0,0) 100%);
+  }
+  
+  .why-us::before {
+    top: 0;
+  }
+  
+  .why-us::after {
+    bottom: 0;
+  }
+  
+  .why-us h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1A2A33;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.015em;
+    line-height: 1.6;
+  }
+  
+  .why-us header p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    color: #50606B;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .feature-card {
+    height: 100%;
+    padding: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+  
+  .feature-icon {
+    font-size: 48px;
+    color: #2AB4A8;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1A2A33;
+  }
+  
+  .feature-description {
+    color: #6C7983;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* ==========================================================================
+     4. Process Section (How Insurance Comparison Works)
+     ========================================================================== */
+  .insurance-comparison {
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+  }
+  
+  .insurance-comparison::before,
+  .insurance-comparison::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.05) 50%,
+      rgba(0,0,0,0) 100%);
+  }
+  
+  .insurance-comparison::before {
+    top: 0;
+  }
+  
+  .insurance-comparison::after {
+    bottom: 0;
+  }
+  
+  .insurance-comparison h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1A2A33;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.015em;
+    line-height: 1.6;
+  }
+  
+  .insurance-comparison p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #50606B;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .insurance-comparison h2:hover {
+    color: #1A2A33;
+    cursor: default;
+    text-decoration: none;
+  }
+  
+  .step-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .process-column {
+    padding-right: 1rem;
+  }
+  
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    min-height: 65px;
+  }
+  
+  .step-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .step-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .step-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #1A2A33;
+    line-height: 1.3;
+  }
+  
+  .step-content p {
+    color: #6C7983;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .step-icon {
+    flex-shrink: 0;
+    margin-right: 1rem;
+    margin-top: 0.125rem;
+  }
+  
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(42, 180, 168, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-circle i {
+    color: #2AB4A8;
+    font-size: 20px;
+  }
+  
+  /* Phone mockup */
+  .device-mockup {
+    position: relative;
+    width: 240px;
+    margin: 0;
+  }
+  
+  .device-frame {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #1a1a1a;
+    border-radius: 42px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15),
+                0 0 0 5px #e2e2e2,
+                inset 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    overflow: hidden;
+  }
+  
+  /* Side buttons */
+  .device-power {
+    position: absolute;
+    right: -4px;
+    top: 110px;
+    width: 4px;
+    height: 35px;
+    background-color: #e2e2e2;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  .device-volume-up {
+    position: absolute;
+    left: -4px;
+    top: 100px;
+    width: 4px;
+    height: 25px;
+    background-color: #e2e2e2;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .device-volume-down {
+    position: absolute;
+    left: -4px;
+    top: 145px;
+    width: 4px;
+    height: 25px;
+    background-color: #e2e2e2;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  /* Notch and sensors */
+  .device-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 28px;
+    background-color: #1a1a1a;
+    border-radius: 0 0 16px 16px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .device-sensors {
+    width: 8px;
+    height: 8px;
+    background: rgba(80, 80, 80, 0.6);
+    border-radius: 50%;
+  }
+  
+  /* Screen area */
+  .device-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f7;
+    border-radius: 34px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .device-home {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 4px;
+    z-index: 3;
+  }
+  
+  .device-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .device-app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-header {
+    padding: 10px 16px;
+    background-color: var(--primary-color, #2AB4A8);
+    color: white;
+    position: relative;
+  }
+  
+  .app-status-bar {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .status-icons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .app-title {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .app-content {
+    flex: 1;
+    background-color: white;
+    position: relative;
+  }
+  
+  .app-placeholder {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .app-placeholder p {
+    font-size: 14px;
+    color: var(--text-secondary, #64748b);
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .play-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color, #2AB4A8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 4px 10px rgba(42, 180, 168, 0.3);
+  }
+  
+  .app-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* ==========================================================================
+     5. Reviews Section
+     ========================================================================== */
+  .reviews-section {
+    background-color: #f3f4f6;
+    padding: 3rem 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .reviews-section h2 {
+    font-size: 1.75rem;
+    color: #1A2A33;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.015em;
+    line-height: 1.6;
+  }
+  
+  .reviews-section p {
+    color: #50606B;
+    font-size: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .review-container {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+    width: 100%;
+    height: 280px;
+  }
+  
+  .review-track {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    will-change: transform;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .review-card {
+    flex: 0 0 auto;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .review-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.04);
+  }
+  
+  .review-card__decoration-top {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(42, 180, 168, 0.02);
+    z-index: 0;
+  }
+  
+  .review-card__decoration-bottom {
+    position: absolute;
+    bottom: -35px;
+    left: -35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(42, 180, 168, 0.02);
+    z-index: 0;
+  }
+  
+  .review-card__avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .review-card__name {
+    font-weight: 600;
+    color: #1A2A33;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  
+  .review-card__stars {
+    color: #FFD700;
+  }
+  
+  .review-card__text {
+    font-size: 0.875rem;
+    color: #2C3E50;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+  }
+  
+  /* ==========================================================================
+     6. Partner Section
+     ========================================================================== */
+  .partners-section {
+    background-color: #f3f4f6;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+  }
+  
+  .partners-section::before,
+  .partners-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      rgba(0,0,0,0) 0%, 
+      rgba(0,0,0,0.05) 50%, 
+      rgba(0,0,0,0) 100%);
+  }
+  
+  .partners-section::before {
+    top: 0;
+  }
+  
+  .partners-section::after {
+    bottom: 0;
+  }
+  
+  .partners-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1A2A33;
+    margin-bottom: 0.5rem;
+  }
+  
+  .partners-section header p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #50606B;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .partner-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #d1d9e6;
+    border-radius: 0.5rem;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+  }
+  
+  .partner-card:hover {
+    border-color: #2AB4A8;
+  }
+  
+  .partner-card:active {
+    background-color: #E5E7EB;
+  }
+  
+  .partner-card:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 180, 168, 0.15);
+    border-color: #2AB4A8;
+  }
+  
+  .partner-logo {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* ==========================================================================
+     7. Articles Section
+     ========================================================================== */
+  .articles {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem 0;
+  }
+  
+  .articles::before,
+  .articles::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      rgba(0,0,0,0) 0%, 
+      rgba(0,0,0,0.05) 50%, 
+      rgba(0,0,0,0) 100%);
+  }
+  
+  .articles::before {
+    top: 0;
+  }
+  
+  .articles::after {
+    bottom: 0;
+  }
+  
+  .articles h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1A2A33;
+    margin-bottom: 0.5rem;
+  }
+  
+  .articles header p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #50606B;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Category Navigation Styling */
+  .category-nav .nav-pills .nav-link {
+    color: #6C7983;
+    background-color: transparent;
+    border-radius: 980px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 1rem;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .category-nav .nav-pills .nav-link:hover {
+    color: #2AB4A8;
+    background-color: rgba(42, 180, 168, 0.05);
+  }
+  
+  .category-nav .nav-pills .nav-link.active {
+    color: white;
+    background-color: #2AB4A8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  }
+  
+  /* Article Card Styling */
+  .article-card {
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d1d9e6;
+    will-change: transform;
+  }
+  
+  .article-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+    border-color: #2AB4A8;
+  }
+  
+  /* Article Image Container */
+  .article-image {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56%;
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+  }
+  
+  .featured-article .article-image {
+    padding-bottom: 60%;
+  }
+  
+  .article-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+  
+  /* Image gradient overlay */
+  .image-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.25));
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.3s ease;
+  }
+  
+  /* Article Category Label */
+  .article-category {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: #2AB4A8;
+    color: white;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 4px 1rem;
+    border-radius: 980px;
+    box-shadow: 0 2px 4px rgba(42, 180, 168, 0.2);
+    z-index: 1;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Featured Article Styling */
+  .featured-article .article-category {
+    background-color: #FF7A2E;
+    box-shadow: 0 2px 4px rgba(255, 122, 46, 0.2);
+  }
+  
+  /* Article Content Area */
+  .article-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .featured-article .article-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Article Title */
+  .article-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    color: #1A2A33;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .article-card:hover .article-title {
+    color: #2AB4A8;
+  }
+  
+  .featured-article .article-title {
+    font-size: 1.125rem;
+  }
+  
+  /* Article Meta Information */
+  .article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.8125rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .article-date {
+    margin-right: 1rem;
+  }
+  
+  .article-read-time i {
+    color: #2AB4A8;
+  }
+  
+  /* Article Excerpt */
+  .article-excerpt {
+    color: #6C7983;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    flex-grow: 1;
+  }
+  
+  /* Article Link */
+  .article-link {
+    color: #2AB4A8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .article-link:hover {
+    color: #097268;
+  }
+  
+  .article-link i {
+    font-size: 12px;
+    margin-left: 0.25rem;
+  }
+  
+  /* Newsletter Prompt */
+  .newsletter-prompt {
+    background-color: rgba(42, 180, 168, 0.05);
+    border-radius: 0.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .newsletter-prompt:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+  
+  .newsletter-prompt h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1A2A33;
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletter-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-form .form-control {
+    height: 44px;
+    border-radius: 980px;
+  }
+  
+  .newsletter-form .btn {
+    min-width: 120px;
+  }
+  
+  /* ==========================================================================
+     8. FAQ Section
+     ========================================================================== */
+  .faqs {
+    background-color: #fff;
+    padding: 3rem 0;
+  }
+  
+  /* FAQ header styling */
+  .main-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1A2A33;
+    margin-bottom: 0.5rem;
+  }
+  
+  .main-header p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #50606B;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* FAQ List */
+  .faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* FAQ Items */
+  .faq-item {
+    border-top: 1px solid #e5e7eb;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .faq-item:last-child {
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .faq-item:hover {
+    background-color: rgba(42, 180, 168, 0.02);
+  }
+  
+  .faq-header {
+    margin: 0;
+  }
+  
+  /* FAQ Question Button */
+  .faq-question {
+    position: relative;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 40px 24px 0;
+    text-align: left;
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .faq-question:hover {
+    color: #2AB4A8;
+  }
+  
+  .faq-question:focus {
+    outline: none;
+  }
+  
+  .faq-question:focus-visible {
+    outline: 2px solid #2AB4A8;
+    outline-offset: 2px;
+  }
+  
+  /* Plus/minus icon */
+  .faq-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .faq-question:hover .faq-icon {
+    transform: translateY(-50%) translateX(-3px);
+  }
+  
+  .faq-icon:before,
+  .faq-icon:after {
+    content: "";
+    position: absolute;
+    background-color: #1e293b;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* FAQ Plus/Minus Icon - Ensure Proper Visibility */
+  .faq-icon:before,
+  .faq-icon:after {
+    content: "";
+    position: absolute;
+    background-color: #1e293b;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Horizontal line */
+  .faq-icon:before {
+    top: 7px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+  }
+  
+  /* Vertical line (for plus) */
+  .faq-icon:after {
+    top: 0;
+    left: 7px;
+    width: 2px;
+    height: 16px;
+    transform: scaleY(1);
+  }
+  
+  /* Transform to minus when expanded */
+  .faq-question:not(.collapsed) .faq-icon:after {
+    transform: scaleY(0);
+  }
+  
+  .faq-question:hover .faq-icon:before,
+  .faq-question:hover .faq-icon:after {
+    background-color: #2AB4A8;
+  }
+  
+  /* Answer styling */
+  .faq-answer {
+    transition: height 0.35s ease;
+  }
+  
+  .faq-answer-content {
+    padding: 0 0 24px 0;
+    color: #6C7983;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* FAQ Answer Content */
+  .faq-answer-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .faq-answer-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .faq-answer-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .faq-answer-content li {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Active FAQ item */
+  .faq-active {
+    background-color: rgba(42, 180, 168, 0.02);
+  }
+  
+  .faq-active .faq-question {
+    color: #2AB4A8;
+    font-weight: 600;
+  }
+  
+  .faq-active .faq-icon:before,
+  .faq-active .faq-icon:after {
+    background-color: #2AB4A8;
+  }
+  
+  /* ==========================================================================
+     9. CTA Section
+     ========================================================================== */
+  .cta {
+    background-color: #2AB4A8;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Background animation effect */
+  .cta::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 80%);
+    animation: ctaBgPulse 15s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+  
+  @keyframes ctaBgPulse {
+    0% { transform: translate(0, 0); opacity: 0.03; }
+    100% { transform: translate(5%, 5%); opacity: 0.06; }
+  }
+  
+  /* CTA content styling */
+  .cta h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .cta p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .cta .small {
+    font-size: 0.875rem;
+    opacity: 0.8;
+  }
+  
+  /* ==========================================================================
+     10. Footer
+     ========================================================================== */
+  .footer {
+    background-color: #1A2A33;
+    color: #cbd5e0;
+    padding: 4rem 0 2rem;
+  }
+  
+  /* Footer Headings */
+  .footer-heading {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Footer Social */
+  .footer-social-heading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background-color 150ms ease;
+  }
+  
+  .footer-social-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  /* Footer Secondary Links */
+  .footer-secondary {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-secondary-link {
+    color: #cbd5e0;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+  
+  .footer-secondary-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .footer-canadian {
+    color: #cbd5e0;
+    font-size: 0.875rem;
+  }
+  
+  /* Footer Copyright & Disclaimer */
+  .footer-copyright {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-disclaimer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ==========================================================================
+     11. Media Queries
+     ========================================================================== */
+  
+  /* Mobile screens */
+  @media (max-width: 767.98px) {
+    /* Hero section */
+    .hero {
+      height: 560px !important;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: #16a496;
+    }
+    
+    .hero-image {
+      max-height: none;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+    }
+    
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      padding: 2.5rem 1rem 1.5rem;
+      text-align: left;
+      max-width: 100%;
+      margin: 0;
+    }
+    
+    .hero h1 {
+      font-size: 1.75rem !important;
+      line-height: 1.4 !important;
+      margin-bottom: 1rem !important;
+      color: white !important;
+      text-align: left !important;
+    }
+    
+    .hero-description {
+      font-size: 0.875rem !important;
+      color: white !important;
+      margin-bottom: 1.5rem !important;
+      max-width: 90%;
+      text-align: left !important;
+    }
+    
+    .hero-cta {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      max-width: 240px;
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      display: inline-block !important;
+    }
+    
+    /* Trust bar mobile */
+    .trust-bar {
+      padding: 0.75rem 0;
+      margin: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    
+    .trust-badges--desktop {
+      display: none;
+    }
+    
+    .trust-badges--mobile {
+      display: block;
+      height: 30px;
+    }
+    
+    .trust-badge-container {
+      animation: trustBadgeScroll 20s linear infinite;
+    }
+    
+    .trust-badges--mobile .canadian-badge {
+      font-size: 12px;
+      margin-right: 1rem;
+    }
+    
+    .trust-badges--mobile .maple-icon {
+      height: 14px;
+    }
+    
+    .trust-badges--mobile .trust-badge {
+      height: 16px;
+      margin: 0 0.5rem;
+    }
+    
+    .trust-badges--mobile .trust-badge-divider {
+      height: 16px;
+      margin: 0 0.75rem;
+    }
+    
+    @keyframes trustBadgeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    /* Why Us Section */
+    .why-us {
+      padding: 2.5rem 1rem 1.5rem;
+    }
+    
+    .why-us header {
+      margin-bottom: 1.5rem;
+    }
+    
+    .why-us h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .why-us header p {
+      font-size: 0.9375rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .feature-card {
+      padding: 1rem 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-icon {
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .feature-title {
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .feature-description {
+      font-size: 0.9375rem;
+    }
+    
+    /* Insurance Comparison Section */
+    .insurance-comparison {
+      padding: 2.5rem 0;
+    }
+    
+    .insurance-comparison h2 {
+      font-size: 1.5rem;
+    }
+    
+    .insurance-comparison p {
+      font-size: 0.9375rem;
+    }
+    
+    .step-content p {
+      font-size: 0.9375rem;
+      max-width: 100%;
+      padding-right: 0;
+    }
+    
+    .step-item {
+      margin-bottom: 1.5rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .step-icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .step-content {
+      text-align: center;
+      width: 100%;
+    }
+    
+    .step-content p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90%;
+    }
+    
+    .device-mockup {
+      width: 220px;
+      margin: 0 auto !important;
+    }
+    
+    .device-frame {
+      height: 460px;
+    }
+    
+    /* Reviews Section */
+    .review-card {
+      width: 260px;
+    }
+    
+    /* CTA Button Width */
+    .cta .btn-cta {
+      max-width: 280px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    
+    .faqs .btn,
+    .reviews-section .btn,
+    .insurance-comparison .btn-primary,
+    .articles .btn {
+      max-width: 250px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* Tablet screens */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    /* Hero */
+    .hero h1 {
+      font-size: 2.5rem !important;
+      line-height: 1.3 !important;
+      margin-bottom: 1rem !important;
+      text-align: left !important;
+    }
+    
+    .hero-description {
+      font-size: 1rem !important;
+      margin-bottom: 1.5rem !important;
+      text-align: left !important;
+    }
+    
+    .hero-text {
+      text-align: left !important;
+    }
+    
+    .hero .btn-orange,
+    .hero .hero-cta,
+    .hero .btn-cta {
+      min-width: 180px;
+      width: auto;
+      display: inline-flex !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+    }
+    
+    /* Process section */
+    .process-column {
+      padding-right: 1.5rem;
+    }
+    
+    .feature-card {
+      min-height: 320px;
+    }
+    
+    /* Insurance comparison tablet layout */
+    .insurance-comparison .row.align-items-center {
+      flex-direction: column;
+      align-items: center !important;
+    }
+    
+    .insurance-comparison .process-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding-right: 0 !important;
+      margin-bottom: 2rem;
+    }
+    
+    .insurance-comparison .step-container {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .insurance-comparison .step-content {
+      text-align: center;
+    }
+    
+    .insurance-comparison .step-item {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .insurance-comparison .step-icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      padding-top: 0;
+    }
+    
+    .insurance-comparison .process-column .cta-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 2rem;
+      padding-left: 0;
+    }
+    
+    .insurance-comparison .col-lg-5 {
+      display: flex !important;
+      justify-content: center !important;
+      width: 100%;
+      margin-top: 0;
+    }
+    
+    .device-mockup {
+      margin: 0 auto !important;
+      width: 260px !important;
+    }
+    
+    .device-frame {
+      height: 520px !important;
+    }
+  }
+  
+  /* Desktop screens */
+  @media (min-width: 992px) {
+    .hero {
+      padding: 3rem 0;
+      min-height: 580px;
+      display: flex;
+      align-items: left;
+    }
+    
+    .hero h1 {
+      font-size: 3.25rem;
+      text-align: left;
+    }
+    
+    .hero-description {
+      margin-left: 0;
+      text-align: left;
+      font-size: 1.125rem;
+    }
+    
+    .hero-text {
+      text-align: left !important;
+    }
+    
+    .why-us,
+    .partners-section {
+      padding: 4rem 0;
+    }
+    
+    .process-column {
+      padding-right: 2.5rem;
+    }
+    
+    .article-card {
+      transition: transform 0.4s ease-out, box-shadow 0.4s ease, border-color 0.3s ease;
+    }
+    
+    .hero-text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 500px;
+    }
+    
+    /* Button sizes */
+    .btn-cta, 
+    .btn-orange, 
+    .btn-cta-primary {
+      min-width: 180px;
+      width: auto;
+    }
+    
+    .hero .btn-cta,
+    .hero .btn-orange,
+    .hero .hero-cta {
+      min-width: 200px;
+      width: auto;
+    }
+    
+    .cta .btn-cta {
+      min-width: 240px;
+    }
+    
+    .insurance-comparison .btn-primary {
+      min-width: 160px;
+      width: auto;
+    }
+    
+    .reviews-section .btn {
+      min-width: 180px;
+      width: auto;
+    }
+    
+    /* Trust badges desktop */
+    .trust-badges--desktop {
+      display: flex;
+    }
+    
+    .trust-badges--mobile {
+      display: none;
+    }
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 359.98px) {
+    .btn-cta,
+    .btn-orange,
+    .btn-primary,
+    .btn {
+      max-width: 220px;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.25rem;
+    }
+    
+    .hero .btn-orange,
+    .hero .hero-cta,
+    .hero .btn-cta {
+      max-width: 200px;
+    }
+    
+    h2 {
+      font-size: 1.35rem;
+    }
+    
+    h3 {
+      font-size: 1.1rem;
+    }
+    
+    .trust-badges--mobile .canadian-badge {
+      font-size: 11px;
+    }
+    
+    .trust-badges--mobile .maple-icon {
+      height: 12px;
+    }
+    
+    .trust-badges--mobile .trust-badge {
+      height: 14px;
+    }
+    
+    .badge-group {
+      margin-right: 1.5rem;
+    }
+    
+    .badge-group--canadian {
+      margin-right: 2rem;
+    }
+  }
+  
+  /* Standard button styles across device sizes */
+  .btn-cta, 
+  .btn-orange, 
+  .btn-cta-primary,
+  .btn-primary,
+  .hero-cta {
+    min-height: 44px;
+    padding: 0.85rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .btn-cta-secondary,
+  .btn-outline-primary {
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Standardized heading styles */
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #1A2A33;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: #1A2A33;
+    letter-spacing: -0.015em;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: #1A2A33;
+  }
+  
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: #1A2A33;
+  }
+  
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: #1A2A33;
+  }
+  
+  .reviews-section h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  @media (max-width: 767.98px) {
+    .reviews-section h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+  /* Add these CSS rules to your homepage.css file */
+  
+  /* Trust Bar Animation CSS Class */
+  .animate-trust-badges {
+    animation: trustBadgeScroll 20s linear infinite;
+  }
+  
+  /* Ensure the animation is properly defined */
+  @keyframes trustBadgeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  /* Fix for the Trust Bar Mobile container */
+  .trust-badges--mobile {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 36px;
+    padding: 0.5rem 0;
+  }
+  
+  /* Reviews Section Enhanced Styling */
+  .review-container {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+    width: 100%;
+    height: 280px;
+  }
+  
+  .review-track {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    left: 0;
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .review-card {
+    flex: 0 0 auto;
+    width: 280px;
+    margin-right: 1rem; /* Added to ensure proper spacing */
+    background-color: #fff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .review-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.04);
+    transform: translateY(-5px);
+  }
+  
+  @media (max-width: 767.98px) {
+    /* Make sure the trust bar animation appears on mobile */
+    .trust-badges--desktop {
+      display: none;
+    }
+    
+    .trust-badges--mobile {
+      display: block;
+      height: 30px;
+    }
+    
+    /* Ensure review cards are properly sized on mobile */
+    .review-card {
+      width: 260px;
+    }
+  }
+  
+  /* Disable icon hover transforms */
+  .btn:hover i,
+  .btn-learn:hover i,
+  .card-link:hover i,
+  .article-link:hover i,
+  .about-link:hover h5 i,
+  .faq-question:hover .faq-icon,
+  .navbar__link:hover i {
+    transform: none !important;
+  }
+  
+  /* Stop the arrow movement in FAQ section */
+  .faq-question:hover .faq-icon {
+    transform: translateY(-50%) !important;
+  }
+  
+  /* Disable review track animation hover pause */
+  .review-track {
+    transition: none !important;
+  }
+  /* Mobile optimization following Google standards */
+  @media (max-width: 767.98px) {
+    /* Standard section padding */
+    section {
+      padding: 24px 0; /* Use 24px (1.5rem) as standard section padding */
+    }
+    
+    /* Container consistent padding */
+    .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    
+    /* Hero section spacing */
+    .hero {
+      height: auto !important;
+      min-height: 520px;
+      padding: 0 !important;
+    }
+    
+    .hero-text {
+      padding: 24px 16px !important; /* Consistent 24px/16px padding */
+    }
+    
+    /* Feature sections */
+    .why-us, 
+    .insurance-comparison,
+    .reviews-section,
+    .partners-section,
+    .articles,
+    .faqs {
+      padding: 32px 0; /* Slightly more spacing between major sections */
+    }
+    
+    /* Card and interactive element padding */
+    .feature-card,
+    .review-card,
+    .article-card {
+      padding: 16px !important; /* Consistent 16px padding */
+    }
+    
+    /* Touch targets - ensure minimum 48px height with adequate padding */
+    .btn,
+    .hero-cta,
+    .btn-primary,
+    .btn-orange,
+    .navbar__link,
+    .footer-link {
+      min-height: 48px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+    }
+    
+    /* Section headings spacing */
+    .text-center.mb-4,
+    .text-center.mb-5 {
+      margin-bottom: 24px !important;
+    }
+    
+    /* Standard margins between elements */
+    .mb-3 {
+      margin-bottom: 16px !important;
+    }
+    
+    .mb-4 {
+      margin-bottom: 24px !important;
+    }
+    
+    /* Row gutters - consistent 16px */
+    .row {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+    
+    [class*="col-"] {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    
+    /* FAQ proper spacing */
+    .faq-question {
+      padding: 16px 40px 16px 16px;
+    }
+    
+    .faq-answer-content {
+      padding: 0 16px 16px 16px;
+    }
+  }
+  
+  /* Mobile CTA Button Positioning Fix */
+  @media (max-width: 767.98px) {
+    /* Hero CTA/Get Quote button size adjustment */
+    .hero-cta,
+    .hero .btn-orange,
+    .hero .btn-cta,
+    .hero .btn-cta-primary,
+    .hero a[href="/quote"],
+    .hero a.btn {
+      /* Size adjustment */
+      height: auto;
+      padding: 10px 24px;
+      font-size: 1rem;
+      line-height: 1.4;
+      max-width: 220px;
+      width: 100%;
+      /* Left-aligned specifically for hero section */
+      margin-left: 0;
+      margin-right: auto;
+      /* Maintain proper touch target size */
+      min-height: 44px;
+      border-radius: 24px;
+      /* Remove excessive shadow */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Keep all other CTAs centered */
+    .btn-primary,
+    .btn-cta,
+    .btn-orange,
+    a[href="/quote"],
+    a[href*="quotes"].btn,
+    .cta-container .btn,
+    section:not(.hero) .btn {
+      /* Standard sizing */
+      padding: 10px 20px;
+      font-size: 1rem;
+      min-height: 44px;
+      /* Centered positioning */
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      justify-content: center;
+      display: inline-flex;
+    }
+    
+    /* Ensure centered display for specific sections */
+    .insurance-comparison .btn-primary,
+    .step-item + .cta-container .btn,
+    .reviews-section .btn,
+    .col-lg-7 .cta-container .btn-primary,
+    .process-column .cta-container .btn {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: block;
+      max-width: 220px;
+      width: 100%;
+    }
+    
+    /* Fix for the "Get My Quotes" button specifically */
+    .cta-container .btn-primary,
+    a[href*="quotes"].btn-primary,
+    .process-column .btn-primary {
+      display: block;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 200px;
+      width: 100%;
+    }
+    
+    /* Center text alignment for button containers */
+    .cta-container,
+    .process-column .cta-container,
+    .col-auto,
+    .text-center .btn {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
+  /* Extra small screens need even smaller buttons */
+  @media (max-width: 374.98px) {
+    .btn-primary,
+    .btn-orange,
+    .btn-cta,
+    a[href="/quote"],
+    a[href*="quotes"].btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  /* ONLY Hero CTA Left Alignment Override */
+  @media (max-width: 767.98px) {
+    /* Target ONLY hero section CTA with left alignment */
+    .hero .btn,
+    .hero .btn-orange,
+    .hero .btn-cta,
+    .hero .hero-cta,
+    .hero a[href="/quote"] {
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      display: inline-flex !important;
+      text-align: center !important;
+    }
+    
+    /* In case hero has text-center class */
+    .hero.text-center .btn,
+    .hero.text-center .btn-orange,
+    .hero.text-center .btn-cta,
+    .hero.text-center .hero-cta,
+    .hero .text-center .btn {
+      margin-left: 0 !important;
+      margin-right: auto !important;
+    }
+    
+    /* Keep text alignment left in hero section */
+    .hero .text-center {
+      text-align: left !important;
+    }
+  }
+  /* World Class Mobile Partners Section Refinements */
+  @media (max-width: 767.98px) {
+    /* Improved spacing and visual hierarchy */
+    .partners-section {
+      padding: 20px 0 24px !important;
+      background-color: #f9f9f9 !important; /* Subtle background to add depth */
+    }
+    
+    /* Better header spacing */
+    .partners-section header {
+      margin-bottom: 16px !important;
+      padding: 0 16px !important;
+    }
+    
+    .partners-section h2 {
+      font-size: 1.5rem !important;
+      margin-bottom: 8px !important;
+      color: #1A2A33 !important;
+    }
+    
+    .partners-section p {
+      font-size: 0.9rem !important;
+      color: #64748b !important;
+      margin-bottom: 8px !important;
+    }
+    
+    /* Enhanced card styling */
+    .partner-card {
+      background-color: white !important;
+      border-radius: 8px !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
+      border: 1px solid rgba(209,217,230,0.8) !important;
+      height: 64px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 10px !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+    
+    /* Better logo presentation */
+    .partner-logo {
+      max-width: 85% !important;
+      max-height: 34px !important;
+      filter: grayscale(70%) !important; /* Reduced grayscale for better visibility */
+      opacity: 0.8 !important; /* Slightly more visible */
+      transition: filter 0.2s ease, opacity 0.2s ease !important;
+    }
+    
+    /* Subtle hover effect */
+    .partner-card:active {
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06) !important;
+      border-color: rgba(42, 180, 168, 0.4) !important;
+    }
+    
+    .partner-card:active .partner-logo {
+      filter: grayscale(30%) !important;
+      opacity: 1 !important;
+    }
+    
+    /* Consistent grid spacing */
+    .partners-section .row {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      grid-gap: 10px !important;
+      padding: 0 10px !important;
+    }
+    
+    /* Grid item consistency */
+    .partners-section .row > div {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+  /* ==========================================================================
+     12. Accessibility Improvements
+     ========================================================================== */
+  
+  /* Focus Management - Enhanced visible focus states */
+  :focus-visible {
+    outline: 3px solid #2AB4A8;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(42, 180, 168, 0.3);
+  }
+  
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  .navbar__link:focus-visible,
+  .btn:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 3px solid #2AB4A8;
+    outline-offset: 2px;
+  }
+  
+  /* Skip link enhancement */
+  .skip-link:focus {
+    top: 0;
+    left: 0;
+    padding: 16px;
+    background-color: #2AB4A8;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 9999;
+  }
+  
+  /* Color contrast improvements */
+  .text-muted, 
+  .feature-description, 
+  .article-excerpt,
+  .faq-answer-content p,
+  .trust-bar {
+    color: #505A64; /* Darker gray for better contrast */
+  }
+  
+  .footer-links a, 
+  .footer-secondary-link {
+    color: #cbd5e0; /* Lighter on dark background */
+  }
+  
+  /* Ensure form elements have adequate contrast */
+  .form-control::placeholder {
+    color: #767F88;
+  }
+  
+  /* Motion & Animation Controls - Respect user preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001s !important;
+      transition-duration: 0.001s !important;
+      scroll-behavior: auto !important;
+    }
+    
+    /* Stop specific animations */
+    .trust-badge-container {
+      animation: none !important;
+    }
+    
+    .review-track {
+      position: static !important;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 1rem !important;
+    }
+    
+    .review-container {
+      height: auto !important;
+      overflow: visible !important;
+    }
+    
+    .review-card {
+      width: 100% !important;
+    }
+    
+    /* Replace hover animations with simple state changes */
+    .btn:hover,
+    .insurance-card:hover,
+    .partner-card:hover,
+    .article-card:hover {
+      transform: none !important;
+    }
+  }
+  
+  /* Touch Target Size Improvements */
+  @media (max-width: 767.98px) {
+    .btn,
+    .navbar__link,
+    .navbar__toggle,
+    .footer-link,
+    .insurance-card__link,
+    .learn-card__link,
+    .article-link,
+    .faq-question,
+    .footer-social-link {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Increase tap target spacing */
+    .footer-links li,
+    .navbar__item,
+    .trust-badges .badge-group {
+      margin-bottom: 8px;
+    }
+    
+    /* Ensure footer social links have adequate spacing and size */
+    .footer-social-link {
+      width: 44px;
+      height: 44px;
+      margin-right: 12px;
+    }
+  }
+  
+  /* Keyboard Navigation Enhancement */
+  .navbar__link[data-toggle="dropdown"]:focus-visible + .megamenu,
+  .navbar__item:focus-within .megamenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Better readability */
+  p, 
+  .feature-description, 
+  .article-excerpt,
+  .faq-answer-content,
+  .step-content p {
+    line-height: 1.6;
+  }
+  
+  /* Support for High Contrast Mode */
+  @media (forced-colors: active) {
+    .btn,
+    .btn-primary,
+    .btn-orange,
+    .navbar__toggle,
+    .faq-question {
+      border: 2px solid ButtonText;
+    }
+    
+    a:not(.btn):not(.navbar__link):not(.footer-link) {
+      text-decoration: underline;
+    }
+    
+    .feature-card,
+    .review-card,
+    .article-card,
+    .partner-card {
+      border: 1px solid ButtonText;
+    }
+  }
+  
+  /* Make form error states more accessible */
+  .form-control.is-invalid {
+    border-color: #b00020; /* More accessible red */
+    box-shadow: 0 0 0 1px #b00020;
+  }
+  
+  .form-control.is-valid {
+    border-color: #0a5f38; /* More accessible green */
+  }
+  
+  /* Improved focus for FAQ questions */
+  .faq-question:focus-visible {
+    background-color: rgba(42, 180, 168, 0.1);
+  }
+  
+  /* Better visual cues for current navigation item */
+  .navbar__link--active {
+    border-bottom: 2px solid #2AB4A8;
+  }
+  
+  /* Ensure proper color contrast on hover states */
+  .btn-primary:hover {
+    background-color: #097268; /* Darker for better contrast */
+  }
+  
+  .btn-orange:hover, 
+  .btn-cta:hover, 
+  .btn-cta-primary:hover {
+    background-color: #D55D15; /* Darker orange */
+  }
+  
+  /* Add outlines to cards for better perceived boundaries */
+  .insurance-card, 
+  .learn-card, 
+  .review-card, 
+  .article-card, 
+  .partner-card {
+    border: 1px solid #d1d9e6;
+  }
+  
+  
+  /* Mobile Hero Section Spacing Fixes */
+  
+  /* Adjust header and hero section spacing */
+  @media (max-width: 767.98px) {
+    /* Header height adjustment */
+    .header, .navbar {
+      height: 60px; /* Consistent header height */
+      padding: 0;
+    }
+    
+    /* Logo size adjustment */
+    .navbar__logo {
+      height: 32px;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Hero section spacing */
+    .hero {
+      height: auto !important; /* Override fixed height */
+      min-height: 520px; /* Ensure enough space for content */
+      padding-top: 0 !important; /* ← DECREASE THIS VALUE to reduce space from top */
+    }
+    
+    /* Hero text container spacing */
+    .hero-text {
+      padding: 24px 16px 24px !important; /* ← DECREASE THIS TOP PADDING to reduce space */
+      margin-top: 0 !important;
+    }
+    
+    /* Hero heading adjustments */
+    .hero h1 {
+      font-size: 1.7rem !important;
+      line-height: 1.3 !important;
+      margin-top: 40px !important;
+      margin-bottom: 2px !important;
+    }
+    
+    /* Hero description spacing */
+    .hero-description {
+      margin-bottom: 24px !important;
+    }
+    
+    /* CTA button spacing and alignment */
+    .hero-cta {
+      margin-top: 8px !important;
+      margin-bottom: 16px !important;
+      padding: 12px 24px !important;
+      font-size: 1rem !important;
+    }
+    
+    /* Trust bar below hero adjustments */
+    .trust-bar {
+      padding: 12px 0 !important;
+    }
+  }
+  
+  /* Extra small screens (iPhone SE, etc.) */
+  @media (max-width: 374.98px) {
+    .hero h1 {
+      font-size: 1.5rem !important;
+    }
+    
+    .hero-description {
+      font-size: 0.875rem !important;
+    }
+    
+    .hero {
+      min-height: 480px; /* Slightly reduced height */
+    }
+  }
+  
+  /* Ensure consistent container padding */
+  @media (max-width: 767.98px) {
+    .container {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Remove hover effects from steps section */
+  
+  /* Target the step items */
+  .step-item,
+  .step-container .step-item,
+  .insurance-comparison .step-item,
+  .process-column .step-item {
+    transition: none !important;
+  }
+  
+  /* Remove background color change on hover */
+  .step-item:hover,
+  .step-container .step-item:hover,
+  .insurance-comparison .step-item:hover,
+  .process-column .step-item:hover {
+    background-color: transparent !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Remove color changes for icons */
+  .step-item:hover .icon-circle,
+  .step-item:hover .step-icon,
+  .step-item:hover .step-icon i,
+  .step-item:hover .icon-circle i {
+    background-color: rgba(42, 180, 168, 0.08) !important; /* Keep original color */
+    color: #2AB4A8 !important; /* Keep original color */
+    transform: none !important;
+  }
+  
+  /* Remove color changes for headings */
+  .step-item:hover .step-content h3,
+  .step-item:hover h3,
+  .step-item:hover .step-title {
+    color: #1A2A33 !important; /* Keep original heading color */
+    transform: none !important;
+  }
+  
+  /* Remove any outline or border changes */
+  .step-item:hover {
+    border-color: transparent !important;
+    outline: none !important;
+  }
+  
+  /* Ensure no background highlight appears */
+  .step-content:hover,
+  .step-icon:hover,
+  .step-container:hover {
+    background-color: transparent !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ==========================================================================
+   WCAG Color Contrast Compliance Fixes - ADD TO END OF homepage.css
+   ========================================================================== */
+
+/* CTA Section with darkened background */
+.cta {
+  background-color: #178F85; /* Darkened from #2AB4A8 for 4.5:1 contrast with white */
+}
+
+/* Feature and content text colors */
+.feature-description,
+.step-content p,
+.article-excerpt,
+.faq-answer-content,
+.faq-answer-content p {
+  color: #4E5962; /* Darkened from #6C7983 to meet 4.5:1 on white */
+}
+
+/* Trust bar text color */
+.trust-bar {
+  color: #505A64; /* Darkened for better contrast */
+}
+
+/* Feature icons */
+.feature-icon {
+  color: #178F85; /* Darkened primary */
+}
+
+/* Hero CTA button */
+.hero-cta {
+  background-color: #D96816; /* Darkened from #FF7A2E for better contrast */
+  font-weight: 600; /* Increased weight for better visibility */
+}
+
+.hero-cta:hover {
+  background-color: #BA5A12; /* Further darkened for hover state */
+}
+
+/* FAQ section colors */
+.faq-active .faq-question,
+.faq-active .faq-icon:before,
+.faq-active .faq-icon:after,
+.faq-question:hover .faq-icon:before,
+.faq-question:hover .faq-icon:after {
+  color: #178F85; /* Darkened primary */
+}
+
+.faq-question:hover {
+  color: #178F85; /* Darkened primary */
+}
+
+/* Featured article category */
+.featured-article .article-category {
+  background-color: #D96816; /* Darkened from #FF7A2E for better contrast */
+  box-shadow: 0 2px 4px rgba(217, 104, 22, 0.2);
+}
+
+/* Review card name - ensure proper contrast */
+.review-card__name {
+  color: #1A2A33; /* Already good contrast, but ensure consistency */
+}
+
+/* Footer disclaimer text */
+.footer-disclaimer .text-muted {
+  color: #CBD5E0; /* Lighter for better contrast on dark background */
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 767.98px) {
+  .partners-section p {
+    color: #505A64 !important; /* Ensure mobile-specific override has good contrast */
+  }
+  
+  /* Ensure mobile hero CTA has good contrast */
+  .hero .btn-orange,
+  .hero .hero-cta,
+  .hero .btn-cta {
+    background-color: #D96816;
+    font-weight: 600;
+  }
+  
+  /* Footer links in mobile */
+  .footer-link {
+    color: #E9EEF5;
+  }
+}
+
+/* World Class Mobile Partners Section - ensure contrast */
+@media (max-width: 767.98px) {
+  .partners-section h2 {
+    color: #1A2A33 !important; /* Already good contrast */
+  }
+  
+  .partners-section p {
+    color: #505A64 !important; /* Darkened for better contrast */
+  }
+  
+  .partner-card:active {
+    border-color: rgba(23, 143, 133, 0.4) !important; /* Darkened for better visibility */
+  }
+  
+  .partner-card:active .partner-logo {
+    filter: grayscale(50%) !important; /* Reduced grayscale for better contrast */
+    opacity: 0.9 !important; /* Increased opacity for better visibility */
+  }
+}

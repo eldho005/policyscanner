@@ -1,0 +1,264 @@
+{
+  "title": "Disability Insurance in Canada",
+  "seo_title": "Disability Insurance Canada | Income Protection Plans | PolicyScanner",
+  "seo_description": "Compare disability insurance plans in Canada. Protect your monthly income if illness or injury stops you from working. Ontario-licensed advisors. Free quotes.",
+  "slug": "disability",
+  "tag": "Disability Insurance",
+  "read_time": "10 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 2200,
+    "primary_keyword": "disability insurance canada",
+    "secondary_keywords": [
+      "disability insurance ontario",
+      "income replacement insurance",
+      "long-term disability insurance canada",
+      "short-term disability canada",
+      "individual disability insurance"
+    ],
+    "conversion_goal": "Lead capture — motivate self-employed and unprotected workers to compare DI quotes",
+    "page_role": "Product pillar page for Disability Insurance — links to CI vs Disability comparison page",
+    "writer_focus": "The core message: your ability to earn income is your biggest asset. If you can't work, disability insurance replaces your paycheque. Canadians underestimate the disability risk — 1 in 3 workers will be disabled for 3+ months before age 65.",
+    "seo_keywords": {
+      "use_primary_exact": "disability insurance",
+      "density_rule": "Use 'disability insurance' 3–4 times per 500 words. Vary with 'income protection' and 'DI coverage'.",
+      "synonyms": [
+        "income protection insurance",
+        "income replacement insurance",
+        "DI coverage",
+        "disability income insurance",
+        "inability to work insurance"
+      ],
+      "lsi_terms": [
+        "elimination period",
+        "benefit period",
+        "own-occupation definition",
+        "any-occupation definition",
+        "monthly benefit",
+        "non-cancellable",
+        "guaranteed renewable",
+        "residual disability",
+        "partial disability",
+        "COLA rider"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "FSRA",
+        "Canada Pension Plan disability",
+        "CPP-D",
+        "Sun Life",
+        "Manulife",
+        "Great-West Life",
+        "iA Financial"
+      ],
+      "action_keywords": [
+        "compare disability insurance quotes",
+        "protect your income",
+        "get DI coverage",
+        "replace lost income"
+      ],
+      "natural_variations": [
+        "if you couldn't work for 6 months",
+        "protecting your paycheque",
+        "income protection plan in Canada",
+        "DI coverage for self-employed"
+      ],
+      "real_example_to_use": "David, 39, self-employed contractor in Mississauga — herniated disc, off work 14 months, disability insurance replaced 70% of his $8,500/month income throughout recovery",
+      "avoid": "Do not write 'disability insurance canada' as a stiff exact phrase. Write naturally: 'disability insurance in Canada' or 'Canadian disability coverage'."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "Disability Insurance: Protect Your Paycheque If You Can't Work",
+      "subheading": "Your income is your most valuable asset. Disability insurance replaces up to 70–85% of your monthly income if illness or injury keeps you off work.",
+      "cta_primary": "Compare DI Quotes Free",
+      "cta_secondary": "How Much Could I Get?",
+      "_writer_notes": {
+        "target_words": 60,
+        "focus": "Lead with income protection framing — not the risk, the solution. 'Protect your paycheque' is the hook.",
+        "key_points": [
+          "Up to 85% of pre-disability income replaced",
+          "Covers illness AND injury — not just workplace accidents",
+          "Benefits paid monthly — like a paycheque from your insurer"
+        ]
+      }
+    },
+    {
+      "_type": "statsBar",
+      "stats": [
+        { "value": "1 in 3", "label": "Canadian workers will be off work 3+ months before age 65" },
+        { "value": "2.6 years", "label": "Average length of a long-term disability claim in Canada" },
+        { "value": "85%", "label": "Maximum income replacement most DI plans offer" },
+        { "value": "43%", "label": "Canadians with zero disability coverage" }
+      ],
+      "_writer_notes": {
+        "target_words": 40,
+        "focus": "Stats from CLHIA (Canadian Life and Health Insurance Association) and Sun Life disability study. These are credible industry sources — cite loosely if needed."
+      }
+    },
+    {
+      "_type": "whatIsSection",
+      "heading": "What Is Disability Insurance?",
+      "_writer_notes": {
+        "target_words": 300,
+        "focus": "Define DI clearly. It's monthly income replacement while you cannot work. Two main types: short-term (STD) and long-term (LTD). Personal vs group plans.",
+        "key_points": [
+          "Pays a monthly benefit (not lump sum like CI) while you're unable to work",
+          "Covers both physical disabilities (back injury, accident) and mental health (depression, anxiety)",
+          "Short-term DI: pays for 3–6 months, lower elimination period (days)",
+          "Long-term DI: pays for 2 years, 5 years, or to age 65",
+          "Group DI: through employer — often insufficient, not portable",
+          "Individual DI: your own policy — stronger definitions, portable"
+        ],
+        "structure": "Start with the scenario: 'You earn $7,000/month. You slip on ice and break your hip. You're off work for 8 months. What pays your mortgage?' Then explain DI as the answer."
+      }
+    },
+    {
+      "_type": "definitionsSection",
+      "heading": "Own-Occupation vs Any-Occupation: The Critical Distinction",
+      "_writer_notes": {
+        "target_words": 280,
+        "focus": "This is the most important concept in DI. Own-occ pays if you can't do YOUR job. Any-occ only pays if you can't do ANY job. Professionals need own-occ.",
+        "key_points": [
+          "Own-occupation: you qualify if you can't perform the duties of YOUR specific occupation",
+          "Any-occupation: you only qualify if you can't work in ANY job for which you're reasonably suited",
+          "Example: surgeon loses use of right hand → own-occ pays even if they could work as a teacher",
+          "Group plans usually use any-occ definition after 2 years — individual plans can be own-occ to age 65",
+          "Own-occ is more expensive but far stronger protection"
+        ],
+        "real_example": "Dr. Patel, dentist, develops severe hand tremors. Under own-occ: qualifies immediately — can't do dental work. Under any-occ definition: insurer may argue she can teach, consult, or work in another field — claim denied.",
+        "structure": "Side-by-side comparison table: Own-Occ vs Any-Occ (definition, who qualifies, cost, best for). Then plain-language explanation."
+      }
+    },
+    {
+      "_type": "eliminationPeriodSection",
+      "heading": "Elimination Period: Your DI Deductible",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Explain elimination period (waiting period before benefits start). Common choices: 30, 60, 90, 120 days. Longer EP = lower premium.",
+        "key_points": [
+          "Most people choose 90-day EP to balance cost vs. coverage",
+          "If you have 3 months emergency savings, 90-day EP is usually appropriate",
+          "30-day EP adds 25–35% to premium cost",
+          "Self-employed with irregular cash flow may prefer shorter EP"
+        ],
+        "structure": "Quick table: EP length vs. cost impact. Recommendation: 90 days for most Canadians."
+      }
+    },
+    {
+      "_type": "whoNeedsItSection",
+      "heading": "Who Needs Personal Disability Insurance?",
+      "_writer_notes": {
+        "target_words": 280,
+        "focus": "Self-employed is the #1 target. Also: employees with weak group DI, high earners, sole income providers.",
+        "key_points": [
+          "Self-employed: no employer plan, no sick pay, no EI for extended illness",
+          "Employees with group DI: most group plans replace only 60% to 2 years — often not enough",
+          "High-income earners: group plans cap benefits — individual tops up",
+          "Single income households: one earner's disability is devastating",
+          "Professionals (doctors, dentists, lawyers): need own-occ definition"
+        ],
+        "callout_after": "Note: EI sickness benefits pay 55% of earnings for up to 26 weeks. That covers short gaps — not long-term disability."
+      }
+    },
+    {
+      "_type": "costTable",
+      "heading": "How Much Does Disability Insurance Cost in Canada?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Sample monthly premiums. Based on: non-smoker, office worker, $5,000/month benefit, 90-day EP, to-age-65 benefit period.",
+        "key_points": [
+          "Age 30, female: ~$90–$130/mo for $5,000/mo benefit",
+          "Age 35, male: ~$100–$150/mo for $5,000/mo benefit",
+          "Age 40, female: ~$140–$200/mo for $5,000/mo benefit",
+          "Age 45, male: ~$200–$280/mo for $5,000/mo benefit",
+          "Factors: age, sex, occupation class, health, smoker status, EP length, benefit period"
+        ],
+        "structure": "Table with age bracket / male / female columns. Note: occupation class matters — manual workers pay more. CTA after table.",
+        "callout_after": "Blue callout: 'You can insure up to 85% of your pre-disability earned income. Most policies are designed to replace your net take-home pay, not your gross salary.'"
+      }
+    },
+    {
+      "_type": "groupVsIndividualSection",
+      "heading": "Group DI vs. Individual DI: What's the Difference?",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "Most Canadians have group DI through work but don't know how weak it is. Individual DI is portable, has better definitions, and often pays more.",
+        "key_points": [
+          "Group DI: cheaper (employer shares cost), but: any-occ definition after 2 years, not portable, taxable if employer pays premiums, caps often too low",
+          "Individual DI: you own it, own-occ definition available, portable if you change jobs, benefits tax-free if you pay premiums",
+          "Best strategy: check what your group plan pays — if under 70% of income, consider topping up with individual DI"
+        ],
+        "structure": "Comparison table: Group vs Individual on 6 dimensions."
+      }
+    },
+    {
+      "_type": "ontarioSection",
+      "heading": "Disability Insurance in Ontario",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Ontario-specific context: WSIB covers only workplace accidents — DI covers illness and non-workplace injuries too. FSRA regulates insurers.",
+        "key_points": [
+          "WSIB (Workplace Safety and Insurance Board) only covers injuries that happen AT work",
+          "Most disabilities are caused by illness (cancer, mental health, heart disease) — WSIB won't cover these",
+          "Ontario has no provincial disability income program beyond CPP-D",
+          "CPP Disability pays a maximum of ~$1,583/month — far less than most incomes",
+          "FSRA-licensed Ontario advisors help you compare 10+ DI providers"
+        ]
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Disability Insurance — Frequently Asked Questions",
+      "faqs": [
+        {
+          "question": "Is disability insurance tax-deductible in Canada?",
+          "answer": "No, personal disability insurance premiums are not tax-deductible. However, the benefits you receive are tax-free. If your employer pays DI premiums, the benefits are taxable income.",
+          "_guidance": "Clear answer. Explain the tax treatment both ways — personally paid vs employer-paid."
+        },
+        {
+          "question": "How long does disability insurance pay out?",
+          "answer": "It depends on your benefit period. Short-term DI pays for 3–6 months. Long-term DI can pay for 2 years, 5 years, 10 years, or to age 65. Most people planning for serious disability choose a to-age-65 benefit period.",
+          "_guidance": "Explain options — don't just say 'it depends' without the specifics."
+        },
+        {
+          "question": "Can self-employed Canadians get disability insurance?",
+          "answer": "Yes. Individual disability insurance is designed for the self-employed. You'll need to document your income (tax returns or financial statements) to prove your earned income. Most insurers require 2 years of filed returns.",
+          "_guidance": "This is a very common search. David example from _meta works here."
+        },
+        {
+          "question": "Does disability insurance cover mental health in Canada?",
+          "answer": "Yes — modern disability insurance policies cover mental health conditions like depression, anxiety, and burnout if they prevent you from working. Mental health is now the leading cause of long-term disability claims in Canada.",
+          "_guidance": "Important — mental health is a growing concern. Be empathetic in tone."
+        },
+        {
+          "question": "What's the maximum disability insurance benefit in Canada?",
+          "answer": "Most insurers cover up to 85% of your pre-disability earned income, combining group and individual plans. The maximum monthly benefit on most individual DI plans is $15,000–$20,000/month, though high-income earners can apply for specialty high-limit policies.",
+          "_guidance": "Give real numbers — most readers want to know the ceiling."
+        },
+        {
+          "question": "Will CPP disability replace my income?",
+          "answer": "Partially. CPP Disability pays a flat benefit — in 2024, the maximum is approximately $1,583/month. For most Canadians earning above minimum wage, this doesn't come close to replacing your income. Personal DI fills the gap.",
+          "_guidance": "Use current year figure. Position CPP-D as supplement, not solution."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Compare Disability Insurance Plans — Free in 2 Minutes",
+      "subheading": "Ontario-licensed advisors compare 10+ Canadian DI providers. Get your personalized quote now.",
+      "cta_button": "Get My Free DI Quote",
+      "_writer_notes": {
+        "target_words": 50,
+        "focus": "Motivate action. Reinforce: free, fast, licensed Ontario advisors, no obligation.",
+        "key_points": [
+          "No pressure — compare options, then decide",
+          "Takes 2 minutes to fill out your profile",
+          "Advisor follows up to explain options in plain language"
+        ]
+      }
+    }
+  ]
+}

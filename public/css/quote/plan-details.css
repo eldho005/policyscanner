@@ -1,0 +1,527 @@
+/* ==========================================================================
+   INSURANCE SIDEBAR - MOBILE FIRST PROGRESSIVE DESIGN
+   Starts with mobile (320px+) and progressively enhances
+   OKLCH Colors with RGB Fallbacks for Wide Compatibility
+   ========================================================================== */
+
+/* ==========================================================================
+   0. COLOR SYSTEM - OKLCH with RGB Fallbacks
+   ========================================================================== */
+
+.insurance-sidebar {
+  /* RGB Fallbacks */
+  --sidebar-primary-text: #3D4A59;
+  --sidebar-secondary-text: #7C8B97;
+  --sidebar-primary-teal: #3BC5B9;
+  --sidebar-bg-white: #FFFFFF;
+  --sidebar-bg-light: #F6F9FA;
+  --sidebar-bg-tertiary: #F0F8F7;
+  --sidebar-border-light: #E5E9ED;
+  
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--sidebar-primary-text, var(--primary-text));
+}
+
+/* Progressive Enhancement - OKLCH Support */
+@supports (color: oklch(60% 0.15 180)) {
+  .insurance-sidebar {
+    --sidebar-primary-text: oklch(35% 0.02 250);
+    --sidebar-secondary-text: oklch(55% 0.01 250);
+    --sidebar-primary-teal: oklch(75% 0.15 180);
+    --sidebar-bg-white: oklch(100% 0 0);
+    --sidebar-bg-light: oklch(97% 0.005 200);
+    --sidebar-bg-tertiary: oklch(96% 0.015 180);
+    --sidebar-border-light: oklch(92% 0.005 200);
+  }
+}
+
+/* ==========================================================================
+   1. MOBILE FIRST BASE (320px+) - Primary Design Target
+   ========================================================================== */
+
+/* Overlay - Mobile First */
+.insurance-sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-modal-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.insurance-sidebar__overlay--active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+}
+
+/* Modal - Mobile First (Full Screen on Mobile) */
+.insurance-sidebar__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-white);
+  /* z-index: var(--z-modal-content); */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.insurance-sidebar__modal--active {
+  transform: translateX(0);
+}
+
+/* Header - Mobile First */
+.insurance-sidebar__header {
+  position: sticky;
+  top: 0;
+  background: var(--bg-white);
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.insurance-sidebar__header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.insurance-sidebar__logo {
+  height: 24px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.insurance-sidebar__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  color: var(--primary-text);
+}
+
+.insurance-sidebar__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--secondary-text);
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+}
+
+/* Coverage Summary - Refined Typography */
+.insurance-sidebar__coverage {
+  background: var(--sidebar-bg-white, var(--bg-white));
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--sidebar-border-light, var(--border-light));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.insurance-sidebar__coverage-amount {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  color: var(--sidebar-primary-text, var(--primary-text));
+  letter-spacing: -0.01em;
+}
+
+.insurance-sidebar__coverage-premium {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  /* color: var(--sidebar-primary-teal, var(--primary-teal)); */
+  text-align: right;
+}
+
+/* Content - Mobile First */
+.insurance-sidebar__content {
+  padding: var(--space-3);
+  flex: 1;
+}
+
+.insurance-sidebar__section {
+  margin-bottom: var(--space-4);
+}
+
+.insurance-sidebar__section:last-child {
+  margin-bottom: 0;
+}
+
+.insurance-sidebar__section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.insurance-sidebar__text {
+  margin: 0 0 var(--space-2) 0;
+  line-height: var(--line-height-relaxed);
+  color: var(--primary-text);
+}
+
+.insurance-sidebar__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Plan Grid - With container like reference image */
+.insurance-sidebar__plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-6);
+  margin-top: var(--space-2);
+  background: var(--sidebar-bg-light, var(--bg-light));
+  border: 1px solid var(--sidebar-border-light, var(--border-light));
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-4);
+}
+
+.insurance-sidebar__plan-item {
+  margin-bottom: var(--space-3);
+}
+
+.insurance-sidebar__plan-item:last-child {
+  margin-bottom: 0;
+}
+
+.insurance-sidebar__plan-label {
+  font-size: var(--font-size-sm);
+  color: var(--sidebar-secondary-text, var(--secondary-text));
+  font-weight: var(--font-weight-normal);
+  margin-bottom: 4px;
+  line-height: var(--line-height-normal);
+}
+
+.insurance-sidebar__plan-value {
+  font-size: var(--font-size-base);
+  color: var(--sidebar-primary-text, var(--primary-text));
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+/* Company Info - With container like reference image */
+.insurance-sidebar__company {
+  margin: var(--space-3) 0;
+  background: var(--sidebar-bg-light, var(--bg-light));
+  border: 1px solid var(--sidebar-border-light, var(--border-light));
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-4);
+}
+
+.insurance-sidebar__company-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.insurance-sidebar__company-logo {
+  width: 50px;
+  height: 32px;
+  background: var(--sidebar-bg-white, var(--bg-white));
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--sidebar-secondary-text, var(--secondary-text));
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.insurance-sidebar__company-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--sidebar-primary-text, var(--primary-text));
+  margin: 0 0 4px 0;
+}
+
+.insurance-sidebar__company-meta {
+  font-size: var(--font-size-sm);
+  color: var(--sidebar-secondary-text, var(--secondary-text));
+  margin: 0;
+}
+
+/* Steps - With container like reference image */
+.insurance-sidebar__steps {
+  margin: var(--space-3) 0;
+  background: var(--sidebar-bg-light, var(--bg-light));
+  border: 1px solid var(--sidebar-border-light, var(--border-light));
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-4);
+}
+
+.insurance-sidebar__steps-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--sidebar-primary-text, var(--primary-text));
+  margin: 0 0 var(--space-3) 0;
+}
+
+.insurance-sidebar__steps-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.insurance-sidebar__steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  color: var(--sidebar-primary-text, var(--primary-text));
+  line-height: var(--line-height-normal);
+  position: relative;
+}
+
+.insurance-sidebar__steps-list li:last-child {
+  margin-bottom: 0;
+}
+
+.insurance-sidebar__steps-list li::before {
+  content: counter(step-counter);
+  counter-increment: step-counter;
+  background: var(--sidebar-primary-teal, var(--primary-teal));
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.insurance-sidebar__steps-list {
+  counter-reset: step-counter;
+}
+
+/* CTA Footer - Mobile First */
+.insurance-sidebar__cta {
+  background: var(--bg-white);
+  padding: var(--space-3);
+  text-align: center;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.insurance-sidebar__guarantee {
+  background: var(--sidebar-bg-tertiary, var(--bg-tertiary));
+  padding: var(--space-2);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-3);
+  text-align: center;
+}
+
+.insurance-sidebar__guarantee p {
+  font-size: var(--font-size-sm);
+  color: var(--sidebar-primary-text, var(--primary-text));
+  margin: 0;
+  font-weight: var(--font-weight-normal);
+}
+
+.insurance-sidebar__cta-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.insurance-sidebar__cta-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--secondary-text);
+  margin: 0 0 var(--space-3) 0;
+}
+
+/* ==========================================================================
+   2. PROGRESSIVE ENHANCEMENT - Small Tablets (576px+)
+   ========================================================================== */
+
+@media (min-width: 576px) {
+  /* Modal becomes smaller, not full screen */
+  .insurance-sidebar__modal {
+    width: 90vw;
+    max-width: 400px;
+  }
+  
+  /* Header gets more padding */
+  .insurance-sidebar__header {
+    padding: var(--space-4);
+  }
+  
+  /* Coverage gets side-by-side layout */
+  .insurance-sidebar__coverage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: var(--space-4);
+  }
+  
+  .insurance-sidebar__coverage-premium {
+    text-align: right;
+  }
+  
+  /* Content gets more padding */
+  .insurance-sidebar__content,
+  .insurance-sidebar__cta {
+    padding: var(--space-4);
+  }
+  
+  /* Plan grid stays 2-column even on smaller screens with container */
+  .insurance-sidebar__plan-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3) var(--space-4);
+    padding: var(--space-3);
+  }
+  
+  .insurance-sidebar__company,
+  .insurance-sidebar__steps {
+    padding: var(--space-3);
+  }
+}
+
+/* ==========================================================================
+   3. PROGRESSIVE ENHANCEMENT - Large Tablets (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  /* Modal becomes larger sidebar */
+  .insurance-sidebar__modal {
+    width: 500px;
+    max-width: 500px;
+  }
+  
+  /* Logo gets bigger */
+  .insurance-sidebar__logo {
+    height: 28px;
+  }
+  
+  /* Title gets slightly bigger but still refined */
+  .insurance-sidebar__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  /* Coverage amounts stay proportional - no oversizing */
+  .insurance-sidebar__coverage-amount {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .insurance-sidebar__coverage-premium {
+    font-size: var(--font-size-xl);
+  }
+  
+  /* Plan grid gets more space with container */
+  .insurance-sidebar__plan-grid {
+    gap: var(--space-4) var(--space-6);
+    padding: var(--space-4);
+  }
+  
+  .insurance-sidebar__company,
+  .insurance-sidebar__steps {
+    padding: var(--space-4);
+  }
+  
+  /* Company logo gets bigger */
+  .insurance-sidebar__company-logo {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+/* ==========================================================================
+   4. PROGRESSIVE ENHANCEMENT - Desktop (992px+)
+   ========================================================================== */
+
+@media (min-width: 992px) {
+  /* Modal becomes full sidebar */
+  .insurance-sidebar__modal {
+    width: 600px;
+    max-width: 600px;
+  }
+  
+  /* Plan grid gets optimal spacing with container */
+  .insurance-sidebar__plan-grid {
+    gap: var(--space-4) var(--space-6);
+    padding: var(--space-4);
+  }
+  
+  .insurance-sidebar__company,
+  .insurance-sidebar__steps {
+    padding: var(--space-4);
+  }
+  
+  /* All sections get more spacing */
+  .insurance-sidebar__section {
+    margin-bottom: var(--space-5);
+  }
+}
+
+/* Mobile-only: Single column plan grid but keep container */
+@media (max-width: 575.98px) {
+  .insurance-sidebar__plan-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+  
+  .insurance-sidebar__company,
+  .insurance-sidebar__steps {
+    padding: var(--space-3);
+  }
+}
+
+/* ==========================================================================
+   5. ACCESSIBILITY & REDUCED MOTION
+   ========================================================================== */
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .insurance-sidebar__overlay,
+  .insurance-sidebar__modal {
+    transition: none;
+  }
+}
+
+/* Focus indicators */
+.insurance-sidebar__close:focus {
+  outline: 2px solid var(--primary-teal);
+  outline-offset: 2px;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .insurance-sidebar__overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .insurance-sidebar__modal {
+    border: 2px solid var(--primary-text);
+  }
+}

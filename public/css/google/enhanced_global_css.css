@@ -1,0 +1,1055 @@
+/* ==========================================================================
+   PolicyScanner - WORLD-CLASS Global CSS Foundation (BEM Methodology)
+   Mobile-first design system with insurance professional enhancements
+   UPDATED WITH CTA FIXES & PERFORMANCE OPTIMIZATIONS
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CSS Variables / Design Tokens
+   Comprehensive design system for consistent reuse
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --primary-teal: #3BC5B9;
+  --cta-orange: #FF7A2A;
+  --cta-hover: #E6661F;
+  
+  /* Text Colors - UPDATED FOR INTEGRATION */
+  --primary-text: #3D4A59;
+  --secondary-text: #6B7280;  /* UPDATED: More sophisticated refined color */
+  --white-text: #FFFFFF;
+  
+  /* Background Colors - Enhanced Professional System */
+  --bg-white: #FFFFFF;
+  --bg-light: #F6F9FA;
+  --bg-hero-tint: #F9FEFD;
+  --bg-footer: #1A2B32;
+  --border-light: #E5E9ED;
+  
+  /* Professional Background Hierarchy */
+  --bg-primary: #FFFFFF;                    /* Pure white - main content */
+  --bg-secondary: #F6F9FA;                  /* Professional light - alternating sections */
+  --bg-tertiary: #F0F8F7;                   /* Light teal tint - accent sections */
+  --bg-quaternary: #FBFEFE;                 /* Subtle cool white - premium sections */
+
+  /* Section-Specific Background Assignments */
+  --bg-section-trust-bar: var(--bg-quaternary);
+  --bg-section-trust: var(--bg-tertiary);
+  --bg-section-how-it-works: var(--bg-primary);
+  --bg-section-reviews: var(--bg-tertiary);
+  --bg-section-partners: var(--bg-secondary);
+  --bg-section-articles: var(--bg-primary);
+  --bg-section-faq: var(--bg-secondary);
+
+  /* OKLCH Professional Enhancements - Progressive Enhancement */
+  --bg-primary-oklch: oklch(100% 0 0);                    /* Pure white */
+  --bg-secondary-oklch: oklch(97.5% 0.008 195);           /* Professional light */
+  --bg-tertiary-oklch: oklch(96% 0.015 180);             /* Perfect teal integration */
+  --bg-quaternary-oklch: oklch(99% 0.005 180);           /* Subtle cool professional */
+
+  /* NEW: GRADIENT TRANSITION SYSTEM - RGB FALLBACKS */
+  --hero-bg-rgb: #F9FEFD;           /* Hero background - light teal tint */
+  --quotes-bg-rgb: #F0F8F7;         /* Quotes background - medium teal */
+  --transition-mid-rgb: #F5FBFA;    /* Perfect middle point for smooth gradient */
+  
+  /* NEW: GRADIENT TRANSITION SYSTEM - OKLCH VERSIONS */
+  --hero-bg-oklch: oklch(98.5% 0.008 180);      /* Hero: Very light, subtle teal */
+  --quotes-bg-oklch: oklch(96% 0.015 180);      /* Quotes: Medium light, more teal */
+  --transition-mid-oklch: oklch(97.2% 0.012 180); /* Perfect perceptual midpoint */
+  
+  /* NEW: GRADIENT TRANSITION POINTS - Story progression */
+  --gradient-start: var(--hero-bg-rgb);          /* Where hero ends */
+  --gradient-mid: var(--transition-mid-rgb);     /* Smooth transition */
+  --gradient-end: var(--quotes-bg-rgb);         /* Where quotes begins */
+
+  /* Footer Color System */
+  --footer-text-primary: #FFFFFF;
+  --footer-text-secondary: rgba(255, 255, 255, 0.85);
+  --footer-text-tertiary: rgba(255, 255, 255, 0.65);
+  --footer-border: rgba(255, 255, 255, 0.15);
+  --footer-link-hover: var(--primary-teal);
+  --footer-social-hover: var(--primary-teal);
+  
+  /* Functional Colors */
+  --success: #28a745;
+  --success-green: #10b981;
+  --warning: #ffc107;
+  --error: #dc3545;
+  
+ /* Typography Scale - Mobile-First Optimized - UPDATED FOR INTEGRATION */
+--font-size-xs: 0.75rem;      /* 12px - Micro text (use sparingly!) */
+--font-size-sm: 0.875rem;     /* 14px - Small text (minimum for secondary) */
+--font-size-base: 1rem;       /* 16px - Body text (mobile standard) */
+--font-size-lg: 1.125rem;     /* 18px - Large text */
+--font-size-xl: 1.25rem;      /* 20px - Emphasis text */
+--font-size-2xl: 1.5rem;      /* 24px - Section headers */
+--font-size-3xl: 2rem;        /* 32px - Hero mobile */
+--font-size-4xl: 2.5rem;      /* 40px - Hero tablet */
+--font-size-5xl: 3.125rem;    /* 50px - Hero desktop */
+
+/* Mobile Typography Sizes - UPDATED FOR HERO INTEGRATION */
+--font-size-h1-mobile: 1.75rem;   /* 28px - UPDATED: Refined progression */
+--font-size-h2-mobile: 1.5rem;    /* 24px - Section headers */
+--font-size-h3-mobile: 1.125rem;  /* 18px - UPDATED: Better harmony */
+--font-size-h4-mobile: 1.125rem;  /* 18px - Card headers */
+
+/* Tablet Typography Sizes - UPDATED FOR FOCUSED STANDARDIZATION */
+--font-size-h1-tablet: 2.25rem;   /* 36px - UPDATED: Refined progression */
+--font-size-h2-tablet: 1.75rem;   /* 28px - FIXED: Proper scaling for sections */
+--font-size-h3-tablet: 1.25rem;   /* 20px - UPDATED: Refined proportion */
+--font-size-h4-tablet: 1.25rem;   /* 20px - Card headers */
+
+/* Desktop Typography Sizes - UPDATED FOR FOCUSED STANDARDIZATION */
+--font-size-h1-desktop: 2.75rem;  /* 44px - UPDATED: Creative director refined */
+--font-size-h2-desktop: 2rem;     /* 32px - FIXED: Proper scaling for sections */
+--font-size-h3-desktop: 1.375rem; /* 22px - UPDATED: Perfect balance */
+--font-size-h4-desktop: 1.25rem;  /* 20px - Card headers */
+
+/* CTA Font Sizes - Mobile-First Hierarchy */
+--font-size-cta-hero: 1.125rem;     /* 18px - Hero CTAs mobile */
+--font-size-cta-primary: 1rem;      /* 16px - Primary CTAs */
+--font-size-cta-secondary: 1rem;    /* 16px - Standard CTAs */
+--font-size-cta-tertiary: 0.875rem; /* 14px - Small CTAs */
+
+/* Body Text Variants - Added */
+--font-size-body-lg: 1.125rem;   /* 18px - Lead paragraphs */
+--font-size-body: 1rem;          /* 16px - Standard body */
+--font-size-body-sm: 0.875rem;   /* 14px - Secondary text */
+--font-size-caption: 0.75rem;    /* 12px - Captions only */
+
+/* Font Weights */
+--font-weight-normal: 400;
+--font-weight-medium: 500;
+--font-weight-semibold: 600;
+--font-weight-bold: 700;        /* Added for hero emphasis */
+
+/* Line Heights - Optimized for mobile */
+--line-height-tight: 1.1;     /* Hero headings */
+--line-height-snug: 1.25;     /* Regular headings */
+--line-height-normal: 1.4;    /* UI text, CTAs */
+--line-height-relaxed: 1.6;   /* Body text for readability */
+  /* ==========================================================================
+     SPACING SYSTEM - Clean Standard Scale
+     One system for entire website
+     ========================================================================== */
+  
+  /* Base Spacing Scale - 8px Grid */
+--space-1: 0.5rem;    /* 8px */
+--space-2: 1rem;      /* 16px */
+--space-3: 1.5rem;    /* 24px */
+--space-4: 2rem;      /* 32px */
+--space-5: 2.5rem;    /* 40px */
+--space-6: 3.5rem;    /* 56px */
+
+/* Container & Layout */
+--container-max-width: 1200px;
+--container-max-width-sm: 1280px;        /* Small Desktop: 992px-1365px */
+--container-max-width-lg: 1320px;        /* Large Desktop: 1366px+ */
+--container-padding-mobile: 1.25rem;   /* 20px */
+--container-padding-tablet: 1.5rem;    /* 24px */
+--container-padding-desktop: 2.5rem;   /* 40px */
+
+/* Section Spacing - Standard for entire site */
+--section-padding-mobile: var(--space-4);     /* 32px */
+--section-padding-tablet: var(--space-5);     /* 40px */
+--section-padding-desktop: 3.25rem;           /* 52px */
+
+/* Component Spacing */
+--card-padding-mobile: var(--space-3);        /* 24px */
+--card-padding-tablet: 1.75rem;               /* 28px */
+--card-padding-desktop: var(--space-4);       /* 32px */
+
+/* Button Spacing - Updated to Industry Standards */
+--button-padding-mobile-v: 0.875rem;          /* 14px vertical */
+--button-padding-mobile-h: 1.5rem;            /* 24px horizontal */
+--button-padding-desktop-v: 1.125rem;         /* 18px vertical */
+--button-padding-desktop-h: 2.5rem;           /* 40px horizontal */
+
+/* Button Heights - Industry Standard */
+--button-height-mobile: 3rem;                 /* 48px */
+--button-height-mobile-large: 3.25rem;        /* 52px for hero */
+--button-height-desktop: 3.5rem;              /* 56px */
+--button-height-desktop-large: 3.75rem;       /* 60px for hero */
+
+/* Element Spacing - Content Hierarchy */
+--heading-to-text: var(--space-2);            /* 16px */
+--text-to-button: 1.25rem;                    /* 20px */
+--element-gap: var(--space-1);                /* 8px */
+
+/* Borders & Radius */
+--border-radius-sm: 4px;
+--border-radius: 8px;
+--border-radius-lg: 12px;
+--border-radius-pill: 9999px;
+
+/* CONSERVATIVE INSURANCE SHADOWS - MICRO & SUBTLE ONLY */
+--shadow-micro: 0 1px 2px rgba(0,0,0,0.03);
+--shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+--shadow-md: 0 2px 4px rgba(0,0,0,0.04);
+--shadow-lg: 0 3px 6px rgba(0,0,0,0.06);
+
+/* UPDATED: Conservative Button Shadows - Minimal for Life Insurance */
+--shadow-button-primary: 0 1px 2px rgba(0, 0, 0, 0.08);  /* Very subtle shadow */
+--shadow-button-primary-hover: 0 1px 3px rgba(0, 0, 0, 0.12);  /* Slightly more on hover */
+--shadow-button-outline: 0 1px 2px rgba(59, 197, 185, 0.08), 0 1px 1px rgba(0, 0, 0, 0.03);
+--shadow-button-outline-hover: 0 1px 3px rgba(59, 197, 185, 0.12), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+/* Professional Card Shadows */
+--shadow-card: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+--shadow-card-hover: 0 3px 6px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+
+/* Form & Input Shadows */
+--shadow-form: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+--shadow-input-focus: 0 0 0 2px rgba(59, 197, 185, 0.08), inset 0 1px 2px rgba(0, 0, 0, 0.02);
+
+/* Transitions */
+--transition-fast: 150ms ease;
+--transition-base: 250ms ease;
+--transition-slow: 350ms ease;
+
+/* Z-index scale */
+--z-0: 0;
+--z-10: 10;
+--z-20: 20;
+--z-30: 30;
+--z-40: 40;
+--z-50: 50;
+
+/* ==========================================================================
+     MICROPOLISH SYSTEM - World-Class Premium Details
+     Standardized micro-enhancements for consistent luxury experience
+     ========================================================================== */
+  
+  /* Typography Micropolishes - Premium Text Rendering */
+  --micropolish-font-features-base: 'kern' 1, 'liga' 1;
+  --micropolish-font-features-full: 'kern' 1, 'liga' 1, 'calt' 1;
+  --micropolish-letter-spacing-tight: -0.025em;    /* Hero headings */
+  --micropolish-letter-spacing-normal: -0.015em;   /* Section headings */
+  --micropolish-letter-spacing-subtle: -0.008em;   /* Body text refinement */
+  --micropolish-letter-spacing-micro: -0.003em;    /* Small text */
+  --micropolish-text-rendering: optimizeLegibility;
+  --micropolish-font-smoothing: antialiased;
+  --micropolish-font-smoothing-moz: grayscale;
+  
+  /* Shadow System Hierarchy - Multi-layered Depth */
+  --micropolish-shadow-text-subtle: 0 0.5px 2px rgba(0, 0, 0, 0.04);
+  --micropolish-shadow-text-medium: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --micropolish-shadow-card-base: 0 2px 8px rgba(59, 197, 185, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02), var(--shadow-sm);
+  --micropolish-shadow-card-hover: 0 4px 16px rgba(59, 197, 185, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03), var(--shadow-md);
+  --micropolish-shadow-card-premium: 0 8px 32px rgba(59, 197, 185, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04), var(--shadow-lg);
+  --micropolish-shadow-button-base: 0 4px 12px rgba(59, 197, 185, 0.25), 0 2px 4px rgba(255, 122, 42, 0.15);
+  --micropolish-shadow-button-hover: 0 6px 20px rgba(59, 197, 185, 0.3), 0 3px 8px rgba(255, 122, 42, 0.2);
+  --micropolish-inset-highlight-subtle: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --micropolish-inset-highlight-medium: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --micropolish-inset-highlight-strong: inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  
+  /* Background System - Sophisticated Multi-layer */
+  --micropolish-gradient-base: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+  --micropolish-gradient-premium: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.96) 100%);
+  --micropolish-gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.96) 25%, rgba(255, 255, 255, 0.98) 75%, rgba(255, 255, 255, 0.95) 100%);
+  --micropolish-radial-accent: radial-gradient(ellipse at 25% 50%, rgba(59, 197, 185, 0.02) 0%, transparent 60%);
+  --micropolish-radial-accent-alt: radial-gradient(ellipse at 75% 50%, rgba(59, 197, 185, 0.015) 0%, transparent 50%);
+  --micropolish-radial-subtle: radial-gradient(ellipse at 30% 60%, rgba(59, 197, 185, 0.008) 0%, transparent 70%);
+  --micropolish-overlay-depth: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 40%, rgba(59, 197, 185, 0.008) 70%, transparent 100%);
+  --micropolish-overlay-premium: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 25%, transparent 50%, rgba(59, 197, 185, 0.005) 75%, transparent 100%);
+  
+  /* Glassmorphism System - Progressive Enhancement */
+  --micropolish-glass-subtle: blur(2px) saturate(1.05);
+  --micropolish-glass-medium: blur(8px) saturate(1.1);
+  --micropolish-glass-strong: blur(16px) saturate(1.15);
+  --micropolish-glass-ultra: blur(20px) saturate(1.2);
+  
+  /* Premium Transitions & Easing */
+  --micropolish-easing-premium: cubic-bezier(0.4, 0, 0.2, 1);
+  --micropolish-easing-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --micropolish-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --micropolish-timing-instant: 0.15s;
+  --micropolish-timing-fast: 0.2s;
+  --micropolish-timing-base: 0.3s;
+  --micropolish-timing-slow: 0.4s;
+  --micropolish-timing-ultra: 0.6s;
+  
+  /* Hardware Acceleration - Performance Optimization */
+  --micropolish-gpu-base: translateZ(0);
+  --micropolish-gpu-hover: translateY(-1px) translateZ(0);
+  --micropolish-gpu-hover-strong: translateY(-2px) translateZ(0);
+  --micropolish-gpu-hover-subtle: translateY(-0.5px) translateZ(0);
+  --micropolish-gpu-active: translateY(-3px) translateZ(0);
+  --micropolish-gpu-scale-subtle: scale(1.02) translateZ(0);
+  --micropolish-gpu-scale-medium: scale(1.05) translateZ(0);
+  
+  /* Border System - Refined Edge Treatment */
+  --micropolish-border-subtle: 1px solid rgba(229, 233, 237, 0.4);
+  --micropolish-border-medium: 1px solid rgba(229, 233, 237, 0.6);
+  --micropolish-border-accent: 1px solid rgba(59, 197, 185, 0.15);
+  --micropolish-border-accent-hover: 1px solid rgba(59, 197, 185, 0.4);
+  --micropolish-border-gradient: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+  
+  /* Image Enhancement System */
+  --micropolish-image-base: saturate(1.05) brightness(1.02);
+  --micropolish-image-premium: saturate(1.08) brightness(1.05) contrast(1.02);
+  --micropolish-image-grayscale: grayscale(100%) brightness(1.08) contrast(0.95) saturate(0.9);
+  --micropolish-image-grayscale-hover: grayscale(20%) brightness(1.05) contrast(1.02) saturate(1.1);
+  
+  /* Icon Enhancement System */
+  --micropolish-icon-base: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+  --micropolish-icon-medium: drop-shadow(0 1px 2px rgba(59, 197, 185, 0.1));
+  --micropolish-icon-premium: drop-shadow(0 2px 4px rgba(59, 197, 185, 0.15));
+  
+  /* Animation Performance */
+  --micropolish-will-change-transform: transform;
+  --micropolish-will-change-full: transform, opacity, filter;
+  --micropolish-will-change-premium: transform, opacity, filter, backdrop-filter;
+}
+
+/* UPDATED: Progressive Enhancement - OKLCH when supported */
+@supports (color: oklch(98% 0.008 180)) {
+  :root {
+    --bg-primary: var(--bg-primary-oklch);
+    --bg-secondary: var(--bg-secondary-oklch);
+    --bg-tertiary: var(--bg-tertiary-oklch);
+    --bg-quaternary: var(--bg-quaternary-oklch);
+    
+    /* NEW: Gradient transition system OKLCH upgrade */
+    --gradient-start: var(--hero-bg-oklch);
+    --gradient-mid: var(--transition-mid-oklch);
+    --gradient-end: var(--quotes-bg-oklch);
+    
+    /* Update existing background variables for consistency */
+    --bg-hero-tint: var(--hero-bg-oklch);
+    --bg-tertiary: var(--quotes-bg-oklch);
+    --bg-section-trust: var(--quotes-bg-oklch);
+  }
+}
+
+
+/* ==========================================================================
+   2. Reset & Base Styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--primary-text);
+  background-color: var(--bg-white);
+  
+  /* WORLD-CLASS: Premium text rendering */
+  -webkit-font-smoothing: var(--micropolish-font-smoothing);
+  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: var(--primary-teal);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. WORLD-CLASS Typography System - Mobile First - UPDATED WITH STANDARDIZATION
+   Consistent across entire website with premium micropolishes
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--heading-to-text);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--primary-text);
+  
+  /* WORLD-CLASS: Premium typography rendering */
+  font-feature-settings: var(--micropolish-font-features-full);
+  text-rendering: var(--micropolish-text-rendering);
+  -webkit-font-smoothing: var(--micropolish-font-smoothing);
+  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+  letter-spacing: var(--micropolish-letter-spacing-normal);
+}
+
+/* H1 - Hero Only - UPDATED WITH INTEGRATION VALUES */
+h1 {
+  font-size: var(--font-size-h1-mobile); /* 28px mobile - UPDATED */
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--micropolish-letter-spacing-tight);
+  text-shadow: var(--micropolish-shadow-text-subtle);
+}
+
+/* H2 - Section Headings - ENHANCED WITH AUTHORITY */
+h2 {
+  font-size: var(--font-size-h2-mobile); /* 24px mobile */
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--heading-to-text);
+  position: relative;
+  text-shadow: var(--micropolish-shadow-text-subtle);
+}
+
+/* PROFESSIONAL: Section title underline for authority */
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-teal), rgba(59, 197, 185, 0.3));
+  border-radius: 1px;
+}
+
+/* H3 - Subsection Headings - UPDATED WITH INTEGRATION VALUES */
+h3 {
+  font-size: var(--font-size-h3-mobile); /* 18px mobile - UPDATED */
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--heading-to-text);
+  letter-spacing: var(--micropolish-letter-spacing-subtle);
+}
+
+/* H4 - Component Headings - ENHANCED */
+h4 {
+  font-size: var(--font-size-h4-mobile); /* 18px - UPDATED */
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--heading-to-text);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+/* Body Text - ENHANCED WITH MICROPOLISHES */
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-relaxed);
+  
+  /* WORLD-CLASS: Premium body text rendering */
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+  -webkit-font-smoothing: var(--micropolish-font-smoothing);
+  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+/* Text Variants - ENHANCED */
+.text-large {
+  font-size: var(--font-size-lg); /* 18px */
+  line-height: var(--line-height-relaxed);
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+.text-small {
+  font-size: var(--font-size-sm); /* 14px */
+  line-height: var(--line-height-normal);
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+.text-micro {
+  font-size: var(--font-size-xs); /* 12px */
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+.text-secondary {
+  color: var(--secondary-text);
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+.text-white {
+  color: var(--white-text);
+}
+
+/* ==========================================================================
+   4. Layout System (BEM) - Mobile First
+   Flexible grid for entire website
+   ========================================================================== */
+
+.layout {
+  width: 100%;
+}
+
+.layout__container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-padding-mobile);
+  padding-left: var(--container-padding-mobile);
+}
+
+.layout__section {
+  padding-top: var(--section-padding-mobile);
+  padding-bottom: var(--section-padding-mobile);
+}
+
+.layout__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--space-2) * -1);
+  margin-left: calc(var(--space-2) * -1);
+}
+
+.layout__grid-item {
+  flex: 1 0 0%;
+  padding-right: var(--space-2);
+  padding-left: var(--space-2);
+}
+
+/* Grid Item Sizes */
+.layout__grid-item--full { flex: 0 0 100%; max-width: 100%; }
+.layout__grid-item--half { flex: 0 0 50%; max-width: 50%; }
+.layout__grid-item--third { flex: 0 0 33.333333%; max-width: 33.333333%; }
+.layout__grid-item--quarter { flex: 0 0 25%; max-width: 25%; }
+.layout__grid-item--two-thirds { flex: 0 0 66.666667%; max-width: 66.666667%; }
+.layout__grid-item--three-quarters { flex: 0 0 75%; max-width: 75%; }
+.layout__grid-item--seven-twelfths { flex: 0 0 58.333333%; max-width: 58.333333%; }
+
+/* ==========================================================================
+   5. FIXED CTA BUTTON SYSTEM - Life Insurance Professional CTAs
+   Clean, flat design focused on trust and readability with PERFORMANCE OPTIMIZATIONS
+   ========================================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding-mobile-v) var(--button-padding-mobile-h);
+  font-size: var(--font-size-cta-secondary); /* 16px base */
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-height: 44px; /* Touch-friendly minimum */
+  position: relative;
+  
+  /* WORLD-CLASS: Premium button typography */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+  
+  /* ✅ ADDED: Performance optimizations */
+  transform: translateZ(0);  /* GPU acceleration */
+  will-change: transform, background-color;  /* Performance hint */
+}
+
+.button:hover {
+  text-decoration: none;
+  /* ✅ ADDED: Subtle elevation with GPU acceleration */
+  transform: translateY(-0.5px) translateZ(0);
+}
+
+.button:active {
+  transform: scale(0.98) translateZ(0);
+}
+
+/* ✅ FIXED: CONSERVATIVE PRIMARY BUTTONS - Life Insurance Style */
+.button--primary {
+  background-color: var(--cta-orange);  /* Single brand color only */
+  color: var(--white-text);
+  border: 1px solid var(--cta-orange);
+  box-shadow: none;  /* No shadows */
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: var(--cta-hover);  /* ✅ FIXED: Now uses proper hover color */
+  border-color: var(--cta-hover);
+  color: var(--white-text);
+  box-shadow: none;  /* No shadows */
+}
+
+/* PROFESSIONAL OUTLINE BUTTONS - Trust Building */
+.button--outline {
+  background-color: var(--bg-white);  /* Flat white background */
+  color: var(--primary-teal);
+  border: 1px solid rgba(59, 197, 185, 0.3);
+  box-shadow: var(--shadow-button-outline);
+}
+
+.button--outline:hover,
+.button--outline:focus {
+  background-color: rgba(59, 197, 185, 0.04);  /* Very subtle background tint */
+  color: var(--primary-teal);
+  border-color: var(--primary-teal);
+  box-shadow: var(--shadow-button-outline-hover);
+}
+
+/* Button Sizes - CTA Hierarchy */
+.button--hero {
+  padding: calc(var(--button-padding-mobile-v) + 2px) calc(var(--button-padding-mobile-h) + 4px);
+  font-size: var(--font-size-cta-hero); /* 18px */
+  font-weight: var(--font-weight-semibold);
+}
+
+.button--large {
+  padding: calc(var(--button-padding-mobile-v) + 1px) calc(var(--button-padding-mobile-h) + 2px);
+  font-size: var(--font-size-cta-primary); /* 16px */
+  font-weight: var(--font-weight-semibold);
+}
+
+.button--navbar {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-cta-tertiary); /* 14px */
+  font-weight: var(--font-weight-medium);
+  min-height: 36px; /* Smaller for navbar */
+}
+
+.button--small {
+  padding: calc(var(--button-padding-mobile-v) - 2px) calc(var(--button-padding-mobile-h) - 4px);
+  font-size: var(--font-size-cta-tertiary); /* 14px */
+  font-weight: var(--font-weight-medium);
+}
+
+/* Mobile-only hero button - same size as navbar */
+@media (max-width: 767.98px) {
+  .button--mobile-hero {
+    padding: 0.5rem 1rem !important;
+    font-size: var(--font-size-cta-tertiary) !important; /* 14px */
+    font-weight: var(--font-weight-medium) !important;
+    min-height: 36px !important;
+  }
+}
+
+/* ✅ ADDED: Accessibility improvements */
+.button:focus {
+  outline: 2px solid var(--primary-teal);
+  outline-offset: 2px;
+}
+
+/* ✅ ADDED: Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .button:hover,
+  .button:focus,
+  .button:active {
+    transform: none;
+  }
+  
+  .button {
+    transition: background-color var(--transition-base), 
+                border-color var(--transition-base);
+  }
+}
+
+/* ✅ ADDED: High contrast mode support */
+@media (prefers-contrast: high) {
+  .button {
+    border-width: 2px;
+  }
+}
+
+/* ==========================================================================
+   6. WORLD-CLASS Card Component (BEM) - Insurance Professional
+   ========================================================================== */
+
+.card {
+  background: 
+    var(--bg-white),
+    var(--micropolish-gradient-card);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--card-padding-mobile);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(229, 233, 237, 0.6);
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: var(--micropolish-gpu-hover-subtle);
+}
+
+.card__header {
+  margin-bottom: var(--space-4);
+}
+
+.card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--heading-to-text);
+  color: var(--primary-text);
+  
+  /* WORLD-CLASS: Premium card title typography */
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-subtle);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.card__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+  margin-bottom: 0;
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+.card__content {
+  color: var(--primary-text);
+}
+
+.card__content > *:last-child {
+  margin-bottom: 0;
+}
+
+.card__footer {
+  margin-top: var(--text-to-button);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+/* ==========================================================================
+   7. WORLD-CLASS Form Components (BEM) - Insurance Professional
+   ========================================================================== */
+
+.form {
+  width: 100%;
+}
+
+.form__group {
+  margin-bottom: var(--space-3);
+}
+
+.form__label {
+  display: block;
+  margin-bottom: var(--element-gap);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-text);
+  
+  /* WORLD-CLASS: Premium form label typography */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.form__control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--primary-text);
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  transition: border-color var(--transition-base);
+  min-height: 44px; /* Touch-friendly */
+  
+  /* WORLD-CLASS: Premium form input typography */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.form__control:focus {
+  border-color: var(--primary-teal);
+  outline: 0;
+  box-shadow: var(--shadow-input-focus);
+}
+
+/* ==========================================================================
+   8. Utility Classes (Minimal)
+   ========================================================================== */
+
+/* Text Utilities */
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+
+/* Display Utilities */
+.u-hidden { display: none; }
+.u-block { display: block; }
+.u-inline { display: inline; }
+.u-inline-block { display: inline-block; }
+.u-flex { display: flex; }
+
+/* Flex Utilities */
+.u-flex-column { flex-direction: column; }
+.u-flex-row { flex-direction: row; }
+.u-justify-start { justify-content: flex-start; }
+.u-justify-center { justify-content: center; }
+.u-justify-end { justify-content: flex-end; }
+.u-justify-between { justify-content: space-between; }
+.u-align-start { align-items: flex-start; }
+.u-align-center { align-items: center; }
+.u-align-end { align-items: flex-end; }
+
+/* Font Weight Utilities */
+.u-font-normal { font-weight: var(--font-weight-normal); }
+.u-font-medium { font-weight: var(--font-weight-medium); text-align: center; }
+.u-font-semibold { font-weight: var(--font-weight-semibold); }
+
+/* ==========================================================================
+   9. Accessibility
+   ========================================================================== */
+
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.u-skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-teal);
+  color: var(--white-text);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  z-index: var(--z-50);
+  transition: top var(--transition-fast);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.u-skip-link:focus {
+  top: 6px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Focus Management */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.button:focus {
+  outline: 2px solid var(--primary-teal);
+  outline-offset: 2px;
+}
+
+.button:focus {
+  outline-offset: 4px;
+}
+
+/* ==========================================================================
+   10. Responsive Breakpoints - UPDATED WITH PROPER H2 SCALING
+   ========================================================================== */
+
+/* Small devices (576px+) */
+@media (min-width: 576px) {
+  .layout__grid-item--sm-half { flex: 0 0 50%; max-width: 50%; }
+  .layout__grid-item--sm-third { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  
+  .u-sm-hidden { display: none; }
+  .u-sm-block { display: block; }
+}
+
+/* Medium devices (768px+) - FIXED H2 SCALING */
+@media (min-width: 768px) {
+  /* Container adjustments */
+  .layout__container {
+    padding-right: var(--container-padding-tablet);
+    padding-left: var(--container-padding-tablet);
+  }
+  
+  .layout__section {
+    padding-top: var(--section-padding-tablet);
+    padding-bottom: var(--section-padding-tablet);
+  }
+  
+  /* FIXED Typography scaling - proper h2 responsive scaling */
+  h1 { 
+    font-size: var(--font-size-h1-tablet); /* 36px tablet */
+  }
+  h2 { 
+    font-size: var(--font-size-h2-tablet); /* 28px - FIXED! */
+  }
+  h3 { 
+    font-size: var(--font-size-h3-tablet); /* 20px */
+  }
+  h4 {
+    font-size: var(--font-size-h4-tablet); /* 20px */
+  }
+  
+  /* Desktop left-aligned headers */
+  h2::after {
+    left: 0;
+    transform: none;
+  }
+  
+  .text-large { 
+    font-size: 1rem; /* 16px tablet hero subtext */
+  }
+  
+  /* Components */
+  .card {
+    padding: var(--card-padding-tablet);
+  }
+  
+  /* Grid responsive classes */
+  .layout__grid-item--md-half { flex: 0 0 50%; }
+  .layout__grid-item--md-third { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .layout__grid-item--md-quarter { flex: 0 0 25%; max-width: 25%; }
+  .layout__grid-item--md-two-thirds { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .layout__grid-item--md-seven-twelfths { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .layout__grid-item--md-full { flex: 0 0 100%; max-width: 100%; }
+  
+  /* Utilities */
+  .u-md-hidden { display: none; }
+  .u-md-block { display: block; }
+  .u-md-flex { display: flex; }
+}
+
+/* iPad Pro specific fix (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .layout__container {
+    max-width: 1240px; /* Wider container specifically for tablets like iPad Pro */
+  }
+  
+  /* Give more width to the content area on tablets */
+  .layout__grid-item--md-two-thirds { 
+    flex: 0 0 75%; 
+    max-width: 75%; 
+  }
+}
+
+/* Large devices (992px+) - FIXED H2 SCALING */
+@media (min-width: 992px) {
+  /* Desktop spacing */
+  .layout__container {
+    padding-right: var(--container-padding-desktop);
+    padding-left: var(--container-padding-desktop);
+    max-width: var(--container-max-width-sm);  /* Progressive scaling */
+  }
+  
+  .layout__section {
+    padding-top: var(--section-padding-desktop);
+    padding-bottom: var(--section-padding-desktop);
+  }
+  
+  .card {
+    padding: var(--card-padding-desktop);
+  }
+  
+  .button {
+    padding: var(--button-padding-desktop-v) var(--button-padding-desktop-h);
+  }
+  
+  .button--hero {
+    padding: calc(var(--button-padding-desktop-v) + 2px) calc(var(--button-padding-desktop-h) + 8px);
+  }
+  
+  .button--large {
+    padding: calc(var(--button-padding-desktop-v) + 1px) calc(var(--button-padding-desktop-h) + 4px);
+  }
+  
+  /* FIXED Typography scaling - proper h2 desktop scaling */
+  h1 { 
+    font-size: var(--font-size-h1-desktop); /* 44px desktop */
+  }
+  h2 { 
+    font-size: var(--font-size-h2-desktop); /* 32px - FIXED! */
+  }
+  h3 { 
+    font-size: var(--font-size-h3-desktop); /* 22px desktop */
+  }
+  h4 {
+    font-size: var(--font-size-h4-desktop); /* 20px */
+  }
+  
+  .text-large { 
+    font-size: var(--font-size-lg); /* 18px desktop hero subtext */
+  }
+  
+  /* Desktop left-aligned headers */
+  h2::after {
+    left: 0;
+    transform: none;
+  }
+  
+  /* Grid responsive classes */
+  .layout__grid-item--lg-half { flex: 0 0 50%; max-width: 50%; }
+  .layout__grid-item--lg-third { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .layout__grid-item--lg-quarter { flex: 0 0 25%; max-width: 25%; }
+  .layout__grid-item--lg-two-thirds { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .layout__grid-item--lg-seven-twelfths { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .layout__grid-item--lg-full { flex: 0 0 100%; max-width: 100%; }
+  
+  /* Utilities */
+  .u-lg-hidden { display: none; }
+  .u-lg-block { display: block; }
+  .u-lg-flex { display: flex; }
+  .u-lg-text-left { text-align: left; }
+  .u-lg-justify-end { justify-content: flex-end; }
+}
+
+/* Large Desktop (1366px+) - Progressive Scaling */
+@media (min-width: 1366px) {
+  .layout__container {
+    max-width: var(--container-max-width-lg);  /* 1320px */
+  }
+}
+
+/* ==========================================================================
+   11. Print Styles
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  .u-no-print {
+    display: none !important;
+  }
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-y: hidden;
+}

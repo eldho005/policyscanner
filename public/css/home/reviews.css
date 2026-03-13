@@ -1,0 +1,496 @@
+/**
+ * InsuranceReviews Component v1.0.0
+ * Isolated component architecture - No global conflicts
+ * Namespace: .insurance-reviews-component
+ */
+
+/* ==========================================================================
+   COMPONENT SCOPED CUSTOM PROPERTIES
+   ========================================================================== */
+
+.insurance-reviews-component {
+  /* Component-specific CSS variables to avoid conflicts */
+  --irc-bg-primary: #f0f8f7;
+  --irc-bg-card: rgba(255, 255, 255, 0.95);
+  --irc-text-primary: #1a1a1a;
+  --irc-text-secondary: #666;
+  --irc-border-light: rgba(0, 0, 0, 0.06);
+  --irc-border-hover: rgba(0, 0, 0, 0.10);
+  --irc-shadow-base: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --irc-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --irc-accent-color: #3bc5b9;
+  --irc-accent-light: rgba(59, 197, 185, 0.3);
+  --irc-accent-medium: rgba(59, 197, 185, 0.5);
+  --irc-star-color: #ffb800;
+  --irc-verified-color: #666;
+  --irc-border-radius: 12px;
+  --irc-transition-base: 0.2s ease;
+  --irc-spacing-xs: 4px;
+  --irc-spacing-sm: 8px;
+  --irc-spacing-md: 12px;
+  --irc-spacing-lg: 16px;
+  --irc-spacing-xl: 24px;
+  --irc-spacing-xxl: 32px;
+  --irc-font-weight-medium: 500;
+  --irc-font-weight-semibold: 600;
+  --irc-line-height-tight: 1.25;
+  --irc-line-height-relaxed: 1.6;
+}
+
+/* ==========================================================================
+   COMPONENT ROOT
+   ========================================================================== */
+
+.insurance-reviews-component {
+  background: var(--irc-bg-primary);
+  position: relative;
+  overflow: hidden;
+  padding: var(--irc-spacing-xxl) 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.insurance-reviews-component *,
+.insurance-reviews-component *::before,
+.insurance-reviews-component *::after {
+  box-sizing: inherit;
+}
+
+/* ==========================================================================
+   COMPONENT CONTAINER
+   ========================================================================== */
+
+.insurance-reviews-component__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--irc-spacing-lg);
+}
+
+/* ==========================================================================
+   HEADER SECTION
+   ========================================================================== */
+
+.insurance-reviews-component__header {
+  text-align: center;
+  margin-bottom: var(--irc-spacing-xxl);
+}
+
+.insurance-reviews-component__title {
+  font-size: 1.5rem;
+  font-weight: var(--irc-font-weight-semibold);
+  line-height: var(--irc-line-height-tight);
+  color: var(--irc-text-primary);
+  margin: 0 0 var(--irc-spacing-sm) 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .insurance-reviews-component__title { font-size: 1.75rem; }
+}
+@media (min-width: 992px) {
+  .insurance-reviews-component__title { font-size: 2rem; }
+}
+
+/* ==========================================================================
+   CAROUSEL WRAPPER
+   ========================================================================== */
+
+.insurance-reviews-component__carousel {
+  position: relative;
+  margin-bottom: var(--irc-spacing-lg);
+}
+
+.insurance-reviews-component__wrapper {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  margin-bottom: var(--irc-spacing-lg);
+  
+  /* Hide scrollbars */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.insurance-reviews-component__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==========================================================================
+   FADE EDGES (DESKTOP ONLY)
+   ========================================================================== */
+
+.insurance-reviews-component__wrapper::before,
+.insurance-reviews-component__wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--irc-transition-base);
+}
+
+.insurance-reviews-component__wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, 
+    var(--irc-bg-primary) 0%,
+    var(--irc-bg-primary) 20%,
+    rgba(240, 248, 247, 0.8) 60%,
+    transparent 100%
+  );
+}
+
+.insurance-reviews-component__wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, 
+    var(--irc-bg-primary) 0%,
+    var(--irc-bg-primary) 20%,
+    rgba(240, 248, 247, 0.8) 60%,
+    transparent 100%
+  );
+}
+
+/* ==========================================================================
+   CAROUSEL TRACK
+   ========================================================================== */
+
+.insurance-reviews-component__track {
+  display: flex;
+  gap: var(--irc-spacing-xl);
+  padding: 0 var(--irc-spacing-xxl);
+  width: max-content;
+  transition: transform var(--irc-transition-base);
+}
+
+/* ==========================================================================
+   REVIEW CARDS
+   ========================================================================== */
+
+.insurance-reviews-component__card {
+  flex: 0 0 clamp(280px, 85vw, 340px);
+  width: clamp(280px, 85vw, 340px);
+  min-height: 240px;
+  
+  background: var(--irc-bg-card);
+  border: 1px solid var(--irc-border-light);
+  border-radius: var(--irc-border-radius);
+  box-shadow: var(--irc-shadow-base);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--irc-spacing-xl);
+  
+  scroll-snap-align: start;
+  transition: 
+    box-shadow var(--irc-transition-base),
+    border-color var(--irc-transition-base);
+}
+
+.insurance-reviews-component__card:hover {
+  box-shadow: var(--irc-shadow-hover);
+  border-color: var(--irc-border-hover);
+}
+
+/* ==========================================================================
+   CARD CONTENT
+   ========================================================================== */
+
+.insurance-reviews-component__content {
+  position: relative;
+}
+
+.insurance-reviews-component__author {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--irc-spacing-lg);
+}
+
+.insurance-reviews-component__author-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.insurance-reviews-component__name {
+  font-size: 1rem;
+  font-weight: var(--irc-font-weight-semibold);
+  color: var(--irc-text-primary);
+  line-height: var(--irc-line-height-tight);
+  margin: 0 0 var(--irc-spacing-sm) 0;
+  padding: 0;
+}
+
+.insurance-reviews-component__credentials {
+  display: flex;
+  align-items: center;
+  gap: var(--irc-spacing-md);
+}
+
+.insurance-reviews-component__verification {
+  display: flex;
+  align-items: center;
+  gap: var(--irc-spacing-xs);
+}
+
+.insurance-reviews-component__check-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.insurance-reviews-component__verified {
+  font-size: 0.75rem;
+  font-weight: var(--irc-font-weight-medium);
+  color: var(--irc-verified-color);
+  margin: 0;
+  padding: 0;
+}
+
+.insurance-reviews-component__stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--irc-star-color);
+}
+
+.insurance-reviews-component__stars svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.insurance-reviews-component__text {
+  font-size: 1rem;
+  color: var(--irc-text-primary);
+  line-height: var(--irc-line-height-relaxed);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   SCROLL INDICATORS
+   ========================================================================== */
+
+.insurance-reviews-component__indicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--irc-spacing-sm);
+  margin-top: var(--irc-spacing-lg);
+}
+
+.insurance-reviews-component__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--irc-accent-light);
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: all var(--irc-transition-base);
+  outline: none;
+}
+
+.insurance-reviews-component__dot:focus {
+  outline: 2px solid var(--irc-accent-color);
+  outline-offset: 2px;
+}
+
+.insurance-reviews-component__dot--active {
+  background: var(--irc-accent-color);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.insurance-reviews-component__dot:hover:not(.insurance-reviews-component__dot--active) {
+  background: var(--irc-accent-medium);
+}
+
+/* ==========================================================================
+   CTA SECTION
+   ========================================================================== */
+
+.insurance-reviews-component__cta {
+  text-align: center;
+  margin-top: var(--irc-spacing-xl);
+}
+
+.insurance-reviews-component__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--irc-spacing-md) var(--irc-spacing-xl);
+  background: var(--irc-accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--irc-border-radius);
+  font-weight: var(--irc-font-weight-medium);
+  transition: background-color var(--irc-transition-base);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.insurance-reviews-component__cta-button:hover {
+  background: #32a99f;
+}
+
+.insurance-reviews-component__cta-button:focus {
+  outline: 2px solid var(--irc-accent-color);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .insurance-reviews-component__container {
+    padding: 0 var(--irc-spacing-xl);
+  }
+  
+  .insurance-reviews-component__header {
+    margin-bottom: 3rem;
+  }
+  
+  .insurance-reviews-component__card {
+    padding: 1.5rem;
+    min-height: 250px;
+  }
+  
+  .insurance-reviews-component__track {
+    gap: 2rem;
+    padding: 0 2.5rem;
+  }
+  
+  .insurance-reviews-component__indicators {
+    opacity: 0.8;
+  }
+}
+
+/* Desktop (992px+) */
+@media (min-width: 992px) {
+  .insurance-reviews-component__wrapper::before,
+  .insurance-reviews-component__wrapper::after {
+    width: 56px;
+    opacity: 1;
+  }
+  
+  .insurance-reviews-component__card {
+    padding: 2rem;
+    min-height: 260px;
+  }
+  
+  .insurance-reviews-component__indicators {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Desktop auto-scroll mode */
+  .insurance-reviews-component__wrapper--desktop-mode {
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+  }
+  
+  .insurance-reviews-component__track--desktop-mode {
+    position: absolute;
+    left: 0;
+    animation: insuranceReviewsCarouselScroll 50s linear infinite;
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  .insurance-reviews-component__track--desktop-mode:hover {
+    animation-play-state: paused;
+  }
+  
+  .insurance-reviews-component__wrapper--desktop-mode::before,
+  .insurance-reviews-component__wrapper--desktop-mode::after {
+    opacity: 1;
+  }
+  
+  @keyframes insuranceReviewsCarouselScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .insurance-reviews-component__card {
+    min-height: 280px;
+  }
+  
+  .insurance-reviews-component__track {
+    gap: 2.5rem;
+  }
+  
+  .insurance-reviews-component__wrapper::before,
+  .insurance-reviews-component__wrapper::after {
+    width: 64px;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & PERFORMANCE
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .insurance-reviews-component__card,
+  .insurance-reviews-component__wrapper::before,
+  .insurance-reviews-component__wrapper::after,
+  .insurance-reviews-component__indicators,
+  .insurance-reviews-component__dot,
+  .insurance-reviews-component__track {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .insurance-reviews-component__wrapper {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .insurance-reviews-component__card {
+    border: 2px solid var(--irc-text-primary);
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .insurance-reviews-component__wrapper::before,
+  .insurance-reviews-component__wrapper::after {
+    display: none;
+  }
+  
+  .insurance-reviews-component__verified {
+    color: var(--irc-text-primary);
+  }
+}
+
+@media print {
+  .insurance-reviews-component {
+    background: white;
+  }
+  
+  .insurance-reviews-component__card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    background: white;
+    break-inside: avoid;
+  }
+  
+  .insurance-reviews-component__wrapper::before,
+  .insurance-reviews-component__wrapper::after,
+  .insurance-reviews-component__indicators {
+    display: none;
+  }
+}

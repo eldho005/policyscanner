@@ -1,0 +1,317 @@
+/* ==========================================================================
+   COMPARISON TABLE COMPONENT - MAXIMUM GLOBAL CSS USAGE
+   Absolute minimal custom CSS - everything else uses global classes
+   ========================================================================== */
+
+/* ==========================================================================
+   1. SECTION BACKGROUND - USES GLOBAL SYSTEM WITH OKLCH
+   ========================================================================== */
+
+.comparison-table {
+    /* GLOBAL: Uses established background hierarchy with OKLCH support */
+    background: var(--bg-primary); /* Uses oklch(100% 0 0) when supported, #FFFFFF fallback */
+    position: relative;
+    overflow: hidden;
+}
+
+/* GLOBAL: Subtle background enhancement using global system */
+.comparison-table::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* GLOBAL: Uses global brand color with minimal opacity */
+    background: radial-gradient(ellipse at 30% 60%, rgba(59, 197, 185, 0.008) 0%, transparent 70%);
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.comparison-table > .layout__container {
+    position: relative;
+    z-index: var(--z-10); /* GLOBAL: Uses global z-index scale */
+}
+
+/* ==========================================================================
+   2. TABLE WRAPPER - GLOBAL SPACING & BORDERS
+   ========================================================================== */
+
+.comparison-table__wrapper {
+    margin-top: var(--space-5); /* GLOBAL: Uses global spacing (40px) */
+    border-top: 1px solid var(--border-light); /* GLOBAL: Uses global border color */
+    padding-top: var(--space-4); /* GLOBAL: Uses global spacing (32px) */
+}
+
+/* Typography fully handled by global H2 styles with responsive alignment */
+.comparison-table__title {
+    text-align: center; /* Mobile: centered */
+    margin-bottom: var(--space-2); /* GLOBAL: Uses global spacing */
+}
+
+/* Mobile helper note - uses global typography and utilities */
+.comparison-table__mobile-note {
+    font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale */
+    margin-bottom: var(--space-3); /* GLOBAL: Uses global spacing */
+    font-style: italic;
+    /* Color and alignment handled by global .text-secondary and .u-text-center utilities */
+}
+
+/* Hide on larger screens - following global responsive pattern */
+@media (min-width: 768px) {
+    .comparison-table__mobile-note {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   3. TABLE CONTAINER - GLOBAL STYLING WITH TABLE-SPECIFIC BEHAVIOR
+   ========================================================================== */
+
+.comparison-table__container {
+    background: var(--bg-white); /* GLOBAL: Uses global background */
+    border-radius: var(--border-radius-lg); /* GLOBAL: Uses global border radius */
+    border: 1px solid var(--border-light); /* GLOBAL: Uses global border color */
+    overflow: hidden;
+    margin-top: var(--space-4); /* GLOBAL: Uses global spacing (32px) */
+    overflow-x: auto; /* Mobile horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    position: relative;
+}
+
+.comparison-table__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px mobile) */
+    min-width: 600px; /* Ensures table doesn't compress too much on mobile */
+}
+
+/* ==========================================================================
+   4. FROZEN FIRST COLUMN - TABLE-SPECIFIC FUNCTIONALITY
+   ========================================================================== */
+
+/* Frozen first column for mobile */
+@media (max-width: 767.98px) {
+    .comparison-table__table th:first-child,
+    .comparison-table__table td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: var(--z-10); /* GLOBAL: Uses global z-index scale */
+        border-right: 1px solid var(--border-light); /* GLOBAL: Uses global border color */
+        box-shadow: var(--shadow-sm); /* GLOBAL: Uses global shadow system */
+    }
+    
+    .comparison-table__table th:first-child {
+        background: var(--bg-white); /* GLOBAL: Uses global background */
+        z-index: var(--z-20); /* GLOBAL: Uses global z-index scale */
+    }
+    
+    .comparison-table__table td:first-child {
+        background: var(--bg-light); /* GLOBAL: Uses global background */
+    }
+}
+
+/* ==========================================================================
+   5. TABLE HEADERS - GLOBAL STYLING
+   ========================================================================== */
+
+.comparison-table__table th {
+    padding: var(--space-2); /* GLOBAL: Uses global spacing (16px mobile) */
+    text-align: center;
+    background: var(--bg-light); /* GLOBAL: Uses global background */
+    border-bottom: 1px solid var(--border-light); /* GLOBAL: Uses global border */
+    font-weight: var(--font-weight-medium); /* GLOBAL: Uses global font weight */
+    color: var(--primary-text); /* GLOBAL: Uses global text color */
+    font-size: var(--font-size-xs); /* GLOBAL: Uses global font scale (12px mobile) */
+    vertical-align: top;
+    white-space: nowrap; /* Prevent header text wrapping */
+}
+
+.comparison-table__table th:first-child {
+    background: var(--bg-white); /* GLOBAL: Uses global background */
+    text-align: left;
+    font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px mobile) */
+}
+
+/* ==========================================================================
+   6. TABLE CELLS - GLOBAL STYLING
+   ========================================================================== */
+
+.comparison-table__table td {
+    padding: var(--space-2); /* GLOBAL: Uses global spacing (16px mobile) */
+    text-align: center;
+    border-bottom: 1px solid var(--border-light); /* GLOBAL: Uses global border */
+    font-size: var(--font-size-xs); /* GLOBAL: Uses global font scale (12px mobile) */
+    color: var(--secondary-text); /* GLOBAL: Uses global text color */
+    vertical-align: top;
+    line-height: var(--line-height-snug); /* GLOBAL: Uses global line height */
+}
+
+.comparison-table__table td:first-child {
+    text-align: left;
+    /* Font weight handled by global .u-font-medium utility in HTML */
+    color: var(--primary-text); /* GLOBAL: Uses global text color */
+    background: var(--bg-light); /* GLOBAL: Uses global background */
+    font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px mobile) */
+}
+
+.comparison-table__table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==========================================================================
+   7. PRODUCT HEADERS - GLOBAL TYPOGRAPHY & UTILITIES
+   ========================================================================== */
+
+.comparison-table__product-header {
+    /* Text alignment handled by global .u-text-center utility in HTML */
+    position: relative;
+    padding-top: var(--space-2); /* Add padding to accommodate badge on border */
+}
+
+.comparison-table__product-name {
+    font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px mobile) */
+    color: var(--primary-text); /* GLOBAL: Uses global text color */
+    margin-bottom: var(--space-1); /* GLOBAL: Uses global spacing */
+    line-height: var(--line-height-tight); /* GLOBAL: Uses global line height */
+    margin-top: 0; /* No extra margin needed */
+    /* Font weight handled by global .u-font-semibold utility in HTML */
+}
+
+.comparison-table__product-price {
+    font-size: var(--font-size-xs); /* GLOBAL: Uses global font scale (12px mobile) */
+    margin: 0;
+    /* Color and font weight handled by global utilities in HTML */
+}
+
+/* ==========================================================================
+   8. POPULAR BADGE - TEAL OUTLINE POSITIONED EXACTLY ON BORDER LINE
+   ========================================================================== */
+
+.comparison-table__popular-badge {
+    position: absolute;
+    top: 0; /* Positioned exactly on the table border line */
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); /* Center both horizontally and vertically on border */
+    background: var(--bg-white); /* GLOBAL: White background */
+    color: var(--primary-teal); /* GLOBAL: Teal text color */
+    border: 1px solid var(--primary-teal); /* GLOBAL: Teal outline border */
+    padding: 0.25rem 0.5rem; /* Mobile: smaller padding */
+    border-radius: var(--border-radius-pill); /* GLOBAL: Uses global border radius */
+    font-size: var(--font-size-xs); /* GLOBAL: Uses global font scale */
+    white-space: nowrap;
+    z-index: var(--z-10); /* GLOBAL: Uses global z-index scale */
+    /* Font weight handled by global .u-font-semibold utility in HTML */
+}
+
+/* ==========================================================================
+   9. CTA ROW - GLOBAL BUTTON INTEGRATION
+   ========================================================================== */
+
+.comparison-table__cta-row td {
+    padding: var(--space-3); /* GLOBAL: Uses global spacing (24px mobile) */
+    border-bottom: none;
+    /* Text alignment handled by global .u-text-center utility in HTML */
+}
+
+.comparison-table__cta-row .button {
+    white-space: nowrap;
+    width: 100%; /* Mobile: Full width buttons */
+    font-size: var(--font-size-xs); /* GLOBAL: Uses global font scale (12px mobile) */
+    padding: var(--space-2) var(--space-1); /* GLOBAL: Uses global spacing - compact mobile */
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN - FOLLOWS GLOBAL BREAKPOINT PATTERNS
+   ========================================================================== */
+
+/* Tablet responsive (768px+) - Following global responsive pattern */
+@media (min-width: 768px) {
+    .comparison-table__wrapper {
+        margin-top: 0; /* Remove margin when used as standalone */
+        border-top: none;
+        padding-top: 0;
+    }
+    
+    .comparison-table__title {
+        text-align: center; /* Tablet: still centered */
+    }
+    
+    /* Enhanced table for tablet */
+    .comparison-table__table {
+        font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px tablet) */
+    }
+    
+    .comparison-table__table th {
+        padding: var(--space-3); /* GLOBAL: Uses global spacing (24px tablet) */
+        font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px tablet) */
+    }
+    
+    .comparison-table__table td {
+        padding: var(--space-3); /* GLOBAL: Uses global spacing (24px tablet) */
+        font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px tablet) */
+    }
+    
+    .comparison-table__product-name {
+        font-size: var(--font-size-lg); /* GLOBAL: Uses global font scale (18px tablet) */
+    }
+    
+    .comparison-table__product-price {
+        font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px tablet) */
+    }
+    
+    .comparison-table__popular-badge {
+        padding: 0.375rem 0.75rem; /* Tablet: Standard padding */
+        /* Position remains the same - exactly on border */
+    }
+    
+    .comparison-table__cta-row .button {
+        width: auto; /* Tablet: Auto width buttons */
+        font-size: var(--font-size-sm); /* GLOBAL: Uses global font scale (14px tablet) */
+        padding: var(--space-2) var(--space-3); /* GLOBAL: Uses global spacing - tablet */
+    }
+}
+
+/* Desktop responsive (992px+) - Following global responsive pattern */
+@media (min-width: 992px) {
+    .comparison-table__title {
+        text-align: left; /* Desktop: left-aligned to match content */
+    }
+    
+    /* Enhanced table for desktop */
+    .comparison-table__table {
+        font-size: var(--font-size-base); /* GLOBAL: Uses global font scale (16px desktop) */
+    }
+    
+    .comparison-table__table th {
+        padding: var(--space-4); /* GLOBAL: Uses global spacing (32px desktop) */
+        font-size: var(--font-size-base); /* GLOBAL: Uses global font scale (16px desktop) */
+    }
+    
+    .comparison-table__table td {
+        padding: var(--space-4); /* GLOBAL: Uses global spacing (32px desktop) */
+        font-size: var(--font-size-base); /* GLOBAL: Uses global font scale (16px desktop) */
+        text-align: left; /* Left-align content on desktop */
+    }
+    
+    .comparison-table__product-name {
+        font-size: var(--font-size-xl); /* GLOBAL: Uses global font scale (20px desktop) */
+    }
+    
+    .comparison-table__product-price {
+        font-size: var(--font-size-base); /* GLOBAL: Uses global font scale (16px desktop) */
+    }
+    
+    .comparison-table__popular-badge {
+        /* Position remains the same - exactly on border for all screen sizes */
+    }
+    
+    .comparison-table__cta-row .button {
+        font-size: var(--font-size-base); /* GLOBAL: Uses global font scale (16px desktop) */
+        padding: var(--space-3) var(--space-4); /* GLOBAL: Uses global spacing - desktop premium */
+    }
+    
+    .comparison-table__cta-row td {
+        text-align: center; /* Keep CTAs centered even on desktop */
+    }
+}

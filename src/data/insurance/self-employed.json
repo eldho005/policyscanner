@@ -1,0 +1,222 @@
+{
+  "title": "Life Insurance for Self-Employed Canadians",
+  "seo_title": "Life Insurance for Self-Employed Canada | Protect Your Income | PolicyScanner",
+  "seo_description": "Life insurance for self-employed Canadians. No employer benefits? Protect your income, business, and family with term life, DI, and CI. Ontario-licensed advisors.",
+  "slug": "self-employed",
+  "tag": "Self-Employed",
+  "read_time": "9 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 1700,
+    "primary_keyword": "life insurance self employed canada",
+    "secondary_keywords": [
+      "life insurance for freelancers canada",
+      "self employed insurance ontario",
+      "insurance for contractors canada",
+      "business owner life insurance canada"
+    ],
+    "conversion_goal": "Lead capture — self-employed Canadians have no employer benefits; they need life, DI, and often CI. High-value lead.",
+    "page_role": "Demographic page targeting freelancers, contractors, sole proprietors, and small business owners. Links to disability and CI product pages.",
+    "writer_focus": "Self-employed Canadians are the most vulnerable and the most underinsured. They have no employer benefits — no group DI, no group life, no sick pay. They understand risk. Speak to them as adults who understand business decisions. Frame insurance as risk management, not fear.",
+    "seo_keywords": {
+      "use_primary_exact": "life insurance for self-employed Canadians",
+      "density_rule": "Use 'life insurance for self-employed' or 'self-employed life insurance' 2–3 times per 500 words.",
+      "synonyms": [
+        "insurance for freelancers",
+        "contractor life insurance",
+        "sole proprietor life insurance",
+        "small business owner insurance",
+        "entrepreneur life insurance"
+      ],
+      "lsi_terms": [
+        "no employer benefits",
+        "income protection",
+        "disability insurance self-employed",
+        "business overhead expense",
+        "key person insurance",
+        "buy-sell agreement",
+        "corporation-owned life insurance",
+        "personally-owned life insurance",
+        "EI self-employed program"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "FSRA",
+        "CRA",
+        "Canada Revenue Agency",
+        "Employment Insurance",
+        "CERB",
+        "Mississauga",
+        "GTA"
+      ],
+      "action_keywords": [
+        "get life insurance as self-employed",
+        "protect your business and family",
+        "apply for individual life insurance",
+        "compare self-employed insurance options"
+      ],
+      "natural_variations": [
+        "if you work for yourself",
+        "running your own business in Canada",
+        "freelancer insurance needs canada",
+        "coverage when you have no employer benefits"
+      ],
+      "real_example_to_use": "Marcus, 36, IT consultant in Toronto — $130K income, no employer benefits. Got: $1.2M 20-year term ($88/month) + $7,000/month DI ($180/month) + $300K CI ($165/month). Total: $433/month — his complete personal benefit package.",
+      "avoid": "Do not imply self-employed people don't qualify for standard coverage — they do. The only difference is income documentation and the need for individual (not group) products."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "Life Insurance for Self-Employed Canadians: Build Your Own Benefits Package",
+      "subheading": "No employer, no group plan, no sick pay. Self-employed Canadians need to build their own protection. Here's what you need — and what it costs.",
+      "cta_primary": "Compare Self-Employed Insurance Options",
+      "_writer_notes": {
+        "target_words": 65,
+        "focus": "'Build your own benefits package' is the framing. Self-employed people understand this — they've done it for everything else. Frame insurance as another business decision.",
+        "key_points": [
+          "Life, disability, and critical illness = the three pillars of a self-employed protection strategy",
+          "Individual policies: often stronger, portable, and not tied to any employer"
+        ]
+      }
+    },
+    {
+      "_type": "coverageGapSection",
+      "heading": "What Self-Employed Canadians Are Missing",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Contrast employer benefits vs. self-employed reality. Be direct and factual.",
+        "key_points": [
+          "Group life insurance: employees typically get 1–2x salary free. Self-employed: zero.",
+          "Group disability: employees often get 60% income replaced. Self-employed: zero.",
+          "CPP sickness/EI: self-employed can opt into EI — but EI sickness benefits pay only 55% for 26 weeks max",
+          "CPP Disability: maximum $1,583/month in 2024 — most self-employed earn far more",
+          "OHIP: covers medical treatment but not lost income, private care, or home recovery support",
+          "Bottom line: everything you have, you build yourself"
+        ]
+      }
+    },
+    {
+      "_type": "threeProductsSection",
+      "heading": "The Three Products Every Self-Employed Canadian Should Consider",
+      "_writer_notes": {
+        "target_words": 280,
+        "focus": "Introduce the three pillars: life insurance, disability insurance, critical illness insurance.",
+        "key_points": [
+          "Life insurance: replaces your income for your family if you die. Protects spouse, mortgage, and dependents.",
+          "Disability insurance: replaces your monthly income if you can't work due to illness or injury. The #1 coverage gap for self-employed.",
+          "Critical illness insurance: lump sum on diagnosis of cancer, heart attack, stroke, or 25+ conditions. Covers the blow before DI kicks in.",
+          "Marcus example: all three for $433/month total — his complete replacement benefits package."
+        ],
+        "structure": "Three brief intro blocks for each product. Then Marcus example totaling the monthly cost. Link each to the relevant product page."
+      }
+    },
+    {
+      "_type": "lifeInsuranceForSeSection",
+      "heading": "Life Insurance for Self-Employed: What to Know",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "How qualifying works for self-employed. Income documentation. Best options.",
+        "key_points": [
+          "Qualifying: same as anyone — health + income. You'll need 2 years of filed tax returns to verify income.",
+          "Coverage amount: 20–25x annual income is standard for income replacement (insurers use earned income cap)",
+          "Term is best for most: maximum coverage per dollar spent",
+          "Business uses: key person insurance protects business from loss of a founder/owner",
+          "Corporation-owned life: if incorporated, life insurance premiums may be paid by your corporation (CDA credit on death benefit)"
+        ],
+        "callout_after": "Note: If you're incorporated, speak with an advisor about corporate-owned life insurance — there may be significant tax advantages."
+      }
+    },
+    {
+      "_type": "disabilityForSeSection",
+      "heading": "Disability Insurance Is the Most Important Coverage for the Self-Employed",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "DI is the #1 priority. Self-employed have zero income replacement from any employer. Make this urgent.",
+        "key_points": [
+          "If you can't work for 3–6 months, what pays for: mortgage, food, utilities, business overhead?",
+          "EI only: 55% of income, max 26 weeks. If your disability is longer: no other coverage.",
+          "Individual DI: replaces 70–85% of earned income. Own-occupation definition available.",
+          "Business overhead expense (BOE) insurance: separate product that pays your business expenses (rent, staff) while you're disabled",
+          "Income documentation: 2 years of tax returns. Coverage is typically calculated from average net business income."
+        ],
+        "real_example": "Marcus — herniated disc, 14 months off. DI: $7,000/month replacement income for 14 months = $98,000 total received. Without DI: he would have burned through savings and possibly lost his business.",
+        "callout_after": "Link to disability insurance product page."
+      }
+    },
+    {
+      "_type": "businessOwnerSection",
+      "heading": "If You Have a Business: Additional Coverage to Consider",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Business-specific insurance needs beyond personal protection.",
+        "key_points": [
+          "Key person insurance: if the business depends on you (or a key employee), life insurance on them protects the business from financial loss",
+          "Buy-sell agreement funding: if you have a business partner, life insurance funds the buyout of shares if one partner dies",
+          "Business overhead expense (BOE): pays fixed business expenses (rent, salaries, utilities) for up to 24 months while you're disabled",
+          "Corporate-owned life insurance: premiums paid from corporate account; death benefit credited to Capital Dividend Account (CDA) — paid tax-free to estate"
+        ]
+      }
+    },
+    {
+      "_type": "costSection",
+      "heading": "What Does a Complete Self-Employed Insurance Package Cost?",
+      "_writer_notes": {
+        "target_words": 180,
+        "focus": "Make it tangible. Show the full monthly cost for a typical freelancer or consultant.",
+        "key_points": [
+          "Marcus (age 36, male, non-smoker, office professional, $130K income):",
+          "  - $1.2M 20-year term: ~$88/month",
+          "  - $7,000/month DI (90-day EP, to age 65): ~$180/month",
+          "  - $300K critical illness (10-year term): ~$165/month",
+          "  - Total: ~$433/month",
+          "As % of income: $433/month = 4% of Marcus's $130K income — a reasonable cost for full protection",
+          "Minimum viable package: life + DI only = ~$270/month for same person"
+        ],
+        "structure": "Line-item table showing each product, coverage, and monthly cost. Total row at bottom. Context sentence about % of income."
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Self-Employed Life Insurance — FAQ",
+      "faqs": [
+        {
+          "question": "Can self-employed Canadians get disability insurance?",
+          "answer": "Yes. Individual disability insurance is specifically designed for self-employed people. You'll need to document your income with 2 years of tax returns. Coverage is typically calculated based on your average net earned income, and most insurers can replace 70–85% of that amount.",
+          "_guidance": "Most important question for this audience. Be clear it IS available."
+        },
+        {
+          "question": "Is life insurance tax-deductible for self-employed Canadians?",
+          "answer": "In most cases, no — personally-owned life insurance premiums are not tax-deductible under CRA rules. However, if your life insurance is owned by your corporation and it's for business purposes (like key person coverage or funding a buy-sell agreement), there may be specific deductibility rules. Consult a tax advisor for your specific situation.",
+          "_guidance": "Important tax question. Be accurate — personally owned is generally not deductible."
+        },
+        {
+          "question": "Do I need life insurance if I have no family dependents?",
+          "answer": "If you have no spouse, children, or dependents, life insurance may be less urgent. However, it's still worth considering for: business buy-sell agreements, co-signed debts (mortgages, business loans), aging parents who depend on you financially, or locking in low rates now for future needs.",
+          "_guidance": "Honest answer for the childless freelancer — it's less urgent but still relevant."
+        },
+        {
+          "question": "What if I have irregular income as a freelancer?",
+          "answer": "Insurers typically average your last 2–3 years of net income. If you've had highly variable earnings, your coverage cap will reflect your average. Some insurers have more flexibility for newer freelancers. It's best to apply when your income is established and documented.",
+          "_guidance": "Common concern — address the variable income reality directly."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Build Your Benefits Package — Free Quotes for Self-Employed Canadians",
+      "subheading": "PolicyScanner compares life, disability, and critical illness options for freelancers and contractors. Ontario-licensed advisors who understand self-employed needs.",
+      "cta_button": "Get My Self-Employed Insurance Quote",
+      "_writer_notes": {
+        "target_words": 55,
+        "focus": "Business-minded CTA. Self-employed readers appreciate efficiency — 'build your package' framing.",
+        "key_points": [
+          "Get quotes for life, DI, and CI in one consultation",
+          "Advisors understand contractor and freelancer income documentation",
+          "No obligation — compare and decide"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,515 @@
+/* ==========================================================================
+   Quote Header Component - BEM Methodology Implementation
+   Mobile-First Design with Subtle Row Separation & Compact Height
+   ========================================================================== */
+
+/* Body and Layout Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+}
+
+.layout__container {
+    padding-top: 0;
+}
+
+/* ==========================================================================
+   Block: .quote-header - Main Component
+   ========================================================================== */
+.quote-header {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    transition: all var(--transition-base);
+    margin-bottom: var(--space-4);
+    width: 100%;
+}
+
+/* Modifier: Enhanced shadow when scrolled */
+.quote-header--scrolled {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Element: Content wrapper */
+.quote-header__content {
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ==========================================================================
+   Row 1: Brand & Navigation - BEM Structure
+   PolicyScanner + Term Life Insurance/Change (left) + User Icon (right)
+   ========================================================================== */
+.quote-header__brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(229, 233, 237, 0.5);
+    margin-bottom: 8px;
+}
+
+/* Left section: Logo + Navigation */
+.quote-header__left-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.quote-header__logo {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-teal);
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.quote-header__nav {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.quote-header__nav-item {
+    padding: 0;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--primary-text);
+    text-decoration: none;
+    border-radius: 0;
+    transition: all var(--transition-fast);
+    background: transparent;
+    border: none;
+}
+
+.quote-header__nav-item--active {
+    background: transparent !important;
+    color: var(--primary-text) !important;
+    border: none !important;
+    font-weight: var(--font-weight-normal) !important;
+}
+
+.quote-header__nav-item:hover {
+    color: var(--primary-teal);
+    background: transparent;
+}
+
+/* Shimmer animation for Change link - Balanced visibility */
+.quote-header__nav-item--change {
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-header__nav-item--change::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(59, 197, 185, 0.2) 35%,
+        rgba(59, 197, 185, 0.35) 50%,
+        rgba(59, 197, 185, 0.2) 65%,
+        transparent 100%);
+    animation: shimmer 3.5s ease-in-out infinite;
+    animation-delay: 1.5s; /* Start after 1.5 seconds */
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    88% {
+        left: 100%;
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* User profile section */
+.quote-header__user-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.quote-header__user-section:hover .quote-header__user-icon {
+    background: var(--primary-teal);
+    color: var(--white-text);
+    border-color: var(--primary-teal);
+    transform: translateY(-1px);
+}
+
+.quote-header__user-section:hover .quote-header__user-text {
+    color: var(--primary-teal);
+}
+
+.quote-header__user-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-text);
+    font-size: 12px;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.quote-header__user-text {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--secondary-text);
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+}
+
+/* ==========================================================================
+   Row 2: Controls - Coverage, Term, Month/Year with Equal Distribution
+   Mobile: Vertical labels for breathing room
+   ========================================================================== */
+.quote-header__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(229, 233, 237, 0.5);
+    margin-bottom: 8px;
+}
+
+.quote-header__form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Fields: Coverage and Term */
+.quote-header__field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.quote-header__field:first-child {
+    align-items: flex-start;
+}
+
+.quote-header__field:nth-child(2) {
+    align-items: center;
+}
+
+.quote-header__label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-text);
+    white-space: nowrap;
+    min-width: fit-content;
+    flex-shrink: 0;
+}
+
+.quote-header__select {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: var(--font-size-xs);
+    color: var(--primary-text);
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 6px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    padding-right: 24px;
+    min-height: 28px;
+    box-sizing: border-box;
+}
+
+.quote-header__select:focus {
+    border-color: var(--primary-teal);
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(59, 197, 185, 0.1);
+}
+
+/* Toggle container: Month/Year */
+.quote-header__toggle-container {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.quote-header__toggle-label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-text);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.quote-header__toggle {
+    display: flex;
+    background: var(--bg-light);
+    border-radius: var(--border-radius-pill);
+    padding: 1px;
+    border: 1px solid var(--border-light);
+    width: auto;
+    flex-shrink: 0;
+}
+
+.quote-header__toggle-btn {
+    padding: 3px 8px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border: none;
+    background: transparent;
+    color: var(--secondary-text);
+    border-radius: var(--border-radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    min-height: 24px;
+    min-width: 32px;
+}
+
+.quote-header__toggle-btn--active {
+    background: var(--primary-teal);
+    color: var(--white-text);
+}
+
+.quote-header__toggle-btn:hover:not(.quote-header__toggle-btn--active) {
+    color: var(--primary-text);
+    background: rgba(59,197,185,0.1);
+}
+
+/* ==========================================================================
+   Row 3: Filter Pills - All, With Medical, No Medical
+   ========================================================================== */
+.quote-header__filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.quote-header__filter {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--border-radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 1px solid var(--border-light);
+    background: var(--bg-white);
+    color: var(--secondary-text);
+    min-height: 24px;
+}
+
+.quote-header__filter--active {
+    background: var(--primary-teal);
+    color: var(--white-text);
+    border-color: var(--primary-teal);
+}
+
+.quote-header__filter:hover:not(.quote-header__filter--active) {
+    background: rgba(59,197,185,0.1);
+    border-color: rgba(59,197,185,0.3);
+    color: var(--primary-text);
+}
+
+/* ==========================================================================
+   Responsive Design - Progressive Enhancement
+   ========================================================================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+    .quote-header {
+        max-width: 600px;
+        margin: 0 auto var(--space-4) auto;
+    }
+    
+    .quote-header__content {
+        padding: 10px 16px;
+    }
+    
+    .quote-header__brand {
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .quote-header__controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+        gap: 16px;
+    }
+    
+    .quote-header__form-row {
+        flex: 1;
+        gap: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .quote-header__field {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .quote-header__field:first-child {
+        justify-content: flex-start;
+    }
+    
+    .quote-header__field:nth-child(2) {
+        justify-content: center;
+    }
+    
+    .quote-header__toggle-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .quote-header__logo {
+        font-size: var(--font-size-lg);
+    }
+    
+    .quote-header__nav-item {
+        font-size: var(--font-size-sm);
+        padding: 4px 10px;
+    }
+    
+    .quote-header__select {
+        width: auto;
+        max-width: 180px;
+        padding-right: 28px;
+    }
+    
+    .quote-header__toggle-btn {
+        padding: 4px 12px;
+        font-size: var(--font-size-sm);
+        min-height: 28px;
+    }
+    
+    .quote-header__filter {
+        padding: 4px 10px;
+        font-size: var(--font-size-sm);
+        min-height: 28px;
+    }
+}
+
+/* Desktop (992px+) */
+@media (min-width: 992px) {
+    .quote-header {
+        width: 1040px;
+        max-width: 1040px;
+        margin: 0 0 var(--space-4) 0;
+    }
+    
+    .quote-header__content {
+        padding: 12px 20px;
+    }
+    
+    .quote-header__brand {
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+    }
+    
+    .quote-header__controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+        gap: 20px;
+    }
+    
+    .quote-header__form-row {
+        flex: 1;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .quote-header__field {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .quote-header__field:first-child {
+        justify-content: flex-start;
+    }
+    
+    .quote-header__field:nth-child(2) {
+        justify-content: center;
+    }
+    
+    .quote-header__toggle-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .quote-header__logo {
+        font-size: var(--font-size-xl);
+    }
+    
+    .quote-header__select {
+        width: auto;
+        max-width: 200px;
+        padding-right: 32px;
+    }
+    
+    .quote-header__toggle-btn {
+        padding: 6px 14px;
+        font-size: var(--font-size-sm);
+        min-height: 32px;
+    }
+    
+    .quote-header__filter {
+        padding: 5px 12px;
+        font-size: var(--font-size-sm);
+        min-height: 30px;
+    }
+}

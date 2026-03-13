@@ -1,0 +1,253 @@
+{
+  "title": "Term vs. Whole Life Insurance: Which Is Right for You?",
+  "seo_title": "Term vs Whole Life Insurance Canada | Which Is Better? | PolicyScanner",
+  "seo_description": "Compare term life insurance vs. whole life insurance in Canada. See real costs, pros and cons, and find out which type fits your situation. Ontario-licensed advisors.",
+  "slug": "term-vs-whole-life",
+  "tag": "Comparison",
+  "read_time": "11 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 2500,
+    "primary_keyword": "term vs whole life insurance",
+    "secondary_keywords": [
+      "term life vs permanent insurance canada",
+      "which is better term or whole life",
+      "term insurance vs permanent insurance ontario",
+      "whole life vs term life cost"
+    ],
+    "conversion_goal": "Lead capture — after reading comparison, reader chooses a type and requests quotes through PolicyScanner",
+    "page_role": "High-value comparison page — often the final research step before buying. Sits between the term and whole-life pillar pages. Links to both.",
+    "writer_focus": "Balanced but helpful. Most Canadians should buy term life. Be honest about this while explaining who benefits from whole life. Don't dismiss whole life — it has a place in estate planning and for certain needs. But for income replacement during working years: term wins on cost.",
+    "seo_keywords": {
+      "use_primary_exact": "term vs whole life insurance",
+      "density_rule": "Use 'term vs whole life insurance' 2–3 times per 500 words. Use 'term life' and 'whole life' individually much more often.",
+      "synonyms": [
+        "term life vs permanent insurance",
+        "temporary vs permanent life insurance",
+        "term insurance vs whole life policy"
+      ],
+      "lsi_terms": [
+        "coverage period",
+        "cash value",
+        "premium cost comparison",
+        "estate planning",
+        "buy term invest the difference",
+        "level premiums",
+        "renewable term",
+        "participating whole life",
+        "surrender value",
+        "insurance needs assessment"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "Canada",
+        "FSRA",
+        "Sun Life",
+        "Manulife",
+        "London Life",
+        "Great-West Life"
+      ],
+      "action_keywords": [
+        "choose between term and whole life",
+        "compare term and whole life costs",
+        "get term life quotes",
+        "request whole life quote"
+      ],
+      "natural_variations": [
+        "deciding between term and whole life",
+        "is whole life worth the cost",
+        "how term and whole life compare in Canada"
+      ],
+      "real_example_to_use": "Ahmed, 34, Ottawa — budget $150/month. Term: $1.5M 20-year for $110/month. Whole life: $200K for $150/month. He chose term + invested the $40/month difference.",
+      "avoid": "Do not imply whole life is a scam or a bad product. It serves a real purpose for high-net-worth estate planning and specific permanent needs. Be balanced."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "Term vs. Whole Life Insurance: The Honest Comparison",
+      "subheading": "Two very different products. Different costs, different purposes, different ideal buyers. Here's how to decide which one you need.",
+      "cta_primary": "Compare Quotes for Both Types",
+      "_writer_notes": {
+        "target_words": 60,
+        "focus": "Neutral, thoughtful intro. This page serves people who are genuinely undecided. Don't sell — educate.",
+        "key_points": [
+          "Term: temporary, lower cost, pure protection",
+          "Whole life: permanent, higher cost, builds cash value"
+        ]
+      }
+    },
+    {
+      "_type": "quickAnswerSection",
+      "heading": "The Short Answer (If You're in a Hurry)",
+      "_writer_notes": {
+        "target_words": 150,
+        "focus": "Give readers the direct answer upfront for those who just want guidance, not a wall of text.",
+        "key_points": [
+          "Choose term life if: you need income/mortgage protection for a defined period (10–30 years), want maximum coverage per dollar, are under 55, have a mortgage or dependents",
+          "Choose whole life if: you have a permanent need (estate planning, business insurance, final expenses for life), high net worth wanting tax-sheltered growth, you've maxed RRSP/TFSA and want another tax vehicle",
+          "Most Canadians: term life is the right choice",
+          "Note: you can have both — term for income protection + small whole life for estate planning"
+        ]
+      }
+    },
+    {
+      "_type": "costComparisonSection",
+      "heading": "The Cost Difference: Term Is Much Cheaper",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Real cost comparison. Same person, same coverage amount — term vs whole life.",
+        "key_points": [
+          "Ahmed, 34, male, non-smoker: $150/month budget",
+          "Term (20-year): up to $1.5M in coverage for ~$110/month",
+          "Whole life: ~$200K coverage for $150/month",
+          "Same monthly budget = 7.5x more coverage with term",
+          "But whole life premiums stay the same forever; term premiums reset at renewal",
+          "'Buy term and invest the difference' — investing $40/month over 20 years at 7% growth = ~$20K"
+        ],
+        "structure": "Side-by-side cost table for same person at ages 30, 35, 40, 45. Then Ahmed's example."
+      }
+    },
+    {
+      "_type": "definitionsSection",
+      "heading": "What Exactly Is Term Life Insurance?",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "Concise definition. You know your template — don't repeat full term guide here. Just core concept + key facts.",
+        "key_points": [
+          "Coverage for a fixed period (10, 20, 30 years)",
+          "Premiums are level for the term period, then jump steeply at renewal",
+          "No cash value — pure insurance",
+          "If you die during the term: full benefit paid. If you outlive it: coverage ends, no refund (unless ROP rider)",
+          "Best for: income replacement, mortgage protection, family protection during working years"
+        ]
+      }
+    },
+    {
+      "_type": "wholeLifeDefinitionSection",
+      "heading": "What Exactly Is Whole Life Insurance?",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "Concise definition. Cover the cash value component honestly — it's a key differentiator.",
+        "key_points": [
+          "Coverage for life — as long as you pay premiums, you're covered",
+          "Builds cash value over time — can borrow against it or surrender for cash",
+          "Participating: earns dividends (non-guaranteed) on top of guaranteed growth",
+          "Premiums are level forever (no renewal surprise)",
+          "More complex: paid-up additions, policy loans, surrender values",
+          "Best for: estate planning, permanent needs, max funded policies as tax shelter"
+        ]
+      }
+    },
+    {
+      "_type": "cashValueSection",
+      "heading": "The Cash Value Debate: Is It Worth It?",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "Honest exploration of the 'whole life as investment' question. Neither dismiss nor over-hype.",
+        "key_points": [
+          "Cash value grows tax-deferred inside the policy — a legitimate benefit",
+          "Growth rate: typically 4–6% on participating policies (not guaranteed on the dividend portion)",
+          "Accessible: policy loans, partial withdrawals, or full surrender",
+          "But: takes years to become significant. First 5–7 years of premiums mostly cover insurance costs",
+          "'Buy term and invest the difference': if you invest the premium difference in a diversified portfolio, you'll likely accumulate more wealth",
+          "Exception: if you've maxed RRSP and TFSA and need another tax-sheltered growth vehicle — whole life fills that role"
+        ]
+      }
+    },
+    {
+      "_type": "whoShouldBuyTermSection",
+      "heading": "Who Should Buy Term Life Insurance?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Clear profile of ideal term buyer.",
+        "key_points": [
+          "Young families protecting income and a mortgage",
+          "Anyone with dependents under age 22",
+          "People with significant debt (mortgage, business loan)",
+          "Middle-income earners needing maximum coverage for their budget",
+          "Anyone who would struggle to maintain large whole life premiums long-term"
+        ],
+        "callout_after": "Link to term life insurance hub page."
+      }
+    },
+    {
+      "_type": "whoShouldBuyWholeLifeSection",
+      "heading": "Who Should Buy Whole Life Insurance?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Clear profile of ideal whole life buyer. Be honest — it's a smaller group.",
+        "key_points": [
+          "High-net-worth Canadians with estate tax planning needs",
+          "Business owners using life insurance as a key-person or buy-sell tool",
+          "People who require permanent coverage (e.g., a dependent who will always need care)",
+          "Investors who have maxed RRSP/TFSA and want a third tax-sheltered vehicle",
+          "Older adults (55+) who want guaranteed final expense coverage for life"
+        ],
+        "callout_after": "Link to whole life insurance hub page."
+      }
+    },
+    {
+      "_type": "sideBySideTableSection",
+      "heading": "Term vs. Whole Life: Full Comparison Table",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Master comparison table. 10+ rows covering every dimension readers care about.",
+        "key_points": [
+          "Coverage period: Fixed term (T) / Permanent (W)",
+          "Monthly cost: Lower (T) / Higher (T, usually 5–10x more per dollar of coverage)",
+          "Cash value: No (T) / Yes, grows over time (W)",
+          "Premium changes: Stable during term, jumps at renewal (T) / Level forever (W)",
+          "Flexibility: Can cancel anytime, low lock-in (T) / Long-term commitment (W)",
+          "Best for: Income/debt protection (T) / Estate planning, permanent need (W)",
+          "Tax benefits: Payout is tax-free (both) / Cash value grows tax-deferred (W)",
+          "Convertibility: Many term policies can convert to permanent (T+W bridge option)"
+        ],
+        "structure": "Two-column table. Bold the row headers. Keep cell content to one short phrase."
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Term vs. Whole Life — Frequently Asked Questions",
+      "faqs": [
+        {
+          "question": "Can I switch from term to whole life insurance?",
+          "answer": "Many term policies include a conversion option that lets you convert to a permanent policy (whole life or universal life) before a certain age, without a new medical exam. This is valuable if your health changes. Check your policy for conversion privileges before your deadline.",
+          "_guidance": "Explain conversion as a bridge — it reassures term buyers they have flexibility."
+        },
+        {
+          "question": "Is whole life insurance a good investment in Canada?",
+          "answer": "Whole life insurance is not a pure investment — it's insurance with a savings component. The internal rate of return on cash value is typically 3–5% on participating policies. For most Canadians, a diversified RRSP or TFSA will outperform whole life as an investment vehicle. However, for high-net-worth individuals who've maxed registered accounts, whole life offers unique tax advantages.",
+          "_guidance": "Answer honestly. Don't dismiss whole life as an investment, but don't oversell it either."
+        },
+        {
+          "question": "What happens when a term life policy expires?",
+          "answer": "When your term ends, coverage stops. You'll typically receive a renewal offer at a much higher premium (reflecting your current age). You can renew, convert to permanent (if conversion privilege exists), or let it lapse. Most people who no longer have dependents or a mortgage simply let it lapse.",
+          "_guidance": "Be direct about what happens at renewal — many people don't understand this."
+        },
+        {
+          "question": "Can I have both term and whole life insurance?",
+          "answer": "Yes, and this is a common strategy. Many Canadians buy a large term policy for income/mortgage protection during their working years, plus a small participating whole life policy for permanent estate planning needs. This 'layered' approach balances cost and long-term coverage.",
+          "_guidance": "Validate the 'have both' strategy — it's actually common among moderate-to-high earners."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Ready to Compare? Get Quotes for Both Types",
+      "subheading": "PolicyScanner compares term and whole life insurance from 10+ Canadian insurers. Ontario-licensed advisors help you choose the right type for your situation.",
+      "cta_primary": "Compare Term Life Quotes",
+      "cta_secondary": "Learn About Whole Life",
+      "_writer_notes": {
+        "target_words": 55,
+        "focus": "Dual CTA — some readers are ready to buy term, others want to explore whole life more. Serve both.",
+        "key_points": [
+          "No obligation comparison",
+          "Advisor explains which type makes sense for your specific situation",
+          "Ontario-licensed, unbiased guidance"
+        ]
+      }
+    }
+  ]
+}

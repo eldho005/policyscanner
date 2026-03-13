@@ -1,0 +1,165 @@
+{
+  "title": "Life Insurance Calculator Canada",
+  "seo_title": "Life Insurance Calculator Canada | How Much Do You Need? | PolicyScanner",
+  "seo_description": "Use our free life insurance calculator for Canada. Find out exactly how much coverage you need based on your income, debts, and family situation. Instant results.",
+  "slug": "calculator",
+  "tag": "Calculator",
+  "read_time": "5 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 1100,
+    "primary_keyword": "life insurance calculator canada",
+    "secondary_keywords": [
+      "how much life insurance do i need canada",
+      "life insurance needs calculator ontario",
+      "life insurance amount calculator",
+      "dime method life insurance"
+    ],
+    "conversion_goal": "Tool engagement — get users to use the calculator, then immediately flow to quote comparison (highest-converting funnel entry)",
+    "page_role": "Tool page. Calculator is the hero. Content explains how to use it and what the result means. Keep copy lean — the tool does the heavy lifting.",
+    "writer_focus": "Short, purposeful content. People come here to DO something, not read. Explain the two methods (DIME and income multiple), show the calculator, then immediately bridge to quotes. No fluff.",
+    "seo_keywords": {
+      "use_primary_exact": "life insurance calculator",
+      "density_rule": "Use 'life insurance calculator' 2–3 times per 500 words. This is a short page — use it in H1, intro paragraph, and near the CTA.",
+      "synonyms": [
+        "life insurance needs calculator",
+        "coverage amount calculator",
+        "how much life insurance tool",
+        "insurance needs estimator"
+      ],
+      "lsi_terms": [
+        "DIME method",
+        "income multiplier",
+        "debt coverage",
+        "income replacement years",
+        "final expenses",
+        "education fund",
+        "mortgage balance",
+        "dependents",
+        "net worth",
+        "coverage gap"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "Canada",
+        "FSRA",
+        "Statistics Canada"
+      ],
+      "action_keywords": [
+        "calculate your coverage needs",
+        "find out how much you need",
+        "get your life insurance estimate",
+        "compare quotes after calculating"
+      ],
+      "natural_variations": [
+        "figure out how much coverage you need",
+        "what amount of life insurance is right for you",
+        "estimating your life insurance needs in Canada"
+      ],
+      "real_example_to_use": "James, 37, Ottawa — income $95K, mortgage $480K, 2 kids under 8 — DIME method gave $1.4M, income multiplier gave $950K. He bought $1.2M 20-year term at $72/month.",
+      "avoid": "Do not overload this page with content. The calculator is the product. Keep written sections to 100–200 words each."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "Life Insurance Calculator: How Much Coverage Do You Actually Need?",
+      "subheading": "Answer 5 quick questions and get a personalized estimate in under 60 seconds. Then compare quotes from 10+ Canadian insurers.",
+      "cta_primary": "Use the Calculator",
+      "_writer_notes": {
+        "target_words": 55,
+        "focus": "Short hero — tool is above the fold. Get users to the calculator immediately. Subheading focuses on speed (60 seconds) and what happens after (compare quotes).",
+        "key_points": [
+          "No email required to use the calculator",
+          "Instant estimate based on your specific situation"
+        ]
+      }
+    },
+    {
+      "_type": "calculatorEmbed",
+      "calculator_type": "needs_calculator",
+      "fields": [
+        { "id": "income", "label": "Your annual income ($)", "type": "number" },
+        { "id": "income_years", "label": "Years family needs income replacement", "type": "select", "options": ["5 years", "10 years", "15 years", "20 years", "Until youngest child is 25"] },
+        { "id": "mortgage", "label": "Outstanding mortgage balance ($)", "type": "number" },
+        { "id": "other_debt", "label": "Other debts (car, student loans, etc.) ($)", "type": "number" },
+        { "id": "existing_coverage", "label": "Existing life insurance coverage ($)", "type": "number" },
+        { "id": "final_expenses", "label": "Estimated final expenses ($)", "type": "number", "default": 15000 }
+      ],
+      "formula": "DIME: Debt (mortgage + other) + Income (annual x years) + Mortgage (already included) + Education ($50K per child) — Existing coverage",
+      "_writer_notes": {
+        "target_words": 0,
+        "focus": "This is a dynamic UI component — no static written content. The calculator output should show: (1) your DIME estimate, (2) your income-multiplier estimate, (3) a recommendation range, (4) CTA to get quotes for that coverage amount."
+      }
+    },
+    {
+      "_type": "methodExplainerSection",
+      "heading": "How Is This Calculated? Two Methods Explained",
+      "_writer_notes": {
+        "target_words": 280,
+        "focus": "Explain the two main calculation methods briefly. DIME is the most complete. Income multiplier (10x) is the quickest rule of thumb.",
+        "key_points": [
+          "DIME method: Debt + Income replacement + Mortgage + Education. Most comprehensive.",
+          "Income multiplier: annual income × 10 (common financial advisor rule of thumb)",
+          "Why they differ: DIME is tailored to your specific debts; 10x income is a quick estimate",
+          "Which to use: DIME is better if you have significant debts or a specific mortgage balance",
+          "Real example: James, $95K income, $480K mortgage, 2 kids → DIME = $1.4M, 10x = $950K. He chose $1.2M as a middle ground."
+        ],
+        "structure": "Two subsections: DIME + Income Multiplier. Keep each under 100 words. Simple and scannable."
+      }
+    },
+    {
+      "_type": "coverageGapsSection",
+      "heading": "Common Coverage Mistakes to Avoid",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Quick bullets on what people forget to include in their needs calculation.",
+        "key_points": [
+          "Forgetting childcare costs after a parent's death (can be $2–4K/month in Ontario)",
+          "Underestimating income replacement years — many choose 5 years when 15 is more appropriate",
+          "Not subtracting existing group life insurance from employer (usually 1–2x salary, not portable)",
+          "Ignoring education costs — university in Canada averages $30–50K over 4 years per child",
+          "Assuming a spouse will immediately return to full-time work — recovery takes time"
+        ]
+      }
+    },
+    {
+      "_type": "afterCalculatorCtaSection",
+      "heading": "Got Your Number? Now Compare Quotes in 2 Minutes",
+      "subheading": "Once you know the coverage amount you need, PolicyScanner compares 10+ Canadian insurers to find the lowest rate for that exact coverage.",
+      "cta_button": "Compare Quotes for My Coverage Amount",
+      "_writer_notes": {
+        "target_words": 55,
+        "focus": "Tight bridge from calculator result to quote funnel. This is the highest-converting element on the page.",
+        "key_points": [
+          "Pre-fill the quote form with the calculator result",
+          "Takes 2 minutes to get your quotes",
+          "Ontario-licensed advisor reviews and explains results"
+        ],
+        "callout_after": "Link: 'Not sure how much coverage to get? Read our guide: How Much Life Insurance Do I Need in Canada?'"
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Life Insurance Calculator — FAQ",
+      "faqs": [
+        {
+          "question": "How accurate is a life insurance calculator?",
+          "answer": "A calculator gives you a solid starting estimate — typically within 10–20% of what a licensed advisor would recommend. For a precise recommendation based on your full financial picture, speaking with a licensed advisor is always wise.",
+          "_guidance": "Honest about limitations. Position advisor consultation as the smart next step."
+        },
+        {
+          "question": "What is the DIME method for life insurance?",
+          "answer": "DIME stands for Debt, Income, Mortgage, and Education. You add: all non-mortgage debts + years of income replacement needed × annual income + outstanding mortgage + estimated education costs for children. Then subtract existing coverage. The result is your coverage gap.",
+          "_guidance": "Clear formula explanation — most readers have never heard of DIME."
+        },
+        {
+          "question": "Is 10x income enough life insurance in Canada?",
+          "answer": "The 10x income rule is a quick estimate. For many Canadians with a mortgage and young children, it may actually be too low. If you have a $600,000 mortgage and two children, 10x income may not cover all your debts AND replace income. Use the DIME method for a more accurate figure.",
+          "_guidance": "Challenge the common oversimplification — be specific."
+        }
+      ]
+    }
+  ]
+}

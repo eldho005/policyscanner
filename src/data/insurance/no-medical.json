@@ -1,0 +1,224 @@
+{
+  "title": "No Medical Life Insurance in Canada",
+  "seo_title": "No Medical Life Insurance Canada | No Exam Policies | PolicyScanner",
+  "seo_description": "Compare no medical life insurance in Canada. Get approved without a medical exam. Coverage for seniors, health conditions, and anyone declined before. Ontario advisors.",
+  "slug": "no-medical",
+  "tag": "No Medical",
+  "read_time": "8 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 1900,
+    "primary_keyword": "no medical life insurance canada",
+    "secondary_keywords": [
+      "no exam life insurance canada",
+      "guaranteed life insurance canada",
+      "simplified issue life insurance",
+      "life insurance without medical exam ontario"
+    ],
+    "conversion_goal": "Lead capture — get declined, older, or health-impaired Canadians to compare no-medical options",
+    "page_role": "Niche product page. Audience: seniors, people with health conditions, those previously declined. High-intent — they need coverage now.",
+    "writer_focus": "Empathetic, validating tone. These readers may have been declined or feel embarrassed. Write with compassion: 'You can still get covered.' Be clear about trade-offs: lower coverage, higher premiums, waiting periods.",
+    "seo_keywords": {
+      "use_primary_exact": "no medical life insurance",
+      "density_rule": "Use 'no medical life insurance' 2–3 times per 500 words. Also use 'guaranteed life insurance' and 'simplified issue' naturally.",
+      "synonyms": [
+        "guaranteed issue life insurance",
+        "simplified issue life insurance",
+        "no exam life insurance",
+        "guaranteed acceptance life insurance",
+        "life insurance without a medical exam"
+      ],
+      "lsi_terms": [
+        "graded benefit period",
+        "waiting period (2 years)",
+        "accidental death benefit",
+        "return of premium on death",
+        "coverage limit",
+        "final expense insurance",
+        "burial insurance",
+        "whole life guaranteed"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "FSRA",
+        "Foresters Financial",
+        "Assumption Life",
+        "Industrial Alliance",
+        "Canada Protection Plan",
+        "Empire Life"
+      ],
+      "action_keywords": [
+        "apply without a medical exam",
+        "get guaranteed life insurance",
+        "coverage if you've been declined",
+        "compare no-exam policies"
+      ],
+      "natural_variations": [
+        "life insurance with no health questions",
+        "coverage without an exam",
+        "guaranteed approval life insurance in Canada",
+        "if you've been declined before"
+      ],
+      "real_example_to_use": "Grace, 67, from Hamilton — type 2 diabetes and high blood pressure, previously declined twice. Got $50,000 guaranteed issue whole life for $148/month through PolicyScanner.",
+      "avoid": "Do not imply these policies are the same quality as fully underwritten coverage. Be honest: they cost more and cover less. Readers will discover this anyway — be upfront."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "No Medical Life Insurance: You Can Still Get Covered",
+      "subheading": "Previously declined? Have a health condition? Over 65? No medical exam life insurance in Canada gives you guaranteed or simplified coverage — no doctor, no blood tests.",
+      "cta_primary": "See My Options — No Exam",
+      "cta_secondary": "Compare No-Medical Plans",
+      "_writer_notes": {
+        "target_words": 65,
+        "focus": "Inclusive, reassuring tone. This audience has often been rejected. The hero message is: 'You can still get covered.' Avoid clinical language.",
+        "key_points": [
+          "No blood tests, no medical exam, no doctor visit",
+          "Two types: Simplified Issue (health questions) and Guaranteed Issue (no questions at all)",
+          "Approval can be same-day"
+        ]
+      }
+    },
+    {
+      "_type": "twoTypesSection",
+      "heading": "Two Types of No Medical Life Insurance",
+      "_writer_notes": {
+        "target_words": 300,
+        "focus": "Clearly distinguish Simplified Issue vs. Guaranteed Issue. Most readers don't know the difference.",
+        "key_points": [
+          "Simplified Issue: no medical exam but has health questions (usually 5–15). Some conditions may disqualify. Coverage up to $500K. Lower premiums than GI.",
+          "Guaranteed Issue: NO health questions, NO exam, CANNOT be declined. Usually for ages 40–85. Coverage limited to $10K–$50K. Higher premiums. 2-year graded benefit period.",
+          "Which is better? Simplified issue if you can qualify — it costs less and covers more. Guaranteed issue is the last resort."
+        ],
+        "structure": "Two columns or two clear subsections. Comparison table at the end of the section."
+      }
+    },
+    {
+      "_type": "gradedBenefitSection",
+      "heading": "What Is the Graded Benefit Period?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Critical concept to explain honestly. Most guaranteed issue policies have a 2-year waiting period. If you die of illness in year 1–2, your family gets premiums back + interest, NOT the full benefit.",
+        "key_points": [
+          "Usually 2 years from policy start date",
+          "If you die within 2 years from illness: insurer returns premiums paid + 10% interest to beneficiary",
+          "If you die within 2 years from accident: full benefit usually paid immediately",
+          "After 2 years: full benefit paid for any cause of death",
+          "Why? Insurer is taking on unknown health risk — the waiting period prevents anti-selection"
+        ],
+        "structure": "Explain clearly, then example: 'If Grace gets her $50K policy in January and passes away in September from a heart condition, her daughter receives $1,776 in returned premiums — not $50,000. But after 2 years, the full $50,000 would be paid.' Be direct."
+      }
+    },
+    {
+      "_type": "whoIsItForSection",
+      "heading": "Who Should Consider No Medical Life Insurance?",
+      "_writer_notes": {
+        "target_words": 250,
+        "focus": "Help readers self-identify. Four specific groups.",
+        "key_points": [
+          "Seniors 60+: healthy underwriting standards get stricter with age — no-medical fills the gap",
+          "People with chronic conditions: diabetes, heart disease, cancer history, COPD, HIV — may be declined for fully underwritten policies",
+          "Previously declined: if you've been declined once, no-medical may be your only option",
+          "Those wanting fast approval: no-medical is approved in hours or days vs. weeks for fully underwritten"
+        ],
+        "callout_after": "Contextual note: 'If you're under 50 and in reasonable health, you should first apply for a fully underwritten policy — it will cost less and cover more. Use no-medical insurance only if needed.'"
+      }
+    },
+    {
+      "_type": "costTable",
+      "heading": "How Much Does No Medical Life Insurance Cost?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Real premium estimates. Show that no-medical costs more than traditional. Be honest — readers will compare.",
+        "key_points": [
+          "Simplified Issue, $100K whole life, age 55, male, non-smoker: ~$120–$160/month",
+          "Simplified Issue, $100K whole life, age 60, female, non-smoker: ~$130–$170/month",
+          "Guaranteed Issue, $25K whole life, age 65, male: ~$80–$110/month",
+          "Guaranteed Issue, $50K whole life, age 65, female: ~$120–$160/month",
+          "Compare: $100K fully underwritten term, age 55 is often $50–$80/month — so no-medical costs 2–3x more per dollar of coverage"
+        ],
+        "structure": "Table: Type / Coverage / Age / Monthly Estimate. Add honest note at bottom: 'No-medical insurance costs more. But if you can't qualify for standard coverage, it may be your best option.'"
+      }
+    },
+    {
+      "_type": "topProvidersSection",
+      "heading": "Top No Medical Life Insurance Providers in Canada",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Brief overview of main providers specializing in no-medical. Don't rank or endorse — just describe what they're known for.",
+        "key_points": [
+          "Canada Protection Plan: largest no-medical insurer in Canada — wide coverage range",
+          "Assumption Life: good simplified issue options, strong Catholic roots (not relevant — just their reputation)",
+          "Foresters Financial: competitive guaranteed issue with fraternal benefits",
+          "Industrial Alliance (iA): simplified issue with competitive rates for healthy seniors",
+          "Empire Life: strong term life alternative for those who can qualify medically"
+        ],
+        "callout_after": "PolicyScanner compares multiple no-medical providers — get your quote in 2 minutes."
+      }
+    },
+    {
+      "_type": "simplifiedVsGuaranteedTable",
+      "heading": "Simplified Issue vs. Guaranteed Issue: Quick Comparison",
+      "_writer_notes": {
+        "target_words": 150,
+        "focus": "Quick reference table. Six rows comparing the two types on key dimensions.",
+        "key_points": [
+          "Health questions: Yes (SI) vs. No (GI)",
+          "Maximum coverage: Up to $500K (SI) vs. Up to $50K (GI)",
+          "Graded period: Sometimes (SI) vs. Usually 2 years (GI)",
+          "Monthly cost: Moderate (SI) vs. High per dollar of coverage (GI)",
+          "Best for: Health conditions but not terminal (SI) vs. Any health history, final expenses (GI)",
+          "Approval time: 1–3 days (SI) vs. Same day (GI)"
+        ]
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "No Medical Life Insurance — Frequently Asked Questions",
+      "faqs": [
+        {
+          "question": "Can I get no medical life insurance over age 70 in Canada?",
+          "answer": "Yes. Guaranteed issue policies are typically available to Canadians aged 40–85, depending on the insurer. Coverage limits are lower at older ages (often $10,000–$25,000), and premiums are higher. Most people over 70 use these policies to cover funeral costs and final debts.",
+          "_guidance": "Clear answer. Mention typical maximum age and coverage limits honestly."
+        },
+        {
+          "question": "Is no medical life insurance worth it?",
+          "answer": "It depends on your situation. If you cannot qualify for a standard fully-underwritten policy due to health or age, then yes — having some coverage is better than none. If you are in reasonable health, a fully underwritten policy will almost always provide better coverage at a lower price.",
+          "_guidance": "Balanced, honest answer. Don't oversell no-medical — help readers make the right choice."
+        },
+        {
+          "question": "What if I only need enough to cover my funeral?",
+          "answer": "A guaranteed issue policy of $15,000–$25,000 is commonly used as final expense insurance in Canada. It covers funeral costs, which average $8,000–$15,000 in Ontario, and leaves a small amount for other end-of-life expenses. Foresters and Canada Protection Plan are popular choices for this use case.",
+          "_guidance": "Validate the use case. Don't be judgmental about small face amounts — many Canadians just want to cover their funeral."
+        },
+        {
+          "question": "Can I be declined for guaranteed issue life insurance?",
+          "answer": "No. Guaranteed issue life insurance cannot decline you for any health reason. As long as you meet the age requirements (usually 40–80 or 40–85 depending on insurer) and are a Canadian resident, you are approved.",
+          "_guidance": "This is the key selling feature. Be definitive."
+        },
+        {
+          "question": "Do no medical insurance companies check my health records?",
+          "answer": "For simplified issue: they ask health questions and may verify answers with MIB (Medical Information Bureau) or prescription drug database. For guaranteed issue: no health check of any kind. The 2-year graded benefit period is the insurer's protection instead.",
+          "_guidance": "Explain how each type handles verification. MIB is a real credentialing body — mention it."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Compare No Medical Life Insurance Plans — Free in 2 Minutes",
+      "subheading": "Ontario-licensed advisors compare simplified issue and guaranteed issue plans from Canada's top no-medical insurers.",
+      "cta_button": "Get My No-Medical Quote",
+      "_writer_notes": {
+        "target_words": 50,
+        "focus": "Compassionate, warm CTA. This audience may feel rejected. The message: 'You have options — let us help you find them.'",
+        "key_points": [
+          "No judgment — all health histories considered",
+          "Compare 5+ no-medical providers at once",
+          "Ontario advisor calls to walk you through options"
+        ]
+      }
+    }
+  ]
+}

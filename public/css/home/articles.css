@@ -1,0 +1,565 @@
+/* ==========================================================================
+   Articles Section - Refined Professional Insurance Design
+   Clean, professional, compact navigation with appropriate shadows
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Articles Block - Clean Professional Foundation
+   ========================================================================== */
+
+.articles {
+  background: var(--bg-section-articles);
+  padding-top: var(--section-padding-mobile);
+  padding-bottom: var(--section-padding-mobile);
+  position: relative;
+  isolation: isolate;
+  transform: var(--micropolish-gpu-base);
+  contain: layout style paint;
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+  -webkit-font-smoothing: var(--micropolish-font-smoothing);
+  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+}
+
+/* Subtle professional background depth */
+.articles::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    var(--micropolish-overlay-depth),
+    var(--micropolish-radial-subtle);
+  pointer-events: none;
+  z-index: var(--z-0);
+  opacity: 0.3; /* Reduced for subtlety */
+}
+
+.articles > * {
+  position: relative;
+  z-index: var(--z-10);
+}
+
+/* ==========================================================================
+   2. Clean Section Header
+   ========================================================================== */
+
+.articles__header {
+  margin-bottom: var(--space-3); /* Compact spacing */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.articles__title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin-bottom: var(--heading-to-text);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--micropolish-letter-spacing-normal);
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-shadow: var(--micropolish-shadow-text-subtle);
+}
+
+.articles__subtitle {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--secondary-text);
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+/* ==========================================================================
+   3. Compact Grid Layout
+   ========================================================================== */
+
+.articles__grid {
+  gap: var(--space-1); /* Tight, professional spacing */
+}
+
+/* Mobile: Compact 2x2 Grid */
+@media (max-width: 767px) {
+  .articles__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .layout__grid-item--full {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: var(--space-1);
+  }
+  
+  .articles__sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-1);
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 992px) {
+  .articles__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+  
+  .articles__grid > .layout__grid-item {
+    flex: 0 0 calc(50% - 4px);
+    max-width: calc(50% - 4px);
+  }
+}
+
+.articles__sub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-1);
+  height: 100%;
+}
+
+.articles__sub-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   4. Professional Cards - Insurance Industry Standard
+   ========================================================================== */
+
+.articles__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: 
+    color-mix(in oklch, var(--bg-section-articles) 88%, var(--micropolish-gradient-card)),
+    var(--micropolish-gradient-card);
+  border: var(--micropolish-border-subtle);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  
+  /* PROFESSIONAL: Single clean shadow - insurance industry standard */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  
+  backdrop-filter: var(--micropolish-glass-subtle);
+  -webkit-backdrop-filter: var(--micropolish-glass-subtle);
+  
+  /* Clean professional transition - no movement */
+  transition: 
+    border-color var(--micropolish-timing-fast) var(--micropolish-easing-premium),
+    box-shadow var(--micropolish-timing-fast) var(--micropolish-easing-premium);
+}
+
+.articles__card:hover {
+  border-color: var(--micropolish-border-accent-hover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slightly deeper but still clean */
+}
+
+/* Subtle professional highlight */
+.articles__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--micropolish-border-gradient);
+  opacity: 0.6;
+  z-index: var(--z-10);
+}
+
+/* Featured card - subtle professional distinction */
+.articles__card--featured {
+  background: 
+    color-mix(in oklch, var(--bg-section-articles) 92%, var(--micropolish-gradient-premium)),
+    var(--micropolish-gradient-premium);
+  border: var(--micropolish-border-medium);
+  
+  /* Professional featured shadow */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.articles__card--featured:hover {
+  border-color: var(--micropolish-border-accent-hover);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   5. Compact Images - Professional Proportions
+   ========================================================================== */
+
+.articles__image-container {
+  position: relative;
+  aspect-ratio: 3 / 2; /* Professional, balanced proportions */
+  overflow: hidden;
+  background: var(--bg-section-articles);
+}
+
+.articles__image-container--featured {
+  aspect-ratio: 3 / 2; /* Consistent across all cards */
+}
+
+.articles__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: var(--micropolish-image-premium);
+  /* NO HOVER EFFECTS - static professional images */
+}
+
+/* Clean professional overlay */
+.articles__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, 
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.05) 30%,
+      rgba(0, 0, 0, 0.12) 70%,
+      rgba(0, 0, 0, 0.20) 100%
+    );
+  z-index: var(--z-10);
+}
+
+/* ==========================================================================
+   6. Compact Content - Clean Typography
+   ========================================================================== */
+
+.articles__content {
+  padding: var(--space-2); /* Compact padding */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Mobile: Clean, minimal design */
+@media (max-width: 767px) {
+  .articles__content {
+    padding: var(--space-2);
+    text-align: center;
+  }
+  
+  /* Hide secondary elements for compactness */
+  .articles__meta,
+  .articles__cta {
+    display: none;
+  }
+}
+
+/* Desktop: Professional full content */
+@media (min-width: 768px) {
+  .articles__content {
+    padding: var(--space-3);
+    text-align: left;
+  }
+  
+  .articles__meta {
+    display: flex;
+  }
+  
+  .articles__cta {
+    display: inline-flex;
+  }
+}
+
+/* ==========================================================================
+   7. Professional Typography - Standard Sizes
+   ========================================================================== */
+
+.articles__card-title {
+  font-size: var(--font-size-base); /* Standard global size */
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-1);
+  color: var(--primary-text);
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-subtle);
+  text-shadow: var(--micropolish-shadow-text-subtle);
+  /* Clean color transition - no movement */
+  transition: color var(--micropolish-timing-fast) var(--micropolish-easing-premium);
+}
+
+/* Featured card - subtle distinction */
+.articles__card--featured .articles__card-title {
+  font-size: var(--font-size-lg); /* Standard global size */
+  font-weight: var(--font-weight-semibold);
+}
+
+.articles__card:hover .articles__card-title {
+  color: var(--primary-teal);
+}
+
+/* Clean one-line descriptions */
+.articles__excerpt {
+  color: var(--secondary-text);
+  line-height: var(--line-height-normal);
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  opacity: 0.9;
+  /* Subtle enhancement - no movement */
+  transition: opacity var(--micropolish-timing-fast) var(--micropolish-easing-premium);
+}
+
+.articles__card:hover .articles__excerpt {
+  opacity: 1;
+}
+
+/* Mobile: Show description */
+@media (max-width: 767px) {
+  .articles__excerpt {
+    display: block;
+    margin-top: var(--space-1);
+  }
+}
+
+/* ==========================================================================
+   8. Professional Category Badges
+   ========================================================================== */
+
+.articles__category {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  background: 
+    linear-gradient(135deg, 
+      var(--primary-teal) 0%, 
+      rgba(59, 197, 185, 0.95) 100%
+    );
+  color: var(--white-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-organic-sm);
+  z-index: var(--z-20);
+  letter-spacing: 0.025em;
+  
+  /* PROFESSIONAL: Clean shadow - not overdone */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.articles__category--featured {
+  background: 
+    linear-gradient(135deg, 
+      var(--cta-orange) 0%, 
+      rgba(255, 122, 42, 0.95) 100%
+    );
+  padding: var(--space-1) var(--space-3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+/* ==========================================================================
+   9. Clean Link Experience
+   ========================================================================== */
+
+.articles__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  outline: none;
+  border-radius: var(--border-radius-lg);
+}
+
+.articles__link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.articles__link:focus {
+  outline: 2px solid var(--primary-teal);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   10. Desktop Enhancement Elements
+   ========================================================================== */
+
+.articles__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--secondary-text);
+  font-feature-settings: 'tnum' 1, 'kern' 1;
+  opacity: 0.8;
+}
+
+.articles__date {
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+}
+
+.articles__read-time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  opacity: 0.9;
+}
+
+.articles__icon {
+  color: rgba(59, 197, 185, 0.7);
+  flex-shrink: 0;
+  filter: var(--micropolish-icon-medium);
+}
+
+.articles__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-text);
+  margin-top: var(--space-2);
+  opacity: 0.8;
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  font-feature-settings: var(--micropolish-font-features-base);
+  transition: color var(--micropolish-timing-fast) var(--micropolish-easing-premium);
+}
+
+.articles__card:hover .articles__cta {
+  color: var(--primary-teal);
+}
+
+.articles__arrow {
+  flex-shrink: 0;
+  opacity: 0.7;
+  filter: var(--micropolish-icon-base);
+  /* NO MOVEMENT - static arrow */
+}
+
+/* ==========================================================================
+   11. Responsive Professional Design
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .articles {
+    padding-top: var(--section-padding-tablet);
+    padding-bottom: var(--section-padding-tablet);
+  }
+  
+  .articles__header {
+    margin-bottom: var(--space-4);
+  }
+  
+  .articles__title {
+    font-size: 1.75rem;
+  }
+  
+  .articles__subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .articles__sub-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-1);
+  }
+  
+  /* Professional shadow scaling */
+  .articles__card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+  
+  .articles__card:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .articles__card--featured {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .articles__card--featured:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@media (min-width: 992px) {
+  .articles {
+    padding-top: var(--section-padding-desktop);
+    padding-bottom: var(--section-padding-desktop);
+  }
+  
+  .articles__header {
+    margin-bottom: var(--space-5);
+  }
+  
+  .articles__sub-grid {
+    gap: var(--space-1);
+  }
+  
+  .articles__title {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================================================
+   12. Professional Accessibility
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .articles__card,
+  .articles__card-title,
+  .articles__excerpt,
+  .articles__cta {
+    transition: none !important;
+  }
+  
+  .articles__card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .articles__card {
+    border: 2px solid var(--border-light);
+    background: var(--bg-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .articles__category {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .articles__overlay {
+    background: linear-gradient(to bottom, 
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+}
+
+@media print {
+  .articles {
+    background: white !important;
+  }
+  
+  .articles__card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+  
+  .articles__image {
+    filter: none !important;
+  }
+  
+  .articles__category {
+    background: #666 !important;
+    color: white !important;
+  }
+}

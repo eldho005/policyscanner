@@ -1,0 +1,444 @@
+/* ==========================================================================
+   FAQ SECTION - STANDARDIZED CLEAN PRODUCTION READY
+   Typography + Spacing + Padding fully standardized with global system
+   Uses global CSS variables and micropolish enhancements
+   ========================================================================== */
+
+/* ==========================================================================
+   1. FAQ Block - Clean Foundation
+   ========================================================================== */
+
+.faq {
+  background: #F6F9FA;
+  padding-top: var(--section-padding-mobile);
+  padding-bottom: var(--section-padding-mobile);
+  position: relative;
+  isolation: isolate;
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+  -webkit-font-smoothing: var(--micropolish-font-smoothing);
+  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+}
+
+/* Subtle atmospheric background */
+.faq::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(59, 197, 185, 0.02) 0%, transparent 40%),
+    radial-gradient(ellipse at 70% 80%, rgba(59, 197, 185, 0.015) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.faq > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   2. FAQ Header - Professional Typography
+   ========================================================================== */
+
+.faq__header {
+  text-align: center;
+  margin-bottom: var(--space-5); /* Global spacing */
+}
+
+/* STANDARDIZED: Now uses global h2 system with responsive scaling 24px → 28px → 32px */
+.faq__title {
+  /* font-size: REMOVED - uses global h2 responsive scaling */
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--heading-to-text); /* Global spacing */
+  
+  /* ENHANCED: Professional micropolish */
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-normal);
+  text-rendering: var(--micropolish-text-rendering);
+  text-shadow: var(--micropolish-shadow-text-subtle);
+}
+
+.faq__subtitle {
+  max-width: 585px;
+  margin: 0 auto;
+  font-size: var(--font-size-sm); /* Global typography */
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.9;
+  
+  /* ENHANCED: Professional typography micropolish */
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+/* ==========================================================================
+   3. FAQ List Container
+   ========================================================================== */
+
+.faq__list {
+  max-width: 875px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ==========================================================================
+   4. FAQ Items - Clean Professional Design
+   ========================================================================== */
+
+.faq__item {
+  border-bottom: var(--micropolish-border-subtle);
+  position: relative;
+  background: transparent;
+  
+  /* Clean transition */
+  transition: background-color var(--micropolish-timing-fast) var(--micropolish-easing-premium);
+}
+
+.faq__item:hover {
+  background: rgba(59, 197, 185, 0.03);
+}
+
+.faq__item:last-child {
+  border-bottom: none;
+}
+
+/* Professional highlight line */
+.faq__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--micropolish-border-gradient);
+  opacity: 0.3;
+}
+
+/* ==========================================================================
+   5. FAQ Question Button - STANDARDIZED Typography
+   ========================================================================== */
+
+.faq__question {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  padding: var(--space-2) 0; /* Global spacing */
+  color: var(--primary-text);
+  text-align: left;
+  background: none;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  
+  /* Clean transition - no color changes */
+  transition: none;
+  
+  /* STANDARDIZED: Global typography */
+  font-size: var(--font-size-base); /* FIXED: Changed from sm to base (16px) */
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.faq__question:hover,
+.faq__question:focus {
+  color: var(--primary-text);
+  outline: none;
+}
+
+.faq__question:focus-visible {
+  outline: 2px solid var(--primary-teal);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* ==========================================================================
+   6. FAQ Question Text
+   ========================================================================== */
+
+.faq__question-text {
+  flex: 1;
+  padding-right: var(--space-2); /* Global spacing */
+  
+  /* ENHANCED: Professional typography */
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+/* ==========================================================================
+   7. FAQ Icon - Professional Icon System
+   ========================================================================== */
+
+.faq__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  
+  /* ENHANCED: Professional transition */
+  transition: 
+    transform var(--micropolish-timing-base) var(--micropolish-easing-premium),
+    color var(--micropolish-timing-fast) var(--micropolish-easing-premium);
+  
+  color: var(--secondary-text);
+  opacity: 0.8;
+  
+  /* ENHANCED: Professional icon enhancement */
+  filter: var(--micropolish-icon-base);
+}
+
+/* Icon rotation when expanded */
+.faq__question[aria-expanded="true"] .faq__icon {
+  transform: rotate(180deg);
+  color: var(--primary-teal);
+  opacity: 1;
+  filter: var(--micropolish-icon-medium);
+}
+
+/* ==========================================================================
+   8. FAQ Answer Container
+   ========================================================================== */
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  
+  /* ENHANCED: Professional transition */
+  transition: max-height var(--micropolish-timing-base) var(--micropolish-easing-smooth);
+}
+
+.faq__answer--expanded {
+  max-height: 500px;
+}
+
+/* ==========================================================================
+   9. FAQ Answer Content - STANDARDIZED Typography
+   ========================================================================== */
+
+.faq__answer-content {
+  padding: 0 var(--space-5) var(--space-4) 0; /* Global spacing */
+  color: var(--secondary-text);
+  
+  /* ENHANCED: Professional typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-full);
+  text-rendering: var(--micropolish-text-rendering);
+  -webkit-font-smoothing: var(--micropolish-font-smoothing);
+  -moz-osx-font-smoothing: var(--micropolish-font-smoothing-moz);
+}
+
+.faq__answer-content p {
+  margin-bottom: var(--space-2); /* Global spacing */
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm); /* Global typography: 14px - appropriate for answer text */
+  font-weight: var(--font-weight-normal);
+  
+  /* ENHANCED: Professional typography */
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  font-feature-settings: var(--micropolish-font-features-base);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.faq__answer-content p:last-child {
+  margin-bottom: 0;
+}
+
+.faq__answer-content ul {
+  margin: var(--space-2) 0; /* Global spacing */
+  padding-left: var(--space-3); /* Global spacing */
+}
+
+.faq__answer-content li {
+  margin-bottom: var(--space-1); /* Global spacing */
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm); /* Global typography */
+  font-weight: var(--font-weight-normal);
+  
+  /* ENHANCED: Professional typography */
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  font-feature-settings: var(--micropolish-font-features-base);
+}
+
+.faq__answer-content li:last-child {
+  margin-bottom: 0;
+}
+
+.faq__answer-content strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  
+  /* ENHANCED: Professional typography features */
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-subtle);
+}
+
+/* ==========================================================================
+   10. Responsive Design
+   ========================================================================== */
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767.98px) {
+  .faq__question {
+    min-height: 48px;
+    padding: var(--space-2) 0; /* Global spacing */
+    font-size: var(--font-size-base); /* Global typography - keep base size on mobile */
+  }
+  
+  .faq__icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .faq__answer-content {
+    padding-right: var(--space-3); /* Global spacing */
+  }
+  
+  .faq__subtitle {
+    font-size: var(--font-size-sm); /* Global typography */
+  }
+}
+
+/* Tablet and up (768px+) */
+@media (min-width: 768px) {
+  .faq {
+    padding-top: var(--section-padding-tablet);
+    padding-bottom: var(--section-padding-tablet);
+  }
+  
+  .faq__subtitle {
+    font-size: var(--font-size-base); /* Global typography */
+  }
+  
+  .faq__question {
+    font-size: var(--font-size-base); /* Global typography */
+  }
+  
+  .faq__header {
+    margin-bottom: var(--space-6); /* Global spacing */
+  }
+  
+  /* Subtle hover effect on larger screens */
+  .faq__item:hover {
+    background: rgba(59, 197, 185, 0.04);
+  }
+}
+
+/* Desktop (992px+) */
+@media (min-width: 992px) {
+  .faq {
+    padding-top: var(--section-padding-desktop);
+    padding-bottom: var(--section-padding-desktop);
+  }
+  
+  .faq__question {
+    min-height: 50px;
+    padding: var(--space-2) 0; /* Global spacing */
+    font-size: var(--font-size-base); /* Global typography */
+  }
+  
+  .faq__answer-content {
+    padding-right: var(--space-5); /* Global spacing */
+  }
+  
+  .faq__icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .faq__header {
+    margin-bottom: var(--space-6); /* Global spacing */
+  }
+  
+  /* Premium desktop hover effects */
+  .faq__item:hover {
+    background: rgba(59, 197, 185, 0.05);
+  }
+}
+
+/* ==========================================================================
+   11. Accessibility & Performance
+   ========================================================================== */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .faq__icon,
+  .faq__answer,
+  .faq__question,
+  .faq__item {
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .faq {
+    background: var(--bg-white);
+  }
+  
+  .faq__item {
+    border-bottom: 2px solid var(--primary-text);
+    background: transparent;
+  }
+  
+  .faq__question {
+    color: var(--primary-text);
+  }
+  
+  .faq__answer-content {
+    color: var(--primary-text);
+  }
+  
+  .faq__icon {
+    color: var(--primary-text);
+    filter: none;
+  }
+  
+  .faq__title {
+    text-shadow: none;
+  }
+}
+
+/* Print optimization */
+@media print {
+  .faq {
+    background: white;
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+  
+  .faq__item {
+    border-bottom: 0.5px solid #ccc;
+    background: transparent;
+    break-inside: avoid;
+  }
+  
+  .faq__answer {
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .faq__answer--expanded {
+    max-height: none;
+  }
+  
+  .faq__icon {
+    display: none;
+  }
+  
+  .faq__answer-content {
+    padding-right: 0;
+  }
+  
+  .faq__title {
+    text-shadow: none;
+  }
+}

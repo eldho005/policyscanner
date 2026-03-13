@@ -1,0 +1,123 @@
+/* ==========================================================================
+   LIFE INSURANCE CALCULATOR SECTION - MINIMAL EXTERNAL CSS
+   Maximum global CSS usage - only styles that can't be utility classes
+   Mobile: Full-width heading → Image → Content | Desktop: Content column (with heading) | Image column
+   ========================================================================== */
+
+/* ==========================================================================
+   1. SECTION BACKGROUND - USES GLOBAL SYSTEM
+   ========================================================================== */
+
+.calculator-section {
+    /* GLOBAL: Uses established background hierarchy */
+    background: var(--bg-secondary); /* Light gray background #F6F9FA */
+}
+
+/* ==========================================================================
+   2. COMPONENT-SPECIFIC STYLES ONLY
+   Everything else handled by global CSS classes and utilities
+   ========================================================================== */
+
+.calculator-image {
+    /* Component-specific image styling that can't be utility classes */
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    border-radius: var(--border-radius-lg); /* Uses global variable */
+}
+
+/* Mobile-First Ordering - Image appears before content on mobile */
+.mobile-image-order { 
+    order: 1; 
+}
+
+.mobile-content-order { 
+    order: 2; 
+}
+
+/* Mobile image spacing - more space between photo and content */
+.mobile-image-spacing { 
+    margin-bottom: var(--space-5); /* Uses global spacing variable - 40px */
+}
+
+/* Responsive heading display - Mobile shows full-width, Desktop shows in content column */
+.mobile-heading { 
+    display: block; 
+}
+
+.desktop-heading { 
+    display: none; 
+}
+
+/* ==========================================================================
+   3. RESPONSIVE BEHAVIOR - FOLLOWS GLOBAL BREAKPOINT PATTERN
+   Uses same breakpoints as global system for consistency
+   ========================================================================== */
+
+/* Medium devices (768px+) - Following global pattern */
+@media (min-width: 768px) {
+    .calculator-image {
+        max-width: 450px;
+    }
+    
+    /* Desktop ordering - reset to side-by-side layout */
+    .mobile-content-order { 
+        order: 1; /* Content on left */
+    }
+    
+    .mobile-image-order { 
+        order: 2; /* Image on right */
+    }
+    
+    /* Remove mobile spacing on desktop */
+    .mobile-image-spacing { 
+        margin-bottom: 0; 
+    }
+    
+    /* Switch heading display for desktop layout */
+    .mobile-heading { 
+        display: none; 
+    }
+    
+    .desktop-heading { 
+        display: block; 
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-image-spacing { 
+        margin-top: 15%;
+    }
+}
+
+/* Large devices (992px+) - Following global pattern */
+@media (min-width: 992px) {
+    .calculator-image {
+        max-width: 500px;
+        margin: 0; /* Remove auto centering on desktop */
+    }
+    
+    /* Desktop ordering maintained */
+    .mobile-content-order { 
+        order: 1; 
+    }
+    
+    .mobile-image-order { 
+        order: 2; 
+    }
+    
+    /* Mobile spacing removed on desktop */
+    .mobile-image-spacing { 
+        margin-bottom: 0; 
+    }
+    
+    /* Desktop heading display maintained */
+    .mobile-heading { 
+        display: none; 
+    }
+    
+    .desktop-heading { 
+        display: block; 
+    }
+}

@@ -1,0 +1,261 @@
+{
+  "title": "Get Your Free Life Insurance Quote | PolicyScanner",
+  "seo_title": "Get Life Insurance Quotes Online | Compare 20+ Insurers | Free",
+  "seo_description": "Compare life insurance quotes from 20+ top Canadian insurers. Free, instant quotes. Term, whole life, critical illness & more. Get your quote in 2 minutes.",
+  "slug": "quotes",
+  "tag": "Life Insurance Quotes",
+  "read_time": "8 min read",
+  "prepared_by": "Prepared by Baljit Kaur LLQP",
+  "reviewed_by": "Reviewed by Eldho George LLQP",
+  "_meta": {
+    "target_words": "1,200–1,500 (plus the quote form — this is a CONVERSION page, not a reading page)",
+    "primary_keyword": "life insurance quotes canada",
+    "secondary_keywords": ["compare life insurance quotes", "free life insurance quote", "instant life insurance quote"],
+    "conversion_goal": "30-40% form completion rate",
+    "page_priority": "MONEY PAGE — highest priority for SEO and conversion. Quote form must be above the fold.",
+    "design_note": "Keep content lean. The form is the hero. Every section below supports conversion — it doesn't distract from it.",
+    "seo_keywords": {
+      "use_primary_exact": "life insurance quotes",
+      "density_rule": "Use 'life insurance quotes' 2–3 times only. Vary heavily with 'rates', 'pricing', 'premium quotes' — this phrase stuffs easily.",
+      "synonyms": ["life insurance rates", "insurance quotes", "coverage quotes", "premium quotes", "life insurance pricing", "insurance pricing"],
+      "lsi_terms": ["compare quotes", "free quote", "instant quote", "personalized quote", "quote comparison", "multiple insurers", "best rate", "no obligation", "licensed broker"],
+      "entity_keywords": ["Canada", "Ontario", "Canadian insurers", "FSRA licensed", "Mississauga", "Brampton", "Toronto"],
+      "action_keywords": ["compare quotes", "get a quote", "request a quote", "compare rates", "save money", "find the best rate"],
+      "real_example_to_use": "Michael, 38, from Mississauga — compared 5 insurers and saved $240/year. Use this example in the 'Why Compare' section.",
+      "avoid": "Do not write 'life insurance quotes canada' as a visible phrase — it reads unnaturally. Use 'life insurance quotes in Canada' or just 'life insurance quotes'."
+    }
+  },
+  "page_data": [
+    {
+      "component": "hero_section",
+      "title": "Get Your Free Life Insurance Quote",
+      "description": "",
+      "_writer_notes": {
+        "target_words": "40–60 only — keep it extremely tight above the form",
+        "focus": "Instant credibility + remove friction before the form",
+        "key_points": [
+          "Lead with the value statement: Compare quotes from 20+ top Canadian insurers in minutes",
+          "Add 3-4 trust micro-bullets BEFORE the form (not after): ✓ Free, no obligation ✓ Results in minutes ✓ Licensed brokers to help you choose ✓ 100% confidential",
+          "DO NOT put long paragraphs above the form — every extra line hurts conversion"
+        ],
+        "example": "'Compare quotes from 20+ top Canadian insurers in minutes. Free, no obligation, and completely confidential.'"
+      }
+    },
+    {
+      "component": "trust_badges"
+    },
+    {
+      "component": "content_block",
+      "id": "WhyCompare",
+      "heading": "Why Compare Life Insurance Quotes?",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "200–250",
+        "focus": "Create urgency and logic for comparing — show real dollar savings",
+        "key_points": [
+          "HEADLINE STAT: 'Life insurance rates can vary by 30–50% between insurers for the same coverage.'",
+          "REAL EXAMPLE (include this verbatim or close to it):",
+          "Michael, 38, non-smoker, needed $750,000 of coverage.",
+          "• Insurer A: $68/month",
+          "• Insurer B: $52/month",
+          "• Insurer C: $48/month",
+          "• Insurer D: $71/month",
+          "By comparing, Michael saved $240/year ($20/month × 12) by choosing Insurer C.",
+          "",
+          "WHY RATES VARY:",
+          "• Each insurer has different underwriting guidelines",
+          "• Some specialize in certain age groups",
+          "• Some offer better rates for specific health conditions",
+          "• Pricing strategies differ by company",
+          "",
+          "KEY INSIGHT: What's best for one person isn't best for everyone.",
+          "• Company A: best for 30-year-olds",
+          "• Company B: best for 50-year-olds",
+          "• Company C: best for diabetics",
+          "• Company D: best for smokers",
+          "",
+          "CALLOUT: 'We represent 20+ insurers, so we can find the best rate for YOUR specific situation.'"
+        ]
+      }
+    },
+    {
+      "component": "callout",
+      "type": "insight",
+      "title": "Your Best Rate is Specific to You",
+      "text": "The insurer that offers the best rate for your neighbour may not offer you the best rate. Age, health, and lifestyle all play a role. That's why comparing 20+ insurers — not just the biggest names — is the only way to guarantee you're not overpaying."
+    },
+    {
+      "component": "content_block",
+      "id": "HowQuotesWork",
+      "heading": "How Life Insurance Quotes Work",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "200–250",
+        "focus": "Remove confusion and fear — the quote process is simple and non-committal",
+        "key_points": [
+          "WHAT INFO INSURERS NEED:",
+          "Basic (for instant preliminary quote): Age, gender, smoking status, coverage amount, term length",
+          "For more accurate quotes: Height/weight, general health status, medications, family health history, occupation",
+          "",
+          "PRELIMINARY vs FINAL QUOTE — explain the difference clearly:",
+          "Preliminary Quote (Instant): Based on basic info, assumes good health, gives price range, zero commitment",
+          "Final Quote (After Underwriting): Based on complete health info, may include medical exam, exact guaranteed rate",
+          "",
+          "TIMELINE — write as a simple numbered flow:",
+          "1. Request Quote → Instant (basic info only)",
+          "2. Apply → 15–30 minutes",
+          "3. Medical Exam (if needed) → scheduled within 1–2 weeks",
+          "4. Underwriting Review → 2–6 weeks",
+          "5. Final Quote & Approval → coverage starts with first payment"
+        ]
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "WhatAffectsQuote",
+      "heading": "What Affects Your Life Insurance Quote?",
+      "paragraphs": [""],
+      "bullets": [],
+      "_writer_notes": {
+        "target_words": "250–300",
+        "focus": "Help readers self-assess — show them what they can and can't control",
+        "key_points": [
+          "FACTOR 1 — AGE (Biggest Factor):",
+          "'Premiums double approximately every 10 years.'",
+          "Example: Age 30: $25/month → Age 40: $50/month → Age 50: $120/month",
+          "(all for $500K, 20-year term, male non-smoker)",
+          "",
+          "FACTOR 2 — GENDER:",
+          "Women pay 20–30% less due to longer life expectancy.",
+          "Example ($500K, 20-year, age 40): Male $65/month vs Female $48/month",
+          "",
+          "FACTOR 3 — SMOKING STATUS:",
+          "Smokers pay 2–4x more. Includes cigarettes, cigars, vaping, marijuana.",
+          "Must be nicotine-free for 12 months to qualify as non-smoker rates.",
+          "Example (age 35): Non-smoker $35/month vs Smoker $110/month",
+          "",
+          "FACTOR 4 — HEALTH AND MEDICAL HISTORY:",
+          "Excellent health = Preferred rates (lowest)",
+          "Good health = Standard rates",
+          "Health conditions = Rated (higher) or declined",
+          "Common conditions: Diabetes, high BP, high cholesterol, heart disease, cancer history, mental health, obesity (BMI 30+)",
+          "",
+          "FACTOR 5 — COVERAGE AMOUNT AND TERM:",
+          "Example (age 35, male): $250K 10-year = $15/mo | $500K 20-year = $35/mo | $1M 30-year = $75/mo",
+          "",
+          "FACTOR 6 — OCCUPATION AND HOBBIES:",
+          "High-risk: construction, mining, fishing, skydiving, racing, scuba. May add 25–100% to premium."
+        ]
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "TopInsurers",
+      "heading": "Top Canadian Life Insurance Companies We Work With",
+      "paragraphs": ["PolicyScanner compares rates from Canada's leading life insurers. Here are the major companies we work with and what each is known for."],
+      "bullets": [
+        { "bold": "Sun Life Financial:", "text": "Canada's largest insurer, excellent financial strength, top choice for participating whole life" },
+        { "bold": "Manulife Financial:", "text": "Strong online process, Vitality wellness program, competitive for younger applicants" },
+        { "bold": "Canada Life:", "text": "Wide product range, strong advisor network, result of merger of Great-West Life/London Life/Canada Life" },
+        { "bold": "RBC Insurance:", "text": "Competitive for healthy applicants, simplified issue options, good for existing RBC clients" },
+        { "bold": "Equitable Life:", "text": "Canadian-owned mutual insurer, frequently among the most competitive term rates in Canada" },
+        { "bold": "Empire Life:", "text": "Often lowest term rates nationally, especially for non-smokers, strong digital application process" },
+        { "bold": "iA Financial Group:", "text": "Competitive for preferred health classes, strong western Canada presence" },
+        { "bold": "BMO Insurance:", "text": "Easy online application, flexible term options, good for families" },
+        { "bold": "And 12 more:", "text": "Desjardins, Foresters, Assumption Life, Humania, SSQ, La Capitale, UV Insurance, and others — each with unique strengths for specific health profiles and ages" }
+      ],
+      "_writer_notes": {
+        "target_words": "200–250 total including the bullets above",
+        "focus": "Build confidence that we have genuine breadth — not just 3 or 4 names",
+        "key_points": [
+          "Write a short intro paragraph before the bullets",
+          "After bullets, close with: 'Each insurer has different strengths. By comparing all of them, we find which one offers YOU the best rate for your age, health, and situation.'"
+        ]
+      }
+    },
+    {
+      "component": "content_block",
+      "id": "AfterYouQuote",
+      "heading": "What Happens After You Request a Quote?",
+      "paragraphs": [""],
+      "ordered": [],
+      "_writer_notes": {
+        "target_words": "200–250",
+        "focus": "Set expectations clearly — reduce anxiety about what comes next after submitting the form",
+        "key_points": [
+          "WITHIN 1 BUSINESS DAY: Licensed broker contacts you (email or phone — your preference), reviews your coverage needs, answers questions",
+          "WE PROVIDE: Detailed quotes from multiple insurers, side-by-side comparison, recommendation, no pressure to buy",
+          "IF YOU DECIDE TO APPLY:",
+          "1. Choose insurer and policy",
+          "2. Complete application (15–30 min)",
+          "3. Schedule medical exam if required (at your home or office)",
+          "4. Wait for underwriting (2–6 weeks)",
+          "5. Review final policy and rates",
+          "6. Accept and pay first premium → coverage begins!",
+          "NO OBLIGATION NOTE: 'You're never obligated to buy. No fees for quotes or advice. Take your time.'",
+          "TESTIMONIAL: Include a real quote from a satisfied customer (e.g., 'I got quotes from 5 different insurers and saved over $30/month...')"
+        ]
+      }
+    },
+    {
+      "component": "callout",
+      "type": "tip",
+      "title": "No Obligation, Ever",
+      "text": "Requesting a quote is 100% free with zero obligation to buy. Our brokers are paid by insurers when you choose to purchase — so there is never any fee to you for quotes, comparisons, or advice."
+    },
+    {
+      "component": "rate_calculator",
+      "title": "Calculate Your Coverage & Cost"
+    },
+    {
+      "component": "cta_banner",
+      "heading": "Ready to Compare Quotes?",
+      "body": "Get instant quotes from 20+ Canadian insurers. Free, fast, and no obligation. Or call us to speak with a licensed broker directly.",
+      "button_text": "Get My Free Quote",
+      "url": "/compare-insurance-quotes"
+    },
+    {
+      "component": "faq",
+      "items": [
+        {
+          "question": "How long does it take to get a life insurance quote?",
+          "answer": "Instant preliminary quotes online. Detailed broker quotes with full comparison within 1 business day."
+        },
+        {
+          "question": "Do I have to buy after getting a quote?",
+          "answer": "No. Quotes are completely free with zero obligation to buy. There is no commitment involved in requesting a quote."
+        },
+        {
+          "question": "Will requesting a quote affect my credit score?",
+          "answer": "No. Getting a life insurance quote does not affect your credit score. No credit check is run at the quote stage."
+        },
+        {
+          "question": "How accurate are online quotes?",
+          "answer": "Online quotes assume you're in good health. Your final rate depends on complete health information and underwriting. Most people's final rates match preliminary quotes if they accurately report their health status."
+        },
+        {
+          "question": "Can I get a quote if I have health issues?",
+          "answer": "Yes. We work with 20+ insurers, several of whom specialize in coverage for people with pre-existing conditions. You may pay higher rates, but coverage is typically available."
+        },
+        {
+          "question": "What information do I need for a quote?",
+          "answer": "Basic: Age, gender, smoking status, desired coverage amount. For more accurate quotes: Height, weight, general health status."
+        },
+        {
+          "question": "Why use a broker instead of going directly to an insurer?",
+          "answer": "Brokers compare 20+ insurers simultaneously. Going directly to one insurer means you only see that company's rates — which may not be the best for your age and health profile. Broker advice is free to you."
+        },
+        {
+          "question": "Is there a fee for using PolicyScanner's quote service?",
+          "answer": "No. Our service is 100% free to you. Insurers pay us a commission when you purchase a policy. There is never a fee for quotes, comparisons, or broker advice."
+        }
+      ],
+      "_writer_notes": {
+        "target_words": "All FAQ answers are pre-written — review for tone and accuracy. Keep answers short (50–80 words each) and direct.",
+        "focus": "Address the most common objections and hesitations from someone about to submit a quote form"
+      }
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+/* ==========================================================================
+   Quote Page Components CSS
+   Custom styles for quote result page components
+   Using maximum global CSS integration (85%+ usage)
+   All typography uses global CSS classes and variables
+   ========================================================================== */
+
+/* CUSTOM: Progress Components (unique to quote flow) */
+.progress-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100vh;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-light);
+  padding: var(--space-4) var(--space-3);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.progress-sidebar__step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-1);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-base);
+  min-height: 52px;
+  position: relative;
+}
+
+.progress-sidebar__step--active {
+  color: var(--primary-teal);
+  font-weight: var(--font-weight-semibold);
+  background: rgba(59, 197, 185, 0.04);
+}
+
+.progress-sidebar__step--completed {
+  color: var(--primary-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.progress-sidebar__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  color: var(--secondary-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+  border: 2px solid var(--border-light);
+  transition: all var(--transition-base);
+  position: relative;
+  z-index: 2;
+  margin-top: 2px;
+}
+
+.progress-sidebar__number--active {
+  color: var(--primary-teal);
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(59, 197, 185, 0.08);
+}
+
+.progress-sidebar__number--completed {
+  background: var(--primary-teal);
+  color: var(--white-text);
+  border-color: var(--primary-teal);
+}
+
+.progress-sidebar__step--completed .progress-sidebar__number::after {
+  content: "✓";
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-text);
+}
+
+.progress-sidebar__step--completed .progress-sidebar__number {
+  font-size: 0;
+}
+
+.progress-sidebar__step-line {
+  position: absolute;
+  left: 22px;
+  top: 38px;
+  bottom: -14px;
+  width: 2px;
+  background: var(--border-light);
+  transition: all var(--transition-base);
+  z-index: 1;
+}
+
+.progress-sidebar__step-line--active {
+  background: linear-gradient(to bottom, var(--primary-teal) 0%, rgba(59, 197, 185, 0.3) 100%);
+}
+
+.progress-sidebar__step-line--completed {
+  background: var(--primary-teal);
+}
+
+.progress-sidebar__step:last-child .progress-sidebar__step-line {
+  display: none;
+}
+
+.progress-sidebar__security {
+  width: 100%;
+  text-align: center;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-light);
+  margin-top: var(--space-2);
+}
+
+.progress-sidebar__security-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.progress-sidebar__security-badge {
+  height: 20px;
+  width: auto;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+  filter: grayscale(30%);
+}
+
+.progress-sidebar__security-badge:hover {
+  opacity: 0.9;
+  filter: grayscale(0%);
+}
+
+.progress-sidebar__security-link {
+  background: none;
+  border: none;
+  color: var(--secondary-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  font-family: inherit;
+  line-height: var(--line-height-snug);
+}
+
+.progress-sidebar__security-link:hover {
+  color: var(--primary-teal);
+}
+
+/* CUSTOM: Mobile Progress Bar */
+.progress-bar-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-light);
+  padding: var(--space-2) var(--container-padding-mobile) var(--space-3);
+  z-index: 25;
+  min-height: 70px;
+}
+
+.progress-bar-mobile__steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: var(--space-1);
+}
+
+.progress-bar-mobile__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.progress-bar-mobile__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  color: var(--secondary-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border: 2px solid var(--border-light);
+  transition: all var(--transition-fast);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 6px;
+}
+
+.progress-bar-mobile__number--active {
+  color: var(--primary-teal);
+  border-color: var(--primary-teal);
+}
+
+.progress-bar-mobile__number--completed {
+  color: var(--primary-teal);
+  border-color: var(--primary-teal);
+}
+
+.progress-bar-mobile__step--completed .progress-bar-mobile__number::after {
+  content: "✓";
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-teal);
+}
+
+.progress-bar-mobile__step--completed .progress-bar-mobile__number {
+  font-size: 0;
+}
+
+.progress-bar-mobile__step--active .progress-bar-mobile__label,
+.progress-bar-mobile__step--completed .progress-bar-mobile__label {
+  color: var(--primary-teal);
+  font-weight: var(--font-weight-semibold);
+}
+
+.progress-bar-mobile__line {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: var(--border-light);
+  z-index: 1;
+}
+
+.progress-bar-mobile__line-progress {
+  height: 100%;
+  background: var(--primary-teal);
+  transition: width var(--transition-base);
+  width: 50%;
+}
+
+/* CUSTOM: Header Component */
+.header {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-light);
+  padding: var(--space-2) 0;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  width: 100%;
+}
+
+.header__logo-placeholder {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--secondary-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.header__logo {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  color: var(--primary-teal);
+}
+
+.header__actions {
+  display: flex;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--secondary-text);
+}
+
+.header__actions span {
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.header__actions span:hover {
+  color: var(--primary-teal);
+}
+
+/* CUSTOM: Quote-specific card extensions */
+.quote-card {
+  /* Extends global .card - only business-specific styling */
+}
+
+.quote-card__controls {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.quote-card__rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.quote-card__provider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.quote-card__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.quote-card__logo:hover {
+  transform: scale(1.05);
+}
+
+.quote-card__summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding: var(--space-3) 0;
+}
+
+.control-group__select {
+  /* Extends global .form__control - only custom styling needed */
+  border-radius: var(--border-radius-pill);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+/* CUSTOM: Desktop button layout for quote card */
+.quote-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.quote-card-actions .button {
+  width: 100%;
+}
+
+/* CUSTOM: Preview section (now inside the card) */
+.preview-section {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+.preview-cards {
+  filter: blur(2px);
+  opacity: 0.5;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.preview-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  padding: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.preview-card__logo {
+  width: 24px;
+  height: 24px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-teal);
+}
+
+.preview-card__info {
+  flex: 1;
+}
+
+/* CUSTOM: Modal backdrop (business-specific behavior) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75); /* Increased opacity for better visibility */
+  z-index: 50;
+  padding: var(--space-4);
+}
+
+/* CUSTOM: Modal card styling for better contrast */
+.modal .card {
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-lg), 0 20px 60px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  border: 1px solid var(--border-light);
+  position: relative;
+}
+
+/* CUSTOM: Content wrapper for quote page layout */
+.content-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* CUSTOM: Page-specific spacing adjustments */
+.main {
+  margin-left: 240px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .progress-sidebar {
+    display: none;
+  }
+
+  .progress-bar-mobile {
+    display: block;
+  }
+
+  .header {
+    top: 85px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .main {
+    margin-left: 0;
+    padding-top: 120px;
+  }
+
+  /* Mobile: Primary CTA first */
+  .quote-card-actions {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 768px) {
+  .progress-bar-mobile {
+    display: none;
+  }
+
+  .progress-sidebar {
+    display: flex;
+  }
+
+  .main {
+    margin-left: 240px;
+    padding-top: var(--space-3);
+  }
+
+  .quote-card__logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .quote-card__provider-name {
+    font-size: var(--font-size-base) !important;
+  }
+
+  .quote-card__amount {
+    font-size: var(--font-size-2xl) !important;
+  }
+
+  /* Desktop button layout improvements */
+  .quote-card-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-3);
+  }
+
+  .quote-card-actions .button {
+    width: auto;
+    min-width: 220px;
+    max-width: 280px;
+    flex: 1;
+    min-height: 52px; /* Slightly larger on desktop */
+    font-size: var(--font-size-base); /* Ensure consistent font size */
+  }
+}
+
+@media (min-width: 992px) {
+  .quote-card__logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .quote-card__amount {
+    font-size: var(--font-size-2xl) !important;
+  }
+
+  /* Enhanced desktop button styling */
+  .quote-card-actions .button {
+    min-height: 56px; /* Full desktop height */
+    font-size: var(--font-size-base); /* Consistent typography */
+    padding: var(--button-padding-mobile-v) var(--button-padding-mobile-h);
+  }
+
+  .quote-card-actions .button--primary {
+    box-shadow: var(--shadow-button-primary);
+  }
+
+  .quote-card-actions .button--primary:hover {
+    box-shadow: var(--shadow-button-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .quote-card-actions .button--outline {
+    box-shadow: var(--shadow-button-outline);
+  }
+
+  .quote-card-actions .button--outline:hover {
+    box-shadow: var(--shadow-button-outline-hover);
+    transform: translateY(-1px);
+  }
+}

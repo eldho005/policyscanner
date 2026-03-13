@@ -1,0 +1,1463 @@
+/* 
+ * PolicyScanner - Sidebar System
+ * Version: 1.0
+ * Last updated: April 22, 2025
+ */
+
+/* Base CSS Variables */
+:root {
+  /* Primary Colors */
+  --primary-color: #2AB4A8;
+  --primary-hover: #1D9E92;
+  --primary-active: #097268;
+  --primary-dark: #1A2A33;
+  --primary-light: rgba(42, 180, 168, 0.08);
+  
+  /* Text Colors */
+  --text-dark: #1A2A33;
+  --text-medium: #2C3E50;
+  --text-light: #6C7983;
+  
+  /* Background Colors */
+  --bg-white: #ffffff;
+  --bg-off-white: #f9fafb;
+  
+  /* Border Colors */
+  --border-light: #E7E7E7;
+  
+  /* Accent Colors */
+  --accent-gold: #F59E0B;
+  --accent-gold-light: rgba(245, 158, 11, 0.08);
+  
+  /* Bootstrap Blue (override) */
+  --bs-primary: #2AB4A8;
+  --bs-primary-rgb: 42, 180, 168;
+  --bs-link-color: #2AB4A8;
+  --bs-link-hover-color: #1D9E92;
+}
+
+/* Sidebar backdrop */
+.ps-sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.ps-sidebar-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar Container */
+.ps-sidebar {
+  position: fixed;
+  top: 0;
+  right: -600px; /* Start off-screen */
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  background-color: white;
+  overflow-y: auto;
+  z-index: 1050;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+  font-family: 'Spline Sans', sans-serif;
+  color: var(--text-medium);
+}
+
+.ps-sidebar.active {
+  right: 0;
+}
+
+/* Hide scrollbar but allow scrolling */
+.ps-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.ps-sidebar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sidebar header */
+.ps-sidebar-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ps-sidebar-title {
+  font-size: 1.3125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.ps-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-off-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: var(--text-medium);
+}
+
+.ps-close-btn:hover {
+  background-color: var(--border-light);
+}
+
+/* Sidebar Content */
+.ps-sidebar-content {
+  padding: 1.25rem;
+}
+
+/* Price & Coverage Card */
+.ps-price-coverage-card {
+  background-color: var(--bg-off-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.25rem;
+}
+
+.ps-price-section, .ps-coverage-section {
+  padding: 1rem;
+}
+
+.ps-price-section {
+  border-right: 1px solid var(--border-light);
+}
+
+.ps-price-label, .ps-coverage-label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.ps-price-value, .ps-coverage-value {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+.ps-price-cents {
+  font-size: 1.0625rem;
+  font-weight: 400;
+}
+
+/* Tab System */
+.ps-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 1rem;
+}
+
+.ps-tab {
+  padding: 1rem 0.5rem;
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+  font-size: 0.9375rem;
+}
+
+.ps-tab.active {
+  color: var(--primary-color);
+}
+
+.ps-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.ps-tab.active::after {
+  transform: scaleX(1);
+}
+
+.ps-tab-content {
+  display: none;
+}
+
+.ps-tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Accordion sections */
+.ps-accordion-item {
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.ps-accordion-header {
+  margin-bottom: 0;
+}
+
+.ps-accordion-button {
+  padding: 1rem;
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-dark);
+  box-shadow: none !important;
+  letter-spacing: 0.01em;
+  font-size: 1.0625rem;
+  cursor: pointer;
+}
+
+.ps-accordion-button:not(.collapsed) {
+  color: var(--primary-color);
+  background-color: var(--primary-light);
+}
+
+.ps-section-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.ps-chevron-icon {
+  transition: transform 0.3s ease;
+  color: #9ca3af;
+}
+
+.ps-accordion-button.collapsed .ps-chevron-icon {
+  transform: rotate(180deg);
+}
+
+/* Accordion Body */
+.ps-accordion-body {
+  padding: 1.25rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.ps-accordion-body p {
+  color: var(--text-medium);
+  margin-bottom: 1rem;
+}
+
+.ps-accordion-body ul {
+  color: var(--text-medium);
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.ps-accordion-body ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Feature cards */
+.ps-feature-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.75rem;
+  padding: 0.5rem 0 1rem;
+  margin: 1rem 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ps-feature-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.ps-feature-card {
+  flex: 0 0 auto;
+  width: 120px;
+  border-radius: 12px;
+  padding: 0.875rem;
+  background-color: var(--bg-off-white);
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-light);
+}
+
+.ps-feature-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  background-color: var(--primary-light);
+  box-shadow: 0 6px 12px rgba(42, 180, 168, 0.3);
+}
+
+.ps-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.625rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+}
+
+.ps-feature-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-dark);
+}
+
+.ps-feature-text {
+  font-size: 0.8125rem;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Feature Grid Cards */
+.ps-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 576px) {
+  .ps-feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Step list */
+.ps-step-list {
+  counter-reset: step-counter;
+  margin: 1rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ps-step-item {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.ps-step-number {
+  counter-increment: step-counter;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.ps-step-number::before {
+  content: counter(step-counter);
+}
+
+.ps-step-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 12px;
+  bottom: -8px;
+  width: 1px;
+  background-color: var(--border-light);
+}
+
+.ps-step-content {
+  flex-grow: 1;
+}
+
+.ps-step-title {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
+}
+
+.ps-step-description {
+  font-size: 0.8125rem;
+  color: var(--text-medium);
+  margin-bottom: 0;
+}
+
+/* Info card */
+.ps-info-card {
+  background-color: var(--primary-light);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(42, 180, 168, 0.2);
+}
+
+.ps-info-title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 0.625rem;
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
+}
+
+/* Testimonial styling */
+.ps-testimonial-card {
+  border-radius: 12px;
+  background-color: var(--bg-off-white);
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--primary-color);
+}
+
+.ps-testimonial-quote {
+  font-size: 0.9375rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.ps-testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.ps-author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+.ps-author-info {
+  font-size: 0.8125rem;
+}
+
+.ps-author-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.ps-author-detail {
+  color: var(--text-light);
+}
+
+/* Override Bootstrap Text Primary */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Term option styling */
+.term-option {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.term-option:hover, .term-option.selected {
+  border-color: var(--primary-color) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(42, 180, 168, 0.2) !important;
+}
+
+.term-option.selected {
+  background-color: var(--primary-light) !important;
+}
+
+/* Schedule call section */
+.ps-schedule-section {
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+  background-color: var(--bg-off-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-light);
+}
+
+.ps-schedule-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
+}
+
+.ps-schedule-text {
+  font-size: 0.9375rem;
+  color: var(--text-medium);
+  margin-bottom: 1.25rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.ps-btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(42, 180, 168, 0.2);
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.ps-btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(42, 180, 168, 0.3);
+}
+
+/* Agent note */
+.ps-agent-note {
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-gold-light);
+  border-radius: 12px;
+  padding: 0.75rem;
+  margin: 1rem auto 0;
+  max-width: 400px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.ps-agent-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.ps-agent-text {
+  font-size: 0.9375rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.ps-agent-text strong {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Footer */
+.ps-sidebar-footer {
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-off-white);
+  text-align: center;
+  border-top: 1px solid var(--border-light);
+}
+
+.ps-footer-text {
+  font-size: 0.8125rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* Collapse/expand transitions */
+.ps-collapse {
+  display: none;
+}
+
+.ps-collapse.show {
+  display: block;
+}
+
+/* Slider customization */
+.slider-container {
+  margin-bottom: 1rem;
+}
+
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  margin-bottom: 0.5rem;
+}
+
+.slider-value {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  .ps-sidebar {
+      width: 100%;
+  }
+  
+  .ps-feature-cards {
+      gap: 0.5rem;
+  }
+  
+  .ps-feature-card {
+      width: 110px;
+      padding: 0.75rem;
+  }
+  
+  /* Demo container - for preview purposes only */
+  .demo-container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 20px;
+  }
+  
+  /* Additional styles specific to critical illness sidebar */
+  .ps-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 1rem;
+  }
+  
+  .ps-tab {
+      padding: 1rem 0.5rem;
+      flex: 1;
+      text-align: center;
+      font-weight: 500;
+      color: var(--text-light);
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s ease;
+      font-size: 0.9375rem;
+  }
+  
+  .ps-tab.active {
+      color: var(--primary-color);
+  }
+  
+  .ps-tab::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+  }
+  
+  .ps-tab.active::after {
+      transform: scaleX(1);
+  }
+  
+  .ps-tab-content {
+      display: none;
+  }
+  
+  .ps-tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+  
+  /* Illness coverage chart */
+  .illness-coverage-chart {
+      display: flex;
+      justify-content: space-around;
+      margin: 1.5rem 0;
+  }
+  
+  .chart-category {
+      text-align: center;
+  }
+  
+  .chart-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.5rem;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+  }
+  
+  .chart-circle.full {
+      background-color: var(--primary-light);
+      border: 2px solid var(--primary-color);
+  }
+  
+  .chart-circle.partial {
+      background-color: var(--primary-lighter);
+      border: 2px dashed var(--primary-color);
+  }
+  
+  .chart-label {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-medium);
+  }
+  
+  /* Condition pill list */
+  .condition-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1rem;
+  }
+  
+  .condition-pill {
+      background-color: var(--primary-lighter);
+      border-radius: 50px;
+      padding: 6px 12px;
+      font-size: 0.8125rem;
+      color: var(--text-medium);
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(42, 180, 168, 0.1);
+  }
+  
+  .condition-pill i {
+      color: var(--primary-color);
+      margin-right: 6px;
+  }
+  
+  /* Coverage selector */
+  .coverage-selector {
+      margin: 1.5rem 0;
+  }
+  
+  .coverage-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+  }
+  
+  .coverage-option {
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+  }
+  
+  .coverage-option:hover, .coverage-option.selected {
+      border-color: var(--primary-color);
+      background-color: var(--primary-lighter);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(42, 180, 168, 0.2);
+  }
+  
+  .coverage-amount {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+  }
+  
+  .coverage-price {
+      font-size: 0.875rem;
+      color: var(--primary-color);
+      font-weight: 500;
+  }
+  
+  /* Claim process */
+  .claim-process {
+      margin: 1.5rem 0;
+  }
+  
+  .claim-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  
+  .claim-step {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+  }
+  
+  .claim-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 12px;
+      bottom: -24px;
+      width: 1px;
+      background-color: var(--border-light);
+  }
+  
+  .step-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--primary-light);
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+  }
+  
+  .step-title {
+      font-weight: 500;
+      font-size: 0.9375rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-dark);
+  }
+  
+  .step-description {
+      font-size: 0.8125rem;
+      color: var(--text-medium);
+  }
+  
+  /* Comparison table */
+  .comparison-table {
+      width: 100%;
+      margin: 1rem 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-light);
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+  }
+  
+  .comparison-table th {
+      background-color: var(--primary-light);
+      color: var(--text-dark);
+      font-weight: 600;
+      text-align: left;
+  }
+  
+  .comparison-table tr:last-child td {
+      border-bottom: none;
+  }
+  
+  .comparison-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+      background-color: var(--bg-off-white);
+  }
+  
+  .check-icon {
+      color: var(--primary-color);
+  }
+  
+  .x-icon {
+      color: var(--text-light);
+  }
+  
+        /* Demo container - for preview purposes only */
+        .demo-container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        /* Additional styles for mortgage insurance specific components */
+        .ps-static-comparison {
+            background-color: var(--bg-off-white);
+            border-radius: 12px;
+            margin: 1.25rem 0;
+            padding: 1rem;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+        
+        /* Visual guide steps */
+        .ps-visual-guide {
+            position: relative;
+            margin: 2rem 0;
+            padding: 0;
+        }
+        
+        .ps-guide-step {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .ps-guide-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+        
+        .ps-guide-content {
+            background-color: var(--bg-off-white);
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-1);
+            flex-grow: 1;
+        }
+        
+        .ps-guide-title {
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .ps-guide-text {
+            font-size: 0.8125rem;
+            color: var(--text-medium);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        .ps-guide-connector {
+            position: absolute;
+            top: 36px;
+            left: 18px;
+            bottom: -20px;
+            width: 2px;
+            background-color: var(--primary-light);
+            z-index: 1;
+        }
+        
+        /* Company card */
+        .ps-company-card {
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .ps-company-header {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--bg-off-white);
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .ps-company-logo {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+        
+        .ps-company-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-dark);
+        }
+        
+        .ps-company-rating {
+            display: flex;
+            align-items: center;
+        }
+        
+        .ps-rating-stars {
+            color: var(--accent-gold);
+            font-size: 0.875rem;
+            margin-right: 0.25rem;
+        }
+        
+        .ps-rating-number {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--text-medium);
+        }
+        
+        .ps-company-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .ps-company-badge {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 0.25rem 0.5rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .ps-company-badge i {
+            margin-right: 0.25rem;
+            font-size: 0.875rem;
+        }
+        
+        .ps-company-body {
+            padding: 1rem;
+        }
+        
+        .ps-company-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ps-stat-item {
+            background-color: var(--bg-off-white);
+            border-radius: 8px;
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+        
+        .ps-stat-value {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .ps-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-medium);
+            line-height: 1.4;
+        }
+    
+      
+        /* Demo container - for preview purposes only */
+        .demo-container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        /* Additional styles for no medical insurance sidebar */
+        .ps-protection-scenario {
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: var(--primary-light);
+            border-radius: 12px;
+            border: 1px solid rgba(42, 180, 168, 0.2);
+        }
+
+        .ps-scenario-title {
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: 0.625rem;
+            color: var(--text-dark);
+            letter-spacing: 0.01em;
+        }
+        
+        /* Visual comparison */
+        .ps-cost-comparison {
+            display: flex;
+            margin: 1.5rem 0;
+            gap: 1rem;
+        }
+        
+        .ps-cost-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .ps-cost-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .ps-cost-bar-container {
+            width: 100%;
+            height: 150px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .ps-cost-bar {
+            width: 70%;
+            border-radius: 8px 8px 0 0;
+            transition: height 0.3s ease;
+        }
+        
+        .ps-cost-bar-medical {
+            background-color: var(--primary-color);
+            height: 70%;
+        }
+        
+        .ps-cost-bar-nomedical {
+            background-color: rgba(73, 80, 87, 0.7);
+            height: 100%;
+        }
+        
+        .ps-cost-value {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8125rem;
+        }
+        
+        .ps-cost-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        
+        /* Pros & Cons cards */
+        .ps-pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .ps-pros-card, .ps-cons-card {
+            padding: 1rem;
+            border-radius: 12px;
+            height: 100%;
+        }
+        
+        .ps-pros-card {
+            background-color: rgba(42, 180, 168, 0.08);
+            border: 1px solid rgba(42, 180, 168, 0.2);
+        }
+        
+        .ps-cons-card {
+            background-color: rgba(234, 88, 88, 0.08);
+            border: 1px solid rgba(234, 88, 88, 0.2);
+        }
+        
+        .ps-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .ps-card-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        
+        .ps-pros-icon {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .ps-cons-icon {
+            background-color: rgb(234, 88, 88);
+            color: white;
+        }
+        
+        .ps-card-title {
+            font-weight: 600;
+            font-size: 0.9375rem;
+            color: var(--text-dark);
+        }
+        
+        .ps-simple-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        
+        .ps-simple-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            font-size: 0.8125rem;
+        }
+        
+        .ps-simple-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .ps-list-icon {
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        
+        .ps-pros-list .ps-list-icon {
+            color: var(--primary-color);
+        }
+        
+        .ps-cons-list .ps-list-icon {
+            color: rgb(234, 88, 88);
+        }
+
+        /* ==========================================================================
+   Whole Life Insurance Sidebar Specific Styles
+   ========================================================================== */
+
+/* Cash Value Chart - For Whole Life Insurance Sidebar
+   ========================================================================== */
+.cash-value-chart {
+  height: 180px;
+  position: relative;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border-light);
+}
+
+.chart-bar {
+  position: absolute;
+  bottom: 20px;
+  width: 40px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(to top, var(--primary-color), rgba(42, 180, 168, 0.7));
+}
+
+.chart-value {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.chart-label {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 0.8125rem;
+  color: var(--text-medium);
+}
+
+/* Comparison Table - For Whole Life vs Term Insurance comparison
+   ========================================================================== */
+.comparison-table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-light);
+}
+
+.comparison-table th {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.comparison-table td {
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border-light);
+  background-color: white;
+  text-align: center;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  background-color: var(--bg-off-white);
+}
+
+.comparison-table td.highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Payment Options - For Whole Life Limited Pay section
+   ========================================================================== */
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.payment-option {
+  flex: 1 0 calc(50% - 0.375rem);
+  min-width: 130px;
+  background-color: var(--bg-off-white);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+/* No hover effects as requested */
+.payment-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-dark);
+}
+
+.payment-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.payment-term {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* Company Stats Grid - For "About Foresters Financial" section
+   ========================================================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stats-item {
+  background-color: var(--bg-off-white);
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.stats-icon {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.stats-value {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.stats-label {
+  font-size: 0.8125rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+

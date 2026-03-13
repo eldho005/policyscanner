@@ -1,0 +1,197 @@
+{
+  "title": "Life Insurance for Homeowners in Canada",
+  "seo_title": "Life Insurance for Homeowners Canada | Protect Your Mortgage | PolicyScanner",
+  "seo_description": "Life insurance for homeowners in Canada. Protect your mortgage and family's home. Why personal term life beats bank mortgage insurance. Ontario advisors.",
+  "slug": "for-homeowners",
+  "tag": "Homeowners",
+  "read_time": "8 min read",
+  "prepared_by": "PolicyScanner Editorial Team",
+  "reviewed_by": "Licensed Ontario Insurance Advisor",
+  "_meta": {
+    "target_words": 1700,
+    "primary_keyword": "life insurance for homeowners",
+    "secondary_keywords": [
+      "life insurance for homeowners canada",
+      "mortgage protection life insurance ontario",
+      "protecting your home with life insurance",
+      "term life vs mortgage insurance"
+    ],
+    "conversion_goal": "Lead capture — homeowners comparing bank mortgage insurance vs. personal coverage. Get them to compare quotes.",
+    "page_role": "Demographic page targeting homeowners. Complements mortgage-protection.json. More empathetic framing around protecting the family home.",
+    "writer_focus": "Homeowners want to protect their home for their family. Frame this around the asset they've worked for — not death. The message: 'You've worked hard for your home. Make sure your family keeps it.' Tie coverage amount directly to mortgage balance.",
+    "seo_keywords": {
+      "use_primary_exact": "life insurance for homeowners",
+      "density_rule": "Use 'life insurance for homeowners' 2–3 times per 500 words. Use 'mortgage protection' naturally throughout.",
+      "synonyms": [
+        "homeowner life insurance",
+        "mortgage life insurance",
+        "home protection insurance",
+        "coverage for homeowners"
+      ],
+      "lsi_terms": [
+        "mortgage balance",
+        "protect your mortgage",
+        "home equity",
+        "level term life",
+        "20-year term",
+        "death benefit",
+        "beneficiary",
+        "mortgage insurance alternative",
+        "bank creditor insurance"
+      ],
+      "entity_keywords": [
+        "Ontario",
+        "FSRA",
+        "GTA",
+        "Toronto",
+        "Mississauga",
+        "Brampton",
+        "CMHC"
+      ],
+      "action_keywords": [
+        "protect your mortgage",
+        "insure your home for your family",
+        "compare homeowner life insurance",
+        "replace bank mortgage insurance"
+      ],
+      "natural_variations": [
+        "keeping your family in their home",
+        "what covers your mortgage if you die",
+        "protecting your home purchase with life insurance"
+      ],
+      "real_example_to_use": "Sarah and Tom, Mississauga, $720K mortgage, 2 children. Both got 20-year term: Tom $750K for $68/month, Sarah $750K for $54/month. Either death: mortgage paid, family stays in home.",
+      "avoid": "Don't repeat the full bank vs. term insurance argument from mortgage-protection.json — keep it brief here and link to that page for detail."
+    }
+  },
+  "page_data": [
+    {
+      "_type": "heroSection",
+      "heading": "Life Insurance for Homeowners: Keep Your Family in Their Home",
+      "subheading": "You've worked hard to own your home. A 20-year term life policy ensures your family never has to sell it because they can't afford the mortgage.",
+      "cta_primary": "Compare Homeowner Coverage Quotes",
+      "_writer_notes": {
+        "target_words": 60,
+        "focus": "Emotional connection to the home they've worked for. Protection framing — not fear.",
+        "key_points": [
+          "Coverage tied directly to mortgage balance",
+          "Personal term life beats bank mortgage insurance in almost every measure"
+        ]
+      }
+    },
+    {
+      "_type": "whatHappensSection",
+      "heading": "What Happens to Your Mortgage If You Die?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Explain what happens without coverage — and with coverage. No jargon.",
+        "key_points": [
+          "Without life insurance: your estate must settle debts. Surviving spouse may have to sell the home if they can't carry the mortgage alone.",
+          "With life insurance: death benefit goes to your beneficiary (spouse/family). They can pay off mortgage, stay in home, or choose how to use funds.",
+          "With bank mortgage insurance: payout goes directly to the bank, not your family. Benefit decreases as you pay down mortgage. Premiums don't decrease.",
+          "With personal term life: your family decides what to do with the money. Full, level benefit throughout the term."
+        ]
+      }
+    },
+    {
+      "_type": "howMuchSection",
+      "heading": "How Much Life Insurance Does a Homeowner Need?",
+      "_writer_notes": {
+        "target_words": 200,
+        "focus": "Coverage calculation for homeowners. Start with mortgage balance, then add income.",
+        "key_points": [
+          "Minimum: your outstanding mortgage balance (so family can pay it off)",
+          "Better: mortgage + 5–10 years of income replacement (so surviving spouse can maintain lifestyle)",
+          "Best: DIME method — full needs assessment (see calculator page)",
+          "On a $700K mortgage with a $90K income and 2 kids: recommended coverage = $1.2–1.5M for primary earner",
+          "On a $400K mortgage, both spouses working, kids grown: $500–$700K each may be sufficient"
+        ]
+      }
+    },
+    {
+      "_type": "termVsBankSection",
+      "heading": "Personal Term Life vs. Bank Mortgage Insurance: The Short Version",
+      "_writer_notes": {
+        "target_words": 180,
+        "focus": "Brief comparison — link to full mortgage-protection page for detail.",
+        "key_points": [
+          "Bank mortgage insurance: benefit decreases as you pay off mortgage; premiums stay the same; bank is beneficiary",
+          "Personal term life: fixed benefit regardless of mortgage balance; your family is beneficiary; portable",
+          "Cost: bank mortgage insurance often costs more per dollar of coverage than personal term life",
+          "Winner: personal term life in almost all cases for healthy Canadians under 60"
+        ],
+        "callout_after": "Link: 'Read the full comparison: Bank Mortgage Insurance vs. Personal Term Life Insurance'"
+      }
+    },
+    {
+      "_type": "howLongSection",
+      "heading": "How Long Should Your Coverage Last?",
+      "_writer_notes": {
+        "target_words": 150,
+        "focus": "Match term length to mortgage payoff timeline.",
+        "key_points": [
+          "Match your term to your mortgage amortization: 25-year mortgage? Consider a 25 or 30-year term.",
+          "20-year term is the most popular choice — covers most of working life and mortgage paydown",
+          "Some homeowners overlap terms: 10-year + 20-year stacked to reduce coverage as mortgage decreases",
+          "At renewal: reassess — if mortgage is paid off and kids are grown, you may not need as much coverage"
+        ]
+      }
+    },
+    {
+      "_type": "costTable",
+      "heading": "Sample Rates: Life Insurance for Homeowners",
+      "_writer_notes": {
+        "target_words": 180,
+        "focus": "Rates for common homeowner scenarios. $600K–$800K 20-year term.",
+        "key_points": [
+          "Age 32, male, $700K 20-year term: ~$58–$78/month",
+          "Age 32, female, $700K 20-year term: ~$44–$60/month",
+          "Age 38, male, $600K 20-year term: ~$60–$80/month",
+          "Age 38, female, $600K 20-year term: ~$47–$65/month",
+          "Age 43, male, $500K 20-year term: ~$70–$90/month",
+          "Comparison: bank mortgage insurance on $700K mortgage often $140–$190/month with decreasing benefit"
+        ]
+      }
+    },
+    {
+      "_type": "faqSection",
+      "heading": "Life Insurance for Homeowners — FAQ",
+      "faqs": [
+        {
+          "question": "Should I get life insurance before or after buying a home?",
+          "answer": "Ideally, you should have life insurance in place before or as soon as you take possession of your home. If you close on a purchase and don't yet have personal coverage, apply immediately. The mortgage creates an instant significant financial obligation.",
+          "_guidance": "Timing question — many readers are recent buyers."
+        },
+        {
+          "question": "Does life insurance pay off my mortgage when I die?",
+          "answer": "With a personal term life policy, the death benefit is paid to your named beneficiary. They can use the funds to pay off the mortgage if they choose — but they're not required to. With bank mortgage insurance, the payout goes directly to the lender to retire the mortgage balance.",
+          "_guidance": "Explain the beneficiary distinction clearly."
+        },
+        {
+          "question": "Can I get life insurance if my home has a second mortgage?",
+          "answer": "Yes. Second mortgages and HELOCs are simply additional debt. Include the total outstanding balance in your coverage calculation. Some people hold separate policies or separate riders to cover each debt.",
+          "_guidance": "Practical question for homeowners with layered debt."
+        },
+        {
+          "question": "What happens to my life insurance if I sell my home?",
+          "answer": "Nothing — your personal term life policy continues unchanged. It's not tied to the property. Bank mortgage insurance, however, is tied to the mortgage and ends when the mortgage is paid off or you move lenders. This is one of the key advantages of personal coverage.",
+          "_guidance": "Reinforce portability advantage of personal term."
+        }
+      ]
+    },
+    {
+      "_type": "ctaSection",
+      "heading": "Protect Your Home — Compare Life Insurance Quotes Free",
+      "subheading": "PolicyScanner compares 10+ Canadian insurers. See if you can get better coverage than your bank's mortgage insurance for less money.",
+      "cta_button": "Compare My Homeowner Coverage",
+      "_writer_notes": {
+        "target_words": 50,
+        "focus": "Focused CTA on the bank insurance comparison angle — this is the motivated buyer.",
+        "key_points": [
+          "Ontario-licensed advisors review your options",
+          "Takes 2 minutes",
+          "No obligation to buy"
+        ]
+      }
+    }
+  ]
+}

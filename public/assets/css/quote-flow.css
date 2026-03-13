@@ -1,0 +1,2094 @@
+/* 
+ * PolicyScanner Quote Flow CSS
+ * Optimized version with clean organization and compatibility with existing HTML
+ */
+
+/* ==============================
+ * CSS Variables
+ * ============================== */
+ :root {
+  /* Colors - aligned with global style.css variables */
+  --primary: #2AB4A8;
+  --primary-dark: #239b90;
+  --primary-hover: #1D9E92;
+  --primary-active: #097268;
+  --primary-light: rgba(42, 180, 168, 0.15);
+  --primary-lighter: rgba(42, 180, 168, 0.08);
+  --primary-faint: rgba(42, 180, 168, 0.04);
+  
+  /* Secondary Colors */
+  --secondary: #FF7A2E;
+  --secondary-hover: #E66A20;
+  --secondary-active: #D55D15;
+  
+  /* Background & Text Colors */
+  --bg-color: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-light: #94a3b8;
+  --heading-color: #1A2A33;
+  --border-color: #e2e8f0;
+  
+  /* Neutral colors */
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e0;
+  --neutral-400: #94a3b8;
+  --neutral-500: #718096;
+  --neutral-600: #64748b;
+  --neutral-700: #4a5568;
+  --neutral-800: #2d3748;
+  --neutral-900: #1e293b;
+  
+  /* Elevations */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-primary: 0 2px 5px rgba(42, 180, 168, 0.2);
+  --shadow-focus: 0 0 0 3px rgba(42, 180, 168, 0.15);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.07);
+  
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 0.95rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  
+  /* Font weights - aligned with global style.css */
+  --font-weight-regular: 400;
+  --font-weight-medium: 450;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 600;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 50px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  
+  /* Z-index layers */
+  --z-header: 1000;
+  --z-sidebar: 999;
+  --z-sidebar-toggle: 1001;
+  --z-overlay: 998;
+  --z-modal: 1040;
+  --z-sticky-cta: 980;
+  --z-floating: 990;
+  --z-toast: 1050;
+}
+
+/* ==============================
+ * Accessibility Helpers
+ * ============================== */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: var(--z-header);
+}
+
+.skip-to-content:focus-visible {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  background-color: var(--bg-color);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 0;
+  box-shadow: var(--shadow-md);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==============================
+ * Layout Structure
+ * ============================== */
+#quoteFlow {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 64px; /* Header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px; /* Space for sticky button on mobile */
+}
+
+.form-container {
+  width: 100%;
+  max-width: 700px;
+  padding: var(--spacing-xl) var(--spacing-md);
+  margin: 0 auto;
+}
+
+.form-step {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.form-step.transitioning-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.form-step.transitioning-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ==============================
+ * Typography
+ * ============================== */
+.form-step h1, 
+.form-step h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* ==============================
+ * Header Component
+ * ============================== */
+.lead-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: var(--z-header);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.top-bar {
+  height: 4px;
+  background-color: var(--primary);
+  width: 100%;
+}
+
+.header-container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-3xl);
+}
+
+.logo {
+  height: 32px;
+}
+
+/* Step Counter and Insurance Type */
+.step-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.step-counter {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.step-counter span {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary);
+}
+
+.insurance-type-pill {
+  background-color: var(--primary-lighter);
+  color: var(--primary);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.insurance-type-pill:hover {
+  background-color: var(--primary-light);
+}
+
+.insurance-type-pill i {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* Progress Bar */
+.progress-container {
+  position: relative;
+  height: 4px;
+}
+
+.progress {
+  height: 4px;
+  background-color: var(--neutral-200);
+  border-radius: 0;
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: var(--primary);
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==============================
+ * Sidebar Component
+ * ============================== */
+#sidebarCollapse {
+  position: fixed;
+  top: 12px;
+  left: 20px;
+  z-index: var(--z-sidebar-toggle);
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-sm);
+}
+
+#sidebarCollapse:hover {
+  background-color: var(--primary-lighter);
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 29, 31, 0.4);
+  z-index: var(--z-overlay);
+  visibility: hidden;
+  opacity: 0;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#sidebar {
+  width: 280px;
+  position: fixed;
+  top: 0;
+  left: -280px;
+  height: 100vh;
+  z-index: var(--z-sidebar);
+  background-color: var(--bg-color);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h3 {
+  color: var(--bg-color);
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xl);
+}
+
+#sidebar h4 {
+  color: var(--heading-color);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  padding: 0 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.btn-close {
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+.btn-close:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin: 0;
+}
+
+.sidebar-menu a {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.sidebar-menu a:hover {
+  background-color: var(--primary-lighter);
+  color: var(--primary);
+}
+
+.sidebar-menu a i {
+  margin-right: 12px;
+  color: var(--primary);
+  font-size: var(--font-size-lg);
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-menu a.text-danger i {
+  color: #dc3545;
+}
+
+.sidebar-menu a.text-danger:hover {
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+/* Sidebar Insurance Types */
+.sidebar-insurance-types {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-insurance-types li {
+  margin: 0;
+}
+
+.sidebar-insurance-types a {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.sidebar-insurance-types a:hover {
+  background-color: var(--primary-lighter);
+  color: var(--primary);
+}
+
+.sidebar-insurance-types a.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: var(--font-weight-semibold);
+  position: relative;
+}
+
+.sidebar-insurance-types a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary);
+}
+
+.sidebar-insurance-types i {
+  margin-right: 12px;
+  color: var(--primary);
+  font-size: var(--font-size-lg);
+  width: 20px;
+  text-align: center;
+}
+
+.security-message {
+  padding: 20px;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neutral-100);
+  margin-top: auto;
+}
+
+.security-message i {
+  margin-right: 8px;
+  color: var(--primary);
+}
+
+/* ==============================
+ * Insurance Card Component
+ * ============================== */
+.insurance-options {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insurance-card {
+  background-color: var(--neutral-50);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+
+.insurance-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 6px 12px rgba(42, 180, 168, 0.1);
+}
+
+.insurance-card-content {
+  padding: var(--spacing-md);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.insurance-card.selected {
+  background-color: #e7f6f6; /* Softer than var(--primary-light) */
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary), 0 4px 12px rgba(42, 180, 168, 0.08);
+}
+
+.insurance-card.selected .insurance-card-content::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='14' height='14'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' d='M5 12l5 5L20 7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  box-shadow: var(--shadow-xs);
+}
+
+.insurance-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-lighter);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.insurance-card.selected .insurance-icon {
+  background-color: var(--primary);
+  color: white;
+}
+
+.insurance-icon i {
+  font-size: 16px;
+}
+
+.insurance-title {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  margin-bottom: 0;
+}
+
+.insurance-card.selected .insurance-title {
+  color: var(--primary-dark);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ==============================
+ * Selection Components (Province, Gender, Tobacco)
+ * ============================== */
+.province-selection,
+.gender-selection,
+.tobacco-selection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Original class mappings preserved for compatibility */
+.btn-province,
+.btn-gender,
+.btn-tobacco {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  padding: 12px 15px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+}
+
+.btn-province:hover,
+.btn-gender:hover,
+.btn-tobacco:hover {
+  background-color: var(--primary-lighter);
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-province.selected,
+.btn-gender.selected,
+.btn-tobacco.selected {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary), 0 4px 12px rgba(42, 180, 168, 0.15);
+  font-weight: var(--font-weight-semibold);
+  padding-left: 40px;
+}
+
+/* Selection indicator */
+.btn-province.selected::after,
+.btn-gender.selected::after,
+.btn-tobacco.selected::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='14' height='14'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' d='M5 12l5 5L20 7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-province.selected::after {
+  content: '✓';
+  margin-left: 8px;
+}
+
+/* Icons inside buttons */
+.btn-gender i,
+.btn-tobacco i {
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.btn-gender.selected i,
+.btn-tobacco.selected i {
+  opacity: 0;
+}
+
+/* ==============================
+ * Form Elements
+ * ============================== */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 5px;
+}
+
+.form-text {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin-top: 6px;
+}
+
+.form-control {
+  height: 42px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  border-color: var(--neutral-200);
+  font-size: var(--font-size-base);
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-focus);
+}
+
+/* DOB Inputs */
+.dob-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.dob-inputs .form-control {
+  text-align: center;
+  font-size: var(--font-size-base);
+  width: 100%;
+}
+
+/* Form validation */
+.form-control.is-invalid {
+  border-color: #dc3545;
+  background-image: none;
+  padding-right: var(--spacing-md);
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+.invalid-feedback.show {
+  display: block;
+}
+
+.form-control.is-valid {
+  border-color: #198754;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* WhatsApp toggle styling */
+.whatsapp-toggle-container {
+  background-color: var(--primary-lighter);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  transition: all var(--transition-fast);
+  margin: 12px 0;
+}
+
+.form-switch .form-check-input {
+  cursor: pointer;
+  height: 24px;
+  width: 48px;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.form-switch .form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(42, 180, 168, 0.25);
+}
+
+/* Phone number field */
+.phone-hint {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  color: var(--neutral-400);
+  pointer-events: none;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+#phoneNumber:focus + .phone-hint,
+#phoneNumber:not(:placeholder-shown) + .phone-hint {
+  opacity: 0;
+}
+
+/* Insurance age container */
+.insurance-age-container {
+  background-color: var(--primary-lighter);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  line-height: 1.3;
+  color: var(--text-primary);
+  margin-top: 12px;
+}
+
+/* Privacy toggle and collapsible */
+.privacy-toggle {
+  font-size: var(--font-size-sm);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  display: inline-flex;
+  align-items: center;
+}
+
+.privacy-toggle:hover,
+.privacy-toggle:focus {
+  text-decoration: underline;
+}
+
+.privacy-toggle .fa-chevron-down {
+  transition: transform var(--transition-fast);
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.privacy-toggle[aria-expanded="true"] .fa-chevron-down {
+  transform: rotate(-180deg);
+}
+
+.privacy-note {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+/* ==============================
+ * Button Components
+ * ============================== */
+.btn {
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-normal);
+}
+
+/* Primary Buttons */
+.btn-primary,
+#step1Next,
+#step5Next,
+#step6Submit,
+#showQuotesBtn,
+#mobileShowQuotesBtn,
+#stickyNext {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  padding: 10px 24px;
+  font-size: var(--font-size-base);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover:not([disabled]),
+#step1Next:hover:not([disabled]),
+#step5Next:hover:not([disabled]),
+#step6Submit:hover:not([disabled]),
+#showQuotesBtn:hover:not([disabled]),
+#mobileShowQuotesBtn:hover:not([disabled]),
+#stickyNext:hover:not([disabled]) {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: var(--shadow-primary);
+}
+
+/* Secondary Buttons */
+.btn-outline-secondary,
+#step2Back,
+#step3Back,
+#step4Back,
+#step5Back,
+#step6Back {
+  color: var(--neutral-600);
+  border-color: var(--neutral-200);
+  background-color: var(--bg-color);
+  padding: 8px 20px;
+  font-size: var(--font-size-sm);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-outline-secondary:hover,
+#step2Back:hover,
+#step3Back:hover,
+#step4Back:hover,
+#step5Back:hover,
+#step6Back:hover {
+  background-color: var(--neutral-50);
+  color: var(--neutral-700);
+  border-color: var(--neutral-300);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Button loading state */
+.btn-primary.submitting,
+.btn-primary.submitting:hover,
+.btn-primary.submitting:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* Fix for Continue and Back buttons centering in mobile views */
+@media (max-width: 768px) {
+  /* Continue button fix */
+  .btn-primary,
+  a.btn-primary,
+  button.btn-primary,
+  a[href="#"].btn-primary,
+  #step1Next,
+  #step5Next,
+  #step6Submit,
+  #showQuotesBtn,
+  #mobileShowQuotesBtn,
+  .sticky-cta .btn,
+  #stickyNext {
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  /* Back button fix */
+  .btn-outline-secondary,
+  a.btn-outline-secondary,
+  button.btn-outline-secondary,
+  a[href="#"].btn-outline-secondary,
+  #step2Back,
+  #step3Back,
+  #step4Back,
+  #step5Back,
+  #step6Back {
+    display: block !important;
+    width: auto !important;
+    min-width: 120px !important;
+    max-width: 180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  /* Fix for button containers */
+  .form-container > div:last-child,
+  .form-step > div:last-child,
+  .d-grid.gap-2.d-md-flex.justify-content-md-center,
+  .sticky-cta {
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
+/* ==============================
+ * Avatar and User Components
+ * ============================== */
+.avatar-container {
+  display: block;
+  text-align: center;
+  margin: 0 auto var(--spacing-lg) auto;
+  width: 100%;
+  position: relative;
+}
+
+.avatar-image {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.avatar-tooltip {
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-color);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.avatar-container:hover .avatar-tooltip {
+  visibility: visible;
+  opacity: 1;
+  top: -45px;
+}
+
+.avatar-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--bg-color);
+}
+
+/* ==============================
+ * Modal Components
+ * ============================== */
+.modal-content {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: none;
+  box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.modal-title {
+  color: var(--heading-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+.modal-body {
+  padding: var(--spacing-lg);
+}
+
+/* Final Questions Modal */
+#finalQuestionsModal .modal-content {
+  position: relative;
+  background: linear-gradient(to bottom, var(--bg-color), #fafbfb);
+  border-radius: var(--radius-xl);
+}
+
+#finalQuestionsModal .modal-dialog::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-faint);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+
+#finalQuestionsModal .modal-header {
+  padding: 15px 15px 5px;
+  border-bottom: none;
+}
+
+.questions-indicator {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  color: var(--neutral-600);
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-pill);
+  padding: 3px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  margin-bottom: 10px;
+}
+
+.questions-indicator span {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary);
+}
+
+.question-container {
+  display: none;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.question-container.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.question-container.exit {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.question-container h3 {
+  font-size: var(--font-size-xl);
+  color: var(--neutral-900);
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.refinement-hint {
+  text-align: center;
+  margin-top: -16px;
+  margin-bottom: 20px;
+}
+
+.refinement-hint small {
+  font-size: var(--font-size-xs);
+  color: var(--neutral-400);
+  font-style: italic;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.option-btn {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  padding: 12px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  box-shadow: var(--shadow-xs);
+}
+
+.option-btn:hover {
+  background-color: var(--primary-lighter);
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: var(--shadow-hover);
+}
+
+.option-btn.selected {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary), 0 4px 12px rgba(42, 180, 168, 0.15);
+  font-weight: var(--font-weight-semibold);
+  padding-left: 40px;
+}
+
+.option-btn.selected::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='14' height='14'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' d='M5 12l5 5L20 7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  box-shadow: var(--shadow-xs);
+}
+
+.option-btn i {
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.option-btn.selected i {
+  opacity: 0;
+}
+
+/* Avatar Message Bubble */
+.avatar-message {
+  position: absolute;
+  top: -55px;
+  left: 20px;
+  background: var(--bg-color);
+  border-radius: var(--radius-lg);
+  padding: 10px 16px;
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: var(--transition-normal);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.avatar-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.avatar-message::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  background: var(--bg-color);
+  transform: rotate(45deg);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.04);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.avatar-message-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar-mini {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+/* Mobile Modal Footer */
+.mobile-modal-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1060;
+  background-color: var(--bg-color);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mobile-modal-footer .btn {
+  flex: 1;
+}
+
+/* ==============================
+ * Helper Classes and Utilities
+ * ============================== */
+.advisor-link {
+  color: var(--primary);
+  font-size: var(--font-size-sm);
+  display: inline-flex;
+  align-items: center;
+}
+
+.advisor-link:hover {
+  color: var(--primary-hover);
+}
+
+.advisor-link i {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.info-tooltip {
+  cursor: pointer;
+}
+
+.trust-indicator {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+}
+
+.trust-indicator i {
+  color: var(--primary);
+  margin-right: var(--spacing-xs);
+}
+
+/* ==============================
+ * Floating Elements
+ * ============================== */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  padding: 12px 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: var(--z-sticky-cta);
+  transition: transform 0.3s ease;
+}
+
+.sticky-cta.hidden {
+  transform: translateY(100%);
+}
+
+.help-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  color: var(--primary);
+  border: 1px solid rgba(42, 180, 168, 0.3);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: var(--z-floating);
+}
+
+.help-button:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary);
+}
+
+.help-button i {
+  font-size: 20px;
+}
+
+/* Floating Banner */
+.floating-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-toast);
+  max-width: 300px;
+  animation: slideInUp 0.5s ease;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.banner-content span {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ==============================
+ * Animations
+ * ============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.question-container.active {
+  animation: fadeInRight 0.3s ease forwards;
+}
+
+.question-container.exit {
+  animation: fadeOutLeft 0.3s ease forwards;
+}
+
+/* ==============================
+ * Responsive Adjustments
+ * ============================== */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+    justify-content: center;
+  }
+  
+  .step-info-wrapper {
+    position: static;
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+  }
+  
+  .form-step h1, .form-step h2 {
+    font-size: 1.375rem; /* 22px on mobile */
+  }
+
+  #quoteFlow {
+    padding-top: 52px;
+  }
+  
+  .btn-province {
+    width: 100%;
+    max-width: 220px;
+  }
+  
+  .gender-selection, 
+  .tobacco-selection {
+    width: 100%;
+  }
+  
+  .help-button {
+    width: 42px;
+    height: 42px;
+    bottom: 70px; /* Adjusted to account for sticky CTA */
+    right: 16px;
+  }
+  
+  .help-button i {
+    font-size: 18px;
+  }
+  
+  .insurance-card-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+  
+  #finalQuestionsModal .modal-footer {
+    display: none !important;
+  }
+  
+  #finalQuestionsModal .modal-body {
+    padding-bottom: 80px; /* Extra space for sticky footer */
+  }
+  
+  .floating-banner {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+  }
+
+  .avatar-message {
+    top: -50px;
+    left: 10px;
+  }
+  
+  /* Layout Adjustments */
+  .form-container {
+    padding: 10px 10px 15px;
+  }
+  
+  .form-step {
+    padding: 15px 0 20px;
+  }
+  
+  /* Header Adjustments */
+  .header-container {
+    height: 48px;
+    padding: 0 10px;
+  }
+  
+  .logo-container {
+    padding-left: 30px;
+  }
+  
+  .logo {
+    height: 24px;
+  }
+  
+  .step-counter {
+    font-size: 0.7rem;
+  }
+  
+  .insurance-type-pill {
+    padding: 2px 8px;
+    font-size: 0.7rem;
+  }
+  
+  #sidebarCollapse {
+    top: 12px;
+    left: 10px;
+  }
+  
+  .progress-container, 
+  .progress, 
+  .progress-bar {
+    height: 3px;
+  }
+  
+  /* Avatar & Images */
+  .avatar-container {
+    margin-bottom: 15px;
+  }
+  
+  .avatar-image {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Insurance Cards */
+  .insurance-options {
+    margin-top: 5px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .insurance-card {
+    margin-bottom: 4px;
+  }
+  
+  .insurance-card-content {
+    padding: 8px 12px !important;
+    min-height: auto !important;
+  }
+  
+  .insurance-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+    margin-right: 10px !important;
+  }
+  
+  .insurance-icon i {
+    font-size: 12px;
+  }
+  
+  .insurance-title {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+  
+  .insurance-card.selected .insurance-card-content::after {
+    width: 16px;
+    height: 16px;
+    right: 10px;
+  }
+  
+  /* Form Elements */
+  .form-control,
+  .form-select {
+    height: 42px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .form-group,
+  .mb-3 {
+    margin-bottom: 15px;
+  }
+  
+  .dob-inputs {
+    gap: 6px;
+  }
+  
+  .dob-inputs .form-control {
+    height: 42px;
+    padding: 8px 6px;
+  }
+  
+  .whatsapp-toggle-container {
+    padding: 10px 12px;
+  }
+  
+  /* Modal Adjustments */
+  .modal-dialog {
+    margin: 10px;
+    max-width: calc(100% - 20px);
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
+  
+  .question-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .option-btn {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+  
+  #finalQuestionsModal .modal-body {
+    padding: 0.5rem 1.25rem 5rem;
+  }
+  
+  .options-container {
+    max-width: 100%;
+  }
+  
+  /* Security Footer */
+  .mobile-security-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin-top: 20px;
+  }
+  
+  .mobile-security-footer i {
+    color: var(--primary);
+    margin-right: 8px;
+  }
+  
+  .mobile-security-footer span {
+    font-size: 0.8rem;
+    color: var(--neutral-500);
+  }
+  
+  /* Remove Sticky CTA on mobile */
+  .sticky-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+  .form-step h1, 
+  .form-step h2 {
+    font-size: 1.1rem;
+  }
+  
+  .avatar-image {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .form-control,
+  .form-select,
+  .dob-inputs .form-control {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .btn,
+  .btn-lg,
+  .btn-province, 
+  .btn-gender, 
+  .btn-tobacco,
+  .option-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .insurance-card-content {
+    padding: 7px 10px !important;
+  }
+  
+  .insurance-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px !important;
+  }
+  
+  .insurance-title {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==============================
+ * Override Hover Transforms
+ * ============================== */
+.insurance-card:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover,
+.coverage-option:hover,
+.quote-card:hover,
+.review-card:hover,
+.phone-mockup:hover,
+.period-btn:hover,
+.filter-pill:hover,
+.sidebar-menu a:hover,
+.features-tab:hover,
+.option-btn:hover,
+.btn-link:hover,
+.featured-box:hover,
+.learn-card:hover,
+.btn-province:hover,
+.btn-gender:hover,
+.btn-tobacco:hover,
+.avatar-container:hover .avatar-tooltip,
+.help-button:hover,
+.advisor-link:hover i {
+  transform: none !important;
+}
+
+/* ==============================
+ * Override Animation Controls from style.css
+ * ============================== */
+/* Ensure our button centering works even with global animation overrides */
+@media (max-width: 768px) {
+  /* Continue button always centered with !important to override any animations */
+  .btn-primary,
+  a.btn-primary,
+  button.btn-primary,
+  a[href="#"].btn-primary,
+  #step1Next,
+  #step5Next,
+  #step6Submit,
+  #showQuotesBtn,
+  #mobileShowQuotesBtn,
+  .sticky-cta .btn,
+  #stickyNext {
+    transform: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  
+  /* Back button always centered */
+  .btn-outline-secondary,
+  a.btn-outline-secondary,
+  button.btn-outline-secondary,
+  a[href="#"].btn-outline-secondary,
+  #step2Back,
+  #step3Back,
+  #step4Back,
+  #step5Back,
+  #step6Back {
+    transform: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  
+  /* Force all button containers to center their contents */
+  .d-grid,
+  .d-grid.gap-2,
+  .d-grid.gap-2.d-md-flex,
+  .d-grid.gap-2.d-md-flex.justify-content-md-center {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+/* 
+ * Mobile Optimizations for PolicyScanner Quote Flow
+ * These styles fix mobile-specific issues to create a more polished experience
+ */
+
+/* ==============================
+ * Fix Double Button Issue
+ * ============================== */
+
+/* Hide the non-sticky continue button in mobile views */
+@media (max-width: 768px) {
+  /* Hide regular next buttons when sticky is visible */
+  #step1Next,
+  #step5Next,
+  #step6Submit,
+  #showQuotesBtn {
+    display: none !important;
+  }
+  
+  /* Make only the sticky button visible */
+  .sticky-cta {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 12px 15px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: var(--z-sticky-cta);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  /* Ensure proper padding at the bottom to account for sticky button */
+  #quoteFlow {
+    padding-bottom: 70px !important;
+  }
+  
+  /* Remove unnecessary back button margins */
+  #step2Back,
+  #step3Back,
+  #step4Back,
+  #step5Back,
+  #step6Back {
+    margin-top: 0 !important;
+  }
+}
+
+/* ==============================
+ * Fix Province Selection Alignment
+ * ============================== */
+
+@media (max-width: 768px) {
+  /* Center align province selection buttons */
+  .province-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px; /* Match width with other form elements */
+    margin: 0 auto;
+    gap: var(--spacing-md);
+  }
+  
+  .btn-province {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Consistent Button Sizing */
+  .btn-province,
+  .btn-gender,
+  .btn-tobacco {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+/* ==============================
+ * Remove Redundant "Show My Quotes" Button
+ * ============================== */
+
+@media (max-width: 768px) {
+  #mobileShowQuotesBtn {
+    display: none !important;
+  }
+  
+  /* Adjust mobile modal footer to be cleaner with just necessary buttons */
+  .mobile-modal-footer {
+    padding: 12px 15px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  /* If the button was used for navigation, use this instead */
+  .mobile-modal-footer .btn-primary:not(#mobileShowQuotesBtn) {
+    display: block !important;
+    width: 100%;
+  }
+}
+
+/* ==============================
+ * General Mobile Polish & Refinements
+ * ============================== */
+
+@media (max-width: 768px) {
+  /* Better avatar sizing and spacing */
+  .avatar-container {
+    margin-bottom: 20px;
+  }
+  
+  .avatar-image {
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Reduce unnecessary space */
+  .form-step {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+  
+  /* More compact headings without losing readability */
+  .form-step h1, 
+  .form-step h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  
+  .form-step p.text-secondary {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Fix insurance cards alignment and spacing */
+  .insurance-options {
+    margin-top: 5px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .insurance-card {
+    margin-bottom: 4px;
+  }
+  
+  .insurance-card-content {
+    padding: 8px 12px !important;
+    min-height: auto !important;
+  }
+  
+  /* Proper vertical spacing for all CTA buttons */
+  .btn-outline-secondary {
+    margin-top: 10px !important;
+  }
+  
+  /* Ensure floating help button doesn't overlap with sticky footer */
+  .help-button {
+    bottom: 80px;
+  }
+  
+  /* Fix modal spacing for better appearance on small screens */
+  .modal-body {
+    padding: 15px;
+  }
+  
+  /* Fix header height and padding to be consistent */
+  .header-container {
+    height: 52px !important;
+    padding: 0 15px;
+  }
+  
+  /* Better vertical rhythm throughout the form */
+  .form-group,
+  .mb-3,
+  .mb-4 {
+    margin-bottom: 15px !important;
+  }
+  
+  /* Fix header positioning and spacing */
+  .lead-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: var(--z-header);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  /* Give focus to the actual form area */
+  .form-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+  }
+  
+  /* Fix trust indicator positioning */
+  .trust-indicator {
+    margin-top: 15px !important;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+  }
+  
+  /* Fix tooltips for mobile view */
+  .avatar-tooltip {
+    top: -40px;
+  }
+  
+  /* Improve gender and tobacco button alignment */
+  .gender-selection,
+  .tobacco-selection {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Improve form input fields appearance */
+  .form-control,
+  .form-select {
+    height: 44px;
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+  
+  /* Better contact form layout */
+  .contact-form {
+    max-width: 100% !important;
+  }
+  
+  /* Fix modal message bubble appearance */
+  .avatar-message {
+    top: -50px;
+    left: 15px;
+    max-width: 80%;
+  }
+}
+
+/* ==============================
+ * Extra Small Screen Optimizations
+ * ============================== */
+
+@media (max-width: 360px) {
+  /* Further size adjustments for very small screens */
+  .form-step h1, 
+  .form-step h2 {
+    font-size: 1.2rem;
+  }
+  
+  .avatar-image {
+    width: 70px;
+    height: 70px;
+  }
+  
+  /* Fix button text size */
+  .btn,
+  .btn-primary,
+  .btn-outline-secondary {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Reduce side padding */
+  .form-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* ==============================
+ * Extra Touch Targets for Mobile
+ * ============================== */
+
+@media (max-width: 768px) {
+  /* Larger touch targets for all interactive elements */
+  .btn,
+  .form-control,
+  .form-select,
+  button,
+  input,
+  select,
+  .btn-province,
+  .btn-gender,
+  .btn-tobacco,
+  .insurance-card {
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+  }
+  
+  /* Ensure proper spacing between stacked elements */
+  .form-step > div:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  /* Focus & active states enhancement for touch */
+  .btn:active,
+  .form-control:active,
+  .insurance-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}

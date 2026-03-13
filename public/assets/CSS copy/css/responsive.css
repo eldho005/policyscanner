@@ -1,0 +1,146 @@
+/* OpenTeQ immigration mart responsive file */
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px)  {
+    #content {
+        width: 100%;
+    
+        }
+        .hero h1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .how-it-works {
+            padding: 60px 0px;
+        }
+        #testimonialSlider .owl-next {
+            right: 3%;
+        }        
+        #testimonialSlider .owl-prev {
+            left: 70%;
+        }
+        .social-icons a{
+            color: var(--primary-color) !important;
+        }
+        .step-content {
+            flex-grow: 1;
+            padding-top: var(--space-xl);
+        }
+        .date-inputs div {
+            width: 33%;
+        }
+        
+        .date-inputs {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar-menu {
+            margin-top: 10px;
+        }
+        .price-section {
+            display: block !important;
+        }
+        .filter-pills {
+            flex-wrap: wrap;
+        }
+        .cta-box .btn {
+            padding-top: 11px;
+        }
+        .card.mb-4.sticky-lg-top{
+            top: 20px!important;
+        }
+        .expert-view .d-flex.align-items-center.mb-3{
+            display: block !important;
+        }
+        body {
+            padding-bottom: 0px;
+        }
+        .section-header {
+            display: block
+        ;
+        }
+        .section-details {
+            display: block;
+            text-align: left;
+        }
+        .section-details2 {
+            text-align: left;
+            justify-content: space-between;
+        }
+        .life-event-cards {
+            display: block;
+        }
+        .life-event-card{
+            margin-bottom: 6px;
+        }
+        .coverage-options {
+            display: ruby
+        ;
+    }
+    .guide-card{
+        display: block;
+    }
+    .ps-feature-cards {
+        display: block;
+    }
+    .ps-feature-card {
+       margin-bottom: 8px;
+    }
+
+    }
+
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .filter-pills {
+        flex-wrap: wrap;
+    }
+
+    #content {
+        width: 100%;
+    
+        }
+        .step-content {
+            flex-grow: 1;
+            padding-top: var(--space-xl);
+        }
+        .date-inputs div {
+            width: 33%;
+        }
+        
+        .date-inputs {
+            display: flex;
+            width: 100%;
+        }
+
+
+}

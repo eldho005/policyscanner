@@ -1,0 +1,996 @@
+/* ===================================================================
+   POLICYSCANNER – INSURANCE PAGE  (content_global.css)
+   Full rebuild v4. BEM throughout. No generic class name conflicts.
+   =================================================================== */
+
+/* ── DESIGN TOKENS ─────────────────────────────────────────────────── */
+/*
+  Each colour token is declared twice: hex first (legacy fallback), then
+  oklch (modern, wide-gamut). Browsers that don't support oklch() silently
+  ignore the second declaration and use the hex.
+  Support: Chrome 111+, Firefox 113+, Safari 15.4+
+*/
+:root {
+  /* Container */
+  --page-max        : 860px;
+  --page-px         : clamp(1rem, 4vw, 2rem);
+
+  /* Type scale */
+  --fs-xs           : clamp(0.7rem,  1.2vw, 0.8rem);
+  --fs-sm           : clamp(0.8rem,  1.4vw, 0.875rem);
+  --fs-base         : clamp(0.9rem,  1.6vw, 1rem);
+  --fs-lg           : clamp(1rem,    1.8vw, 1.125rem);
+  --fs-xl           : clamp(1.125rem,2vw,   1.25rem);
+  --fs-2xl          : clamp(1.375rem,2.5vw, 1.625rem);
+  --fs-3xl          : clamp(1.75rem, 3.5vw, 2.5rem);
+
+  /* Line heights */
+  --lh-tight        : 1.15;
+  --lh-snug         : 1.3;
+  --lh-normal       : 1.65;
+  --lh-relaxed      : 1.75;
+
+  /* Spacing */
+  --sp-2xs          : 0.25rem;
+  --sp-xs           : 0.5rem;
+  --sp-sm           : 0.75rem;
+  --sp-md           : 1rem;
+  --sp-lg           : 1.5rem;
+  --sp-xl           : 2rem;
+  --sp-2xl          : 3rem;
+  --sp-3xl          : 4.5rem;
+
+  /* Surfaces */
+  --c-bg            : #FCFEFE;
+  --c-bg            : oklch(99.2% 0.004 198);
+  --c-surface       : #FFFFFF;
+  --c-surface       : oklch(100%  0     0);
+  --c-surface-alt   : #F7FAFA;
+  --c-surface-alt   : oklch(97.5% 0.004 198);
+
+  /* Brand — teal */
+  --c-brand         : #1FA99D;
+  --c-brand         : oklch(67%   0.10  193);
+  --c-brand-hover   : #178880;
+  --c-brand-hover   : oklch(57%   0.09  193);
+  --c-brand-light   : rgba(31, 169, 157, 0.08);
+  --c-brand-light   : oklch(67%   0.10  193 / 0.08);
+  --c-brand-light2  : rgba(31, 169, 157, 0.16);
+  --c-brand-light2  : oklch(67%   0.10  193 / 0.16);
+  --c-brand-ring    : rgba(31, 169, 157, 0.12);
+  --c-brand-ring    : oklch(67%   0.10  193 / 0.12);
+
+  /* Accent — orange CTA */
+  --c-accent        : #FF7A2A;
+  --c-accent        : oklch(73%   0.185 43.5);
+  --c-accent-hover  : #E06414;
+  --c-accent-hover  : oklch(65%   0.190 42);
+
+  /* Semantic — amber warning */
+  --c-warn          : #D97706;
+  --c-warn          : oklch(66%   0.163 66);
+  --c-warn-bg       : #FFFBEB;
+  --c-warn-bg       : oklch(98.5% 0.034 97);
+  --c-warn-border   : #FCD34D;
+  --c-warn-border   : oklch(87%   0.170 97);
+
+  /* Semantic — green (tip callout) */
+  --c-green         : #10B981;
+  --c-green         : oklch(72%   0.15  155);
+  --c-green-bg      : rgba(16, 185, 129, 0.06);
+  --c-green-bg      : oklch(72%   0.15  155 / 0.06);
+
+  /* Text — blue-slate axis */
+  --c-text          : #1D2939;
+  --c-text          : oklch(28%   0.024 254);
+  --c-text-2        : #475467;
+  --c-text-2        : oklch(43%   0.022 254);
+  --c-text-3        : #98A2B3;
+  --c-text-3        : oklch(68%   0.020 254);
+
+  /* Borders */
+  --c-border        : #E4E7EC;
+  --c-border        : oklch(91%   0.008 254);
+  --c-border-light  : #F2F4F7;
+  --c-border-light  : oklch(95.5% 0.006 254);
+
+  /* Shadows — minimal, flat */
+  --shadow-xs       : 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm       : 0 0 0 1px rgba(0,0,0,0.04), 0 2px 6px  rgba(0,0,0,0.05);
+  --shadow-md       : 0 0 0 1px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-btn      : 0 1px 2px rgba(0,0,0,0.08);
+
+  /* Radii */
+  --radius-sm       : 8px;
+  --radius-md       : 12px;
+  --radius-lg       : 16px;
+  --radius-xl       : 20px;
+  --radius-pill     : 999px;
+
+  /* Transition */
+  --speed           : 180ms ease;
+}
+
+/* ── SCOPED RESET ───────────────────────────────────────────────────── */
+.page-container *,
+.page-container *::before,
+.page-container *::after {
+  box-sizing: border-box;
+}
+
+/* ===================================================================
+   1. PAGE CONTAINER
+   =================================================================== */
+.page-container {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--page-px);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--c-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===================================================================
+   2. PAGE HEADER  (hero_section)
+   =================================================================== */
+.page-header {
+  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 3vw, 2.25rem);
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface-alt);
+  margin-inline: calc(-1 * var(--page-px));
+  padding-inline: var(--page-px);
+}
+
+.page-header__tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-xs) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-brand) !important;
+  background: var(--c-brand-light2);
+  padding: 0.3em 0.85em;
+  border-radius: var(--radius-pill);
+  margin: 0 0 var(--sp-md) 0;
+  text-decoration: none !important;
+}
+
+.page-header__title {
+  font-size: var(--fs-3xl) !important;
+  font-weight: 700 !important;
+  line-height: var(--lh-tight) !important;
+  letter-spacing: -0.03em;
+  color: var(--c-text) !important;
+  margin: 0 0 var(--sp-md) 0 !important;
+  text-wrap: balance;
+  max-width: 22ch;
+}
+
+.page-header__desc {
+  font-size: var(--fs-lg) !important;
+  color: var(--c-text-2) !important;
+  line-height: var(--lh-relaxed) !important;
+  margin: 0 0 var(--sp-lg) 0 !important;
+  max-width: 58ch;
+}
+
+.page-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  font-size: var(--fs-xs) !important;
+  color: var(--c-text-3) !important;
+  margin: 0 !important;
+}
+
+.page-header__meta span + span::before {
+  content: '\B7';
+  margin-right: 0.5rem;
+}
+
+/* ===================================================================
+   3. TRUST BAR
+   =================================================================== */
+.trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  padding-block: clamp(0.875rem, 2vw, 1.25rem);
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+.trust-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem clamp(1rem, 3vw, 2rem);
+  position: relative;
+}
+
+.trust-bar__item + .trust-bar__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--c-border);
+}
+
+.trust-bar__value {
+  font-size: var(--fs-lg) !important;
+  font-weight: 700 !important;
+  color: var(--c-brand) !important;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-decoration: none !important;
+}
+
+.trust-bar__label {
+  font-size: var(--fs-xs) !important;
+  color: var(--c-text-3) !important;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: 0.125rem;
+}
+
+/* ===================================================================
+   4. CONTENT BLOCK IMAGE
+   =================================================================== */
+.content-block__image {
+  margin: var(--sp-md) 0 var(--sp-xl);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  line-height: 0;
+}
+.content-block__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+/* ===================================================================
+   5. MAIN LAYOUT
+   =================================================================== */
+.main-layout {
+  padding-block: clamp(2rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
+}
+
+.main-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.main-content article {
+  width: 100%;
+}
+
+/* ===================================================================
+   6. TYPOGRAPHY
+   =================================================================== */
+.page-container h1,
+.page-container h2,
+.page-container h3,
+.page-container h4 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--c-text);
+  text-wrap: balance;
+}
+
+.page-container h2 {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--sp-md);
+}
+
+.page-container h3 {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--sp-sm);
+}
+
+.page-container h4 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  margin-bottom: var(--sp-xs);
+}
+
+.page-container .fluid-heading {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: -0.02em;
+}
+
+/* Section heading spacing — no border (clean/minimal) */
+.main-content section > .fluid-heading:first-child,
+.main-content section > h2:first-child {
+  margin-bottom: var(--sp-md);
+}
+
+.page-container p {
+  margin: 0 0 var(--sp-md) 0;
+  line-height: var(--lh-normal);
+}
+.page-container p:last-child { margin-bottom: 0; }
+
+.page-container strong { font-weight: 700; color: var(--c-text); }
+
+/* Link base — excluded from button-styled elements */
+.page-container a:not(.cta-banner__button):not(.cta-button) {
+  color: var(--c-brand);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--speed);
+}
+.page-container a:not(.cta-banner__button):not(.cta-button):hover {
+  color: var(--c-brand-hover);
+  text-decoration: underline;
+}
+
+/* Lists */
+.page-container ul,
+.page-container ol {
+  margin: var(--sp-sm) 0;
+  padding-left: var(--sp-xl);
+}
+.page-container li {
+  margin-bottom: var(--sp-xs);
+  line-height: var(--lh-relaxed);
+}
+.page-container li::marker {
+  color: var(--c-brand);
+}
+
+/* ===================================================================
+   7. SECTION SPACING
+   =================================================================== */
+.main-content section {
+  margin-bottom: var(--sp-3xl);
+}
+.main-content section:last-child {
+  margin-bottom: 0;
+}
+.main-content section > h2:first-child,
+.main-content section > h3:first-child {
+  margin-top: 0;
+}
+.main-content section h2 + *,
+.main-content section h3 + *,
+.main-content section h4 + * {
+  margin-top: var(--sp-sm);
+}
+.main-content section p + p {
+  margin-top: var(--sp-md);
+}
+
+/* ===================================================================
+   8. DEFINITION BLOCK
+   =================================================================== */
+.definition-block {
+  background: var(--c-brand-light);
+  border: 1px solid rgba(31, 169, 157, 0.20);
+  border: 1px solid oklch(67% 0.10 193 / 0.20);
+  border-left: 4px solid var(--c-brand);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--sp-lg) var(--sp-xl);
+  margin-bottom: var(--sp-xl);
+}
+
+.definition-block__title {
+  font-size: var(--fs-sm) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-brand) !important;
+  margin: 0 0 var(--sp-xs) 0;
+}
+
+.definition-block__text {
+  font-size: var(--fs-base) !important;
+  color: var(--c-text) !important;
+  line-height: var(--lh-relaxed) !important;
+  margin: 0 !important;
+}
+
+/* ===================================================================
+   9. CALLOUT COMPONENT  (full BEM — no bare .header/.title conflicts)
+   =================================================================== */
+.callout-component {
+  background: var(--c-brand-light);
+  border-left: 4px solid var(--c-brand);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--sp-lg) var(--sp-xl);
+  margin-bottom: var(--sp-xl);
+  box-shadow: var(--shadow-xs);
+}
+
+.callout-component--warning {
+  background: var(--c-warn-bg);
+  border-left-color: var(--c-warn);
+}
+
+.callout-component--tip {
+  background: var(--c-green-bg);
+  border-left-color: var(--c-green);
+}
+
+.callout-component__header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-xs);
+}
+
+.callout-component__icon {
+  flex-shrink: 0;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.callout-component__title {
+  font-size: var(--fs-sm) !important;
+  font-weight: 700 !important;
+  color: var(--c-text) !important;
+  margin: 0 !important;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.callout-component__body {
+  font-size: var(--fs-sm) !important;
+  color: var(--c-text-2) !important;
+  line-height: var(--lh-relaxed) !important;
+}
+
+.callout-component__body p {
+  margin: 0 !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  line-height: inherit !important;
+}
+
+/* ===================================================================
+   10. EXAMPLE CARD
+   =================================================================== */
+.example-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  margin-bottom: var(--sp-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.example-card__title {
+  font-size: var(--fs-base) !important;
+  font-weight: 700 !important;
+  color: var(--c-brand) !important;
+  margin: 0 0 var(--sp-sm) 0 !important;
+}
+
+.example-card p {
+  font-size: var(--fs-base) !important;
+  color: var(--c-text-2) !important;
+  line-height: var(--lh-relaxed) !important;
+  margin: 0 0 var(--sp-sm) 0 !important;
+}
+.example-card p:last-child { margin-bottom: 0 !important; }
+
+/* ===================================================================
+   11. TABLE
+   =================================================================== */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--sp-xl);
+}
+
+.table-component {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--c-surface);
+  font-size: var(--fs-sm);
+}
+
+.table-component th {
+  background: var(--c-surface-alt);
+  padding: var(--sp-sm) var(--sp-lg);
+  text-align: start;
+  font-weight: 700;
+  font-size: var(--fs-xs);
+  color: var(--c-text);
+  border-bottom: 2px solid var(--c-border);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table-component td {
+  padding: var(--sp-sm) var(--sp-lg);
+  border-bottom: 1px solid var(--c-border-light);
+  color: var(--c-text-2);
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--lh-normal);
+}
+
+.table-component tbody tr:last-child td { border-bottom: none; }
+.table-component tbody tr:nth-child(even) { background: var(--c-surface-alt); }
+.table-component tbody tr:hover { background: #E6FAF7; background: oklch(97% 0.014 190); transition: background 0.1s; }
+
+.table-component__col--medium  { width: 25%; min-width: 120px; }
+.table-component__col--auto    { width: auto; min-width: 110px; }
+.table-component__text--center { text-align: center; }
+
+/* Gap between a section heading and the table below it */
+.main-content section > .fluid-heading + .table-container,
+.main-content section > h2 + .table-container {
+  margin-top: var(--sp-lg);
+}
+
+.table-footnote {
+  font-size: var(--fs-xs) !important;
+  color: var(--c-text-3) !important;
+  margin-top: var(--sp-xs);
+  margin-bottom: var(--sp-xl);
+  line-height: var(--lh-normal);
+}
+
+/* ===================================================================
+   12. FAQ
+   =================================================================== */
+.faq-component {
+  width: 100%;
+  margin-bottom: var(--sp-xl);
+}
+
+.faq-component__item {
+  border-bottom: 1px solid var(--c-border);
+}
+.faq-component__item:last-child { border-bottom: none; }
+
+.faq-component__question {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--sp-lg) 0;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--c-text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-md);
+  line-height: var(--lh-snug);
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: color var(--speed);
+}
+.faq-component__question:hover { color: var(--c-brand); }
+.faq-component__question:focus-visible {
+  outline: 2px solid var(--c-brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.faq-component__question-text { flex: 1; }
+
+.faq-component__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform var(--speed);
+}
+.faq-component__icon::before,
+.faq-component__icon::after {
+  content: '';
+  position: absolute;
+  background: var(--c-text-3);
+  transition: all var(--speed);
+}
+.faq-component__icon::before {
+  top: 50%; left: 50%;
+  width: 12px; height: 1.5px;
+  transform: translate(-50%, -50%);
+}
+.faq-component__icon::after {
+  top: 50%; left: 50%;
+  width: 1.5px; height: 12px;
+  transform: translate(-50%, -50%);
+}
+
+.faq-component__answer {
+  display: none;
+  padding-bottom: var(--sp-md);
+  font-size: var(--fs-sm) !important;
+  color: var(--c-text-2) !important;
+  line-height: var(--lh-normal) !important;
+}
+.faq-component__answer p {
+  margin: 0 0 var(--sp-sm) 0 !important;
+}
+.faq-component__answer p:last-child { margin-bottom: 0 !important; }
+
+.faq-component__item--active .faq-component__answer { display: block; }
+.faq-component__item--active .faq-component__question { color: var(--c-text); }
+.faq-component__item--active .faq-component__icon::before { background: var(--c-brand); }
+.faq-component__item--active .faq-component__icon::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* ===================================================================
+   13. CTA BANNER
+   =================================================================== */
+.cta-banner {
+  text-align: center;
+  padding: var(--sp-2xl) var(--sp-2xl);
+  margin-bottom: var(--sp-xl);
+  background: var(--c-surface-alt);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+}
+
+.cta-banner__title {
+  font-size: var(--fs-2xl) !important;
+  font-weight: 700 !important;
+  line-height: var(--lh-tight) !important;
+  letter-spacing: -0.02em;
+  color: var(--c-text) !important;
+  margin: 0 auto var(--sp-sm) auto !important;
+  max-width: 28ch;
+  text-wrap: balance;
+}
+
+.cta-banner__desc {
+  font-size: var(--fs-base) !important;
+  color: var(--c-text-2) !important;
+  line-height: var(--lh-relaxed) !important;
+  margin: 0 auto var(--sp-xl) auto !important;
+  max-width: 48ch;
+}
+
+.cta-banner__actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* High-specificity CTA button — wins over `.page-container a` */
+.page-container .cta-banner .cta-banner__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 2.25rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--c-accent);
+  color: var(--c-surface) !important;
+  font-size: var(--fs-base);
+  font-weight: 700;
+  font-family: 'Inter', system-ui, sans-serif;
+  text-decoration: none !important;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background var(--speed);
+}
+.page-container .cta-banner .cta-banner__button:hover {
+  background: var(--c-accent-hover);
+  color: var(--c-surface) !important;
+  text-decoration: none !important;
+}
+.page-container .cta-banner .cta-banner__button:focus-visible {
+  outline: 2px solid var(--c-brand);
+  outline-offset: 3px;
+}
+
+/* ===================================================================
+   14. CTA BUTTON  (calculator submit)
+   =================================================================== */
+.page-container .cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 2rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--c-accent);
+  color: var(--c-surface) !important;
+  font-size: var(--fs-base);
+  font-weight: 700;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background var(--speed);
+  text-decoration: none !important;
+}
+.page-container .cta-button:hover {
+  background: var(--c-accent-hover);
+  color: var(--c-surface) !important;
+}
+
+/* ===================================================================
+   15. CALCULATOR COMPONENT  (calc- prefix avoids all bare class conflicts)
+   =================================================================== */
+.calculator-container {
+  width: 100%;
+}
+
+.calculator-component {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-sm);
+}
+
+.calculator-component .calc-header {
+  text-align: center;
+  margin-bottom: var(--sp-2xl);
+  padding-bottom: var(--sp-lg);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.calculator-component .calc-title {
+  font-size: var(--fs-xl) !important;
+  font-weight: 700 !important;
+  line-height: var(--lh-snug) !important;
+  color: var(--c-text) !important;
+  margin: 0 0 var(--sp-xs) 0 !important;
+  letter-spacing: -0.01em;
+}
+
+.calculator-component .calc-subtitle {
+  font-size: var(--fs-sm) !important;
+  color: var(--c-text-2) !important;
+  margin: 0 !important;
+  line-height: var(--lh-snug) !important;
+}
+
+.calculator-component .calc-form {
+  margin-bottom: var(--sp-lg);
+}
+
+.calculator-component .calc-section {
+  margin-bottom: 0;
+}
+
+.calculator-component .calc-section-title {
+  font-size: var(--fs-xs) !important;
+  font-weight: 700 !important;
+  color: var(--c-text-3) !important;
+  margin-bottom: var(--sp-md) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.calculator-component .calc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-lg);
+  margin-bottom: var(--sp-lg);
+}
+.calculator-component .calc-row:last-child {
+  margin-bottom: var(--sp-xl);
+}
+
+.calculator-component .calc-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+}
+
+.calculator-component .calc-label {
+  font-size: var(--fs-xs) !important;
+  font-weight: 600 !important;
+  color: var(--c-text-2) !important;
+  letter-spacing: 0.01em;
+  margin: 0 !important;
+}
+
+/* inputs */
+.calculator-component input[type="number"],
+.calculator-component .coverage-calculator-component__input,
+.calculator-component .calc-input {
+  height: 48px;
+  padding: 0 0.875rem;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  background: var(--c-surface);
+  font-size: var(--fs-base) !important;
+  font-weight: 500;
+  color: var(--c-text) !important;
+  font-family: 'Inter', system-ui, sans-serif;
+  width: 100%;
+  transition: border-color var(--speed), box-shadow var(--speed);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.calculator-component input[type="number"]::-webkit-inner-spin-button,
+.calculator-component input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator-component input[type="number"]:focus,
+.calculator-component .coverage-calculator-component__input:focus {
+  outline: none;
+  border-color: var(--c-brand);
+  box-shadow: 0 0 0 3px var(--c-brand-ring);
+}
+
+/* select */
+.calculator-component select,
+.calculator-component .calc-select {
+  height: 48px;
+  padding: 0 2.25rem 0 0.875rem;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--c-surface);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.65rem center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  font-size: var(--fs-sm) !important;
+  font-weight: 500;
+  color: var(--c-text) !important;
+  font-family: 'Inter', system-ui, sans-serif;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color var(--speed);
+}
+.calculator-component select:focus,
+.calculator-component .calc-select:focus {
+  outline: none;
+  border-color: var(--c-brand);
+  box-shadow: 0 0 0 3px var(--c-brand-ring);
+}
+
+/* toggles */
+.calculator-component .calc-toggle-group {
+  display: flex;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  height: 48px;
+}
+
+.calculator-component .calc-toggle {
+  flex: 1;
+  position: relative;
+}
+
+.calculator-component .calc-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+.calculator-component .calc-toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-inline: var(--sp-md);
+  font-size: var(--fs-xs) !important;
+  font-weight: 500;
+  color: var(--c-text-2) !important;
+  cursor: pointer;
+  transition: all var(--speed);
+  border-right: 1px solid var(--c-border);
+  white-space: nowrap;
+  user-select: none;
+}
+.calculator-component .calc-toggle:last-child .calc-toggle-label {
+  border-right: none;
+}
+.calculator-component .calc-toggle-input:checked + .calc-toggle-label {
+  background: var(--c-brand);
+  color: var(--c-surface) !important;
+  font-weight: 600;
+}
+
+/* ===================================================================
+   16. ACCESSIBILITY & PRINT
+   =================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .page-container *,
+  .page-container *::before,
+  .page-container *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --c-text   : #000;
+    --c-text-2 : #333;
+    --c-border : #999;
+  }
+}
+
+@media print {
+  .cta-banner,
+  .trust-bar,
+  .hero-image-banner,
+  .calculator-component { display: none !important; }
+  .page-container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* ===================================================================
+   17. RESPONSIVE OVERRIDES
+   =================================================================== */
+@media (max-width: 640px) {
+  .trust-bar {
+    justify-content: flex-start;
+  }
+  .trust-bar__item {
+    flex: 0 0 33.33%;
+    min-width: 0;
+    padding-inline: var(--sp-xs);
+  }
+  .trust-bar__item + .trust-bar__item::before {
+    display: none;
+  }
+
+  .calculator-component .calc-row {
+    grid-template-columns: 1fr;
+    gap: var(--sp-md);
+  }
+
+  .cta-banner {
+    padding: var(--sp-2xl) var(--sp-lg);
+  }
+  .cta-banner__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-container .cta-banner .cta-banner__button,
+  .page-container .cta-button {
+    width: 100%;
+  }
+
+  .page-header__meta {
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .page-header__meta span + span::before {
+    display: none;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .trust-bar__item { flex: 0 0 50%; }
+  .calculator-component .calc-toggle-label {
+    padding-inline: var(--sp-xs);
+    font-size: 0.65rem !important;
+  }
+}

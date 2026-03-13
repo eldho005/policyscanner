@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Savings Component - STANDARDIZED Mobile First
+   Typography + Spacing + Padding fully standardized with global system
+   ========================================================================== */
+
+.savings-examples {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.savings-examples__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2); /* Global spacing: 16px */
+  margin-bottom: var(--space-4); /* Global spacing: 32px */
+}
+
+.savings-examples__card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--card-padding-mobile); /* STANDARDIZED: Global card padding */
+  border: 1px solid rgba(229, 233, 237, 0.6);
+  transition: all var(--transition-base);
+  text-align: center;
+  position: relative;
+}
+
+.savings-examples__card:hover {
+  border-color: rgba(229, 233, 237, 0.8);
+  transform: var(--micropolish-gpu-hover-subtle); /* ENHANCED: Global hover effect */
+}
+
+/* STANDARDIZED: Remove custom font-size, use global h4 hierarchy */
+.savings-examples__customer-name {
+  /* font-size: REMOVED - now uses global h4 styling */
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
+  margin-bottom: var(--space-1); /* Global spacing */
+  
+  /* ENHANCED: Premium typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-full);
+  letter-spacing: var(--micropolish-letter-spacing-subtle);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+/* STANDARDIZED: Use global text utility instead of custom font-size */
+.savings-examples__customer-details {
+  /* font-size: REMOVED - now uses .text-small utility class */
+  color: var(--secondary-text);
+  margin-bottom: var(--space-2); /* Global spacing */
+  
+  /* ENHANCED: Premium typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+  opacity: 0.85;
+}
+
+.savings-examples__coverage {
+  font-size: var(--font-size-base); /* Global typography */
+  color: var(--primary-text);
+  margin-bottom: var(--space-2); /* Global spacing */
+  font-weight: var(--font-weight-medium);
+  background: transparent;
+  padding: var(--space-2); /* Global spacing */
+  border-radius: var(--border-radius);
+  
+  /* ENHANCED: Premium typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.savings-examples__coverage-premium {
+  font-size: var(--font-size-sm); /* Global typography */
+  color: var(--secondary-text);
+  font-weight: var(--font-weight-normal);
+}
+
+.savings-examples__savings {
+  background: rgba(16, 185, 129, 0.008);
+  border-radius: var(--border-radius);
+  padding: var(--space-2); /* Global spacing */
+  margin-bottom: var(--space-2); /* Global spacing */
+}
+
+.savings-examples__badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.08);
+  color: var(--success-green);
+  padding: var(--space-1) var(--space-2); /* Global spacing */
+  border-radius: 12px;
+  font-size: 8px;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2); /* Global spacing */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.savings-examples__amount {
+  font-size: var(--font-size-2xl); /* Global typography: 24px */
+  font-weight: var(--font-weight-bold);
+  color: var(--success-green);
+  margin-bottom: var(--space-1); /* Global spacing */
+  line-height: var(--line-height-tight);
+  
+  /* ENHANCED: Premium typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-subtle);
+  text-rendering: var(--micropolish-text-rendering);
+  font-variant-numeric: tabular-nums;
+}
+
+.savings-examples__period {
+  font-size: var(--font-size-xs); /* Global typography */
+  color: var(--primary-text);
+  font-weight: var(--font-weight-medium);
+  
+  /* ENHANCED: Premium typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+  opacity: 0.9;
+}
+
+.savings-examples__cta {
+  text-align: center;
+  background: transparent;
+  padding: var(--space-4) var(--space-2); /* Global spacing */
+  border-radius: var(--border-radius-lg);
+}
+
+.savings-examples__cta-subtitle {
+  color: var(--secondary-text);
+  margin-bottom: var(--text-to-button); /* Global spacing */
+  
+  /* ENHANCED: Premium typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+.savings-examples__disclaimer {
+  text-align: center;
+  font-size: var(--font-size-sm); /* Global typography */
+  color: var(--secondary-text);
+  margin-top: var(--space-4); /* Global spacing */
+  opacity: 0.75;
+  
+  /* ENHANCED: Premium typography micropolish */
+  font-feature-settings: var(--micropolish-font-features-base);
+  letter-spacing: var(--micropolish-letter-spacing-micro);
+  text-rendering: var(--micropolish-text-rendering);
+}
+
+/* ==========================================================================
+   Tablet (768px+) - Progressive Enhancement
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .savings-examples__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-3); /* Global spacing */
+    margin-bottom: var(--space-6); /* Global spacing */
+  }
+
+  .savings-examples__card {
+    padding: var(--card-padding-tablet); /* STANDARDIZED: Global card padding */
+  }
+
+  /* Customer name now uses global h4 responsive scaling */
+  .savings-examples__customer-details {
+    margin-bottom: var(--space-3); /* Global spacing */
+  }
+
+  .savings-examples__coverage {
+    margin-bottom: var(--space-3); /* Global spacing */
+    padding: var(--space-3); /* Global spacing */
+  }
+
+  .savings-examples__savings {
+    padding: var(--space-3); /* Global spacing */
+  }
+
+  .savings-examples__badge {
+    padding: var(--space-1) var(--space-2); /* Global spacing */
+    font-size: 9px;
+  }
+
+  .savings-examples__amount {
+    font-size: var(--font-size-3xl); /* Global typography: 32px */
+    margin-bottom: var(--space-1); /* Global spacing */
+  }
+
+  .savings-examples__cta {
+    padding: var(--space-6); /* Global spacing */
+  }
+}
+
+/* ==========================================================================
+   Desktop (992px+) - Premium Enhancement
+   ========================================================================== */
+
+@media (min-width: 992px) {
+  .savings-examples__grid {
+    gap: var(--space-4); /* Global spacing */
+    margin-top: var(--space-5); /* Global spacing */
+  }
+
+  .savings-examples__card {
+    padding: var(--card-padding-desktop); /* STANDARDIZED: Global card padding */
+  }
+
+  /* Customer name automatically scales with global h4 system */
+}
+
+/* ==========================================================================
+   Accessibility & Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .savings-examples__card {
+    transition: none;
+  }
+}

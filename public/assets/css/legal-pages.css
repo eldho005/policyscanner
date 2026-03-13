@@ -1,0 +1,445 @@
+/* 
+ * PolicyScanner - Legal Pages Stylesheet
+ * Version: 1.0
+ * Last updated: April 20, 2025
+ */
+
+/* Legal Pages Specific Styles */
+.page-header {
+  background-color: #F9FAFB;
+  padding: 80px 0 60px;
+  position: relative;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1A2A33;
+}
+
+.page-header p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #6C7983;
+  font-size: 18px;
+}
+
+.legal-content,
+.privacy-content,
+.terms-content,
+.editorial-content,
+.contact-content {
+  padding: 60px 0;
+}
+
+.legal-section,
+.privacy-section,
+.terms-section {
+  margin-bottom: 40px;
+}
+
+.legal-section h2,
+.privacy-section h2,
+.terms-section h2 {
+  color: #1A2A33;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.legal-section h3,
+.privacy-section h3,
+.terms-section h3 {
+  color: #1A2A33;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.legal-section p,
+.privacy-section p,
+.terms-section p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #50606B;
+}
+
+.legal-section ul, 
+.legal-section ol,
+.privacy-section ul,
+.privacy-section ol,
+.terms-section ul,
+.terms-section ol {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.legal-section li,
+.privacy-section li,
+.terms-section li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #50606B;
+}
+
+.important-note {
+  background-color: rgba(42, 180, 168, 0.05);
+  border-left: 4px solid #2AB4A8;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.important-note p {
+  margin-bottom: 0;
+}
+
+.warning-note {
+  background-color: rgba(255, 122, 46, 0.05);
+  border-left: 4px solid #FF7A2E;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.warning-note p {
+  margin-bottom: 0;
+}
+
+.warning-note p.caps-text {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.meta-info {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: 14px;
+  color: #6C7983;
+}
+
+/* Contact page specific styles */
+.contact-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 30px;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(42, 180, 168, 0.1);
+  color: #2AB4A8;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-form {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  padding: 30px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Cookie table styles */
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.cookie-table th, 
+.cookie-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #d1d9e6;
+}
+
+.cookie-table th {
+  background-color: #F9FAFB;
+  font-weight: 600;
+  color: #1A2A33;
+}
+
+/* Editorial team box */
+.editorial-team {
+  background-color: rgba(42, 180, 168, 0.05);
+  border-radius: 0.5rem;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.editorial-team h3 {
+  color: #2AB4A8;
+  margin-top: 0;
+}
+
+.team-member {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d1d9e6;
+}
+
+.team-member:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.member-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #F9FAFB;
+  margin-right: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2AB4A8;
+  font-size: 30px;
+}
+
+.member-info h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #1A2A33;
+}
+
+.member-position {
+  color: #6C7983;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Disclaimer alert */
+.disclaimer-alert {
+  background-color: rgba(255, 122, 46, 0.05);
+  border-left: 4px solid #FF7A2E;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 0.5rem;
+}
+
+.disclaimer-alert h3 {
+  color: #E66A20;
+  margin-top: 0;
+}
+
+/* Map container */
+.map-container {
+  position: relative;
+  height: 400px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.map-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contact icons with text */
+.contact-info i {
+  color: #2AB4A8;
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+/* About us page styles */
+.about-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.about-section.bg-light {
+  background-color: #F9FAFB;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #1A2A33;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #6C7983;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stats Section */
+.stats-container {
+  padding: 50px 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 30px 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2AB4A8;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #6C7983;
+  font-weight: 500;
+}
+
+/* Value cards */
+.value-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  padding: 30px;
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(42, 180, 168, 0.1);
+  color: #2AB4A8;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.value-icon i {
+  font-size: 26px;
+}
+
+/* Call to Action (CTA) section */
+.cta-section {
+  background-color: #2AB4A8;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  opacity: 0.9;
+  color: white;
+}
+
+.cta-btn {
+  background-color: #FF7A2E;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  border-radius: 980px;
+  padding: 14px 34px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.cta-btn:hover {
+  background-color: #E66A20;
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .page-header h1 {
+    font-size: 3.25rem;
+  }
+  
+  .legal-section h2,
+  .privacy-section h2,
+  .terms-section h2 {
+    font-size: 2.25rem;
+  }
+  
+  .legal-section h3,
+  .privacy-section h3,
+  .terms-section h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-card, 
+  .value-card {
+    margin-bottom: 20px;
+  }
+  
+  .team-member {
+    flex-direction: column;
+  }
+  
+  .member-avatar {
+    margin-bottom: 15px;
+  }
+  
+  .cookie-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
