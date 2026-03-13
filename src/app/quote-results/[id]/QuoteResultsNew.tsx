@@ -561,18 +561,12 @@ export default function QuoteResultsNew() {
               <span className="font-semibold text-sm sm:text-base text-slate-700 whitespace-nowrap">
                 {POLICY_LABEL[policyType]}
               </span>
-              <button
-                onClick={() => setShowPolicyModal(true)}
-                className="text-xs font-semibold text-slate-500 bg-transparent border border-slate-300 rounded px-2 py-1 hover:bg-slate-100 hover:text-slate-900 hover:border-slate-400 transition-all duration-200"
-              >
-                Change
-              </button>
             </div>
 
             <div className="flex items-center gap-3">
               <a
                 href="/compare-insurance-quotes"
-                className="text-xs font-semibold text-slate-500 hover:text-slate-800 transition-colors hidden sm:block"
+                className="text-xs font-semibold text-slate-500 hover:text-slate-800 transition-colors"
               >
                 New Quote
               </a>
