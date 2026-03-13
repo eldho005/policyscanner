@@ -67,6 +67,18 @@
 
 
 
+/* Vertical connector line — subtle grey */
+.howitworks__steps-list::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 52px;
+  bottom: 52px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
 .howitworks__step-item {
   display: flex;
   align-items: flex-start;
