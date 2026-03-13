@@ -77,7 +77,6 @@
 }
 
 .insurance-reviews-component__title {
-  color: var(--irc-text-primary);
   margin: 0 0 var(--irc-spacing-sm) 0;
   padding: 0;
 }
