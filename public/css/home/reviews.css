@@ -10,7 +10,7 @@
 
 .insurance-reviews-component {
   /* Component-specific CSS variables to avoid conflicts */
-  --irc-bg-primary: #f0f8f7;
+  --irc-bg-primary: var(--bg-secondary);
   --irc-bg-card: rgba(255, 255, 255, 0.95);
   --irc-text-primary: #1a1a1a;
   --irc-text-secondary: #666;
