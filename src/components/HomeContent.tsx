@@ -162,9 +162,6 @@ export default function HomeContent() {
                   <li className="howitworks__step-item">
                     <div className="howitworks__step-num" aria-hidden="true">01</div>
                     <div className="howitworks__step-body">
-                      <div className="howitworks__step-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                      </div>
                       <div className="howitworks__step-text">
                         <h3 className="howitworks__step-title">Tell us about yourself</h3>
                         <p className="howitworks__step-desc">Answer a few quick questions — takes under 30 seconds</p>
@@ -174,9 +171,6 @@ export default function HomeContent() {
                   <li className="howitworks__step-item">
                     <div className="howitworks__step-num" aria-hidden="true">02</div>
                     <div className="howitworks__step-body">
-                      <div className="howitworks__step-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
-                      </div>
                       <div className="howitworks__step-text">
                         <h3 className="howitworks__step-title">Compare real quotes</h3>
                         <p className="howitworks__step-desc">See side-by-side rates from 20+ top Canadian insurers instantly</p>
@@ -186,9 +180,6 @@ export default function HomeContent() {
                   <li className="howitworks__step-item">
                     <div className="howitworks__step-num" aria-hidden="true">03</div>
                     <div className="howitworks__step-body">
-                      <div className="howitworks__step-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/><polyline points="9 12 11 14 15 10"/></svg>
-                      </div>
                       <div className="howitworks__step-text">
                         <h3 className="howitworks__step-title">Choose your policy</h3>
                         <p className="howitworks__step-desc">Pick the best plan and get covered — no agents, no pressure</p>

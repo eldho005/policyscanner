@@ -65,20 +65,7 @@
   position: relative;
 }
 
-/* Vertical connector line */
-.howitworks__steps-list::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 44px;
-  bottom: 44px;
-  width: 1px;
-  background: linear-gradient(to bottom,
-    var(--primary-teal),
-    color-mix(in srgb, var(--primary-teal) 20%, transparent)
-  );
-  pointer-events: none;
-}
+
 
 .howitworks__step-item {
   display: flex;
@@ -88,20 +75,20 @@
   position: relative;
 }
 
-/* Large teal step number circle */
+/* Step number circle — teal border only, neutral text */
 .howitworks__step-num {
   flex-shrink: 0;
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 2px solid var(--primary-teal);
-  background: color-mix(in srgb, var(--primary-teal) 8%, transparent);
+  border: 1.5px solid var(--primary-teal);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-teal);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-text);
   letter-spacing: 0.02em;
   position: relative;
   z-index: 1;
@@ -110,22 +97,7 @@
 .howitworks__step-body {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-2);
-  padding-top: 10px;
-}
-
-/* Icon circle */
-.howitworks__step-icon {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--border-radius-md);
-  background: color-mix(in srgb, var(--primary-teal) 10%, transparent);
-  border: 1px solid color-mix(in srgb, var(--primary-teal) 25%, transparent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-teal);
+  padding-top: 9px;
 }
 
 .howitworks__step-text {
@@ -164,15 +136,16 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--secondary-text);
-  background: color-mix(in srgb, var(--primary-teal) 8%, transparent);
-  border: 1px solid color-mix(in srgb, var(--primary-teal) 20%, transparent);
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 99px;
   padding: 5px 12px;
 }
 
 .howitworks__trust-pill svg {
-  color: var(--primary-teal);
+  color: var(--secondary-text);
   flex-shrink: 0;
+  opacity: 0.6;
 }
 
 /* 5. CTA Button
