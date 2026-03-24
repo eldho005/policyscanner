@@ -115,6 +115,17 @@ export default function ResultsPage() {
   // Hydrate from sessionStorage (set by the quote page after API call)
   useEffect(() => {
     try {
+      // TTL check — 30 minutes
+      const ts = sessionStorage.getItem("ps_quote_ts");
+      if (ts && Date.now() - Number(ts) > 30 * 60 * 1000) {
+        sessionStorage.removeItem("ps_quote_results");
+        sessionStorage.removeItem("ps_quote_form");
+        sessionStorage.removeItem("ps_quote_meta");
+        sessionStorage.removeItem("ps_quote_session_id");
+        sessionStorage.removeItem("ps_quote_ts");
+        router.push("/quote");
+        return;
+      }
       const stored = sessionStorage.getItem("ps_quote_results");
       const formCtx = sessionStorage.getItem("ps_quote_form");
       const metaStored = sessionStorage.getItem("ps_quote_meta");

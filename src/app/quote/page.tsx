@@ -88,42 +88,53 @@ export default function QuotePage() {
 
     // In edit mode, restore full form from sessionStorage so fields are pre-filled
     if (editMode) {
-      try {
-        const stored = sessionStorage.getItem("ps_quote_form");
-        if (stored) {
-          const ctx = JSON.parse(stored);
-          /* eslint-disable react-hooks/set-state-in-effect -- One-time mount hydration from sessionStorage/URL params */
-          setForm((prev) => ({
-            ...prev,
-            type: ctx.type || prev.type,
-            province: ctx.province || "ontario",
-            termLength: ctx.termLength || prev.termLength,
-            wholePay: ctx.wholePay || prev.wholePay,
-            gender: ctx.gender || prev.gender,
-            tobacco: ctx.tobacco || prev.tobacco,
-            tobaccoType: ctx.tobaccoType || prev.tobaccoType,
-            meds: ctx.meds || prev.meds,
-            dui: ctx.dui || prev.dui,
-            familyHistory: ctx.familyHistory || prev.familyHistory,
-            skipMeasurements: ctx.skipMeasurements || prev.skipMeasurements,
-            heightUnit: ctx.heightUnit || "imperial",
-            weightUnit: ctx.weightUnit || "imperial",
-            heightFt: ctx.heightFt ? String(ctx.heightFt) : prev.heightFt,
-            heightIn: ctx.heightIn != null ? String(ctx.heightIn) : prev.heightIn,
-            weightLbs: ctx.weightLbs ? String(ctx.weightLbs) : prev.weightLbs,
-            heightCm: ctx.heightCm ? String(ctx.heightCm) : prev.heightCm,
-            weightKg: ctx.weightKg ? String(ctx.weightKg) : prev.weightKg,
-            coverage: ctx.coverage ? String(ctx.coverage) : prev.coverage,
-            dobDay: ctx.dobDay || prev.dobDay,
-            dobMonth: ctx.dobMonth || prev.dobMonth,
-            dobYear: ctx.dobYear || prev.dobYear,
-            fullName: ctx.fullName || prev.fullName,
-            email: ctx.email || prev.email,
-            phone: ctx.phone || prev.phone,
-          }));
-        }
-      } catch { /* ignore */ }
-      setStep(2);
+      // TTL check — if expired, start fresh
+      const ts = sessionStorage.getItem("ps_quote_ts");
+      if (ts && Date.now() - Number(ts) > 30 * 60 * 1000) {
+        sessionStorage.removeItem("ps_quote_results");
+        sessionStorage.removeItem("ps_quote_form");
+        sessionStorage.removeItem("ps_quote_meta");
+        sessionStorage.removeItem("ps_quote_session_id");
+        sessionStorage.removeItem("ps_quote_ts");
+        // Don't pre-fill — fall through to fresh start
+      } else {
+        try {
+          const stored = sessionStorage.getItem("ps_quote_form");
+          if (stored) {
+            const ctx = JSON.parse(stored);
+            /* eslint-disable react-hooks/set-state-in-effect -- One-time mount hydration from sessionStorage/URL params */
+            setForm((prev) => ({
+              ...prev,
+              type: ctx.type || prev.type,
+              province: ctx.province || "ontario",
+              termLength: ctx.termLength || prev.termLength,
+              wholePay: ctx.wholePay || prev.wholePay,
+              gender: ctx.gender || prev.gender,
+              tobacco: ctx.tobacco || prev.tobacco,
+              tobaccoType: ctx.tobaccoType || prev.tobaccoType,
+              meds: ctx.meds || prev.meds,
+              dui: ctx.dui || prev.dui,
+              familyHistory: ctx.familyHistory || prev.familyHistory,
+              skipMeasurements: ctx.skipMeasurements || prev.skipMeasurements,
+              heightUnit: ctx.heightUnit || "imperial",
+              weightUnit: ctx.weightUnit || "imperial",
+              heightFt: ctx.heightFt ? String(ctx.heightFt) : prev.heightFt,
+              heightIn: ctx.heightIn != null ? String(ctx.heightIn) : prev.heightIn,
+              weightLbs: ctx.weightLbs ? String(ctx.weightLbs) : prev.weightLbs,
+              heightCm: ctx.heightCm ? String(ctx.heightCm) : prev.heightCm,
+              weightKg: ctx.weightKg ? String(ctx.weightKg) : prev.weightKg,
+              coverage: ctx.coverage ? String(ctx.coverage) : prev.coverage,
+              dobDay: ctx.dobDay || prev.dobDay,
+              dobMonth: ctx.dobMonth || prev.dobMonth,
+              dobYear: ctx.dobYear || prev.dobYear,
+              fullName: ctx.fullName || prev.fullName,
+              email: ctx.email || prev.email,
+              phone: ctx.phone || prev.phone,
+            }));
+          }
+        } catch { /* ignore */ }
+        setStep(2);
+      }
     } else {
       if (typeParam) {
         setForm((prev) => ({ ...prev, type: typeParam }));
@@ -309,6 +320,8 @@ export default function QuotePage() {
           if (data?.meta?.sessionId) {
             sessionStorage.setItem("ps_quote_session_id", data.meta.sessionId);
           }
+          // Timestamp for TTL expiry (30 min)
+          sessionStorage.setItem("ps_quote_ts", String(Date.now()));
           // Fire-and-forget lead capture
           fetch("/api/leads", {
             method: "POST",
