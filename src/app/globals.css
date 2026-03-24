@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Backgrounds ── */
+  --color-background:          oklch(0.985 0.005 80);
+  --color-background-warm:     oklch(0.965 0.012 70);
+
+  /* ── Foreground / Text ── */
+  --color-foreground:           oklch(0.18 0.01 50);
+  --color-foreground-secondary: oklch(0.45 0.01 50);
+  --color-foreground-muted:     oklch(0.58 0.008 60);
+
+  /* ── Primary (h40 – warm rust/sienna) ── */
+  --color-primary:        oklch(0.52 0.14 40);
+  --color-primary-hover:  oklch(0.44 0.119 40);
+  --color-primary-light:  oklch(0.94 0.017 40);
+  --color-primary-subtle: oklch(0.97 0.008 40);
+
+  /* ── Accent Green (h155 – near-triadic) ── */
+  --color-accent-green:    oklch(0.55 0.12 155);
+  --color-accent-green-bg: oklch(0.955 0.012 155);
+
+  /* ── Accent Red (h25 – analogous warm) ── */
+  --color-accent-red:    oklch(0.52 0.15 25);
+  --color-accent-red-bg: oklch(0.952 0.015 25);
+
+  /* ── Accent Blue (h220 – true complement) ── */
+  --color-accent-blue:    oklch(0.52 0.12 220);
+  --color-accent-blue-bg: oklch(0.952 0.012 220);
+
+  /* ── Accent Gold (h85 – analogous warm) ── */
+  --color-accent-gold: oklch(0.78 0.15 85);
+
+  /* ── Borders ── */
+  --color-border:       oklch(0.90 0.008 70);
+  --color-border-light: oklch(0.93 0.005 70);
+
+  /* ── Dark / White ── */
+  --color-dark:  oklch(0.16 0.01 50);
+  --color-white: oklch(1 0 0);
+
+  /* ── Footer Neutrals ── */
+  --color-footer-text:    oklch(0.6 0 0);
+  --color-footer-heading: oklch(0.8 0 0);
+  --color-footer-hover:   oklch(0.9 0 0);
+  --color-footer-border:  oklch(0.25 0 0);
+
+  /* ── Brand Colors ── */
+  --color-trustpilot:       #00b67a;
+  --color-accent-green-mid: oklch(0.88 0.06 155);
+  --color-accent-purple:    oklch(0.52 0.15 310);
+
+  /* ── Stats bar ── */
+  --color-stats-icon-bg: oklch(0.24 0.01 50);
+  --color-stats-label:   oklch(0.55 0 0);
+
+  /* ── Typography ── */
+  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-outfit), -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ── Radii ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-foreground);
+  background: var(--color-background);
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  font-optical-sizing: auto;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* ── Premium Micro-interaction System ──────────────────────────
+   Timing scale (φ = 1.618):  80 → 130 → 200 → 320 → 520 ms
+   Curves:
+     snap   = cubic-bezier(0.2, 0, 0, 1)    – fast start, smooth settle
+     spring = cubic-bezier(0.16, 1, 0.3, 1)  – decelerate with overshoot
+     ease   = cubic-bezier(0.4, 0, 0.2, 1)   – standard material
+   ──────────────────────────────────────────────────────────── */
+
+/* ── SelectCard tactile press ── */
+.select-card-transition {
+  transition:
+    transform 130ms cubic-bezier(0.2, 0, 0, 1),
+    border-color 130ms cubic-bezier(0.2, 0, 0, 1),
+    background-color 130ms cubic-bezier(0.2, 0, 0, 1),
+    box-shadow 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+.select-card-transition:active {
+  transform: scale(0.975);
+  transition-duration: 80ms;
+}
+
+/* ── Radio circle + check icon ── */
+.radio-transition {
+  transition:
+    background-color 80ms cubic-bezier(0.2, 0, 0, 1),
+    border-color 80ms cubic-bezier(0.2, 0, 0, 1);
+}
+.check-transition {
+  transition: opacity 130ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ── Step transitions (directional) ── */
+@keyframes stepEnter {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes stepExit {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-8px); }
+}
+@keyframes stepEnterBack {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes stepExitBack {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(8px); }
+}
+
+.animate-step-enter      { animation: stepEnter     520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-step-exit       { animation: stepExit      320ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-step-enter-back { animation: stepEnterBack 520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-step-exit-back  { animation: stepExitBack  320ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* ── Modal entrance ── */
+@keyframes modalOverlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes modalContentIn {
+  from { opacity: 0; transform: scale(0.96) translateY(6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-modal-overlay { animation: modalOverlayIn 200ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+.animate-modal-content { animation: modalContentIn 320ms cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: 80ms; }
+
+/* ── Primary button press ── */
+.btn-press:active:not(:disabled) {
+  transform: scale(0.985);
+  transition: transform 80ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ── Fade-up (loader steps) ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Infinite scroll marquee — 50% because the track is duplicated */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 80s linear infinite;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ── Quote card stagger entrance ── */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-card-in {
+  animation: cardIn 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeInContent {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeInContent 200ms ease both;
+}
+
+/* Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-custom {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Star fill color — matches accent-gold token */
+.star-fill { fill: var(--color-accent-gold); }
+
+/* Optical-size utilities for variable display font */
+.opsz-48 { font-variation-settings: 'opsz' 48; }
+.opsz-32 { font-variation-settings: 'opsz' 32; }
+
+/* ── Insight image gradients (oklch interpolation) ── */
+.gradient-warm-1 {
+  background:
+    radial-gradient(in oklch, ellipse at 30% 40%, oklch(0.72 0.08 55 / 0.7), transparent 60%),
+    linear-gradient(in oklch 145deg, oklch(0.70 0.07 60), oklch(0.55 0.10 40));
+}
+.gradient-warm-2 {
+  background:
+    radial-gradient(in oklch, ellipse at 60% 50%, oklch(0.68 0.07 50 / 0.7), transparent 60%),
+    linear-gradient(in oklch 145deg, oklch(0.62 0.09 45), oklch(0.50 0.11 35));
+}
+.gradient-warm-3 {
+  background:
+    radial-gradient(in oklch, ellipse at 40% 60%, oklch(0.72 0.06 58 / 0.7), transparent 60%),
+    linear-gradient(in oklch 145deg, oklch(0.68 0.08 55), oklch(0.52 0.10 38));
+}
+
+/* ── Modern CSS Enhancements ──────────────────────────────── */
+
+/* Balanced heading wrap — prevents orphans on narrow viewports */
+h1, h2 {
+  text-wrap: balance;
+}
+
+/* Offscreen rendering skip — saves paint cost below the fold */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* ── Scroll-driven section reveal ── */
+@keyframes scrollReveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-reveal {
+    animation: scrollReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+  }
+}
+
+/* ── Mega dropdown — CSS-driven entry / exit ── */
+.mega-wrapper {
+  pointer-events: none;
+}
+.mega-wrapper[data-open="true"] {
+  pointer-events: auto;
+}
+
+.mega-panel {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    display 150ms allow-discrete;
+}
+
+.mega-wrapper:not([data-open="true"]) .mega-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+@starting-style {
+  .mega-wrapper[data-open="true"] .mega-panel {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+
