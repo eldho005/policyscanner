@@ -105,9 +105,9 @@ export default function StepCoverageContact({
     onChange("dobYear", digits(raw).slice(0, 4));
   };
 
-  /* ── Phone handler — auto-format ──────────────────────── */
+  /* ── Phone handler — no formatting (autofill-safe) ───── */
   const handlePhone = (raw: string) => {
-    onChange("phone", formatPhone(raw));
+    onChange("phone", raw);
   };
 
   /* ── Name handler — letters, spaces, hyphens, apostrophes */
@@ -128,7 +128,7 @@ export default function StepCoverageContact({
   const emailError = touched.email && email.length > 0 && !emailValid;
 
   const phoneDigits = digits(phone).length;
-  const phoneError = touched.phone && phoneDigits > 0 && phoneDigits < 10;
+  const phoneError = touched.phone && phoneDigits > 0 && (phoneDigits < 10 || phoneDigits > 11);
 
   const nameError = touched.name && fullName.length > 0 && fullName.trim().length < 2;
 
@@ -263,7 +263,7 @@ export default function StepCoverageContact({
             <input
               type="tel"
               className={`flex-1 px-3.5 py-3 border-[1.5px] rounded-sm text-[0.9rem] text-foreground outline-none transition-all focus:border-primary focus:shadow-[0_0_0_3px_var(--color-primary-light)] ${phoneError ? "border-accent-red" : "border-border"}`}
-              placeholder="(555) 123-4567"
+              placeholder="5551234567"
               autoComplete="tel"
               inputMode="tel"
               value={phone}
@@ -272,7 +272,7 @@ export default function StepCoverageContact({
             />
           </div>
           {phoneError && (
-            <p className="text-[0.78rem] mt-1 text-accent-red">Please enter a 10-digit phone number</p>
+            <p className="text-[0.78rem] mt-1 text-accent-red">Please enter a valid phone number</p>
           )}
         </div>
       </div>
