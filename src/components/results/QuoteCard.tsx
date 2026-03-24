@@ -46,7 +46,7 @@ export default function QuoteCard({
     setQuoting(true);
     setTimeout(() => {
       onGetQuote();
-    }, 950);
+    }, 650);
   };
 
   // Price calculation — use API prices directly when available,

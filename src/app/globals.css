@@ -68,6 +68,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Eliminate mobile tap delay on all interactive elements */
+a, button, input, select, textarea, [role="button"] {
+  touch-action: manipulation;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-foreground);
@@ -133,10 +138,10 @@ button:not(:disabled) {
   to   { opacity: 0; transform: translateY(8px); }
 }
 
-.animate-step-enter      { animation: stepEnter     520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-.animate-step-exit       { animation: stepExit      320ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-.animate-step-enter-back { animation: stepEnterBack 520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-.animate-step-exit-back  { animation: stepExitBack  320ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-step-enter      { animation: stepEnter     380ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-step-exit       { animation: stepExit      200ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-step-enter-back { animation: stepEnterBack 380ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-step-exit-back  { animation: stepExitBack  200ms cubic-bezier(0.16, 1, 0.3, 1) both; }
 
 /* ── Modal entrance ── */
 @keyframes modalOverlayIn {

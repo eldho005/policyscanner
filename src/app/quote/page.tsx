@@ -199,12 +199,11 @@ export default function QuotePage() {
       setStep(n);
       setStepAnim(forward ? "animate-step-enter" : "animate-step-enter-back");
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 320);
+    }, 200);
   };
 
   const handleGetQuotes = () => {
-    // 120ms delay: perceptible as a deliberate acknowledgement
-    // (≈80% of human visual reaction time — fast but not instant)
+    // Brief delay so button press registers visually
     setTimeout(() => {
       setShowLoaderModal(true);
       setLoaderProgress(0);
