@@ -43,7 +43,7 @@ export default function Hero() {
           </div>
 
           {/* Floating Card - Top Right */}
-          <div className="flex absolute top-6 -right-4 max-lg:right-2 max-sm:right-3 max-sm:top-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-3 max-sm:py-2 items-center gap-3 max-sm:gap-2">
+          <div className="flex absolute top-6 -right-4 max-lg:right-2 max-sm:-right-2 max-sm:top-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-3 max-sm:py-2 items-center gap-3 max-sm:gap-2">
             <div className="w-9 h-9 max-sm:w-7 max-sm:h-7 rounded-lg bg-accent-green-bg flex items-center justify-center">
               <Check size={16} className="text-accent-green max-sm:!w-[13px] max-sm:!h-[13px]" />
             </div>
@@ -54,7 +54,7 @@ export default function Hero() {
           </div>
 
           {/* Floating Card - Bottom Left */}
-          <div className="block absolute bottom-6 -left-4 max-lg:left-2 max-sm:left-3 max-sm:bottom-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-3 max-sm:py-2">
+          <div className="block absolute bottom-6 -left-4 max-lg:left-2 max-sm:-left-2 max-sm:bottom-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-3 max-sm:py-2">
             <div className="flex items-center gap-2 mb-1">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
