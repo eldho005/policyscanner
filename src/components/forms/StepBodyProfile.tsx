@@ -83,13 +83,13 @@ export default function StepBodyProfile({ gender, heightUnit, weightUnit, height
           <div>
             <div className="flex items-center justify-between mb-2">
               <p className="text-[0.95rem] font-semibold text-foreground">Height</p>
-              <div className="flex rounded-full bg-background border border-border p-[2px] text-[0.6rem] font-semibold leading-none">
+              <div className="flex rounded-full bg-background border border-border p-[2px] text-[0.65rem] font-semibold leading-none">
                 <button type="button" onClick={() => onSelect("heightUnit", "imperial")}
-                  className={`px-2 py-[3px] rounded-full transition-all ${!isHeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
+                  className={`px-3 py-1.5 rounded-full transition-all ${!isHeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
                   ft
                 </button>
                 <button type="button" onClick={() => onSelect("heightUnit", "metric")}
-                  className={`px-2 py-[3px] rounded-full transition-all ${isHeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
+                  className={`px-3 py-1.5 rounded-full transition-all ${isHeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
                   cm
                 </button>
               </div>
@@ -125,13 +125,13 @@ export default function StepBodyProfile({ gender, heightUnit, weightUnit, height
           <div>
             <div className="flex items-center justify-between mb-2">
               <p className="text-[0.95rem] font-semibold text-foreground">Weight</p>
-              <div className="flex rounded-full bg-background border border-border p-[2px] text-[0.6rem] font-semibold leading-none">
+              <div className="flex rounded-full bg-background border border-border p-[2px] text-[0.65rem] font-semibold leading-none">
                 <button type="button" onClick={() => onSelect("weightUnit", "imperial")}
-                  className={`px-2 py-[3px] rounded-full transition-all ${!isWeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
+                  className={`px-3 py-1.5 rounded-full transition-all ${!isWeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
                   lbs
                 </button>
                 <button type="button" onClick={() => onSelect("weightUnit", "metric")}
-                  className={`px-2 py-[3px] rounded-full transition-all ${isWeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
+                  className={`px-3 py-1.5 rounded-full transition-all ${isWeightMetric ? "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.08)]" : "text-foreground-muted hover:text-foreground"}`}>
                   kg
                 </button>
               </div>

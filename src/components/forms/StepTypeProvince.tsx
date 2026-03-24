@@ -66,7 +66,7 @@ export default function StepTypeProvince({
                 key={opt.value}
                 type="button"
                 onClick={() => onSelectTermLength(opt.value)}
-                className={`px-2 py-2.5 rounded-md text-[0.82rem] font-medium border-[1.5px] transition-all duration-150 ${
+                className={`px-2 py-3 rounded-md text-[0.82rem] font-medium border-[1.5px] transition-all duration-150 ${
                   selectedTermLength === opt.value
                     ? "border-primary bg-primary-light text-primary"
                     : "border-border bg-white text-foreground-secondary hover:border-foreground-muted"

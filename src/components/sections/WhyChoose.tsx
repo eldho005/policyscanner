@@ -62,7 +62,7 @@ export default function WhyChoose() {
               </div>
               <ul className="space-y-2">
                 {c.items.map((item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-[0.84rem] text-foreground-secondary">
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-foreground-secondary">
                     <span className="w-1 h-1 rounded-full bg-foreground-muted flex-shrink-0" />
                     {item}
                   </li>

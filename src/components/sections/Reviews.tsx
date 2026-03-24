@@ -256,7 +256,7 @@ export default function Reviews() {
                   key={i}
                   onClick={() => { if (phase === "idle" && i !== page) goTo(i); }}
                   aria-label={`Show reviews page ${i + 1}`}
-                  className="p-2 -m-0.5"
+                  className="p-3 -m-1"
                 >
                   <span className={`block rounded-full transition-all duration-300 ${
                     i === page
@@ -277,7 +277,7 @@ export default function Reviews() {
               return (
               <div
                 key={`${page}-${r.name}`}
-                className={`bg-white border border-border rounded-lg p-7 flex flex-col ${i >= 2 ? "max-sm:hidden" : ""} ${
+                className={`bg-white border border-border rounded-lg p-7 max-sm:p-5 flex flex-col ${i >= 2 ? "max-sm:hidden" : ""} ${
                   isExiting
                     ? "opacity-0 -translate-y-2 scale-[0.98] transition-all duration-400 ease-[cubic-bezier(0.4,0,1,1)]"
                     : isEntering

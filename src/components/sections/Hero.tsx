@@ -17,13 +17,13 @@ export default function Hero() {
           <div className="flex gap-3.5 mb-5.5">
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center px-5.5 py-3 bg-primary text-white font-semibold text-sm rounded-sm hover:bg-primary-hover transition-colors"
+              className="inline-flex items-center justify-center max-sm:w-full px-5.5 py-3 bg-primary text-white font-semibold text-sm rounded-sm hover:bg-primary-hover transition-colors"
             >
               Compare Quotes Now
             </Link>
 
           </div>
-          <p className="text-[0.82rem] text-foreground-muted flex items-center gap-1.5">
+          <p className="text-[0.85rem] text-foreground-muted flex items-center gap-1.5">
             <Clock size={12} />
             Takes less than 2 minutes
             <span className="w-[3px] h-[3px] rounded-full bg-foreground-muted mx-1.5" />

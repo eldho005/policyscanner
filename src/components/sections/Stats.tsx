@@ -20,7 +20,7 @@ export default function Stats() {
                 {s.value}
                 {s.unit && <span className="font-body text-[0.55em] font-normal opacity-60">{s.unit}</span>}
               </h4>
-              <span className="text-[0.72rem] font-medium text-stats-label uppercase tracking-[0.08em] mt-0.5 block">
+              <span className="text-[0.76rem] font-medium text-stats-label uppercase tracking-[0.08em] mt-0.5 block">
                 {s.label}
               </span>
             </div>

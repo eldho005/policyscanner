@@ -50,7 +50,7 @@ export default function Features() {
                 <f.icon size={22} className={f.iconColor} />
               </div>
               <h3 className="text-base font-bold mb-2 tracking-[-0.01em]">{f.title}</h3>
-              <p className="text-[0.83rem] text-foreground-secondary leading-relaxed mb-5">
+              <p className="text-[0.85rem] text-foreground-secondary leading-relaxed mb-5">
                 {f.desc}
               </p>
               <div className="flex flex-col gap-2">

@@ -75,7 +75,7 @@ export default function ControlsBar({
       <div className="flex items-end gap-5 max-sm:gap-2.5 flex-wrap max-[900px]:flex-col max-sm:flex-row max-[900px]:items-stretch max-sm:items-end">
         {/* Coverage */}
         <div className="flex flex-col gap-1 max-sm:flex-1 max-sm:min-w-0">
-          <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Coverage</span>
+          <span className="text-[0.68rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Coverage</span>
           <select
             value={coverage}
             onChange={(e) => onCoverageChange(Number(e.target.value))}
@@ -90,7 +90,7 @@ export default function ControlsBar({
         {/* Term — only shown for term life */}
         {policyType === "term" && (
           <div className="flex flex-col gap-1 max-sm:flex-1 max-sm:min-w-0">
-            <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Term</span>
+            <span className="text-[0.68rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Term</span>
             <select
               value={term}
               onChange={(e) => onTermChange(Number(e.target.value))}
@@ -106,7 +106,7 @@ export default function ControlsBar({
         {/* Pay Period — only shown for whole life */}
         {policyType === "whole" && (
           <div className="flex flex-col gap-1 max-sm:flex-1 max-sm:min-w-0">
-            <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Pay Period</span>
+            <span className="text-[0.68rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Pay Period</span>
             <select
               value={wholePay}
               onChange={(e) => onWholePayChange(e.target.value)}
@@ -121,7 +121,7 @@ export default function ControlsBar({
 
         {/* Sort — hidden on mobile, default sort is already price-asc */}
         <div className="flex flex-col gap-1 max-sm:hidden">
-          <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Sort By</span>
+          <span className="text-[0.68rem] font-bold uppercase tracking-[0.1em] text-foreground-muted">Sort By</span>
           <select
             value={sort}
             onChange={(e) => onSortChange(e.target.value as SortOption)}
@@ -140,7 +140,7 @@ export default function ControlsBar({
               key={p}
               onClick={() => onPeriodChange(p)}
               className={clsx(
-                "px-4 py-1.5 max-sm:px-3 text-xs rounded-[4px] transition-all capitalize",
+                "px-4 py-2.5 max-sm:px-3.5 text-xs rounded-[4px] transition-all capitalize",
                 period === p
                   ? "bg-white text-foreground font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.06)]"
                   : "text-foreground-muted font-medium"
@@ -187,7 +187,7 @@ export default function ControlsBar({
             key={f.label}
             onClick={() => onFilterChange(f.label)}
             className={clsx(
-              "px-3 py-1 text-[0.68rem] font-medium rounded-full border-[1.5px] whitespace-nowrap transition-all",
+              "px-3.5 py-2 text-[0.72rem] font-medium rounded-full border-[1.5px] whitespace-nowrap transition-all",
               filter === f.label
                 ? "bg-dark text-white border-dark font-semibold"
                 : "border-border text-foreground-muted"

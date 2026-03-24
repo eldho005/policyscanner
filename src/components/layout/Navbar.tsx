@@ -234,7 +234,7 @@ export default function Navbar() {
                       <div className="text-[0.85rem] font-medium text-foreground">
                         {item.label}
                       </div>
-                      <div className="text-[0.75rem] text-foreground-muted leading-snug">
+                      <div className="text-[0.78rem] text-foreground-muted leading-snug">
                         {item.desc}
                       </div>
                     </div>

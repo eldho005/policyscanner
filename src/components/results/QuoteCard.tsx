@@ -223,7 +223,7 @@ export default function QuoteCard({
                   {quote.brand}
                 </div>
               )}
-              <div className="text-[0.72rem] text-foreground-secondary">
+              <div className="text-[0.76rem] text-foreground-secondary">
                 {quote.product}
               </div>
               {isPar && (
@@ -266,7 +266,7 @@ export default function QuoteCard({
           <button
             onClick={handleGetQuote}
             disabled={quoting}
-            className="w-full py-2.5 bg-primary text-white font-semibold text-[0.82rem] rounded-sm hover:bg-primary-hover transition-colors disabled:opacity-80 disabled:cursor-default"
+            className="w-full py-3 bg-primary text-white font-semibold text-[0.82rem] rounded-sm hover:bg-primary-hover transition-colors disabled:opacity-80 disabled:cursor-default"
           >
             {quoting ? (
               <span className="flex items-center justify-center gap-2">

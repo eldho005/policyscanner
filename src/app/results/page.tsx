@@ -176,7 +176,7 @@ export default function ResultsPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowNewQuoteConfirm(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-[0.82rem] font-medium text-foreground-secondary border border-border rounded-sm hover:border-foreground-muted hover:text-foreground transition-colors"
+              className="flex items-center gap-1.5 px-4 py-2 text-[0.82rem] font-medium text-foreground-secondary border border-border rounded-sm hover:border-foreground-muted hover:text-foreground transition-colors"
             >
               New Quote
             </button>

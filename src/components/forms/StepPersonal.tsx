@@ -77,7 +77,7 @@ export default function StepPersonal({ tobacco, tobaccoType, meds, dui, familyHi
                     key={opt.value}
                     type="button"
                     onClick={() => onSelect("tobaccoType", opt.value)}
-                    className={`px-3 py-2.5 rounded-md text-[0.82rem] font-medium border-[1.5px] transition-all duration-150 ${
+                    className={`px-3 py-3 rounded-md text-[0.82rem] font-medium border-[1.5px] transition-all duration-150 ${
                       tobaccoType === opt.value
                         ? "border-primary bg-primary-light text-primary"
                         : "border-border bg-white text-foreground-secondary hover:border-foreground-muted"

@@ -45,7 +45,7 @@ export default function Insights() {
               Expert guides, comparisons, and practical resources to help you choose the right coverage for your family.
             </p>
           </div>
-          <Link href="/insights/term-vs-whole-life-insurance-canada" className="text-sm font-semibold text-primary whitespace-nowrap flex items-center gap-1">
+          <Link href="/insights/term-vs-whole-life-insurance-canada" className="text-sm font-semibold text-primary whitespace-nowrap flex items-center gap-1 py-2 -my-2">
             Explore all resources →
           </Link>
         </div>
@@ -74,10 +74,10 @@ export default function Insights() {
           </Link>
 
           {/* Small Cards */}
-          <div className="flex flex-col gap-5 max-sm:hidden">
+          <div className="flex flex-col gap-5">
             {articles.slice(1).map((a) => (
               <Link key={a.title} href={a.href} className="bg-white border border-border rounded-lg overflow-hidden hover:border-foreground-muted transition-colors flex flex-col sm:flex-row group">
-                <div className={`sm:w-[170px] h-[130px] sm:h-auto flex-shrink-0 overflow-hidden ${!a.image ? a.gradientClass : ""}`}>
+                <div className={`sm:w-[170px] h-[130px] sm:h-auto flex-shrink-0 overflow-hidden max-sm:hidden ${!a.image ? a.gradientClass : ""}`}>
                   {a.image && (
                     <img
                       src={a.image}

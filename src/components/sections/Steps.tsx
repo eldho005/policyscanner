@@ -37,7 +37,7 @@ export default function Steps() {
         <div className="text-center">
           <Link
             href="/quote"
-            className="inline-flex items-center justify-center px-5.5 py-3 bg-primary text-white font-semibold text-sm rounded-sm hover:bg-primary-hover transition-colors"
+            className="inline-flex items-center justify-center max-sm:w-full px-5.5 py-3 bg-primary text-white font-semibold text-sm rounded-sm hover:bg-primary-hover transition-colors"
           >
             Compare Quotes Now
           </Link>
