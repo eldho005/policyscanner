@@ -20,13 +20,13 @@ const comparisons = [
 
 export default function WhyChoose() {
   return (
-    <section className="py-26 max-sm:py-18 bg-background-warm cv-auto">
-      <div className="max-w-[1120px] mx-auto px-7 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-14 scroll-reveal">
+    <section className="py-26 max-sm:py-14 bg-background-warm cv-auto">
+      <div className="max-w-[1120px] mx-auto px-7 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-14 max-sm:gap-8 scroll-reveal">
         <div>
           <h2 className="font-display text-[2rem] max-sm:text-[1.7rem] font-semibold tracking-[-0.03em] leading-[1.2] mb-4 opsz-32">
             Why thousands of Canadians choose PolicyScanner
           </h2>
-          <p className="text-sm text-foreground-secondary leading-relaxed mb-8">
+          <p className="text-sm text-foreground-secondary leading-relaxed mb-8 max-sm:mb-5">
             We combine smart technology with real human advice — so you get the best policy without the stress.
           </p>
           <blockquote className="text-sm italic text-foreground-secondary border-l-2 border-primary pl-4">

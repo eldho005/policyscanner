@@ -29,9 +29,9 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-26 max-sm:py-18 cv-auto">
+    <section id="features" className="py-26 max-sm:py-14 cv-auto">
       <div className="max-w-[1120px] mx-auto px-7 scroll-reveal">
-        <div className="text-center max-sm:text-left mb-12">
+        <div className="text-center max-sm:text-left mb-12 max-sm:mb-8">
           <h2 className="font-display text-[2rem] max-sm:text-[1.7rem] font-semibold tracking-[-0.03em] mb-2 opsz-32">
             Insurance made simple
           </h2>

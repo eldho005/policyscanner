@@ -204,7 +204,7 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="py-26 max-sm:py-18"
+      className="py-26 max-sm:py-14"
       onMouseEnter={() => { pausedRef.current = true; }}
       onMouseLeave={() => { pausedRef.current = false; }}
       onTouchStart={() => { pausedRef.current = true; }}
@@ -215,7 +215,7 @@ export default function Reviews() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingJsonLd) }}
       />
       <div ref={sectionRef} className="max-w-[1120px] mx-auto px-7">
-        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-14 max-sm:gap-8 items-start">
           {/* Left */}
           <div>
             <h2 className="font-display text-[2rem] max-sm:text-[1.7rem] font-semibold tracking-[-0.03em] leading-[1.2] mb-4 opsz-32">

@@ -8,9 +8,9 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section id="steps" className="py-26 max-sm:py-18 cv-auto">
+    <section id="steps" className="py-26 max-sm:py-14 cv-auto">
       <div className="max-w-[1120px] mx-auto px-7 scroll-reveal">
-        <div className="text-center max-sm:text-left mb-12">
+        <div className="text-center max-sm:text-left mb-12 max-sm:mb-8">
           <h2 className="font-display text-[2rem] max-sm:text-[1.7rem] font-semibold tracking-[-0.03em] mb-2 opsz-32">
             Get covered in 3 simple steps
           </h2>
@@ -19,7 +19,7 @@ export default function Steps() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-11 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-sm:gap-6 mb-11 max-sm:mb-8 relative">
           {/* Connecting line */}
           <div className="hidden md:block absolute top-6 left-[calc(16.66%+24px)] right-[calc(16.66%+24px)] h-px bg-border" />
 

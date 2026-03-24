@@ -46,7 +46,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-26 max-sm:py-18 bg-background-warm cv-auto">
+    <section id="faq" className="py-26 max-sm:py-14 bg-background-warm cv-auto">
       <div className="max-w-[760px] mx-auto px-7">
         <div className="text-center max-sm:text-left mb-12">
           <h2 className="font-display text-[2rem] max-sm:text-[1.7rem] font-semibold tracking-[-0.025em] opsz-32">
@@ -61,7 +61,7 @@ export default function FAQ() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border-b border-border last:border-b-0"
+              className={`border-b border-border last:border-b-0${i >= 5 ? " max-sm:hidden" : ""}`}
             >
               <button
                 onClick={() => toggle(i)}

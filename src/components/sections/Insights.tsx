@@ -34,9 +34,9 @@ const articles = [
 
 export default function Insights() {
   return (
-    <section id="insights" className="py-26 max-sm:py-18 bg-background-warm cv-auto">
+    <section id="insights" className="py-26 max-sm:py-14 bg-background-warm cv-auto">
       <div className="max-w-[1120px] mx-auto px-7 scroll-reveal">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 mb-10">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 mb-10 max-sm:mb-7">
           <div>
             <h2 className="font-display text-[2rem] max-sm:text-[1.7rem] font-semibold tracking-[-0.025em] opsz-32">
               Life insurance insights
@@ -74,7 +74,7 @@ export default function Insights() {
           </Link>
 
           {/* Small Cards */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 max-sm:hidden">
             {articles.slice(1).map((a) => (
               <Link key={a.title} href={a.href} className="bg-white border border-border rounded-lg overflow-hidden hover:border-foreground-muted transition-colors flex flex-col sm:flex-row group">
                 <div className={`sm:w-[170px] h-[130px] sm:h-auto flex-shrink-0 overflow-hidden ${!a.image ? a.gradientClass : ""}`}>
