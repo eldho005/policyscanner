@@ -43,31 +43,31 @@ export default function Hero() {
           </div>
 
           {/* Floating Card - Top Right */}
-          <div className="flex absolute top-6 -right-4 max-lg:right-2 max-sm:-right-4 max-sm:top-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-3 max-sm:py-2 items-center gap-3 max-sm:gap-2">
-            <div className="w-9 h-9 max-sm:w-7 max-sm:h-7 rounded-lg bg-accent-green-bg flex items-center justify-center">
-              <Check size={16} className="text-accent-green max-sm:!w-[13px] max-sm:!h-[13px]" />
+          <div className="flex absolute top-6 -right-4 max-lg:right-2 max-sm:-right-4 max-sm:top-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-2.5 max-sm:py-1.5 items-center gap-3 max-sm:gap-1.5">
+            <div className="w-9 h-9 max-sm:w-6 max-sm:h-6 rounded-lg max-sm:rounded-md bg-accent-green-bg flex items-center justify-center">
+              <Check size={16} className="text-accent-green max-sm:!w-[11px] max-sm:!h-[11px]" />
             </div>
             <div>
-              <p className="text-xs max-sm:text-[0.68rem] font-semibold text-foreground">Compare 20+ insurers</p>
-              <p className="text-[0.7rem] max-sm:text-[0.62rem] text-foreground-muted">100s from $18/mo</p>
+              <p className="text-xs max-sm:text-[0.65rem] font-semibold text-foreground">Compare 20+ insurers</p>
+              <p className="text-[0.7rem] max-sm:text-[0.58rem] text-foreground-muted">100s from $18/mo</p>
             </div>
           </div>
 
           {/* Floating Card - Bottom Left */}
-          <div className="block absolute bottom-6 -left-4 max-lg:left-2 max-sm:-left-4 max-sm:bottom-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-3 max-sm:py-2">
-            <div className="flex items-center gap-2 mb-1">
+          <div className="block absolute bottom-6 -left-4 max-lg:left-2 max-sm:-left-4 max-sm:bottom-3 bg-white rounded-md shadow-lg border border-border-light px-4 py-3 max-sm:px-2.5 max-sm:py-1.5">
+            <div className="flex items-center gap-2 max-sm:gap-1.5 mb-1 max-sm:mb-0.5">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="13" height="13" viewBox="0 0 24 24" stroke="none">
+                  <svg key={i} viewBox="0 0 24 24" stroke="none" className="w-[13px] h-[13px] max-sm:w-2.5 max-sm:h-2.5">
                     <polygon className="star-fill" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                   </svg>
                 ))}
               </div>
-              <span className="text-xs max-sm:text-[0.68rem] font-semibold text-foreground">4.9/5</span>
-              <span className="text-[0.7rem] max-sm:text-[0.62rem] text-foreground-muted">Canadians</span>
+              <span className="text-xs max-sm:text-[0.65rem] font-semibold text-foreground">4.9/5</span>
+              <span className="text-[0.7rem] max-sm:text-[0.58rem] text-foreground-muted">Canadians</span>
             </div>
-            <div className="flex items-center gap-1.5 text-[0.72rem] max-sm:text-[0.62rem] text-foreground-muted">
-              <Shield size={12} className="text-accent-green" />
+            <div className="flex items-center gap-1.5 max-sm:gap-1 text-[0.72rem] max-sm:text-[0.58rem] text-foreground-muted">
+              <Shield size={12} className="text-accent-green max-sm:!w-2.5 max-sm:!h-2.5" />
               Secure &amp; confidential
             </div>
           </div>
