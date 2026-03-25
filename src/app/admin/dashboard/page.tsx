@@ -93,7 +93,8 @@ export default function AdminDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [deleting, setDeleting] = useState(false);
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [lastRefreshed, setLastRefreshed] = useState<Date | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -143,26 +144,40 @@ export default function AdminDashboardPage() {
     router.push("/admin");
   }
 
-  /* ── Delete lead ── */
-  async function handleDelete(id: string) {
-    if (!confirm("Delete this lead? This cannot be undone.")) return;
-    setDeletingId(id);
+  /* ── Toggle selection ── */
+  function toggleSelect(id: string) {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  }
+
+  function toggleSelectAll() {
+    setSelected(selected.size === leads.length ? new Set() : new Set(leads.map((l) => l.id)));
+  }
+
+  /* ── Delete selected ── */
+  async function handleDeleteSelected() {
+    if (!confirm(`Delete ${selected.size} lead${selected.size > 1 ? "s" : ""}? This cannot be undone.`)) return;
+    setDeleting(true);
     try {
-      const res = await fetch("/api/admin/leads", {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id }),
-      });
-      if (res.ok) {
-        setLeads((prev) => prev.filter((l) => l.id !== id));
-        setExpandedId(null);
-      } else {
-        alert("Failed to delete lead. Please try again.");
-      }
+      await Promise.all(
+        Array.from(selected).map((id) =>
+          fetch("/api/admin/leads", {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id }),
+          })
+        )
+      );
+      setLeads((prev) => prev.filter((l) => !selected.has(l.id)));
+      setSelected(new Set());
+      setExpandedId(null);
     } catch {
-      alert("Network error. Please try again.");
+      alert("Delete failed. Please try again.");
     } finally {
-      setDeletingId(null);
+      setDeleting(false);
     }
   }
 
@@ -266,77 +281,101 @@ export default function AdminDashboardPage() {
         {/* ── Leads Table ── */}
         {leads.length > 0 && (
           <div className="bg-white border border-border rounded-lg overflow-hidden shadow-sm">
-            {/* Table header */}
-            <div className="hidden lg:grid grid-cols-[1fr_1fr_0.8fr_0.8fr_0.6fr_0.5fr_80px] gap-3 px-5 py-3 bg-foreground/[0.02] border-b border-border text-xs font-semibold text-foreground/50 uppercase tracking-wider">
-              <span>Contact</span>
-              <span>Plan</span>
-              <span>Coverage / Term</span>
-              <span>Premium</span>
-              <span>Province</span>
-              <span>Status</span>
-              <span>Time</span>
+            {/* Toolbar — shows select-all + delete when items selected */}
+            <div className="flex items-center gap-3 px-4 py-2.5 border-b border-border bg-foreground/[0.02]">
+              <input
+                type="checkbox"
+                className="w-4 h-4 accent-primary cursor-pointer"
+                checked={selected.size === leads.length && leads.length > 0}
+                ref={(el) => { if (el) el.indeterminate = selected.size > 0 && selected.size < leads.length; }}
+                onChange={toggleSelectAll}
+              />
+              {selected.size > 0 ? (
+                <button
+                  onClick={handleDeleteSelected}
+                  disabled={deleting}
+                  className="flex items-center gap-1.5 text-xs font-medium text-accent-red bg-accent-red/8 hover:bg-accent-red/15 px-3 py-1.5 rounded-md transition-colors disabled:opacity-50"
+                >
+                  <Trash2 className="w-3.5 h-3.5" />
+                  {deleting ? "Deleting…" : `Delete ${selected.size} selected`}
+                </button>
+              ) : (
+                <span className="text-xs text-foreground/40 hidden lg:block">Contact / Plan / Coverage / Premium / Province / Status</span>
+              )}
             </div>
 
             {/* Rows */}
             {leads.map((lead) => {
               const isExpanded = expandedId === lead.id;
+              const isSelected = selected.has(lead.id);
               return (
-                <div key={lead.id} className="border-b border-border last:border-b-0">
-                  {/* Main row — clickable to expand */}
-                  <button
-                    onClick={() => setExpandedId(isExpanded ? null : lead.id)}
-                    className="w-full text-left grid grid-cols-1 lg:grid-cols-[1fr_1fr_0.8fr_0.8fr_0.6fr_0.5fr_80px] gap-2 lg:gap-3 px-5 py-3.5 hover:bg-foreground/[0.015] transition-colors"
-                  >
-                    {/* Contact */}
-                    <div className="min-w-0">
-                      <p className="text-sm font-semibold text-foreground truncate">{lead.full_name}</p>
-                      <p className="text-xs text-foreground/50 truncate">{lead.email}</p>
-                    </div>
+                <div key={lead.id} className={`border-b border-border last:border-b-0 ${isSelected ? "bg-primary/[0.03]" : ""}`}>
+                  {/* Main row */}
+                  <div className="flex items-center gap-2 px-4 hover:bg-foreground/[0.015] transition-colors">
+                    {/* Checkbox */}
+                    <input
+                      type="checkbox"
+                      className="w-4 h-4 accent-primary cursor-pointer shrink-0"
+                      checked={isSelected}
+                      onChange={() => toggleSelect(lead.id)}
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                    {/* Row content — clickable to expand */}
+                    <button
+                      onClick={() => setExpandedId(isExpanded ? null : lead.id)}
+                      className="flex-1 text-left grid grid-cols-1 lg:grid-cols-[1fr_1fr_0.8fr_0.8fr_0.6fr_0.5fr_80px] gap-2 lg:gap-3 py-3.5"
+                    >
+                      {/* Contact */}
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-foreground truncate">{lead.full_name}</p>
+                        <p className="text-xs text-foreground/50 truncate">{lead.email}</p>
+                      </div>
 
-                    {/* Plan */}
-                    <div className="min-w-0 hidden lg:block">
-                      <p className="text-sm text-foreground truncate">{lead.plan_brand || "—"}</p>
-                      <p className="text-xs text-foreground/50 truncate">{lead.plan_product || "—"}</p>
-                    </div>
+                      {/* Plan */}
+                      <div className="min-w-0 hidden lg:block">
+                        <p className="text-sm text-foreground truncate">{lead.plan_brand || "—"}</p>
+                        <p className="text-xs text-foreground/50 truncate">{lead.plan_product || "—"}</p>
+                      </div>
 
-                    {/* Coverage / Term */}
-                    <div className="hidden lg:block">
-                      <p className="text-sm text-foreground">{formatCoverage(lead.coverage)}</p>
-                      <p className="text-xs text-foreground/50">{lead.term}yr {POLICY_LABELS[lead.policy_type] || lead.policy_type}</p>
-                    </div>
+                      {/* Coverage / Term */}
+                      <div className="hidden lg:block">
+                        <p className="text-sm text-foreground">{formatCoverage(lead.coverage)}</p>
+                        <p className="text-xs text-foreground/50">{lead.term}yr {POLICY_LABELS[lead.policy_type] || lead.policy_type}</p>
+                      </div>
 
-                    {/* Premium */}
-                    <div className="hidden lg:block">
-                      <p className="text-sm text-foreground">
-                        {lead.plan_price_monthly != null ? `${formatCurrency(lead.plan_price_monthly)}/mo` : "—"}
-                      </p>
-                      <p className="text-xs text-foreground/50">
-                        {lead.plan_price_annual != null ? `${formatCurrency(lead.plan_price_annual)}/yr` : ""}
-                      </p>
-                    </div>
+                      {/* Premium */}
+                      <div className="hidden lg:block">
+                        <p className="text-sm text-foreground">
+                          {lead.plan_price_monthly != null ? `${formatCurrency(lead.plan_price_monthly)}/mo` : "—"}
+                        </p>
+                        <p className="text-xs text-foreground/50">
+                          {lead.plan_price_annual != null ? `${formatCurrency(lead.plan_price_annual)}/yr` : ""}
+                        </p>
+                      </div>
 
-                    {/* Province */}
-                    <div className="hidden lg:block">
-                      <p className="text-sm text-foreground">{lead.province}</p>
-                    </div>
+                      {/* Province */}
+                      <div className="hidden lg:block">
+                        <p className="text-sm text-foreground">{lead.province}</p>
+                      </div>
 
-                    {/* Status */}
-                    <div className="hidden lg:block">
-                      <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ${STATUS_COLORS[lead.status] || "bg-foreground/5 text-foreground/50"}`}>
-                        {lead.status}
-                      </span>
-                    </div>
+                      {/* Status */}
+                      <div className="hidden lg:block">
+                        <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ${STATUS_COLORS[lead.status] || "bg-foreground/5 text-foreground/50"}`}>
+                          {lead.status}
+                        </span>
+                      </div>
 
-                    {/* Time + expand arrow */}
-                    <div className="flex items-center justify-between lg:justify-start gap-2">
-                      <span className="text-xs text-foreground/40">{timeAgo(lead.created_at)}</span>
-                      {isExpanded ? (
-                        <ChevronUp className="w-4 h-4 text-foreground/30 shrink-0" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4 text-foreground/30 shrink-0" />
-                      )}
-                    </div>
-                  </button>
+                      {/* Time + expand arrow */}
+                      <div className="flex items-center justify-between lg:justify-start gap-2">
+                        <span className="text-xs text-foreground/40">{timeAgo(lead.created_at)}</span>
+                        {isExpanded ? (
+                          <ChevronUp className="w-4 h-4 text-foreground/30 shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4 text-foreground/30 shrink-0" />
+                        )}
+                      </div>
+                    </button>
+                  </div>
 
                   {/* Expanded detail panel */}
                   {isExpanded && (
@@ -367,17 +406,6 @@ export default function AdminDashboardPage() {
                           Session: {lead.session_id}
                         </p>
                       )}
-                      {/* Delete button */}
-                      <div className="mt-4 pt-3 border-t border-border/50">
-                        <button
-                          onClick={() => handleDelete(lead.id)}
-                          disabled={deletingId === lead.id}
-                          className="flex items-center gap-1.5 text-xs text-accent-red hover:bg-accent-red/8 px-3 py-1.5 rounded-md transition-colors disabled:opacity-50"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                          {deletingId === lead.id ? "Deleting…" : "Delete lead"}
-                        </button>
-                      </div>
                     </div>
                   )}
                 </div>
