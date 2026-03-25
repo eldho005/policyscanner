@@ -33,6 +33,9 @@ jobs:
             echo "── Installing dependencies ──────────────────"
             npm install --legacy-peer-deps
 
+            echo "── Clearing stale build lock ────────────────"
+            rm -f .next/build-lock.json
+
             echo "── Building production bundle ───────────────"
             npm run build
 
