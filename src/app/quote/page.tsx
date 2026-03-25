@@ -47,6 +47,7 @@ export default function QuotePage() {
   const [loaderSteps, setLoaderSteps] = useState<{ text: string; done: boolean }[]>([]);
   const loaderTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const loaderIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [step4Attempted, setStep4Attempted] = useState(false);
 
   const [form, setForm] = useState<FormData>({
     type: "",
@@ -453,6 +454,7 @@ export default function QuotePage() {
               fullName={form.fullName}
               email={form.email}
               phone={form.phone}
+              showErrors={step4Attempted}
               onChange={updateForm}
             />
           )}
@@ -503,9 +505,18 @@ export default function QuotePage() {
           {step === 4 && (
             <>
               <button
-                disabled={!isStep4Valid}
-                onClick={handleGetQuotes}
-                className="flex items-center justify-center w-full py-3.5 px-6 bg-primary text-white font-semibold text-[0.9rem] rounded-sm hover:bg-primary-hover transition-colors btn-press disabled:bg-border disabled:text-foreground-muted disabled:cursor-not-allowed"
+                onClick={() => {
+                  if (!isStep4Valid) {
+                    setStep4Attempted(true);
+                    return;
+                  }
+                  handleGetQuotes();
+                }}
+                className={`flex items-center justify-center w-full py-3.5 px-6 font-semibold text-[0.9rem] rounded-sm transition-colors btn-press ${
+                  !isStep4Valid && step4Attempted
+                    ? "bg-border text-foreground-muted cursor-not-allowed"
+                    : "bg-primary text-white hover:bg-primary-hover"
+                }`}
               >
                 Get My Quotes
               </button>

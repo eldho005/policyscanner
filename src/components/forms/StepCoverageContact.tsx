@@ -12,6 +12,7 @@ interface StepCoverageContactProps {
   fullName: string;
   email: string;
   phone: string;
+  showErrors?: boolean;
   onChange: (field: string, value: string) => void;
 }
 
@@ -69,6 +70,7 @@ export default function StepCoverageContact({
   fullName,
   email,
   phone,
+  showErrors = false,
   onChange,
 }: StepCoverageContactProps) {
   const mmRef = useRef<HTMLInputElement>(null);
@@ -120,19 +122,22 @@ export default function StepCoverageContact({
   /* ── Computed states ──────────────────────────────────── */
   const dobComplete = dobDay.length === 2 && dobMonth.length === 2 && dobYear.length === 4;
   const dobValid = dobComplete && isDobValid(dobDay, dobMonth, dobYear);
-  const dobError = touched.dob && dobComplete && !dobValid;
+  const dobError = (touched.dob || showErrors) && dobComplete && !dobValid;
+  const dobMissing = (touched.dob || showErrors) && !dobComplete && (!!dobDay || !!dobMonth || !!dobYear || showErrors);
 
   const computedAge = dobValid
     ? nearestAge(parseInt(dobDay, 10), parseInt(dobMonth, 10), parseInt(dobYear, 10))
     : null;
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  const emailError = touched.email && email.length > 0 && !emailValid;
+  const emailError = (touched.email || showErrors) && (email.length === 0 ? showErrors : !emailValid);
 
   const phoneDigits = digits(phone).length;
-  const phoneError = touched.phone && phoneDigits > 0 && phoneDigits !== 10;
+  const phoneError = (touched.phone || showErrors) && (phoneDigits === 0 ? showErrors : phoneDigits !== 10);
 
-  const nameError = touched.name && fullName.length > 0 && fullName.trim().length < 2;
+  const nameError = (touched.name || showErrors) && (fullName.length === 0 ? showErrors : fullName.trim().length < 2);
+
+  const coverageError = showErrors && !coverage;
 
   const inputBase = "flex-1 min-w-0 px-2 py-3 border-[1.5px] rounded-sm text-[0.9rem] text-foreground text-center outline-none transition-all";
   const inputNormal = `${inputBase} border-border focus:border-primary focus:shadow-[0_0_0_3px_var(--color-primary-light)]`;
@@ -156,12 +161,16 @@ export default function StepCoverageContact({
           label="Coverage amount"
           value={coverage}
           onChange={(e) => onChange("coverage", e.target.value)}
+          className={coverageError ? "!border-accent-red" : undefined}
         >
           <option value="" disabled>Select coverage amount</option>
           {coverageAmounts.map((opt) => (
             <option key={opt.value} value={opt.value}>{opt.label}</option>
           ))}
         </FormSelect>
+        {coverageError && (
+          <p className="text-[0.78rem] -mt-4 mb-4 text-accent-red">Please select a coverage amount</p>
+        )}
 
         <div className="mb-0">
           <label className="block text-[0.84rem] font-medium text-foreground-secondary mb-1.5">
@@ -211,8 +220,8 @@ export default function StepCoverageContact({
                   ? `Nearest age: ${computedAge}`
                   : null}
             </p>
-          ) : touched.dob && (dobDay || dobMonth || dobYear) ? (
-            <p className="text-[0.78rem] mt-1.5 text-foreground-muted">Please complete your date of birth</p>
+          ) : dobMissing ? (
+            <p className="text-[0.78rem] mt-1.5 text-accent-red">Please complete your date of birth</p>
           ) : null}
         </div>
       </div>
