@@ -1,0 +1,45 @@
+name: Deploy to Hostinger VPS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22
+          script_stop: true
+          script: |
+            set -e
+            cd /var/www/policyscanner
+
+            echo "── Pulling latest code ─────────────────────"
+            git pull origin master
+
+            echo "── Installing dependencies ──────────────────"
+            npm install --legacy-peer-deps
+
+            echo "── Building production bundle ───────────────"
+            npm run build
+
+            echo "── Restarting PM2 process ───────────────────"
+            pm2 restart policyscanner --update-env
+
+            echo "── Saving PM2 state ─────────────────────────"
+            pm2 save
+
+            echo "✅ Deploy complete"
