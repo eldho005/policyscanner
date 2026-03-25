@@ -105,9 +105,11 @@ export default function StepCoverageContact({
     onChange("dobYear", digits(raw).slice(0, 4));
   };
 
-  /* ── Phone handler — no formatting (autofill-safe) ───── */
+  /* ── Phone handler — strip leading country code 1 from autofill ── */
   const handlePhone = (raw: string) => {
-    onChange("phone", raw);
+    let d = digits(raw);
+    if (d.length === 11 && d.startsWith("1")) d = d.slice(1);
+    onChange("phone", formatPhone(d));
   };
 
   /* ── Name handler — letters, spaces, hyphens, apostrophes */
@@ -128,7 +130,7 @@ export default function StepCoverageContact({
   const emailError = touched.email && email.length > 0 && !emailValid;
 
   const phoneDigits = digits(phone).length;
-  const phoneError = touched.phone && phoneDigits > 0 && (phoneDigits < 10 || phoneDigits > 11);
+  const phoneError = touched.phone && phoneDigits > 0 && phoneDigits !== 10;
 
   const nameError = touched.name && fullName.length > 0 && fullName.trim().length < 2;
 

@@ -187,7 +187,8 @@ export default function QuotePage() {
       }
     }
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
-    const phoneValid = form.phone.replace(/\D/g, "").length === 10;
+    const pd = form.phone.replace(/\D/g, "");
+    const phoneValid = pd.length === 10 || (pd.length === 11 && pd.startsWith("1"));
     return !!(form.coverage && dobValid && form.fullName.trim().length >= 2 && emailValid && phoneValid);
   })();
 
@@ -237,7 +238,7 @@ export default function QuotePage() {
       dobYear: form.dobYear,
       fullName: form.fullName,
       email: form.email,
-      phone: form.phone.replace(/\D/g, ""),
+      phone: form.phone.replace(/\D/g, "").replace(/^1(\d{10})$/, "$1"),
     };
 
     const apiPromise = fetch("/api/quotes", {
@@ -329,7 +330,7 @@ export default function QuotePage() {
               sessionId: data?.meta?.sessionId ?? undefined,
               fullName: form.fullName,
               email: form.email,
-              phone: form.phone.replace(/\D/g, ""),
+              phone: form.phone.replace(/\D/g, "").replace(/^1(\d{10})$/, "$1"),
               province: form.province,
               policyType: form.type,
               coverage: coverageNum,
@@ -365,7 +366,7 @@ export default function QuotePage() {
             province: form.province,
             fullName: form.fullName,
             email: form.email,
-            phone: form.phone.replace(/\D/g, ""),
+            phone: form.phone.replace(/\D/g, "").replace(/^1(\d{10})$/, "$1"),
           }));
           setTimeout(() => {
             setShowLoaderModal(false);
