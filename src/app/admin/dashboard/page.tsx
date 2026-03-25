@@ -14,6 +14,7 @@ import {
   Phone,
   MapPin,
   Calendar,
+  Trash2,
 } from "lucide-react";
 
 /* ───────────────────── Types ───────────────────── */
@@ -92,6 +93,7 @@ export default function AdminDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [lastRefreshed, setLastRefreshed] = useState<Date | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -139,6 +141,29 @@ export default function AdminDashboardPage() {
   async function handleLogout() {
     await fetch("/api/admin/login", { method: "DELETE" });
     router.push("/admin");
+  }
+
+  /* ── Delete lead ── */
+  async function handleDelete(id: string) {
+    if (!confirm("Delete this lead? This cannot be undone.")) return;
+    setDeletingId(id);
+    try {
+      const res = await fetch("/api/admin/leads", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      });
+      if (res.ok) {
+        setLeads((prev) => prev.filter((l) => l.id !== id));
+        setExpandedId(null);
+      } else {
+        alert("Failed to delete lead. Please try again.");
+      }
+    } catch {
+      alert("Network error. Please try again.");
+    } finally {
+      setDeletingId(null);
+    }
   }
 
   /* ── Stats ── */
@@ -342,6 +367,17 @@ export default function AdminDashboardPage() {
                           Session: {lead.session_id}
                         </p>
                       )}
+                      {/* Delete button */}
+                      <div className="mt-4 pt-3 border-t border-border/50">
+                        <button
+                          onClick={() => handleDelete(lead.id)}
+                          disabled={deletingId === lead.id}
+                          className="flex items-center gap-1.5 text-xs text-accent-red hover:bg-accent-red/8 px-3 py-1.5 rounded-md transition-colors disabled:opacity-50"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                          {deletingId === lead.id ? "Deleting…" : "Delete lead"}
+                        </button>
+                      </div>
                     </div>
                   )}
                 </div>

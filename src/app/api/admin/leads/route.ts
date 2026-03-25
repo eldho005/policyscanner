@@ -63,3 +63,40 @@ export async function GET(request: NextRequest) {
     },
   });
 }
+
+export async function DELETE(request: NextRequest) {
+  const authed = await isAdminAuthenticated();
+  if (!authed) {
+    return NextResponse.json(
+      { success: false, error: "Unauthorized" },
+      { status: 401 },
+    );
+  }
+
+  const db = getSupabase();
+  if (!db) {
+    return NextResponse.json(
+      { success: false, error: "Database not configured" },
+      { status: 503 },
+    );
+  }
+
+  const { id } = await request.json().catch(() => ({})) as { id?: string };
+  if (!id || typeof id !== "string") {
+    return NextResponse.json(
+      { success: false, error: "Missing lead id" },
+      { status: 400 },
+    );
+  }
+
+  const { error } = await db.from("leads").delete().eq("id", id);
+  if (error) {
+    console.error("[/api/admin/leads] Delete error:", error.message);
+    return NextResponse.json(
+      { success: false, error: "Failed to delete lead" },
+      { status: 500 },
+    );
+  }
+
+  return NextResponse.json({ success: true });
+}
