@@ -23,7 +23,7 @@ function formatCoverage(n: number): string {
 }
 
 const ADVISOR_IMAGE = "https://res.cloudinary.com/dy4lolmvf/image/upload/v1774455799/eldho_photo_headshot_1_susqew.jpg";
-const ADVISOR_PHONE = "+1 (437) 422-2835";
+const ADVISOR_PHONE = "(437) 422-8353";
 const ADVISOR_EMAIL = "eldho@policyscanner.ca";
 
 export function buildQuoteConfirmationEmail(event: LeadCapturedEvent & { leadId?: string }) {
@@ -103,7 +103,7 @@ export function buildQuoteConfirmationEmail(event: LeadCapturedEvent & { leadId?
                     <tr>
                       <td align="center" style="padding-bottom:12px">
                         <p style="margin:0;font-size:11px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.6px">Direct Line</p>
-                        <p style="margin:4px 0 0"><a href="tel:+14374222835" style="font-size:17px;font-weight:700;color:#a0522d;text-decoration:none;white-space:nowrap">${ADVISOR_PHONE}</a></p>
+                        <p style="margin:4px 0 0"><a href="tel:+14374228353" style="font-size:17px;font-weight:700;color:#a0522d;text-decoration:none;white-space:nowrap">${ADVISOR_PHONE}</a></p>
                       </td>
                     </tr>
                     <tr>
@@ -148,7 +148,7 @@ export function buildQuoteConfirmationEmail(event: LeadCapturedEvent & { leadId?
             </table>
 
             <p style="margin:0;font-size:15px;color:#555;line-height:1.65">
-              Feel free to call Eldho directly at <a href="tel:+14374222835" style="color:#a0522d;font-weight:600;text-decoration:none">${ADVISOR_PHONE}</a> if you have any immediate questions. He's happy to help.
+              Feel free to call Eldho directly at <a href="tel:+14374228353" style="color:#a0522d;font-weight:600;text-decoration:none">${ADVISOR_PHONE}</a> if you have any immediate questions. He's happy to help.
             </p>
           </td>
         </tr>
