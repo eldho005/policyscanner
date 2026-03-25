@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
 
-const SITE = "https://policyscanner.ca";
+const SITE = "https://www.policyscanner.ca";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
