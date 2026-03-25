@@ -124,17 +124,17 @@ export function buildQuoteSelectedEmail(event: QuoteSelectedEvent) {
                   <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
                       <td style="padding:5px 0;font-size:14px;color:#555;line-height:1.5">
-                        <strong style="color:#a0522d">1.</strong> Eldho will review your selection and confirm the details
+                        1. Eldho will review your selection and confirm the details
                       </td>
                     </tr>
                     <tr>
                       <td style="padding:5px 0;font-size:14px;color:#555;line-height:1.5">
-                        <strong style="color:#a0522d">2.</strong> He'll reach out to guide you through the application process
+                        2. He'll reach out to guide you through the application process
                       </td>
                     </tr>
                     <tr>
                       <td style="padding:5px 0;font-size:14px;color:#555;line-height:1.5">
-                        <strong style="color:#a0522d">3.</strong> You can always change your mind — no obligation until you sign
+                        3. You can always change your mind — no obligation until you sign
                       </td>
                     </tr>
                   </table>
@@ -150,7 +150,7 @@ export function buildQuoteSelectedEmail(event: QuoteSelectedEvent) {
                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="text-align:center">
                     <tr>
                       <td align="center" style="padding-bottom:12px">
-                        <img src="${ADVISOR_IMAGE}" alt="Eldho George" width="64" height="64" style="border-radius:50%;display:inline-block" />
+                        <img src="${ADVISOR_IMAGE}" alt="Eldho George" width="64" height="64" style="border-radius:50%;display:inline-block;object-fit:cover;object-position:center top" />
                       </td>
                     </tr>
                     <tr>

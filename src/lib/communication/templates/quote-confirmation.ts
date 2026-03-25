@@ -86,7 +86,7 @@ export function buildQuoteConfirmationEmail(event: LeadCapturedEvent & { leadId?
                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="text-align:center">
                     <tr>
                       <td align="center" style="padding-bottom:14px">
-                        <img src="${ADVISOR_IMAGE}" alt="Eldho George" width="72" height="72" style="border-radius:50%;display:inline-block" />
+                        <img src="${ADVISOR_IMAGE}" alt="Eldho George" width="72" height="72" style="border-radius:50%;display:inline-block;object-fit:cover;object-position:center top" />
                       </td>
                     </tr>
                     <tr>
