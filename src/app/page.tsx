@@ -22,11 +22,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": ["Organization", "InsuranceAgency"],
-      "@id": "https://policyscanner.ca/#organization",
+      "@id": "https://www.policyscanner.ca/#organization",
       name: "PolicyScanner",
       legalName: "PolicyScanner Brokerage Incorporated",
-      url: "https://policyscanner.ca",
-      logo: "https://policyscanner.ca/favicon.svg",
+      url: "https://www.policyscanner.ca",
+      logo: "https://www.policyscanner.ca/favicon.svg",
       description:
         "Compare life insurance quotes from 30+ Canadian insurers. Licensed brokerage (FSRA #41964M) helping Canadians find affordable coverage.",
       areaServed: {
@@ -56,13 +56,13 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://policyscanner.ca/#website",
-      url: "https://policyscanner.ca",
+      "@id": "https://www.policyscanner.ca/#website",
+      url: "https://www.policyscanner.ca",
       name: "PolicyScanner",
-      publisher: { "@id": "https://policyscanner.ca/#organization" },
+      publisher: { "@id": "https://www.policyscanner.ca/#organization" },
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://policyscanner.ca/quote",
+        target: "https://www.policyscanner.ca/quote",
         description: "Get a personalized life insurance quote",
       },
     },

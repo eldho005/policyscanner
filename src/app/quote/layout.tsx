@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Get Your Free Life Insurance Quote — PolicyScanner.ca",
     description:
       "Answer a few quick questions and compare personalized life insurance quotes from 30+ Canadian insurers.",
-    url: "https://policyscanner.ca/quote",
+    url: "https://www.policyscanner.ca/quote",
   },
 };
 

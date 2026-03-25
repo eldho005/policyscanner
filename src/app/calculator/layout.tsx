@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Calculate how much life insurance you need using the DIME method. Free calculator for Canadian families.",
     type: "website",
-    url: "https://policyscanner.ca/calculator",
+    url: "https://www.policyscanner.ca/calculator",
   },
 };
 

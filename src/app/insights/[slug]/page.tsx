@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 
 const AUTHOR_LINKEDIN = "https://www.linkedin.com/in/eldho-george-99b09350";
 const AUTHOR_NAME = "Eldho George, LLQP RIBO";
-const SITE_URL = "https://policyscanner.ca";
+const SITE_URL = "https://www.policyscanner.ca";
 
 /* ── Static params for SSG ── */
 export function generateStaticParams() {
@@ -35,7 +35,7 @@ export async function generateMetadata({
       authors: [article.author],
     },
     alternates: {
-      canonical: `https://policyscanner.ca/insights/${slug}`,
+      canonical: `https://www.policyscanner.ca/insights/${slug}`,
     },
   };
 }

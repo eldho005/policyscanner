@@ -24,10 +24,10 @@ export async function generateMetadata({
     openGraph: {
       title: `${data.title} — PolicyScanner.ca`,
       description: data.metaDescription,
-      url: `https://policyscanner.ca/insurance/${type}`,
+      url: `https://www.policyscanner.ca/insurance/${type}`,
     },
     alternates: {
-      canonical: `https://policyscanner.ca/insurance/${type}`,
+      canonical: `https://www.policyscanner.ca/insurance/${type}`,
     },
   };
 }

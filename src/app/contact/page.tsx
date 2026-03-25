@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Contact Us — PolicyScanner.ca",
     description:
       "Get in touch with PolicyScanner.ca. Licensed Canadian brokerage helping you find the right life insurance.",
-    url: "https://policyscanner.ca/contact",
+    url: "https://www.policyscanner.ca/contact",
   },
 };
 
@@ -22,7 +22,7 @@ const contactJsonLd = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   name: "PolicyScanner",
-  url: "https://policyscanner.ca",
+  url: "https://www.policyscanner.ca",
   telephone: "+1-437-422-8353",
   email: "support@policyscanner.ca",
   address: {

@@ -114,7 +114,7 @@ const aggregateRatingJsonLd = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   name: "PolicyScanner",
-  url: "https://policyscanner.ca",
+  url: "https://www.policyscanner.ca",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: String(avgRating),

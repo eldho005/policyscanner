@@ -16,7 +16,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://policyscanner.ca"),
+  metadataBase: new URL("https://www.policyscanner.ca"),
   title: "PolicyScanner.ca — The Best Way to Buy Life Insurance in Canada",
   description:
     "Compare life insurance quotes from 30+ Canadian insurers. Get personalized rates in under 2 minutes.",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "PolicyScanner.ca — Compare Life Insurance Quotes",
     description:
       "Compare life insurance quotes from 30+ Canadian insurers. Get personalized rates in under 2 minutes.",
-    url: "https://policyscanner.ca",
+    url: "https://www.policyscanner.ca",
     siteName: "PolicyScanner",
     locale: "en_CA",
     type: "website",

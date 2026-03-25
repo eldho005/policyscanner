@@ -33,7 +33,7 @@ export const env = {
   emailFrom: optionalEnv("EMAIL_FROM", "noreply@policyscanner.ca"),
 
   /** App base URL — used in email deep links */
-  appUrl: optionalEnv("NEXT_PUBLIC_APP_URL", "https://policyscanner.ca"),
+  appUrl: optionalEnv("NEXT_PUBLIC_APP_URL", "https://www.policyscanner.ca"),
 
   /** Cron job authentication secret */
   cronSecret: process.env.CRON_SECRET ?? "",
