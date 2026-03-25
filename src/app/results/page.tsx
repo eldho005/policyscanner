@@ -172,6 +172,37 @@ export default function ResultsPage() {
     }
   }, []);
 
+  // ── Handle "Get a Quote" on a plan card — show thank-you + fire T2 email ──
+  const handleGetQuote = useCallback((q: QuoteResult) => {
+    setSelectedQuote(q);
+    setShowThankYou(true);
+
+    // Fire T2 (quote selected) email — non-blocking
+    try {
+      const form = fullFormRef.current;
+      if (!form || !form.email) return;
+      fetch("/api/quotes/select", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current ?? undefined,
+          fullName: form.fullName ?? "",
+          email: form.email,
+          phone: form.phone ?? "",
+          planBrand: q.brand,
+          planProduct: q.product,
+          priceMonthly: q.basePrice,
+          priceAnnual: q.annualPrice ?? q.basePrice * 12,
+          coverage: q.coverage || coverage,
+          term: q.term || term,
+          policyType: policyType,
+        }),
+      }).catch(() => { /* silent */ });
+    } catch {
+      // Never block the UI for comms failures
+    }
+  }, [coverage, term, policyType]);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navbar */}
@@ -316,7 +347,7 @@ export default function ResultsPage() {
                         termYears={term}
                         policyType={policyType}
                         formContext={formContext ?? undefined}
-                        onGetQuote={() => { setSelectedQuote(q); setShowThankYou(true); }}
+                        onGetQuote={() => handleGetQuote(q)}
                         index={i}
                       />
                     ))}

@@ -8,7 +8,6 @@ import { quoteRequestSchema } from "@/lib/validation/quote.schema";
 import { getQuotes } from "@/lib/services/quote.service";
 import { getSupabase } from "@/lib/db/supabase";
 import { createRateLimiter } from "@/lib/rate-limit";
-
 const limiter = createRateLimiter("quotes", { maxRequests: 10, windowMs: 60_000 });
 
 export async function POST(request: Request) {

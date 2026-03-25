@@ -28,6 +28,16 @@ export const env = {
   adminPassword: process.env.ADMIN_PASSWORD ?? "",
   sessionSecret: process.env.SESSION_SECRET || process.env.ADMIN_PASSWORD || "",
 
+  /** Email (SendGrid) */
+  sendgridApiKey: process.env.SENDGRID_API_KEY ?? "",
+  emailFrom: optionalEnv("EMAIL_FROM", "noreply@policyscanner.ca"),
+
+  /** App base URL — used in email deep links */
+  appUrl: optionalEnv("NEXT_PUBLIC_APP_URL", "https://policyscanner.ca"),
+
+  /** Cron job authentication secret */
+  cronSecret: process.env.CRON_SECRET ?? "",
+
   /** Node environment */
   nodeEnv: optionalEnv("NODE_ENV", "development"),
 } as const;
@@ -48,6 +58,12 @@ if (!env.supabaseUrl || !env.supabaseServiceRoleKey) {
 
 if (!env.adminPassword) {
   console.warn("[env] ADMIN_PASSWORD not set — admin login disabled");
+}
+
+if (!env.sendgridApiKey) {
+  console.warn(
+    "[env] SENDGRID_API_KEY not set — emails will be logged to console only",
+  );
 }
 
 if (!process.env.SESSION_SECRET) {
